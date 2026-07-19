@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preempt Global — Costly construction document mistakes, caught before the field.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F6EFE2;
+    --paper:#FFFCF6;
+    --ink:#2B2620;
+    --muted:#7E7568;
+    --line:#E9E0D0;
+    --critical:#8A2A22;
+    --critical-bg:#F1DCD6;
+    --moderate:#C99A3E;
+    --moderate-bg:#F3E7CB;
+    --low:#6E8F6B;
+    --low-bg:#DEE9DA;
+    --navy:#12203F;
+    --navy-line:#22345C;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;background:var(--bg);}
+  body{
+    margin:0;
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    -webkit-text-size-adjust:100%;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px;}
+  section{padding:84px 0;}
+  section[id]{scroll-margin-top:76px;}
+  h1,h2,h3{font-family:'Spectral',Georgia,serif;margin:0;}
+  .kicker{
+    font-family:'Inter',sans-serif;
+    font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--critical);font-weight:700;margin-bottom:14px;
+  }
+  h2{
+    font-weight:600;
+    font-size:clamp(27px,3.5vw,40px);
+    line-height:1.16;
+    letter-spacing:-.012em;
+    max-width:740px;
+  }
+  h3{font-weight:600;letter-spacing:-.005em;}
+  .lede{
+    max-width:620px;margin-top:16px;
+    font-size:16px;line-height:1.7;color:var(--muted);
+  }
+  .lede strong{color:var(--ink);}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .btn{
+    background:var(--ink);color:#FFFCF6;
+    padding:12px 22px;border-radius:11px;
+    font-size:14px;font-weight:600;text-decoration:none;
+    display:inline-block;white-space:nowrap;
+    border:none;cursor:pointer;
+    font-family:'Inter',sans-serif;
+    transition:filter .2s ease;
+  }
+  .btn:hover{filter:brightness(1.15);}
+  .btn.hot{background:var(--critical);}
+  .btn.hot:hover{filter:none;background:#71211b;}
+  a:focus-visible,.btn:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid var(--critical);outline-offset:3px;}
+
+  /* ===== NAV ===== */
+  header.site{
+    position:sticky;top:0;z-index:20;
+    background:rgba(246,239,226,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 24px;max-width:1040px;margin:0 auto;gap:16px;
+  }
+  .brand{display:flex;align-items:center;gap:8px;font-family:'Spectral',serif;font-weight:700;font-size:16px;text-decoration:none;}
+  .brand img{height:28px;width:28px;object-fit:contain;mix-blend-mode:multiply;display:block;}
+  .navlinks{display:flex;gap:26px;font-size:14px;color:var(--muted);}
+  .navlinks a{text-decoration:none;}
+  .navlinks a:hover{color:var(--ink);}
+  @media (max-width:860px){.navlinks{display:none;}}
+
+  /* ===== HERO ===== */
+  .hero{padding:76px 0 0;text-align:center;}
+  h1{
+    font-weight:600;
+    font-size:clamp(33px,5.4vw,58px);
+    line-height:1.1;
+    letter-spacing:-.018em;
+    max-width:840px;margin:0 auto;
+  }
+  h1 .accent{color:var(--critical);}
+  .positioning{
+    margin:24px auto 0;
+    font-size:clamp(16px,2vw,18.5px);line-height:1.6;
+    color:var(--muted);max-width:620px;
+  }
+  .positioning strong{color:var(--ink);font-weight:600;}
+  .proof-line{
+    margin:16px auto 0;
+    font-size:clamp(15px,1.8vw,17px);line-height:1.6;
+    color:var(--ink);font-weight:500;max-width:640px;
+  }
+  .proof-line .num{color:var(--critical);font-weight:700;}
+  .hero-ctas{margin-top:34px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:center;}
+  .btn.soft{background:#EDE5D4;color:var(--ink);}
+  .guarantee-line{margin-top:15px;font-size:13px;color:var(--muted);font-family:'IBM Plex Mono',monospace;}
+  .byline{
+    margin:26px auto 0;font-size:13px;color:var(--muted);font-style:italic;
+    display:flex;align-items:center;justify-content:center;gap:10px;
+  }
+  .byline .sig{
+    width:32px;height:32px;border-radius:50%;
+    background:var(--critical);
+    color:#F8F4ED;font-style:normal;font-weight:700;font-size:11px;
+    display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;
+    letter-spacing:.04em;flex-shrink:0;
+  }
+  .hero-report{max-width:560px;margin:56px auto 0;text-align:left;}
+  .type-strip{margin-top:56px;padding-top:28px;border-top:1px solid var(--line);}
+  .type-strip .label{
+    font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+    margin-bottom:16px;font-weight:600;
+  }
+  .type-strip .row{
+    display:flex;gap:14px 36px;justify-content:center;align-items:center;flex-wrap:wrap;
+    font-family:'Inter',sans-serif;color:#B3A98F;font-weight:700;font-size:13.5px;letter-spacing:.06em;
+  }
+
+  /* report artifact */
+  .report{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:6px 6px 14px 14px;
+    box-shadow:0 24px 60px -24px rgba(43,38,32,.35),0 2px 0 rgba(43,38,32,.04);
+    padding:26px 28px 24px;
+    position:relative;
+    transform:rotate(.4deg);
+  }
+  .report::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:5px;
+    background:var(--critical);border-radius:6px 6px 0 0;
+  }
+  .report-head{
+    display:flex;justify-content:space-between;align-items:baseline;
+    border-bottom:1.5px solid var(--ink);padding-bottom:12px;margin-bottom:16px;
+  }
+  .report-head .title{font-family:'Inter',sans-serif;font-weight:800;font-size:13.5px;letter-spacing:.08em;}
+  .report-head .meta{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);}
+  .r-row{font-family:'IBM Plex Mono',monospace;font-size:12px;display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dotted var(--line);gap:12px;}
+  .r-row .k{color:var(--muted);}
+  .r-row .v{font-weight:500;text-align:right;}
+  .r-row .v.hot{color:var(--critical);font-weight:700;}
+  .r-finding{
+    margin-top:16px;background:var(--critical-bg);border-left:3px solid var(--critical);
+    padding:12px 14px;border-radius:0 8px 8px 0;
+  }
+  .r-finding .fl{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;color:var(--critical);font-weight:600;margin-bottom:6px;}
+  .r-finding p{margin:0;font-size:12.5px;line-height:1.55;}
+  .r-stamp{margin-top:18px;display:flex;justify-content:space-between;align-items:center;}
+  .r-stamp .badge{
+    font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;
+    border:1.5px solid var(--low);color:var(--low);padding:4px 10px;border-radius:6px;
+    transform:rotate(-2deg);font-weight:600;
+  }
+  .r-stamp .pg{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);}
+
+  /* ===== spine ===== */
+  .spine{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+  .spine .step-n{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;
+    color:var(--critical);background:var(--critical-bg);
+    padding:3px 10px;border-radius:20px;
+  }
+  .spine .kicker{margin:0;}
+
+  /* ===== PROBLEM ===== */
+  .readers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px;}
+  .reader-card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:24px;}
+  .reader-mark{
+    width:38px;height:38px;border-radius:11px;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Inter',sans-serif;font-weight:700;font-size:15px;margin-bottom:16px;
+  }
+  .reader-mark.a{background:var(--moderate-bg);color:var(--moderate);}
+  .reader-mark.c{background:var(--critical-bg);color:var(--critical);}
+  .reader-mark.o{background:var(--low-bg);color:var(--low);}
+  .reader-card .role{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:6px;display:block;font-weight:600;}
+  .reader-card h3{font-size:17px;margin-bottom:8px;}
+  .reader-card p{font-size:14px;line-height:1.6;color:var(--muted);margin:0;}
+  @media (max-width:760px){.readers{grid-template-columns:1fr;}}
+  .pull{
+    margin-top:36px;padding:22px 26px;border-left:3px solid var(--critical);
+    background:var(--critical-bg);border-radius:0 12px 12px 0;
+    font-family:'Spectral',serif;font-style:italic;font-weight:600;font-size:19px;line-height:1.5;
+    max-width:660px;
+  }
+
+  /* ===== ECONOMICS ===== */
+  .econ-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:40px;align-items:center;}
+  @media (max-width:860px){.econ-grid{grid-template-columns:1fr;}}
+  .ladder{
+    background:var(--paper);border:1px solid var(--line);border-radius:18px;
+    padding:30px 26px 26px;display:flex;align-items:flex-end;gap:16px;
+  }
+  .rung{flex:1;display:flex;flex-direction:column;align-items:center;}
+  .bar{width:100%;border-radius:8px 8px 3px 3px;}
+  .rung:nth-child(1) .bar{height:12px;background:var(--low);}
+  .rung:nth-child(2) .bar{height:42px;background:var(--moderate);}
+  .rung:nth-child(3) .bar{height:88px;background:#B5502E;}
+  .rung:nth-child(4) .bar{height:140px;background:var(--critical);}
+  .rung .phase{margin-top:12px;font-family:'Inter',sans-serif;font-weight:700;font-size:13px;}
+  .rung .cost{margin-top:4px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--muted);text-align:center;}
+  .rung:nth-child(4) .cost{color:var(--critical);font-weight:600;}
+  .econ-copy p{font-size:15.5px;line-height:1.7;color:var(--muted);margin:0 0 16px;}
+  .econ-copy p strong{color:var(--ink);}
+
+  /* ===== EXHIBIT A ===== */
+  .exhibit{
+    margin-top:40px;display:grid;grid-template-columns:1.05fr 1fr;gap:0;
+    border-radius:18px;overflow:hidden;border:1px solid var(--line);
+  }
+  .exhibit-art{background:var(--navy);position:relative;min-height:340px;}
+  .exhibit-art::after{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(rgba(255,255,255,.12) 1px,transparent 1.4px);
+    background-size:6px 6px;mix-blend-mode:overlay;pointer-events:none;
+  }
+  .exhibit-art svg{position:absolute;inset:0;width:100%;height:100%;}
+  .exhibit-body{background:var(--paper);padding:30px;display:flex;flex-direction:column;justify-content:center;}
+  .tag{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;color:var(--muted);background:var(--bg);
+    padding:2px 8px;border-radius:6px;
+  }
+  .exhibit-body .tag-row{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;}
+  .exhibit-body h3{font-size:20px;margin-bottom:10px;}
+  .exhibit-body p{font-size:14.5px;line-height:1.65;color:var(--muted);margin:0 0 16px;}
+  .exhibit-costs{display:flex;gap:28px;border-top:1px solid var(--line);padding-top:16px;}
+  .exhibit-costs .label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:4px;}
+  .exhibit-costs .value{display:block;font-family:'Spectral',serif;font-weight:700;font-size:20px;}
+  .exhibit-costs .value.hot{color:var(--critical);}
+  .exhibit-costs .value.cool{color:var(--low);}
+  @media (max-width:800px){.exhibit{grid-template-columns:1fr;}}
+  .exhibit-after{margin-top:18px;font-size:14px;color:var(--muted);line-height:1.65;max-width:660px;}
+
+  /* ===== CASE ===== */
+  .case-section{background:var(--navy);color:#EDE6D8;}
+  .case-section .kicker{color:#E8A26C;}
+  .case-section h2{color:#fff;}
+  .case-section .lede{color:#A9B4CE;}
+  .stats{margin-top:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .stat{
+    background:rgba(255,255,255,.05);border:1px solid var(--navy-line);border-radius:16px;
+    padding:22px 16px;text-align:center;
+  }
+  .stat .num{font-family:'Spectral',serif;font-weight:700;font-size:36px;color:#E8A26C;}
+  .stat .lbl{font-size:12.5px;color:#A9B4CE;margin-top:6px;line-height:1.4;}
+  @media (max-width:760px){.stats{grid-template-columns:repeat(2,1fr);}}
+  .exposure{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .expo-card{
+    border:1px solid var(--navy-line);border-radius:16px;padding:22px 24px;
+    background:rgba(255,255,255,.04);
+  }
+  .expo-card .label{font-size:11.5px;text-transform:uppercase;letter-spacing:.1em;color:#8FA0C4;margin-bottom:8px;}
+  .expo-card .big{font-family:'Spectral',serif;font-weight:700;font-size:32px;color:#fff;}
+  .expo-card .note{font-size:12.5px;color:#A9B4CE;margin-top:6px;line-height:1.5;}
+  .expo-card.hot{border-color:#C4633B;background:rgba(196,99,59,.14);}
+  .expo-card.hot .big{color:#F0A177;}
+  @media (max-width:680px){.exposure{grid-template-columns:1fr;}}
+  .case-quote{
+    margin-top:32px;font-family:'Spectral',serif;font-style:italic;font-weight:600;font-size:20px;
+    line-height:1.55;color:#EDE6D8;border-left:3px solid #E8A26C;padding-left:20px;max-width:620px;
+  }
+  .case-shell{border-radius:24px;padding:72px 48px;margin:0 -24px;}
+
+  /* ===== CAPTURE ===== */
+  .capture{
+    background:var(--paper);border:1.5px solid var(--ink);border-radius:20px;
+    padding:44px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;
+  }
+  .capture h2{font-size:clamp(24px,3vw,32px);}
+  .capture .lede{margin-top:14px;font-size:15px;}
+  .capture-form{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:26px;}
+  .capture-form .file-title{font-family:'Spectral',serif;font-weight:600;font-size:18px;margin-bottom:6px;}
+  .capture-form .file-meta{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--muted);line-height:1.7;margin-bottom:18px;}
+  .capture-form input{
+    width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;
+    font-family:'IBM Plex Mono',monospace;font-size:13.5px;background:#fff;margin-bottom:10px;color:var(--ink);
+  }
+  .capture-form input:focus{outline:2px solid var(--critical);outline-offset:1px;border-color:var(--critical);}
+  .capture-form .btn{width:100%;text-align:center;}
+  .capture-form .fine{margin-top:12px;font-size:12px;color:var(--muted);line-height:1.5;}
+  .capture-error{display:none;margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--critical);line-height:1.5;}
+  .capture-success{display:none;}
+  .capture-success .ok{font-family:'Spectral',serif;font-weight:600;font-size:19px;margin:0 0 8px;}
+  .capture-success p{margin:0;font-size:14px;color:var(--muted);line-height:1.6;}
+  @media (max-width:860px){.capture{grid-template-columns:1fr;padding:32px;}}
+
+  /* ===== PROCESS ===== */
+  .steps{margin-top:44px;display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+  .step{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:26px;position:relative;}
+  .step .n{
+    font-family:'Spectral',serif;font-weight:700;font-size:30px;
+    color:transparent;-webkit-text-stroke:1.3px var(--critical);
+    margin-bottom:12px;display:block;
+  }
+  .step h3{font-size:17px;margin-bottom:8px;}
+  .step p{font-size:14px;color:var(--muted);line-height:1.65;margin:0;}
+  .step ul{margin:12px 0 0;padding:0;list-style:none;}
+  .step li{font-size:13.5px;line-height:1.6;padding:6px 0 6px 24px;position:relative;color:var(--ink);}
+  .step li::before{content:"✓";position:absolute;left:0;top:6px;color:var(--low);font-weight:700;font-size:13px;}
+  @media (max-width:700px){.steps{grid-template-columns:1fr;}}
+  .capacity-note{
+    margin-top:24px;padding:18px 22px;background:var(--moderate-bg);border:1px solid #E3D3AC;
+    border-radius:14px;font-size:14px;color:var(--ink);max-width:660px;line-height:1.6;
+  }
+
+  /* ===== FIT ===== */
+  .fit-grid{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .fit-col{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:26px;}
+  .fit-col h3{font-family:'Inter',sans-serif;font-size:14px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px;letter-spacing:.04em;text-transform:uppercase;}
+  .fit-col h3 .dot{width:9px;height:9px;border-radius:50%;display:inline-block;}
+  .fit-col.yes h3 .dot{background:var(--low);}
+  .fit-col.no h3 .dot{background:var(--critical);}
+  .fit-col ul{margin:0;padding:0;list-style:none;}
+  .fit-col li{font-size:14px;line-height:1.6;padding:9px 0;border-top:1px solid var(--line);}
+  .fit-col li:first-of-type{border-top:none;}
+  .fit-col.no li{color:var(--muted);}
+  @media (max-width:760px){.fit-grid{grid-template-columns:1fr;}}
+
+  /* ===== FOUNDER ===== */
+  .founder-grid{margin-top:40px;display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:start;}
+  .monogram-lg{
+    width:96px;height:96px;border-radius:50%;background:var(--critical);color:#F8F4ED;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Inter',sans-serif;font-weight:700;font-size:28px;letter-spacing:.04em;
+  }
+  .founder-copy h3{font-size:22px;margin-bottom:4px;}
+  .founder-copy .role{font-size:13px;color:var(--critical);font-weight:600;margin-bottom:16px;display:block;}
+  .founder-copy .role a{color:var(--critical);text-decoration:none;}
+  .founder-copy .role a:hover{text-decoration:underline;}
+  .founder-copy p{font-size:15px;line-height:1.7;color:var(--muted);margin:0 0 14px;max-width:560px;}
+  .founder-copy p strong{color:var(--ink);}
+  .founder-creds{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px;}
+  .cred{
+    font-family:'IBM Plex Mono',monospace;font-size:11.5px;background:var(--paper);
+    border:1px solid var(--line);border-radius:8px;padding:6px 12px;color:var(--muted);
+  }
+  @media (max-width:640px){.founder-grid{grid-template-columns:1fr;gap:20px;}}
+
+  /* ===== FAQ ===== */
+  .faq{margin-top:36px;max-width:740px;}
+  details{border-bottom:1px solid var(--line);padding:18px 2px;}
+  summary{
+    cursor:pointer;font-family:'Spectral',serif;font-weight:600;font-size:17px;
+    list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";font-size:20px;color:var(--critical);flex-shrink:0;transition:transform .2s;font-family:'IBM Plex Mono',monospace;}
+  details[open] summary::after{transform:rotate(45deg);}
+  details p{font-size:14.5px;line-height:1.65;color:var(--muted);margin:12px 0 0;}
+
+  /* ===== OFFER ===== */
+  .offer-box{
+    margin-top:36px;background:var(--paper);border:1.5px solid var(--ink);border-radius:20px;
+    padding:38px 40px;position:relative;
+  }
+  .offer-box::before{
+    content:"PRE-BID EXPOSURE AUDIT";position:absolute;top:-12px;left:32px;
+    font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;font-weight:600;
+    background:var(--critical);color:#fff;padding:4px 12px;border-radius:6px;
+  }
+  .offer-price-row{
+    display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;
+    padding-bottom:24px;border-bottom:1px solid var(--line);margin-bottom:22px;
+  }
+  .offer-price .amount{display:block;font-family:'Spectral',serif;font-weight:700;font-size:48px;line-height:1;}
+  .offer-price .per{display:block;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-top:8px;}
+  .offer-guarantee{background:var(--low-bg);border:1px solid #C2D4BC;border-radius:12px;padding:16px 20px;}
+  .offer-guarantee .g-label{
+    display:block;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--low);font-weight:600;margin-bottom:6px;
+  }
+  .offer-guarantee .g-text{font-size:15px;line-height:1.55;}
+  .offer-list{margin:0 0 24px;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 28px;}
+  .offer-list li{font-size:14px;line-height:1.55;padding:6px 0 6px 26px;position:relative;}
+  .offer-list li::before{content:"✓";position:absolute;left:0;top:6px;color:var(--low);font-weight:700;}
+  .offer-cta-row{display:flex;gap:24px;align-items:center;flex-wrap:wrap;padding-top:8px;}
+  .offer-deposit{font-size:13px;color:var(--muted);line-height:1.55;max-width:440px;}
+  .offer-deposit strong{color:var(--ink);}
+  @media (max-width:760px){
+    .offer-box{padding:30px 24px;}
+    .offer-price-row{grid-template-columns:1fr;gap:20px;}
+    .offer-list{grid-template-columns:1fr;}
+  }
+
+  /* ===== CLOSE ===== */
+  .close-cta{text-align:center;background:var(--navy);border-radius:24px;padding:64px 32px;color:#EDE6D8;}
+  .close-cta .kicker{color:#E8A26C;}
+  .close-cta h2{color:#fff;margin:0 auto;}
+  .close-cta .sub{max-width:560px;margin:16px auto 0;font-size:15px;line-height:1.65;color:#A9B4CE;}
+  .close-ctas{margin-top:30px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  .close-cta .btn{background:#fff;color:var(--navy);}
+  .close-cta .btn.hot{background:var(--critical);color:#fff;}
+  .close-cta .contact{margin-top:24px;font-size:13.5px;color:#8FA0C4;font-family:'IBM Plex Mono',monospace;}
+  .close-cta .contact a{text-decoration:underline;}
+  .close-sign{margin-top:22px;font-family:'Spectral',serif;font-style:italic;font-size:16px;color:#C9D2E6;}
+  .close-sign b{font-style:normal;font-weight:600;color:#fff;}
+
+  /* ===== reveal ===== */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* ===== MOBILE ===== */
+  @media (max-width:640px){
+    section{padding:60px 0;}
+    .wrap{padding:0 18px;}
+    nav{padding:12px 16px;}
+    .brand{font-size:14px;}
+    .brand img{height:22px;width:22px;}
+    nav > .btn{padding:9px 14px;font-size:12.5px;}
+    .hero{padding-top:48px;}
+    .hero-ctas{flex-direction:column;width:100%;}
+    .hero-ctas .btn{width:100%;text-align:center;padding:15px 20px;}
+    .byline{padding:0 8px;text-align:left;}
+    .hero-report{margin-top:40px;}
+    .report{padding:20px 18px 18px;transform:none;}
+    .r-row{font-size:11px;}
+    .type-strip .row{gap:10px 22px;font-size:12px;}
+    .spine{flex-wrap:wrap;gap:10px;}
+    h2{font-size:25px;}
+    .lede{font-size:15px;}
+    .pull{font-size:16.5px;padding:18px 20px;}
+    .ladder{padding:24px 14px 20px;gap:8px;}
+    .rung .phase{font-size:11px;}
+    .rung .cost{font-size:9.5px;}
+    .econ-grid{gap:24px;}
+    .exhibit-art{min-height:260px;}
+    .exhibit-body{padding:22px 18px;}
+    .exhibit-costs{gap:18px;}
+    .exhibit-costs .value{font-size:18px;}
+    .case-shell{padding:52px 20px;margin:0 -18px;border-radius:18px;}
+    .stat{padding:16px 10px;}
+    .stat .num{font-size:27px;}
+    .stat .lbl{font-size:11px;}
+    .expo-card{padding:18px;}
+    .expo-card .big{font-size:25px;}
+    .case-quote{font-size:16.5px;padding-left:16px;}
+    .capture{padding:24px 18px;gap:24px;}
+    .capture-form{padding:20px 16px;}
+    .offer-box{padding:24px 18px;border-radius:16px;}
+    .offer-box::before{left:18px;font-size:10px;}
+    .offer-price .amount{font-size:40px;}
+    .offer-guarantee{padding:14px 16px;}
+    .offer-guarantee .g-text{font-size:14px;}
+    .offer-cta-row{flex-direction:column;align-items:stretch;}
+    .offer-cta-row .btn{text-align:center;}
+    .offer-deposit{max-width:none;}
+    .step{padding:20px 18px;}
+    .capacity-note{padding:15px 16px;font-size:13.5px;}
+    .fit-col{padding:20px 18px;}
+    .founder-creds{gap:8px;}
+    .cred{font-size:10.5px;padding:5px 10px;}
+    summary{font-size:15.5px;}
+    details p{font-size:14px;}
+    .close-cta{padding:44px 22px;border-radius:18px;}
+    .close-ctas{flex-direction:column;}
+    .close-ctas .btn{width:100%;text-align:center;}
+    .close-cta .contact{font-size:11.5px;line-height:1.7;}
+  }
+  @media (max-width:380px){
+    h1{font-size:30px;}
+    .stats{grid-template-columns:1fr 1fr;}
+  }
+  @media (hover:none){
+    .btn{padding-top:14px;padding-bottom:14px;}
+    summary{padding:4px 0;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1;transform:none;transition:none;}
+    .btn{transition:none;}
+  }
+
+  footer{padding:40px 24px;text-align:center;font-size:13px;color:var(--muted);background:var(--bg);border-top:1px solid var(--line);}
+  footer a{text-decoration:none;}
+  footer a:hover{color:var(--ink);}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <nav>
+    <a class="brand" href="#top">
+      <img src="https://preemptglobal.com/wp-content/uploads/2026/06/Untitled_design_1_-removebg-preview.png" alt="Preempt Global logo">
+      Preempt Global
+    </a>
+    <div class="navlinks">
+      <a href="#problem">The gap</a>
+      <a href="#exhibit">Exhibit A</a>
+      <a href="#case">The case</a>
+      <a href="#offer">The audit</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="btn" href="#offer">$3K · free if we find nothing ▸</a>
+  </nav>
+</header>
+
+<div class="wrap" id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <h1>Costly construction document mistakes — caught on paper, <span class="accent">before they hit the field.</span></h1>
+
+    <p class="positioning"><strong>Independent, owner-side review</strong> of bid and IFC sets for $30M+ commercial and industrial projects. Paid by the owner. Working for no one else.</p>
+
+    <p class="proof-line">Last set: <span class="num">26 conflicts</span> and <span class="num">$430K in exposure</span> that a top-5 GC's own coordination process missed.</p>
+
+    <div class="hero-ctas">
+      <a class="btn soft" href="#exhibit">See actual findings</a>
+      <a class="btn hot" href="mailto:jrossi@preemptglobal.com?subject=Set%20for%20review">Send a set for review</a>
+    </div>
+    <p class="guarantee-line">$3,000 · 48 hours · free if we don't find at least $50,000 in exposure</p>
+
+    <p class="byline"><span class="sig">JR</span>Joe Rossi, Founding Principal — five-plus years drawing these sets before reviewing them.</p>
+
+    <div class="hero-report">
+      <div class="report">
+        <div class="report-head">
+          <span class="title">FINDINGS REPORT</span>
+          <span class="meta">PG-2601 · pre-bid review</span>
+        </div>
+        <div class="r-row"><span class="k">Project type</span><span class="v">Data center · $30M+ CV</span></div>
+        <div class="r-row"><span class="k">Set reviewed</span><span class="v">133 sheets · bid set</span></div>
+        <div class="r-row"><span class="k">Conflicts found</span><span class="v hot">26 (6 critical)</span></div>
+        <div class="r-row"><span class="k">Caught by others</span><span class="v">0</span></div>
+        <div class="r-row"><span class="k">Confirmed exposure</span><span class="v hot">$430,000</span></div>
+        <div class="r-finding">
+          <div class="fl">FINDING 01 · CRITICAL · S-204 / M-302</div>
+          <p>W24×84 transfer girder @ El. 116′-4″ conflicts with 54″ supply duct @ El. 115′-10″. 18″ overlap. No penetration detail issued; note S-001 prohibits penetrating the member.</p>
+        </div>
+        <div class="r-stamp">
+          <span class="badge">CAUGHT PRE-BID</span>
+          <span class="pg">p. 1 of 31 · Preempt Global</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="type-strip">
+      <div class="label">Sets reviewed across</div>
+      <div class="row">
+        <span>DATA CENTERS</span>
+        <span>MANUFACTURING</span>
+        <span>HEALTHCARE</span>
+        <span>HIGHER-ED</span>
+        <span>WAREHOUSE &amp; DIST.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 01 THE GAP ============ -->
+  <section id="problem">
+    <div class="spine"><span class="step-n">01</span><p class="kicker">The gap</p></div>
+    <h2>Three people read your drawings. None of them work for you.</h2>
+    <p class="lede">On every large project, the same three parties open the same documents — and read them for three completely different reasons. Everyone is doing their job exactly as their incentives ask them to. The problem is that none of those incentives are yours.</p>
+
+    <div class="readers">
+      <div class="reader-card">
+        <div class="reader-mark a">A</div>
+        <span class="role">The architect</span>
+        <h3>Checks for design intent — then stops.</h3>
+        <p>QCs the set against their own drawings. Once it matches what they intended to draw, their review is done.</p>
+      </div>
+      <div class="reader-card">
+        <div class="reader-mark c">C</div>
+        <span class="role">The contractor</span>
+        <h3>Reads it like a chess board.</h3>
+        <p>Hunts for the gaps and ambiguities they can price later as change orders. A conflict found now is revenue found later.</p>
+      </div>
+      <div class="reader-card">
+        <div class="reader-mark o">O</div>
+        <span class="role">The owner — you</span>
+        <h3>Pays for every miss. Reviewed by no one.</h3>
+        <p>The only party in the room with no one reading the set purely on their behalf — and the only one who writes the check.</p>
+      </div>
+    </div>
+
+    <p class="pull">That gap is structural, not accidental. It is also exactly where the money leaks.</p>
+  </section>
+
+  <!-- ============ 02 THE ECONOMICS ============ -->
+  <section id="economics">
+    <div class="spine"><span class="step-n">02</span><p class="kicker">What the gap costs</p></div>
+    <h2>The same conflict costs nothing on paper — and a fortune in the field.</h2>
+
+    <div class="econ-grid">
+      <div class="ladder" role="img" aria-label="Bar chart: the same conflict costs $0 at design, $1K–$5K at permit, $5K–$50K at bid, and $20K–$200K+ in the field.">
+        <div class="rung"><div class="bar"></div><span class="phase">Design</span><span class="cost">$0</span></div>
+        <div class="rung"><div class="bar"></div><span class="phase">Permit</span><span class="cost">$1K–$5K</span></div>
+        <div class="rung"><div class="bar"></div><span class="phase">Bid</span><span class="cost">$5K–$50K</span></div>
+        <div class="rung"><div class="bar"></div><span class="phase">Field</span><span class="cost">$20K–$200K+</span></div>
+      </div>
+      <div class="econ-copy">
+        <p>A coordination conflict doesn't get more complicated as a project moves forward. <strong>It gets more expensive.</strong> The identical clash, caught at four different moments, carries four very different price tags.</p>
+        <p>The only variable that moves a conflict up that ladder is whether someone catches it before the set issues. <strong>Once a set goes to bid, the cheap fix is gone for good</strong> — and every uncaught conflict has already started climbing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 EXHIBIT A ============ -->
+  <section id="exhibit">
+    <div class="spine"><span class="step-n">03</span><p class="kicker">Exhibit A — one conflict, written out</p></div>
+    <h2>What a single miss actually looks like on a real set.</h2>
+    <p class="lede">Abstractions don't persuade anyone who builds for a living. So here is one finding in full — anonymized, but exactly as it appeared.</p>
+
+    <div class="exhibit">
+      <div class="exhibit-art">
+        <svg viewBox="0 0 500 420" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Elevation schematic: W24x84 transfer girder overlapping a 54-inch supply duct by 18 inches, with a note prohibiting penetration.">
+          <rect width="500" height="420" fill="#12203F"/>
+          <defs>
+            <pattern id="g2" width="24" height="24" patternUnits="userSpaceOnUse">
+              <path d="M24 0H0V24" fill="none" stroke="#22345C" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect width="500" height="420" fill="url(#g2)"/>
+          <rect x="20" y="195" width="460" height="50" fill="#C99A3E"/>
+          <rect x="20" y="185" width="460" height="12" fill="#DDB463"/>
+          <rect x="20" y="243" width="460" height="12" fill="#B08331"/>
+          <text x="30" y="176" fill="#DDB463" font-family="IBM Plex Mono, monospace" font-size="11">S-204 · W24×84 GIRDER @ 116'-4"</text>
+          <rect x="200" y="110" width="100" height="200" rx="12" fill="#2A4E8C" fill-opacity="0.92"/>
+          <rect x="200" y="110" width="100" height="200" rx="12" fill="none" stroke="#7FA6C9" stroke-width="2"/>
+          <text x="205" y="100" fill="#7FA6C9" font-family="IBM Plex Mono, monospace" font-size="11">M-302 · 54" DUCT @ 115'-10"</text>
+          <rect x="200" y="195" width="100" height="50" fill="#B5502E" fill-opacity="0.6" stroke="#E8956E" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <text x="212" y="350" fill="#E8956E" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="600">18" OVERLAP</text>
+          <text x="30" y="390" fill="#8FA4CC" font-family="IBM Plex Mono, monospace" font-size="10">NOTE S-001 — PENETRATIONS PROHIBITED</text>
+        </svg>
+      </div>
+      <div class="exhibit-body">
+        <div class="tag-row">
+          <span class="tag">Sheet S-204</span>
+          <span class="tag">Sheet M-302</span>
+          <span class="tag">Note S-001</span>
+        </div>
+        <h3>Structural / Mechanical clash — Critical</h3>
+        <p>S-204 sets a W24×84 transfer girder at elevation 116′-4″. M-302 routes a 54-inch supply duct at elevation 115′-10″ — an 18-inch overlap. No penetration detail was ever issued, and general note S-001 expressly prohibits penetrating the member.</p>
+        <div class="exhibit-costs">
+          <div><span class="label">Caught pre-bid</span><span class="value cool">$0</span></div>
+          <div><span class="label">If built as issued</span><span class="value hot">$85K–$140K</span></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="exhibit-after">No one flagged it — not the design team, not the contractor's coordination review. It would have surfaced in the field, by which point the cheapest number on that ladder was gone for everyone.</p>
+  </section>
+
+  <!-- ============ 04 THE CASE ============ -->
+  <section id="case" class="case-section case-shell">
+    <div style="max-width:992px;margin:0 auto;">
+      <div class="spine"><span class="step-n" style="background:rgba(232,162,108,.15);color:#E8A26C;">04</span><p class="kicker">The case — one bid set, 133 sheets</p></div>
+      <h2>Exhibit A wasn't the only one. It wasn't even close.</h2>
+      <p class="lede">The same bid set — 133 sheets for a large data center build — had already been run through a top-5 general contractor's own coordination process. Our independent, owner-side pass surfaced what that process missed.</p>
+
+      <div class="stats">
+        <div class="stat"><div class="num">133</div><div class="lbl">sheets reviewed</div></div>
+        <div class="stat"><div class="num">26</div><div class="lbl">cross-discipline conflicts found</div></div>
+        <div class="stat"><div class="num">6</div><div class="lbl">critical-path conflicts</div></div>
+        <div class="stat"><div class="num">0</div><div class="lbl">caught by anyone else on the project</div></div>
+      </div>
+
+      <div class="exposure">
+        <div class="expo-card hot">
+          <div class="label">Confirmed field-cost exposure</div>
+          <div class="big">$430,000</div>
+          <div class="note">The number we would stand behind in front of the owner — within a total range of $222K–$628K across all 26 findings.</div>
+        </div>
+        <div class="expo-card">
+          <div class="label">Schedule risk avoided</div>
+          <div class="big">56–112 days</div>
+          <div class="note">The kind of overrun that turns a project pro forma upside down.</div>
+        </div>
+      </div>
+
+      <p class="case-quote">Software flags maybes. We put a dollar figure — and our own fee — on every one of them.</p>
+    </div>
+  </section>
+
+  <!-- ============ FINDINGS FILE CAPTURE ============ -->
+  <section id="capture">
+    <div class="capture">
+      <div>
+        <p class="kicker">Not ready to send a set?</p>
+        <h2>Take the evidence first.</h2>
+        <p class="lede">If you'd rather see the work before you talk to anyone, that's the right instinct. We'll send you the full file from that review — all 26 conflicts, each written out the way Exhibit A is: sheet, mechanism, dollar range, schedule impact, fix. Fully anonymized. No call, no pitch.</p>
+      </div>
+      <div class="capture-form">
+        <div class="file-title">The UCCS Findings File</div>
+        <div class="file-meta">133 sheets · 26 conflicts · 6 critical<br>0 caught by anyone else</div>
+        <form id="captureForm" action="https://formspree.io/f/xgobjaoj" method="POST">
+          <input type="email" name="email" placeholder="you@company.com" aria-label="Work email" required>
+          <button class="btn hot" type="submit">Send me the file</button>
+        </form>
+        <p class="fine" id="captureNote">We send it as plain text, on reply — no link to click, no form to chase. The findings do the convincing. You decide what comes next.</p>
+        <p class="capture-error" id="captureError">Something went wrong — email jrossi@preemptglobal.com and we'll send it directly.</p>
+        <div class="capture-success" id="captureSuccess">
+          <p class="ok">On its way.</p>
+          <p>Check your inbox shortly. If it's not there in a few minutes, look in spam or write us at jrossi@preemptglobal.com.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 THE OFFER ============ -->
+  <section id="offer">
+    <div class="spine"><span class="step-n">05</span><p class="kicker">The offer, in plain terms</p></div>
+    <h2>The Pre-Bid Exposure Audit.</h2>
+    <p class="lede">One set, reviewed independently, in 48 hours. What you get back isn't a "review" — it's a documented exposure number, in dollars, with our name on it.</p>
+
+    <div class="offer-box">
+      <div class="offer-price-row">
+        <div class="offer-price">
+          <span class="amount">$3,000</span>
+          <span class="per">one set · 48 hours</span>
+        </div>
+        <div class="offer-guarantee">
+          <span class="g-label">The guarantee</span>
+          <span class="g-text">If we don't surface at least <strong>$50,000 in documented exposure</strong>, you pay nothing.</span>
+        </div>
+      </div>
+      <ul class="offer-list">
+        <li>Every conflict located by sheet and detail — with a dollar figure on each</li>
+        <li>Severity-tiered: critical, moderate, minor</li>
+        <li>Written findings report + 30-minute debrief with your team</li>
+        <li>Mutual NDA before any document moves · E&amp;O coverage on every engagement</li>
+      </ul>
+      <div class="offer-cta-row">
+        <a class="btn hot" href="mailto:jrossi@preemptglobal.com?subject=Set%20for%20audit">Send a set for audit</a>
+        <span class="offer-deposit">The $3,000 isn't a separate cost. Move forward into full-project coverage and <strong>every dollar of it comes straight off the price</strong> — so the audit works as a deposit, not a fee.</span>
+      </div>
+    </div>
+
+    <p class="lede" style="margin-top:24px;font-size:14.5px;">A $3,000 decision against a $20K–$200K change order isn't really about the money. It's about whether anyone's checking.</p>
+  </section>
+
+  <!-- ============ 06 PROCESS ============ -->
+  <section id="process">
+    <div class="spine"><span class="step-n">06</span><p class="kicker">What happens when you send a set</p></div>
+    <h2>Four steps, start to finish. No black box.</h2>
+
+    <div class="steps">
+      <div class="step">
+        <span class="n">01</span>
+        <h3>NDA &amp; receipt</h3>
+        <p>A mutual NDA is signed before any drawings move. Nothing is sent until it's in place — and your set is ours to review, not to share, store loosely, or keep past the engagement.</p>
+      </div>
+      <div class="step">
+        <span class="n">02</span>
+        <h3>Independent cross-discipline pass</h3>
+        <p>Drawings against drawings, drawings against specs, trade against trade — read the way a contractor prices it, but for you. Every review overseen personally by Joe Rossi.</p>
+      </div>
+      <div class="step">
+        <span class="n">03</span>
+        <h3>Findings report — in 48 hours</h3>
+        <p>From receipt to finished report in two days. You get back:</p>
+        <ul>
+          <li>Every conflict located by sheet and detail</li>
+          <li>Severity-tiered: critical, moderate, minor</li>
+          <li>An estimated field cost on each finding</li>
+          <li>Never a vague "area of concern"</li>
+        </ul>
+      </div>
+      <div class="step">
+        <span class="n">04</span>
+        <h3>30-minute debrief</h3>
+        <p>A call to walk every finding with your team, in plain terms — what it is, what it costs if it ships, and how to fix it before it does.</p>
+      </div>
+    </div>
+
+    <p class="capacity-note"><strong>Capacity is capped at four sets a month</strong> so each one gets senior attention — overseen personally, never a junior's first pass. It also means we turn down more than we take.</p>
+  </section>
+
+  <!-- ============ 07 FIT ============ -->
+  <section id="fit">
+    <div class="spine"><span class="step-n">07</span><p class="kicker">Before you write back</p></div>
+    <h2>This is not for everyone. Honestly, it isn't for most.</h2>
+    <p class="lede">We work only for the owner's side. So it's only fair to say plainly who this is built for — and who it isn't.</p>
+
+    <div class="fit-grid">
+      <div class="fit-col yes">
+        <h3><span class="dot"></span>Worth your time if</h3>
+        <ul>
+          <li>You own or develop large commercial or industrial builds at $30M+ construction value</li>
+          <li>You're an owner's rep or program manager running the build on the owner's behalf</li>
+          <li>You're a VP or Director of Development, Construction, or Capital Projects</li>
+          <li>A bid set or IFC set is about to go out — and no one independent is checking it for you</li>
+        </ul>
+      </div>
+      <div class="fit-col no">
+        <h3><span class="dot"></span>Not a fit if</h3>
+        <ul>
+          <li>You're a GC, architect of record, or design-build firm — the interests conflict</li>
+          <li>You're a REIT with no construction arm, or a public-sector public-bid owner</li>
+          <li>"Development" for you means acquisitions, not documents</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 08 FOUNDER ============ -->
+  <section id="founder">
+    <div class="spine"><span class="step-n">08</span><p class="kicker">Who is actually reading your set</p></div>
+    <h2>The people reading your set drew these documents for a living.</h2>
+
+    <div class="founder-grid">
+      <div class="monogram-lg">JR</div>
+      <div class="founder-copy">
+        <h3>Joe Rossi</h3>
+        <span class="role">Founding Principal, Preempt Global · <a href="https://www.linkedin.com/company/preempt-global/" target="_blank" rel="noopener">LinkedIn ↗</a></span>
+        <p>I spent five-plus years producing construction documents and running construction administration on large commercial projects, including multiple $50M+ builds — <strong>drawing the sets, then fielding the RFIs, coordination conflicts, and change orders</strong> that came from documents nobody checked closely enough before they issued.</p>
+        <p>Preempt Global is built around that experience: reviewers who've sat on both sides of the set, reading it the way a contractor prices it — but for the owner. Every review is overseen personally, and every finding carries my name. So does the guarantee.</p>
+        <div class="founder-creds">
+          <span class="cred">5+ yrs producing CDs</span>
+          <span class="cred">$50M+ commercial builds</span>
+          <span class="cred">Drawn, then defended in the field</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq">
+    <p class="kicker">Before you decide</p>
+    <h2>A few things owners ask first.</h2>
+
+    <div class="faq">
+      <details open>
+        <summary>How does confidentiality work?</summary>
+        <p>An NDA is signed before any drawings move. Nothing is sent until it's in place — and the set is ours to review, not to share, store loosely, or keep past the engagement. E&amp;O coverage is carried on every engagement, and your documents are deleted on completion.</p>
+      </details>
+      <details>
+        <summary>Doesn't our GC's or architect's review already cover this?</summary>
+        <p>No — and that's the whole point. The architect QCs the set against their own design intent. The contractor reads it for what they can price later. Both reviews are real; neither is run for you. This one is — paid by the owner, working for no one else. The case above is a set that had already been through a top-5 GC's coordination process.</p>
+      </details>
+      <details>
+        <summary>Doesn't BIM clash detection catch this already?</summary>
+        <p>Clash detection catches geometry — two elements overlapping inside the coordinated model. It doesn't catch the model contradicting the written spec, a general note that prohibits what another sheet requires, or details that don't overlap in the model but still stop work in the field. We read the issued set itself, which is where most of these conflicts actually live.</p>
+      </details>
+      <details>
+        <summary>What kinds of projects do you review?</summary>
+        <p>Large commercial and industrial builds — office, manufacturing, warehouse and distribution, healthcare, higher-ed, data centers, and other complex, multi-discipline sets. If it's $30M+ in construction value with multiple trades sharing tight coordination, it's the kind of set this review is built for.</p>
+      </details>
+      <details>
+        <summary>What do we actually get back?</summary>
+        <p>A written findings report: every conflict located by sheet and detail, severity-tiered, with an estimated field cost on each — plus a 30-minute debrief to walk it. Specific findings like Exhibit A above, never a vague "area of concern."</p>
+      </details>
+      <details>
+        <summary>What if you don't find anything worth the fee?</summary>
+        <p>Then you don't pay. If the audit doesn't surface at least $50,000 in documented exposure, it's free. On a build of this size and complexity there is always something to find — which is why we put the guarantee in writing.</p>
+      </details>
+      <details>
+        <summary>Who does the review?</summary>
+        <p>Joe Rossi oversees every review personally — five-plus years drawing construction documents and managing construction administration on large commercial projects, including $50M+ builds, before founding Preempt Global. The work is done by reviewers who've drawn these sets too, never outsourced and never a black box, with Joe's name on every finding. That oversight is why capacity is capped at four sets a month.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============ CLOSE ============ -->
+  <section id="close">
+    <div class="close-cta">
+      <p class="kicker">Send us one set</p>
+      <h2>If your set qualifies, we take four a month.</h2>
+      <p class="sub">In 48 hours you'll know, in dollars, what's hiding in your set — before the field finds it for you. <strong style="color:#fff;">$3,000, free if we don't find at least $50,000 in exposure</strong> — credited in full, every dollar, toward full-project coverage if you move forward. Send it, or take the findings file first and let the evidence decide.</p>
+      <div class="close-ctas">
+        <a class="btn hot" href="mailto:jrossi@preemptglobal.com?subject=Set%20for%20audit">Send a set — free if we find nothing</a>
+        <a class="btn" href="#capture">Take the findings file first</a>
+      </div>
+      <p class="contact">jrossi@preemptglobal.com · (570) 776-5660 · NDA before any document changes hands</p>
+      <p class="close-sign">— <b>Joe Rossi</b>, Founding Principal, Preempt Global</p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <b>Preempt Global</b> — Independent, owner-side document review · <a href="mailto:jrossi@preemptglobal.com">jrossi@preemptglobal.com</a>
+</footer>
+
+<script>
+  // scroll reveal
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.08,rootMargin:"0px 0px -6% 0px"});
+  document.querySelectorAll('section').forEach(function(s){ s.classList.add('reveal'); io.observe(s); });
+
+  // wired Formspree capture
+  var captureForm=document.getElementById('captureForm');
+  var captureError=document.getElementById('captureError');
+  if(captureForm){
+    captureForm.addEventListener('submit',function(e){
+      e.preventDefault();
+      captureError.style.display='none';
+      fetch(captureForm.action,{method:'POST',body:new FormData(captureForm),headers:{'Accept':'application/json'}})
+        .then(function(r){
+          if(r.ok){
+            captureForm.style.display='none';
+            document.getElementById('captureNote').style.display='none';
+            document.getElementById('captureSuccess').style.display='block';
+          } else { captureError.style.display='block'; }
+        })
+        .catch(function(){ captureError.style.display='block'; });
+    });
+  }
+</script>
+</body>
+</html>
