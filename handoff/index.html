@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preempt Global — Send a set. Here's exactly what happens to it.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F6EFE2;
+    --paper:#FFFCF6;
+    --ink:#2B2620;
+    --muted:#7E7568;
+    --line:#E9E0D0;
+    --critical:#8A2A22;
+    --critical-bg:#F1DCD6;
+    --moderate:#C99A3E;
+    --moderate-bg:#F3E7CB;
+    --low:#6E8F6B;
+    --low-bg:#DEE9DA;
+    --navy:#12203F;
+    --navy-line:#22345C;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;background:var(--bg);}
+  body{
+    margin:0;
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    -webkit-text-size-adjust:100%;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px;}
+  section{padding:84px 0;}
+  section[id]{scroll-margin-top:76px;}
+  h1,h2,h3,h4{font-family:'Spectral',Georgia,serif;margin:0;}
+  .kicker{
+    font-family:'Inter',sans-serif;
+    font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--critical);font-weight:700;margin-bottom:14px;
+  }
+  h2{
+    font-weight:600;
+    font-size:clamp(27px,3.5vw,40px);
+    line-height:1.16;
+    letter-spacing:-.012em;
+    max-width:740px;
+  }
+  h3{font-weight:600;letter-spacing:-.005em;}
+  .lede{
+    max-width:620px;margin-top:16px;
+    font-size:16px;line-height:1.7;color:var(--muted);
+  }
+  .lede strong{color:var(--ink);}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .btn{
+    background:var(--ink);color:#FFFCF6;
+    padding:12px 22px;border-radius:11px;
+    font-size:14px;font-weight:600;text-decoration:none;
+    display:inline-block;white-space:nowrap;
+    border:none;cursor:pointer;
+    font-family:'Inter',sans-serif;
+    transition:filter .2s ease;
+  }
+  .btn:hover{filter:brightness(1.15);}
+  .btn.hot{background:var(--critical);}
+  .btn.hot:hover{filter:none;background:#71211b;}
+  .btn.hot:disabled{opacity:.6;cursor:default;background:var(--critical);}
+  .btn.soft{background:#EDE5D4;color:var(--ink);}
+  a:focus-visible,.btn:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid var(--critical);outline-offset:3px;}
+
+  /* ===== NAV (identical to homepage) ===== */
+  header.site{
+    position:sticky;top:0;z-index:20;
+    background:rgba(246,239,226,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 24px;max-width:1040px;margin:0 auto;gap:16px;
+  }
+  .brand{display:flex;align-items:center;gap:8px;font-family:'Spectral',serif;font-weight:700;font-size:16px;text-decoration:none;}
+  .brand img{height:28px;width:28px;object-fit:contain;mix-blend-mode:multiply;display:block;}
+  .navlinks{display:flex;gap:26px;font-size:14px;color:var(--muted);}
+  .navlinks a{text-decoration:none;}
+  .navlinks a:hover{color:var(--ink);}
+  @media (max-width:860px){.navlinks{display:none;}}
+
+  /* ===== HERO (centered, identical structure to homepage) ===== */
+  .hero{padding:76px 0 0;text-align:center;}
+  h1{
+    font-weight:600;
+    font-size:clamp(33px,5.4vw,58px);
+    line-height:1.1;
+    letter-spacing:-.018em;
+    max-width:840px;margin:0 auto;
+  }
+  h1 .accent{color:var(--critical);}
+  .positioning{
+    margin:24px auto 0;
+    font-size:clamp(16px,2vw,18.5px);line-height:1.6;
+    color:var(--muted);max-width:640px;
+  }
+  .positioning strong{color:var(--ink);font-weight:600;}
+  .hero-ctas{margin-top:34px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:center;}
+  .guarantee-line{margin-top:15px;font-size:13px;color:var(--muted);font-family:'IBM Plex Mono',monospace;}
+  .byline{
+    margin:26px auto 0;font-size:13px;color:var(--muted);font-style:italic;
+    display:flex;align-items:center;justify-content:center;gap:10px;max-width:620px;
+  }
+  .byline .sig{
+    width:32px;height:32px;border-radius:50%;
+    background:var(--critical);
+    color:#F8F4ED;font-style:normal;font-weight:700;font-size:11px;
+    display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;
+    letter-spacing:.04em;flex-shrink:0;
+  }
+
+  /* protocol card in hero (mirrors homepage's findings-report artifact) */
+  .hero-report{max-width:560px;margin:56px auto 0;text-align:left;}
+  .report{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:6px 6px 14px 14px;
+    box-shadow:0 24px 60px -24px rgba(43,38,32,.35),0 2px 0 rgba(43,38,32,.04);
+    padding:26px 28px 24px;
+    position:relative;
+    transform:rotate(.4deg);
+  }
+  .report::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:5px;
+    background:var(--critical);border-radius:6px 6px 0 0;
+  }
+  .report-head{
+    display:flex;justify-content:space-between;align-items:baseline;
+    border-bottom:1.5px solid var(--ink);padding-bottom:12px;margin-bottom:16px;
+  }
+  .report-head .title{font-family:'Inter',sans-serif;font-weight:800;font-size:13.5px;letter-spacing:.08em;}
+  .report-head .meta{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);}
+  .r-row{font-family:'IBM Plex Mono',monospace;font-size:12px;display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dotted var(--line);gap:12px;}
+  .r-row .k{color:var(--muted);}
+  .r-row .v{font-weight:500;text-align:right;}
+  .r-row .v.hot{color:var(--critical);font-weight:700;}
+  .r-row .v.cool{color:var(--low);font-weight:700;}
+  .r-stamp{margin-top:18px;display:flex;justify-content:space-between;align-items:center;}
+  .r-stamp .badge{
+    font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;
+    border:1.5px solid var(--low);color:var(--low);padding:4px 10px;border-radius:6px;
+    transform:rotate(-2deg);font-weight:600;
+  }
+  .r-stamp .pg{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);}
+
+  /* ===== spine (identical to homepage) ===== */
+  .spine{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+  .spine .step-n{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;
+    color:var(--critical);background:var(--critical-bg);
+    padding:3px 10px;border-radius:20px;
+  }
+  .spine .kicker{margin:0;}
+
+  /* ===== PILLARS (homepage reader-card / step style) ===== */
+  .pillars{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px;}
+  .pillar{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:26px;}
+  .pillar .tag{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;color:var(--muted);background:var(--bg);
+    padding:2px 8px;border-radius:6px;display:inline-block;
+  }
+  .pillar h3{font-size:18px;margin:14px 0 8px;}
+  .pillar p{font-size:14px;line-height:1.65;color:var(--muted);margin:0;}
+  .pillar p strong{color:var(--ink);}
+  .pillar .inline{
+    display:inline-flex;align-items:center;gap:7px;margin-top:16px;
+    font-family:'Inter',sans-serif;font-weight:700;font-size:12.5px;letter-spacing:.03em;text-transform:uppercase;
+    color:var(--critical);text-decoration:none;transition:gap .25s;
+    background:none;border:none;cursor:pointer;padding:0;
+  }
+  .pillar .inline:hover{gap:12px;}
+  @media (max-width:760px){.pillars{grid-template-columns:1fr;}}
+
+  .pull{
+    margin-top:36px;padding:22px 26px;border-left:3px solid var(--critical);
+    background:var(--critical-bg);border-radius:0 12px 12px 0;
+    font-family:'Spectral',serif;font-style:italic;font-weight:600;font-size:19px;line-height:1.5;
+    max-width:660px;
+  }
+
+  /* ===== CHAIN OF CUSTODY (homepage steps style) ===== */
+  .steps{margin-top:44px;display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+  .step{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:26px;}
+  .step .n{
+    font-family:'Spectral',serif;font-weight:700;font-size:30px;
+    color:transparent;-webkit-text-stroke:1.3px var(--critical);
+    margin-bottom:12px;display:block;line-height:1;
+  }
+  .step h3{font-size:17px;margin-bottom:8px;}
+  .step p{font-size:14px;color:var(--muted);line-height:1.65;margin:0;}
+  @media (max-width:700px){.steps{grid-template-columns:1fr;}}
+  .capacity-note{
+    margin-top:24px;padding:18px 22px;background:var(--moderate-bg);border:1px solid #E3D3AC;
+    border-radius:14px;font-size:14px;color:var(--ink);max-width:660px;line-height:1.6;
+  }
+  .capacity-note strong{font-weight:700;}
+
+  /* ===== COMMITMENTS (homepage offer-list style, inside offer-box) ===== */
+  .offer-box{
+    margin-top:36px;background:var(--paper);border:1.5px solid var(--ink);border-radius:20px;
+    padding:38px 40px;position:relative;
+  }
+  .offer-box::before{
+    content:"WRITTEN INTO THE MUTUAL NDA";position:absolute;top:-12px;left:32px;
+    font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;font-weight:600;
+    background:var(--critical);color:#fff;padding:4px 12px;border-radius:6px;
+  }
+  .offer-list{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px 28px;}
+  .offer-list li{font-size:14px;line-height:1.55;padding:6px 0 6px 26px;position:relative;}
+  .offer-list li::before{content:"✓";position:absolute;left:0;top:6px;color:var(--low);font-weight:700;}
+  .offer-list li strong{display:block;color:var(--ink);}
+  .offer-list li span{color:var(--muted);font-size:13.5px;}
+  @media (max-width:760px){
+    .offer-box{padding:30px 24px;}
+    .offer-list{grid-template-columns:1fr;}
+  }
+
+  /* ===== CLOSE (identical navy block to homepage) ===== */
+  .close-cta{text-align:center;background:var(--navy);border-radius:24px;padding:64px 32px;color:#EDE6D8;}
+  .close-cta .kicker{color:#E8A26C;}
+  .close-cta h2{color:#fff;margin:0 auto;}
+  .close-cta .sub{max-width:560px;margin:16px auto 0;font-size:15px;line-height:1.65;color:#A9B4CE;}
+  .close-cta .seq{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.06em;color:#E8A26C;margin-top:20px;}
+  .close-ctas{margin-top:30px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  .close-cta .btn{background:#fff;color:var(--navy);}
+  .close-cta .btn.hot{background:var(--critical);color:#fff;}
+  .close-cta .btn .n{opacity:.65;font-family:'IBM Plex Mono',monospace;font-size:11px;margin-right:8px;}
+  .close-cta .contact{margin-top:24px;font-size:13.5px;color:#8FA0C4;font-family:'IBM Plex Mono',monospace;}
+  .close-cta .contact a{text-decoration:underline;}
+
+  /* ===== FAQ-style disclaimer / belief (homepage furniture) ===== */
+  .belief{
+    margin-top:0;font-family:'Spectral',serif;font-weight:500;font-size:19px;
+    line-height:1.5;color:var(--ink);max-width:620px;
+  }
+  .belief .accent{color:var(--critical);font-weight:600;}
+  .disclaimer{
+    margin-top:28px;padding-top:20px;border-top:1px solid var(--line);
+    font-size:12.5px;color:#B3A98F;max-width:80ch;line-height:1.65;
+  }
+
+  /* ===== reveal (identical to homepage) ===== */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* ===== MODALS (styled with homepage tokens) ===== */
+  .pg-modal-overlay{
+    position:fixed;inset:0;z-index:200;
+    background:rgba(18,32,63,.55);
+    display:flex;align-items:center;justify-content:center;
+    padding:24px;
+    opacity:0;visibility:hidden;
+    transition:opacity .25s ease,visibility 0s linear .25s;
+  }
+  .pg-modal-overlay.open{
+    opacity:1;visibility:visible;
+    transition:opacity .25s ease,visibility 0s linear 0s;
+  }
+  .pg-modal{
+    background:var(--paper);border:1.5px solid var(--ink);border-radius:20px;
+    max-width:470px;width:100%;
+    padding:34px 32px 30px;
+    position:relative;
+    box-shadow:0 24px 60px -24px rgba(18,32,63,.5);
+    transform:translateY(14px);
+    transition:transform .3s ease;
+  }
+  .pg-modal-overlay.open .pg-modal{transform:translateY(0);}
+  .pg-modal .ref{
+    font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;font-weight:600;
+    color:#fff;background:var(--critical);padding:4px 12px;border-radius:6px;display:inline-block;
+  }
+  .pg-modal h3{font-size:22px;margin:14px 0 12px;}
+  .pg-modal p{color:var(--muted);font-size:14.5px;line-height:1.65;margin:0;}
+  .pg-modal ul{margin:16px 0 0;padding:0;list-style:none;}
+  .pg-modal li{
+    font-size:13.5px;color:var(--ink);margin-bottom:9px;line-height:1.55;
+    padding-left:26px;position:relative;
+  }
+  .pg-modal li::before{content:"✓";position:absolute;left:0;top:0;color:var(--low);font-weight:700;}
+  .pg-modal-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;}
+  .pg-modal-close{
+    position:absolute;top:16px;right:16px;
+    width:30px;height:30px;border:1px solid var(--line);border-radius:9px;
+    background:transparent;display:grid;place-items:center;
+    cursor:pointer;color:var(--muted);font-family:'Inter',sans-serif;font-size:15px;
+    transition:border-color .2s,color .2s;
+  }
+  .pg-modal-close:hover{border-color:var(--critical);color:var(--critical);}
+
+  /* E&O form fields */
+  .pg-field{margin-top:16px;}
+  .pg-field label{
+    display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:12px;
+    letter-spacing:.05em;text-transform:uppercase;color:var(--ink);margin-bottom:7px;
+  }
+  .pg-field .hint{font-weight:400;text-transform:none;letter-spacing:0;color:#B3A98F;font-style:italic;}
+  .pg-field input{
+    width:100%;padding:12px 14px;
+    background:#fff;border:1px solid var(--line);border-radius:10px;
+    font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--ink);
+  }
+  .pg-field input:focus{outline:2px solid var(--critical);outline-offset:1px;border-color:var(--critical);}
+  .pg-form-status{
+    margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;
+    display:none;padding:10px 14px;border-radius:10px;line-height:1.5;
+  }
+  .pg-form-status.show{display:block;}
+  .pg-form-status.err{background:var(--critical-bg);color:#71211b;}
+  .pg-modal.sent .pg-eo-form{display:none;}
+  .pg-eo-sent-msg{
+    display:none;margin-top:18px;padding:16px 18px;background:var(--low-bg);border-radius:12px;
+    color:var(--ink);font-size:14px;line-height:1.6;
+  }
+
+  /* ===== MOBILE (mirrors homepage pass) ===== */
+  @media (max-width:640px){
+    section{padding:60px 0;}
+    .wrap{padding:0 18px;}
+    nav{padding:12px 16px;}
+    .brand{font-size:14px;}
+    .brand img{height:22px;width:22px;}
+    nav > .btn{padding:9px 14px;font-size:12.5px;}
+    .hero{padding-top:48px;}
+    .hero-ctas{flex-direction:column;width:100%;}
+    .hero-ctas .btn{width:100%;text-align:center;padding:15px 20px;}
+    .byline{padding:0 8px;text-align:left;}
+    .hero-report{margin-top:40px;}
+    .report{padding:20px 18px 18px;transform:none;}
+    .r-row{font-size:11px;}
+    .spine{flex-wrap:wrap;gap:10px;}
+    h2{font-size:25px;}
+    .lede{font-size:15px;}
+    .pull{font-size:16.5px;padding:18px 20px;}
+    .pillar{padding:20px 18px;}
+    .step{padding:20px 18px;}
+    .capacity-note{padding:15px 16px;font-size:13.5px;}
+    .offer-box{padding:24px 18px;border-radius:16px;}
+    .offer-box::before{left:18px;font-size:10px;}
+    .close-cta{padding:44px 22px;border-radius:18px;}
+    .close-ctas{flex-direction:column;}
+    .close-ctas .btn{width:100%;text-align:center;}
+    .close-cta .contact{font-size:11.5px;line-height:1.7;}
+    .pg-modal{padding:26px 20px 24px;}
+    .pg-modal-actions{flex-direction:column;}
+    .pg-modal-actions .btn{width:100%;text-align:center;}
+  }
+  @media (hover:none){.btn{padding-top:14px;padding-bottom:14px;}}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1;transform:none;transition:none;}
+    .btn,.pg-modal,.pg-modal-overlay{transition:none;}
+  }
+
+  footer{padding:40px 24px;text-align:center;font-size:13px;color:var(--muted);background:var(--bg);border-top:1px solid var(--line);}
+  footer a{text-decoration:none;}
+  footer a:hover{color:var(--ink);}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <nav>
+    <a class="brand" href="/">
+      <img src="https://preemptglobal.com/wp-content/uploads/2026/06/Untitled_design_1_-removebg-preview.png" alt="Preempt Global logo">
+      Preempt Global
+    </a>
+    <div class="navlinks">
+      <a href="#protections">The protections</a>
+      <a href="#chain">Chain of custody</a>
+      <a href="#commitments">Commitments</a>
+      <a href="#start">Start</a>
+    </div>
+    <button class="btn hot" type="button" data-modal-open="pg-nda-overlay">Sign the NDA ▸</button>
+  </nav>
+</header>
+
+<div class="wrap">
+
+  <!-- ============ HERO (centered, matching homepage) ============ -->
+  <section class="hero">
+    <h1>You're about to hand us a pre-bid set. <span class="accent">Here's exactly what happens to it.</span></h1>
+
+    <p class="positioning">Interest is easy. The hard part is sending confidential, competitively-sensitive documents to a firm you're still getting to know. So before you do — <strong>every protection is already in place</strong>, waiting on nothing but your click.</p>
+
+    <div class="hero-ctas">
+      <button class="btn soft" type="button" data-modal-open="pg-eo-overlay">Request E&amp;O certificate</button>
+      <button class="btn hot" type="button" data-modal-open="pg-nda-overlay">Sign the mutual NDA</button>
+    </div>
+    <p class="guarantee-line">NDA → secure upload → 48-hour review · nothing moves before the NDA is signed</p>
+
+    <p class="byline"><span class="sig">JR</span>I spent five years drawing these sets. I know what a bid set is worth — and I treat yours like it's worth exactly that.</p>
+
+    <!-- Protocol card: mirrors the homepage's findings-report artifact -->
+    <div class="hero-report">
+      <div class="report">
+        <div class="report-head">
+          <span class="title">HANDLING PROTOCOL</span>
+          <span class="meta">Rev 1.0 · owner-side only</span>
+        </div>
+        <div class="r-row"><span class="k">Mutual NDA</span><span class="v cool">Signed before any sheet moves</span></div>
+        <div class="r-row"><span class="k">Transfer &amp; storage</span><span class="v">Encrypted, end to end</span></div>
+        <div class="r-row"><span class="k">Access</span><span class="v">Sole, named, logged</span></div>
+        <div class="r-row"><span class="k">Model training</span><span class="v hot">Never</span></div>
+        <div class="r-row"><span class="k">Third-party sharing</span><span class="v hot">Never</span></div>
+        <div class="r-row"><span class="k">On completion</span><span class="v cool">Deleted · confirmed in writing</span></div>
+        <div class="r-stamp">
+          <span class="badge">E&amp;O COVERED</span>
+          <span class="pg">Preempt Global · handling protocol</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 01 THE PROTECTIONS ============ -->
+  <section id="protections">
+    <div class="spine"><span class="step-n">01</span><p class="kicker">Settled before a single sheet moves</p></div>
+    <h2>Four things already in place, waiting on nothing.</h2>
+    <p class="lede">The handoff is where most engagements stall. It shouldn't. Each of these is built and ready to send — the friction is on our side, not yours.</p>
+
+    <div class="pillars">
+      <div class="pillar reveal">
+        <span class="tag">§01 · Mutual NDA</span>
+        <h3>Signed both ways, in one click</h3>
+        <p>Binding before any documents change hands — signed in your browser, no printing, no scanning. You're not relying on a handshake; you're holding a <strong>countersigned mutual agreement with a tamper-proof audit trail.</strong></p>
+        <button type="button" class="inline" data-modal-open="pg-nda-overlay">Sign the mutual NDA →</button>
+      </div>
+      <div class="pillar reveal">
+        <span class="tag">§02 · E&amp;O insurance</span>
+        <h3>Professional liability on every engagement</h3>
+        <p>Errors &amp; omissions coverage is carried on <strong>every</strong> review. The certificate of insurance is available on request — or named to your entity by our broker, usually the same day.</p>
+        <button type="button" class="inline" data-modal-open="pg-eo-overlay">Request the E&amp;O certificate →</button>
+      </div>
+      <div class="pillar reveal">
+        <span class="tag">§03 · Data handling</span>
+        <h3>Encrypted, sole-access, then deleted</h3>
+        <p>Encrypted in transit and at rest. Sole access. <strong>Never shared with any third party, never used to train any model.</strong> Permanently deleted on completion — with written confirmation to you.</p>
+        <a class="inline" href="#chain">Read the full chain of custody ↓</a>
+      </div>
+      <div class="pillar reveal">
+        <span class="tag">§04 · Conflict-free</span>
+        <h3>We work for the owner. Only.</h3>
+        <p>Not the architect, not the GC, not the design-builder. Your set is read for <strong>your</strong> exposure and nobody else's — no competing relationship, no incentive to look away. That conflict-free position is the entire reason Preempt Global exists.</p>
+      </div>
+    </div>
+
+    <p class="pull">Your set is worth protecting exactly as hard as it's worth reviewing. We built for both.</p>
+  </section>
+
+  <!-- ============ 02 CHAIN OF CUSTODY ============ -->
+  <section id="chain">
+    <div class="spine"><span class="step-n">02</span><p class="kicker">Chain of custody</p></div>
+    <h2>What your documents touch, who can see them, and when they're gone.</h2>
+    <p class="lede">In order, end to end. No step is skipped and no step is optional.</p>
+
+    <div class="steps">
+      <div class="step reveal">
+        <span class="n">01</span>
+        <h3>Secure intake</h3>
+        <p>You upload to an encrypted file request. No email attachments, no public links, no account required on your end.</p>
+      </div>
+      <div class="step reveal">
+        <span class="n">02</span>
+        <h3>Encrypted storage</h3>
+        <p>Held in access-controlled, encrypted storage. Access is logged from the moment a file lands.</p>
+      </div>
+      <div class="step reveal">
+        <span class="n">03</span>
+        <h3>Sole-access review</h3>
+        <p>Reviewed under named, sole access — never forwarded, never copied to a shared drive, never circulated. Processed only inside confidential, access-controlled systems. Never used to train any model.</p>
+      </div>
+      <div class="step reveal">
+        <span class="n">04</span>
+        <h3>Guaranteed deletion</h3>
+        <p>On delivery of findings, all materials are permanently deleted within 30 days — and the deletion is confirmed to you in writing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 COMMITMENTS ============ -->
+  <section id="commitments">
+    <div class="spine"><span class="step-n">03</span><p class="kicker">The commitments, in plain terms</p></div>
+    <h2>No fine print designed to be missed.</h2>
+    <p class="lede">These are the terms the mutual NDA puts in writing.</p>
+
+    <div class="offer-box reveal">
+      <ul class="offer-list">
+        <li><strong>Single purpose</strong><span>Your documents are used to perform your review and nothing else.</span></li>
+        <li><strong>No third-party sharing</strong><span>Never sold, forwarded, or disclosed to anyone outside the engagement.</span></li>
+        <li><strong>No model training</strong><span>Your set is never used to train or improve any AI model.</span></li>
+        <li><strong>Encryption in transit &amp; at rest</strong><span>Protected from upload through deletion, end to end.</span></li>
+        <li><strong>Written deletion confirmation</strong><span>You receive written confirmation once materials are destroyed.</span></li>
+        <li><strong>Conflict-free engagement</strong><span>No relationship with the architect, GC, or design-builder on your project.</span></li>
+      </ul>
+    </div>
+
+    <p class="capacity-note"><strong>One more thing worth knowing:</strong> this page is a description of practice, but the signed mutual NDA is what governs — it's the binding document, and you hold a countersigned copy.</p>
+  </section>
+
+  <!-- ============ CLOSE (navy block, matching homepage) ============ -->
+  <section id="start">
+    <div class="close-cta reveal">
+      <p class="kicker">Clear the handoff</p>
+      <h2>Two clicks and the review starts.</h2>
+      <p class="sub">Sign the mutual NDA first. Then drop your set into the secure upload — <strong style="color:#fff;">the 48-hour clock starts the moment it lands.</strong></p>
+      <p class="seq">SEQUENCE: NDA → SECURE UPLOAD → 48-HOUR REVIEW</p>
+      <div class="close-ctas">
+        <button type="button" class="btn hot" data-modal-open="pg-nda-overlay"><span class="n">01</span>Sign the mutual NDA</button>
+        <button type="button" class="btn" data-modal-open="pg-upload-overlay"><span class="n">02</span>Upload your set securely</button>
+        <button type="button" class="btn" data-modal-open="pg-eo-overlay">Request E&amp;O certificate</button>
+      </div>
+      <p class="contact">jrossi@preemptglobal.com · (570) 776-5660 · NDA before any document changes hands</p>
+    </div>
+  </section>
+
+  <!-- ============ WHY THIS EXISTS ============ -->
+  <section style="padding-top:0;">
+    <p class="belief">On every large build, three parties read the documents. The architect checks for design intent. The GC reads for what they can price later. <span class="accent">The owner — who pays for every miss — is the only one with no one reading the set for them.</span></p>
+    <p class="disclaimer">This page summarizes how Preempt Global handles client documents. It is a description of practice, not a substitute for the signed mutual non-disclosure agreement, which governs in the event of any conflict. E&amp;O coverage details and certificate terms are provided on request. Nothing here constitutes professional certification of the underlying design.</p>
+  </section>
+
+</div>
+
+<footer>
+  <b>Preempt Global</b> — Independent, owner-side document review · <a href="mailto:jrossi@preemptglobal.com">jrossi@preemptglobal.com</a>
+</footer>
+
+<!-- ============ NDA MODAL ============ -->
+<div class="pg-modal-overlay" id="pg-nda-overlay">
+  <div class="pg-modal" role="dialog" aria-modal="true" aria-labelledby="pg-nda-title">
+    <button type="button" class="pg-modal-close" data-modal-close aria-label="Close">&times;</button>
+    <span class="ref">MUTUAL NDA</span>
+    <h3 id="pg-nda-title">You're about to sign a binding mutual NDA.</h3>
+    <p>This opens a secure DocuSeal signing session — a countersigned mutual agreement, not a one-sided form. It's legally binding once signed by both parties, with a tamper-proof audit trail attached.</p>
+    <ul>
+      <li>Signed entirely in your browser — no printing or scanning</li>
+      <li>Binding both ways before any documents change hands</li>
+      <li>You receive a fully countersigned copy for your records</li>
+    </ul>
+    <div class="pg-modal-actions">
+      <a class="btn hot" data-modal-continue href="https://docuseal.com/d/PsUkhyVcuBVPRY" target="_blank" rel="noopener">Continue to secure signing →</a>
+      <button type="button" class="btn soft" data-modal-close>Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ UPLOAD MODAL ============ -->
+<div class="pg-modal-overlay" id="pg-upload-overlay">
+  <div class="pg-modal" role="dialog" aria-modal="true" aria-labelledby="pg-upload-title">
+    <button type="button" class="pg-modal-close" data-modal-close aria-label="Close">&times;</button>
+    <span class="ref">SECURE HANDOFF</span>
+    <h3 id="pg-upload-title">You're about to open the encrypted upload.</h3>
+    <p>This link takes you to a dedicated, sole-access Dropbox file request created only for Preempt Global intake — not a public folder. No account or sign-in required on your end.</p>
+    <ul>
+      <li>Encrypted in transit and at rest</li>
+      <li>Held under sole access, never forwarded or shared</li>
+      <li>Permanently deleted on completion, confirmed in writing</li>
+    </ul>
+    <div class="pg-modal-actions">
+      <a class="btn hot" data-modal-continue href="https://www.dropbox.com/request/ewlqbjk3hlkpdys014ux" target="_blank" rel="noopener">Continue to secure upload →</a>
+      <button type="button" class="btn soft" data-modal-close>Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ E&O CERTIFICATE MODAL ============ -->
+<div class="pg-modal-overlay" id="pg-eo-overlay">
+  <div class="pg-modal" role="dialog" aria-modal="true" aria-labelledby="pg-eo-title">
+    <button type="button" class="pg-modal-close" data-modal-close aria-label="Close">&times;</button>
+    <span class="ref">E&amp;O CERTIFICATE OF INSURANCE</span>
+    <h3 id="pg-eo-title">Professional liability coverage, on every review.</h3>
+    <p>Errors &amp; omissions insurance is carried on every engagement Preempt Global takes on. We'll send a current certificate of insurance — and can name your entity as certificate holder if you'd like — usually the same day.</p>
+    <ul>
+      <li>Carried on every review, not just larger engagements</li>
+      <li>Certificate can be named to your entity on request</li>
+      <li>Typically sent same-day once requested</li>
+    </ul>
+
+    <form class="pg-eo-form" id="pg-eo-form" action="https://formspree.io/f/xzdljkrb" method="POST">
+      <div class="pg-field">
+        <label for="pg-eo-email">Where should the certificate be sent?</label>
+        <input type="email" id="pg-eo-email" name="email" placeholder="you@company.com" required>
+      </div>
+      <div class="pg-field">
+        <label for="pg-eo-entity">Entity name for certificate holder <span class="hint">(optional)</span></label>
+        <input type="text" id="pg-eo-entity" name="entity_name" placeholder="e.g. Acme Development LLC">
+      </div>
+      <input type="hidden" name="_subject" value="E&amp;O Certificate Request">
+      <div class="pg-modal-actions">
+        <button type="submit" class="btn hot" id="pg-eo-submit">Send my request →</button>
+        <button type="button" class="btn soft" data-modal-close>Cancel</button>
+      </div>
+      <div class="pg-form-status" id="pg-eo-status"></div>
+    </form>
+
+    <p class="pg-eo-sent-msg" id="pg-eo-sent-msg">Got it — thanks. Your certificate request has been sent, and you should hear from us shortly, usually the same day.</p>
+  </div>
+</div>
+
+<script>
+  // scroll reveal (identical to homepage)
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.08,rootMargin:"0px 0px -6% 0px"});
+  document.querySelectorAll('.reveal').forEach(function(s){ io.observe(s); });
+
+  // ---------- generic modal system ----------
+  var openOverlay=null;
+  function openModal(id){
+    var overlay=document.getElementById(id);
+    if(!overlay) return;
+    overlay.classList.add('open');
+    openOverlay=overlay;
+    document.addEventListener('keydown', onKey);
+  }
+  function closeModal(){
+    if(!openOverlay) return;
+    openOverlay.classList.remove('open');
+    openOverlay=null;
+    document.removeEventListener('keydown', onKey);
+  }
+  function onKey(e){ if(e.key==='Escape') closeModal(); }
+
+  document.querySelectorAll('[data-modal-open]').forEach(function(btn){
+    btn.addEventListener('click', function(){ openModal(btn.getAttribute('data-modal-open')); });
+  });
+  document.querySelectorAll('[data-modal-close]').forEach(function(btn){
+    btn.addEventListener('click', closeModal);
+  });
+  document.querySelectorAll('.pg-modal-overlay').forEach(function(overlay){
+    overlay.addEventListener('click', function(e){ if(e.target===overlay) closeModal(); });
+  });
+  document.querySelectorAll('[data-modal-continue]').forEach(function(link){
+    link.addEventListener('click', function(){ setTimeout(closeModal, 200); });
+  });
+
+  // ---------- E&O form via Formspree ----------
+  var eoForm=document.getElementById('pg-eo-form');
+  if(eoForm){
+    var eoStatus=document.getElementById('pg-eo-status');
+    var eoSubmit=document.getElementById('pg-eo-submit');
+    var eoModal=document.querySelector('#pg-eo-overlay .pg-modal');
+    var eoSentMsg=document.getElementById('pg-eo-sent-msg');
+
+    eoForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      eoSubmit.disabled=true;
+      eoSubmit.textContent='Sending…';
+      eoStatus.classList.remove('show','err');
+
+      fetch(eoForm.action, {
+        method:'POST',
+        body:new FormData(eoForm),
+        headers:{ 'Accept':'application/json' }
+      }).then(function(response){
+        if(response.ok){
+          eoModal.classList.add('sent');
+          eoSentMsg.style.display='block';
+        } else {
+          eoStatus.textContent='Something went wrong — please try again or email jrossi@preemptglobal.com directly.';
+          eoStatus.classList.add('show','err');
+          eoSubmit.disabled=false;
+          eoSubmit.textContent='Send my request →';
+        }
+      }).catch(function(){
+        eoStatus.textContent='Something went wrong — please try again or email jrossi@preemptglobal.com directly.';
+        eoStatus.classList.add('show','err');
+        eoSubmit.disabled=false;
+        eoSubmit.textContent='Send my request →';
+      });
+    });
+
+    // reset form each time the modal reopens
+    document.querySelectorAll('[data-modal-open="pg-eo-overlay"]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        eoModal.classList.remove('sent');
+        eoSentMsg.style.display='none';
+        eoStatus.classList.remove('show','err');
+        eoSubmit.disabled=false;
+        eoSubmit.textContent='Send my request →';
+        eoForm.reset();
+      });
+    });
+  }
+</script>
+</body>
+</html>
