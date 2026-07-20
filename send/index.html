@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preempt Global — Send a set for review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F6EFE2;
+    --paper:#FFFCF6;
+    --ink:#2B2620;
+    --muted:#7E7568;
+    --line:#E9E0D0;
+    --critical:#8A2A22;
+    --critical-bg:#F1DCD6;
+    --moderate:#C99A3E;
+    --moderate-bg:#F3E7CB;
+    --low:#6E8F6B;
+    --low-bg:#DEE9DA;
+    --navy:#12203F;
+    --navy-line:#22345C;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;background:var(--bg);}
+  body{
+    margin:0;
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    -webkit-text-size-adjust:100%;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px;}
+  section{padding:84px 0;}
+  section[id]{scroll-margin-top:76px;}
+  h1,h2,h3{font-family:'Spectral',Georgia,serif;margin:0;}
+  .kicker{
+    font-family:'Inter',sans-serif;
+    font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--critical);font-weight:700;margin-bottom:14px;
+  }
+  h2{
+    font-weight:600;
+    font-size:clamp(27px,3.5vw,40px);
+    line-height:1.16;
+    letter-spacing:-.012em;
+    max-width:740px;
+  }
+  h3{font-weight:600;letter-spacing:-.005em;}
+  .lede{
+    max-width:620px;margin-top:16px;
+    font-size:16px;line-height:1.7;color:var(--muted);
+  }
+  .lede strong{color:var(--ink);}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .btn{
+    background:var(--ink);color:#FFFCF6;
+    padding:12px 22px;border-radius:11px;
+    font-size:14px;font-weight:600;text-decoration:none;
+    display:inline-block;white-space:nowrap;
+    border:none;cursor:pointer;
+    font-family:'Inter',sans-serif;
+    transition:filter .2s ease;
+  }
+  .btn:hover{filter:brightness(1.15);}
+  .btn.hot{background:var(--critical);}
+  .btn.hot:hover{filter:none;background:#71211b;}
+  .btn.hot:disabled{opacity:.6;cursor:default;background:var(--critical);}
+  .btn.soft{background:#EDE5D4;color:var(--ink);}
+  a:focus-visible,.btn:focus-visible,input:focus-visible,select:focus-visible,button:focus-visible{outline:2px solid var(--critical);outline-offset:3px;}
+
+  /* ===== NAV (identical to homepage) ===== */
+  header.site{
+    position:sticky;top:0;z-index:20;
+    background:rgba(246,239,226,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 24px;max-width:1040px;margin:0 auto;gap:16px;
+  }
+  .brand{display:flex;align-items:center;gap:8px;font-family:'Spectral',serif;font-weight:700;font-size:16px;text-decoration:none;}
+  .brand img{height:28px;width:28px;object-fit:contain;mix-blend-mode:multiply;display:block;}
+  .navlinks{display:flex;gap:26px;font-size:14px;color:var(--muted);}
+  .navlinks a{text-decoration:none;}
+  .navlinks a:hover{color:var(--ink);}
+  @media (max-width:860px){.navlinks{display:none;}}
+
+  /* ===== HERO (centered, identical structure to homepage) ===== */
+  .hero{padding:76px 0 0;text-align:center;}
+  h1{
+    font-weight:600;
+    font-size:clamp(33px,5.4vw,58px);
+    line-height:1.1;
+    letter-spacing:-.018em;
+    max-width:840px;margin:0 auto;
+  }
+  h1 .accent{color:var(--critical);}
+  .positioning{
+    margin:24px auto 0;
+    font-size:clamp(16px,2vw,18.5px);line-height:1.6;
+    color:var(--muted);max-width:640px;
+  }
+  .positioning strong{color:var(--ink);font-weight:600;}
+  .hero-ctas{margin-top:34px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:center;}
+  .guarantee-line{margin-top:15px;font-size:13px;color:var(--muted);font-family:'IBM Plex Mono',monospace;}
+  .byline{
+    margin:26px auto 0;font-size:13px;color:var(--muted);font-style:italic;
+    display:flex;align-items:center;justify-content:center;gap:10px;max-width:620px;
+  }
+  .byline .sig{
+    width:32px;height:32px;border-radius:50%;
+    background:var(--critical);
+    color:#F8F4ED;font-style:normal;font-weight:700;font-size:11px;
+    display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;
+    letter-spacing:.04em;flex-shrink:0;
+  }
+
+  /* ===== spine (identical to homepage) ===== */
+  .spine{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+  .spine .step-n{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;
+    color:var(--critical);background:var(--critical-bg);
+    padding:3px 10px;border-radius:20px;
+  }
+  .spine .kicker{margin:0;}
+
+  /* ===== WHAT HAPPENS NEXT (homepage steps style) ===== */
+  .steps{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .step{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:26px;}
+  .step .n{
+    font-family:'Spectral',serif;font-weight:700;font-size:30px;
+    color:transparent;-webkit-text-stroke:1.3px var(--critical);
+    margin-bottom:12px;display:block;line-height:1;
+  }
+  .step h3{font-size:17px;margin-bottom:8px;}
+  .step p{font-size:14px;color:var(--muted);line-height:1.65;margin:0;}
+  .step p strong{color:var(--ink);}
+  @media (max-width:760px){.steps{grid-template-columns:1fr;}}
+
+  /* ===== FORM + TRUST GRID ===== */
+  .form-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:32px;align-items:start;margin-top:40px;}
+  @media (max-width:860px){.form-grid{grid-template-columns:1fr;}}
+
+  /* form box: homepage offer-box style */
+  .form-box{
+    background:var(--paper);border:1.5px solid var(--ink);border-radius:20px;
+    padding:38px 40px;position:relative;
+  }
+  .form-box::before{
+    content:"THE SET YOU WANT REVIEWED";position:absolute;top:-12px;left:32px;
+    font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;font-weight:600;
+    background:var(--critical);color:#fff;padding:4px 12px;border-radius:6px;
+  }
+  .form-box .lead{font-size:14.5px;color:var(--muted);margin:4px 0 22px;line-height:1.6;}
+  .field{margin-bottom:16px;}
+  .field label{
+    display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:12px;
+    letter-spacing:.05em;text-transform:uppercase;color:var(--ink);margin-bottom:7px;
+  }
+  .field input,.field select{
+    width:100%;padding:12px 14px;
+    background:#fff;border:1px solid var(--line);border-radius:10px;
+    font-family:'IBM Plex Mono',monospace;font-size:13.5px;color:var(--ink);
+    appearance:auto;
+  }
+  .field input:focus,.field select:focus{outline:2px solid var(--critical);outline-offset:1px;border-color:var(--critical);}
+  .field-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media (max-width:560px){.field-pair{grid-template-columns:1fr;}}
+  .nda-line{
+    font-size:13.5px;line-height:1.55;color:var(--ink);
+    background:var(--critical-bg);border-left:3px solid var(--critical);
+    padding:13px 16px;border-radius:0 10px 10px 0;margin:8px 0 22px;
+  }
+  .nda-line strong{color:var(--critical);}
+  .submit-btn{width:100%;justify-content:center;display:inline-flex;align-items:center;gap:10px;font-size:15px;padding:15px 26px;}
+  .form-foot{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--muted);margin-top:14px;text-align:center;line-height:1.6;}
+  .hp{position:absolute;left:-9999px;}
+  .form-error{
+    display:none;margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;
+    color:#71211b;background:var(--critical-bg);padding:10px 14px;border-radius:10px;line-height:1.5;
+  }
+  .form-success{
+    display:none;background:var(--paper);border:1.5px solid var(--ink);border-radius:20px;
+    padding:38px 40px;
+  }
+  .form-success .badge{
+    font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;
+    border:1.5px solid var(--low);color:var(--low);padding:4px 10px;border-radius:6px;
+    font-weight:600;display:inline-block;margin-bottom:14px;
+  }
+  .form-success h3{font-size:24px;margin:0 0 12px;}
+  .form-success p{margin:0 0 14px;font-size:15px;color:var(--muted);line-height:1.65;}
+  .form-success p:last-child{margin-bottom:0;}
+  .form-success strong{color:var(--ink);}
+  @media (max-width:640px){.form-box,.form-success{padding:26px 20px;}.form-box::before{left:18px;font-size:10px;}}
+
+  /* trust column: homepage card style */
+  .trust-col{display:flex;flex-direction:column;gap:14px;}
+  .trust-card{
+    background:var(--paper);border:1px solid var(--line);border-radius:14px;
+    padding:18px 20px;display:flex;gap:14px;
+  }
+  .trust-card .tick{
+    flex:none;width:22px;height:22px;border-radius:50%;
+    background:var(--low-bg);color:var(--low);
+    display:grid;place-items:center;margin-top:2px;
+    font-weight:700;font-size:12px;
+  }
+  .trust-card .tick::before{content:"✓";}
+  .trust-card b{font-family:'Inter',sans-serif;font-weight:600;font-size:14px;display:block;margin-bottom:3px;color:var(--ink);}
+  .trust-card span{color:var(--muted);font-size:13.5px;line-height:1.55;display:block;}
+  .trust-card a{color:var(--critical);text-decoration:none;font-weight:600;}
+  .trust-card a:hover{text-decoration:underline;}
+
+  /* ===== DIRECT CONTACT (navy close block, matching homepage) ===== */
+  .close-cta{text-align:center;background:var(--navy);border-radius:24px;padding:64px 32px;color:#EDE6D8;}
+  .close-cta .kicker{color:#E8A26C;}
+  .close-cta h2{color:#fff;margin:0 auto;}
+  .close-cta .sub{max-width:540px;margin:16px auto 0;font-size:15px;line-height:1.65;color:#A9B4CE;}
+  .close-cta .sub strong{color:#fff;}
+  .close-ctas{margin-top:30px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  .close-cta .btn{background:#fff;color:var(--navy);}
+  .close-cta .btn.hot{background:var(--critical);color:#fff;}
+  .close-cta .contact{margin-top:24px;font-size:13.5px;color:#8FA0C4;font-family:'IBM Plex Mono',monospace;}
+  .close-cta .contact a{text-decoration:underline;}
+  .close-sign{margin-top:22px;font-family:'Spectral',serif;font-style:italic;font-size:16px;color:#C9D2E6;}
+  .close-sign b{font-style:normal;font-weight:600;color:#fff;}
+
+  /* ===== reveal (identical to homepage) ===== */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* ===== MOBILE (mirrors homepage pass) ===== */
+  @media (max-width:640px){
+    section{padding:60px 0;}
+    .wrap{padding:0 18px;}
+    nav{padding:12px 16px;}
+    .brand{font-size:14px;}
+    .brand img{height:22px;width:22px;}
+    nav > .btn{padding:9px 14px;font-size:12.5px;}
+    .hero{padding-top:48px;}
+    .hero-ctas{flex-direction:column;width:100%;}
+    .hero-ctas .btn{width:100%;text-align:center;padding:15px 20px;}
+    .byline{padding:0 8px;text-align:left;}
+    .spine{flex-wrap:wrap;gap:10px;}
+    h2{font-size:25px;}
+    .lede{font-size:15px;}
+    .step{padding:20px 18px;}
+    .close-cta{padding:44px 22px;border-radius:18px;}
+    .close-ctas{flex-direction:column;}
+    .close-ctas .btn{width:100%;text-align:center;}
+    .close-cta .contact{font-size:11.5px;line-height:1.7;}
+  }
+  @media (hover:none){.btn{padding-top:14px;padding-bottom:14px;}}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1;transform:none;transition:none;}
+    .btn{transition:none;}
+  }
+
+  footer{padding:40px 24px;text-align:center;font-size:13px;color:var(--muted);background:var(--bg);border-top:1px solid var(--line);}
+  footer a{text-decoration:none;}
+  footer a:hover{color:var(--ink);}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <nav>
+    <a class="brand" href="/">
+      <img src="https://preemptglobal.com/wp-content/uploads/2026/06/Untitled_design_1_-removebg-preview.png" alt="Preempt Global logo">
+      Preempt Global
+    </a>
+    <div class="navlinks">
+      <a href="#next">What happens next</a>
+      <a href="#request">Request the review</a>
+      <a href="#direct">Reach Joe directly</a>
+    </div>
+    <a class="btn hot" href="#request">Request the review ▸</a>
+  </nav>
+</header>
+
+<div class="wrap">
+
+  <!-- ============ HERO (centered, matching homepage) ============ -->
+  <section class="hero">
+    <h1>Tell us about the set. <span class="accent">Nothing moves until the NDA does.</span></h1>
+
+    <p class="positioning">A few details so we can scope the review and confirm it's a fit. <strong>No documents change hands at this step</strong> — the mutual NDA comes first, then you send the set.</p>
+
+    <div class="hero-ctas">
+      <a class="btn soft" href="#next">See what happens next</a>
+      <a class="btn hot" href="#request">Request the review</a>
+    </div>
+    <p class="guarantee-line">$3,000 · 48 hours · free if we don't find at least $50,000 in exposure</p>
+
+    <p class="byline"><span class="sig">JR</span>Joe Rossi, Founding Principal — replies within one business day, personally.</p>
+  </section>
+
+  <!-- ============ 01 WHAT HAPPENS NEXT ============ -->
+  <section id="next">
+    <div class="spine"><span class="step-n">01</span><p class="kicker">What happens next</p></div>
+    <h2>Three steps between this page and your findings report.</h2>
+
+    <div class="steps">
+      <div class="step reveal">
+        <span class="n">01</span>
+        <h3>You tell us about the project</h3>
+        <p>The short form below — enough to scope it and confirm the fit. <strong>No drawings yet.</strong></p>
+      </div>
+      <div class="step reveal">
+        <span class="n">02</span>
+        <h3>We send a mutual NDA</h3>
+        <p>Within one business day, with our E&amp;O certificate attached. Nothing is sent until it's signed.</p>
+      </div>
+      <div class="step reveal">
+        <span class="n">03</span>
+        <h3>You send the set — findings in 48 hours</h3>
+        <p>Every conflict by sheet and detail, with a dollar range and a fix.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 THE FORM ============ -->
+  <section id="request">
+    <div class="spine"><span class="step-n">02</span><p class="kicker">Request the review</p></div>
+    <h2>Five fields. One business day.</h2>
+    <p class="lede">Enough for us to scope the review — everything else happens after the NDA.</p>
+
+    <div class="form-grid">
+      <div>
+        <form class="form-box reveal" id="sendForm" action="https://formspree.io/f/xgobjaoj" method="POST">
+          <p class="lead" style="margin-top:8px;">We reply within one business day to scope the review and send the mutual NDA.</p>
+
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="_subject" value="New set for review — preemptglobal.com">
+
+          <div class="field-pair">
+            <div class="field">
+              <label for="f-name">Your name</label>
+              <input type="text" id="f-name" name="name" placeholder="Jane Okafor" required>
+            </div>
+            <div class="field">
+              <label for="f-email">Work email</label>
+              <input type="email" id="f-email" name="email" placeholder="you@company.com" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="f-project">Project name</label>
+            <input type="text" id="f-project" name="project_name" placeholder="e.g. Site 12 — Phase 2" required>
+          </div>
+
+          <div class="field-pair">
+            <div class="field">
+              <label for="f-value">Construction value</label>
+              <input type="text" id="f-value" name="construction_value" placeholder="e.g. $80,000,000" required>
+            </div>
+            <div class="field">
+              <label for="f-phase">Project phase</label>
+              <select id="f-phase" name="project_phase">
+                <option>Design Development</option>
+                <option>Permit Set</option>
+                <option selected>Bid Set</option>
+                <option>Issued for Construction</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="nda-line"><strong>An NDA is signed before any drawings move.</strong> Do not attach or upload the set here — we'll request it only after the NDA is in place.</div>
+
+          <button type="submit" class="btn hot submit-btn" id="submitBtn">Request the review →</button>
+          <div class="form-foot">$50,000 in exposure or it's free · $3,000 if we find it, credited in full toward a full-project engagement</div>
+          <div class="form-error" id="formError">Something went wrong — please email jrossi@preemptglobal.com and we'll pick it up right away.</div>
+        </form>
+
+        <div class="form-success" id="formSuccess">
+          <span class="badge">REQUEST RECEIVED</span>
+          <h3>You're in the queue.</h3>
+          <p>We'll follow up within one business day to scope the review and send the <strong>mutual NDA</strong>, with our E&amp;O certificate attached.</p>
+          <p><strong>No documents move before that's signed.</strong> Once it is, you send the set and the 48-hour clock starts.</p>
+        </div>
+      </div>
+
+      <div class="trust-col">
+        <div class="trust-card reveal"><div class="tick"></div><div><b>NDA first, always</b><span>A mutual NDA is signed before any drawing is sent. Nothing moves without it.</span></div></div>
+        <div class="trust-card reveal"><div class="tick"></div><div><b>Insured</b><span>Professional liability (E&amp;O) coverage on every engagement; certificate sent with the NDA.</span></div></div>
+        <div class="trust-card reveal"><div class="tick"></div><div><b>Four sets a month</b><span>Capacity is deliberately limited so each review is overseen personally.</span></div></div>
+        <div class="trust-card reveal"><div class="tick"></div><div><b>Your documents, handled</b><span>Encrypted, sole-access, never shared — and deleted on completion, confirmed in writing. <a href="/secure-handoff">Read the full handling protocol →</a></span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DIRECT CONTACT (navy block, matching homepage) ============ -->
+  <section id="direct">
+    <div class="close-cta reveal">
+      <p class="kicker">Prefer a human?</p>
+      <h2>Reach Joe directly.</h2>
+      <p class="sub">Skip the form entirely if you'd rather. Email, call, or grab 30 minutes — <strong>every reply comes from Joe, within one business day.</strong></p>
+      <div class="close-ctas">
+        <a class="btn hot" href="mailto:jrossi@preemptglobal.com?subject=One%20set%20for%20review">Email Joe directly</a>
+        <a class="btn" href="https://calendly.com/jrossi-preemptglobal/30min" target="_blank" rel="noopener">Grab 30 minutes</a>
+      </div>
+      <p class="contact">jrossi@preemptglobal.com · (570) 776-5660 · NDA before any document changes hands</p>
+      <p class="close-sign">— <b>Joe Rossi</b>, Founding Principal, Preempt Global</p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <b>Preempt Global</b> — Independent, owner-side document review · <a href="mailto:jrossi@preemptglobal.com">jrossi@preemptglobal.com</a>
+</footer>
+
+<script>
+  // scroll reveal (identical to homepage)
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.08,rootMargin:"0px 0px -6% 0px"});
+  document.querySelectorAll('.reveal').forEach(function(s){ io.observe(s); });
+
+  // Formspree intake form
+  var sendForm=document.getElementById('sendForm');
+  var formError=document.getElementById('formError');
+  var submitBtn=document.getElementById('submitBtn');
+  if(sendForm){
+    sendForm.addEventListener('submit',function(e){
+      e.preventDefault();
+      formError.style.display='none';
+      submitBtn.disabled=true;
+      submitBtn.textContent='Sending…';
+      fetch(sendForm.action,{method:'POST',body:new FormData(sendForm),headers:{'Accept':'application/json'}})
+        .then(function(r){
+          if(r.ok){
+            sendForm.style.display='none';
+            var ok=document.getElementById('formSuccess');
+            ok.style.display='block';
+            ok.scrollIntoView({behavior:'smooth',block:'center'});
+          } else {
+            formError.style.display='block';
+            submitBtn.disabled=false;
+            submitBtn.textContent='Request the review →';
+          }
+        })
+        .catch(function(){
+          formError.style.display='block';
+          submitBtn.disabled=false;
+          submitBtn.textContent='Request the review →';
+        });
+    });
+  }
+</script>
+</body>
+</html>
