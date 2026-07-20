@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Architect QC Isn't Owner Protection — Here's the Difference — Preempt Global</title>
+<meta name="description" content="The architect's QC and the GC's coordination review are both real — but neither is scoped to protect the owner. Here's what closes that gap.">
+<link rel="canonical" href="https://preemptglobal.com/blog/architect-qc-vs-owner-review/">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Architect QC Isn't Owner Protection — Here's the Difference">
+<meta property="og:description" content="The architect's QC and the GC's coordination review are both real — but neither is scoped to protect the owner. Here's what closes that gap.">
+<meta property="og:url" content="https://preemptglobal.com/blog/architect-qc-vs-owner-review/">
+<meta property="og:image" content="https://preemptglobal.com/wp-content/uploads/2026/06/Untitled_design_1_-removebg-preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Architect QC Isn't Owner Protection — Here's the Difference">
+<meta name="twitter:description" content="The architect's QC and the GC's coordination review are both real — but neither is scoped to protect the owner. Here's what closes that gap.">
+<meta name="twitter:image" content="https://preemptglobal.com/wp-content/uploads/2026/06/Untitled_design_1_-removebg-preview.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Architect QC Isn't Owner Protection \u2014 Here's the Difference",
+  "description": "The architect's QC and the GC's coordination review are both real \u2014 but neither is scoped to protect the owner. Here's what closes that gap.",
+  "datePublished": "2026-07-20",
+  "dateModified": "2026-07-20",
+  "image": "https://preemptglobal.com/wp-content/uploads/2026/06/Untitled_design_1_-removebg-preview.png",
+  "mainEntityOfPage": "https://preemptglobal.com/blog/architect-qc-vs-owner-review/",
+  "author": {
+    "@type": "Person",
+    "name": "Joe Rossi"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Preempt Global"
+  }
+}
+</script>
+
+<style>
+  :root{
+    --bg:#F6EFE2;
+    --paper:#FFFCF6;
+    --ink:#2B2620;
+    --muted:#7E7568;
+    --line:#E9E0D0;
+    --critical:#8A2A22;
+    --critical-bg:#F1DCD6;
+    --moderate:#C99A3E;
+    --moderate-bg:#F3E7CB;
+    --low:#6E8F6B;
+    --low-bg:#DEE9DA;
+    --navy:#12203F;
+    --navy-line:#22345C;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;background:var(--bg);}
+  body{
+    margin:0;
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    -webkit-text-size-adjust:100%;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px;}
+  .article-wrap{max-width:740px;margin:0 auto;padding:0 24px;}
+  section{padding:56px 0;}
+  h1,h2,h3{font-family:'Spectral',Georgia,serif;margin:0;}
+  .kicker{
+    font-family:'Inter',sans-serif;
+    font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--critical);font-weight:700;margin-bottom:14px;
+  }
+  h2{font-weight:600;font-size:clamp(24px,3vw,32px);line-height:1.2;letter-spacing:-.01em;margin:44px 0 16px;}
+  h3{font-weight:600;font-size:clamp(19px,2.4vw,23px);line-height:1.3;margin:32px 0 12px;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .btn{
+    background:var(--ink);color:#FFFCF6;
+    padding:12px 22px;border-radius:11px;
+    font-size:14px;font-weight:600;text-decoration:none;
+    display:inline-block;white-space:nowrap;
+    border:none;cursor:pointer;
+    font-family:'Inter',sans-serif;
+    transition:filter .2s ease;
+  }
+  .btn:hover{filter:brightness(1.15);}
+  .btn.hot{background:var(--critical);}
+  .btn.hot:hover{filter:none;background:#71211b;}
+  a:focus-visible,.btn:focus-visible,summary:focus-visible{outline:2px solid var(--critical);outline-offset:3px;}
+
+  /* ===== NAV ===== */
+  header.site{
+    position:sticky;top:0;z-index:20;
+    background:rgba(246,239,226,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 24px;max-width:1040px;margin:0 auto;gap:16px;
+  }
+  .brand{display:flex;align-items:center;gap:8px;font-family:'Spectral',serif;font-weight:700;font-size:16px;text-decoration:none;}
+  .brand img{height:28px;width:28px;object-fit:contain;mix-blend-mode:multiply;display:block;}
+  .navlinks{display:flex;gap:26px;font-size:14px;color:var(--muted);}
+  .navlinks a{text-decoration:none;}
+  .navlinks a:hover{color:var(--ink);}
+  @media (max-width:860px){.navlinks{display:none;}}
+
+  /* ===== BREADCRUMB ===== */
+  .crumb{
+    font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted);
+    padding-top:32px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;
+  }
+  .crumb a{text-decoration:none;color:var(--muted);}
+  .crumb a:hover{color:var(--critical);}
+
+  /* ===== ARTICLE HEADER ===== */
+  .article-head{padding-top:18px;padding-bottom:0;}
+  .tags-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;}
+  .tag-chip{
+    font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--critical);
+    background:var(--critical-bg);padding:4px 11px;border-radius:20px;font-weight:600;
+    letter-spacing:.02em;
+  }
+  h1.post-title{
+    font-weight:600;
+    font-size:clamp(30px,4.6vw,46px);
+    line-height:1.12;
+    letter-spacing:-.015em;
+  }
+  .deck{
+    margin-top:18px;font-size:18px;line-height:1.6;color:var(--muted);
+    max-width:640px;font-family:'Inter',sans-serif;
+  }
+  .byline-row{
+    margin-top:32px;display:flex;align-items:center;gap:14px;
+    padding-bottom:32px;border-bottom:1px solid var(--line);
+    flex-wrap:wrap;
+  }
+  .byline-row .sig{
+    width:44px;height:44px;border-radius:50%;
+    background:var(--critical);
+    color:#F8F4ED;font-weight:700;font-size:14px;
+    display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;
+    letter-spacing:.03em;flex-shrink:0;
+  }
+  .byline-meta .name{font-weight:600;font-size:14.5px;}
+  .byline-meta .role{font-size:13px;color:var(--muted);}
+  .byline-facts{
+    margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted);
+    display:flex;gap:18px;flex-wrap:wrap;
+  }
+  .byline-facts .divider{color:var(--line);}
+  @media (max-width:600px){.byline-facts{margin-left:0;width:100%;}}
+
+  /* ===== FEATURE IMAGE ===== */
+  .feature-art{
+    max-width:1040px;margin:36px auto 0;padding:0 24px;
+  }
+  .feature-art .frame{
+    background:var(--navy);border-radius:16px;overflow:hidden;position:relative;
+    min-height:280px;border:1px solid var(--navy-line);
+  }
+  .feature-art .frame::after{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(rgba(255,255,255,.10) 1px,transparent 1.4px);
+    background-size:6px 6px;mix-blend-mode:overlay;pointer-events:none;
+  }
+  .feature-art svg{position:absolute;inset:0;width:100%;height:100%;}
+  .feature-cap{margin-top:10px;font-size:12.5px;color:var(--muted);font-family:'IBM Plex Mono',monospace;}
+
+  /* ===== ARTICLE BODY ===== */
+  .article-body{font-size:17px;line-height:1.75;color:var(--ink);}
+  .article-body p{margin:0 0 22px;}
+  .article-body p.lede-p{
+    font-size:19px;line-height:1.65;color:var(--muted);font-family:'Inter',sans-serif;
+  }
+  .article-body strong{color:var(--ink);}
+  .article-body ul, .article-body ol{margin:0 0 22px;padding-left:22px;}
+  .article-body li{margin-bottom:10px;line-height:1.65;}
+  .article-body a.inline-link{color:var(--critical);text-decoration:underline;text-underline-offset:2px;}
+  .article-body img{max-width:100%;border-radius:14px;display:block;margin:8px 0 22px;}
+
+  .pull-quote{
+    margin:36px 0;padding:22px 26px;border-left:3px solid var(--critical);
+    background:var(--critical-bg);border-radius:0 12px 12px 0;
+    font-family:'Spectral',serif;font-style:italic;font-weight:600;font-size:19px;line-height:1.5;
+  }
+
+  .callout{
+    margin:32px 0;background:var(--paper);border:1px solid var(--line);border-radius:14px;
+    padding:22px 24px;
+  }
+  .callout .cl-label{
+    font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--critical);font-weight:700;margin-bottom:8px;
+  }
+  .callout p{margin:0;font-size:15px;color:var(--muted);line-height:1.65;}
+  .callout p:last-child{margin:0;}
+
+  /* mini exhibit / data table styled like report artifact */
+  .mini-report{
+    background:var(--paper);border:1px solid var(--line);border-radius:6px 6px 14px 14px;
+    box-shadow:0 16px 40px -20px rgba(43,38,32,.25);
+    padding:20px 22px 18px;margin:32px 0;position:relative;
+  }
+  .mini-report::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:4px;
+    background:var(--critical);border-radius:6px 6px 0 0;
+  }
+  .mini-report .rh{
+    display:flex;justify-content:space-between;align-items:baseline;
+    border-bottom:1.5px solid var(--ink);padding-bottom:10px;margin-bottom:12px;
+  }
+  .mini-report .rh .title{font-family:'Inter',sans-serif;font-weight:800;font-size:12.5px;letter-spacing:.07em;}
+  .mini-report .rh .meta{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--muted);}
+  .mini-row{font-family:'IBM Plex Mono',monospace;font-size:12px;display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dotted var(--line);gap:12px;}
+  .mini-row .k{color:var(--muted);}
+  .mini-row .v{font-weight:500;text-align:right;}
+  .mini-row .v.hot{color:var(--critical);font-weight:700;}
+
+  hr.divider{border:none;border-top:1px solid var(--line);margin:44px 0;}
+
+  /* ===== TAKEAWAYS ===== */
+  .takeaways{
+    margin:40px 0;background:var(--navy);border-radius:18px;padding:30px 32px;color:#EDE6D8;
+  }
+  .takeaways h3{color:#fff;margin-top:0;font-size:16px;font-family:'Inter',sans-serif;
+    letter-spacing:.04em;text-transform:uppercase;font-weight:700;margin-bottom:16px;}
+  .takeaways ul{margin:0;padding:0;list-style:none;}
+  .takeaways li{
+    font-size:14.5px;line-height:1.6;padding:9px 0 9px 26px;position:relative;
+    border-top:1px solid var(--navy-line);color:#C9D2E6;
+  }
+  .takeaways li:first-child{border-top:none;}
+  .takeaways li::before{content:"✓";position:absolute;left:0;top:9px;color:#E8A26C;font-weight:700;}
+
+  /* ===== AUTHOR BOX ===== */
+  .author-box{
+    margin-top:56px;padding:28px;background:var(--paper);border:1px solid var(--line);
+    border-radius:16px;display:flex;gap:20px;align-items:flex-start;
+  }
+  .author-box .sig-lg{
+    width:64px;height:64px;border-radius:50%;background:var(--critical);color:#F8F4ED;
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:19px;
+    font-family:'Inter',sans-serif;flex-shrink:0;
+  }
+  .author-box h4{margin:0 0 4px;font-family:'Spectral',serif;font-size:18px;font-weight:600;}
+  .author-box .role{font-size:12.5px;color:var(--critical);font-weight:600;display:block;margin-bottom:10px;}
+  .author-box p{margin:0;font-size:14.5px;line-height:1.65;color:var(--muted);}
+  @media (max-width:600px){.author-box{flex-direction:column;}}
+
+  /* ===== INLINE CTA ===== */
+  .inline-cta{
+    margin:48px 0;background:var(--paper);border:1.5px solid var(--ink);border-radius:18px;
+    padding:32px 34px;
+  }
+  .inline-cta .kicker{margin-bottom:10px;}
+  .inline-cta h3{margin:0 0 10px;font-size:21px;}
+  .inline-cta p{margin:0 0 20px;font-size:14.5px;color:var(--muted);line-height:1.6;max-width:520px;}
+  .inline-cta .row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+  .inline-cta .fine{font-size:12.5px;color:var(--muted);font-family:'IBM Plex Mono',monospace;}
+
+  /* ===== SHARE ===== */
+  .share-row{
+    display:flex;align-items:center;gap:14px;margin-top:36px;padding-top:24px;
+    border-top:1px solid var(--line);flex-wrap:wrap;
+  }
+  .share-row .lbl{font-size:12.5px;color:var(--muted);font-family:'IBM Plex Mono',monospace;letter-spacing:.04em;}
+  .share-row a, .share-row button{
+    font-size:13px;color:var(--muted);text-decoration:none;border:1px solid var(--line);
+    padding:6px 13px;border-radius:20px;font-family:'Inter',sans-serif;
+    background:none;cursor:pointer;
+  }
+  .share-row a:hover, .share-row button:hover{color:var(--ink);border-color:var(--ink);}
+
+  /* ===== RELATED ===== */
+  .related{background:var(--paper);border-top:1px solid var(--line);}
+  .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px;}
+  .related-card{
+    background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:22px;
+    text-decoration:none;display:block;transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .related-card:hover{transform:translateY(-2px);box-shadow:0 12px 28px -18px rgba(43,38,32,.35);}
+  .related-card .rc-tag{
+    font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--critical);
+    text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:10px;display:block;
+  }
+  .related-card h4{font-family:'Spectral',serif;font-size:16.5px;font-weight:600;margin:0 0 8px;line-height:1.35;color:var(--ink);}
+  .related-card .rc-meta{font-size:12px;color:var(--muted);font-family:'IBM Plex Mono',monospace;}
+  @media (max-width:760px){.related-grid{grid-template-columns:1fr;}}
+
+  footer{padding:40px 24px;text-align:center;font-size:13px;color:var(--muted);background:var(--bg);border-top:1px solid var(--line);}
+  footer a{text-decoration:none;}
+  footer a:hover{color:var(--ink);}
+
+  @media (max-width:640px){
+    section{padding:36px 0;}
+    .wrap,.article-wrap{padding:0 18px;}
+    nav{padding:12px 16px;}
+    .brand{font-size:14px;}
+    .brand img{height:22px;width:22px;}
+    .feature-art{padding:0 18px;margin-top:24px;}
+    .feature-art .frame{min-height:190px;}
+    .byline-facts{gap:10px 16px;}
+    .inline-cta{padding:24px 20px;}
+    .author-box{padding:22px;}
+    .related-grid{gap:14px;}
+    h2{margin:32px 0 12px;}
+    h3{margin:26px 0 10px;}
+    .mini-report{padding:16px 16px 14px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .btn{transition:none;}
+    .related-card{transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <nav>
+    <a class="brand" href="/">
+      <img src="https://preemptglobal.com/wp-content/uploads/2026/06/Untitled_design_1_-removebg-preview.png" alt="Preempt Global logo">
+      Preempt Global
+    </a>
+    <div class="navlinks">
+      <a href="/#problem">The gap</a>
+      <a href="/#exhibit">Exhibit A</a>
+      <a href="/#case">The case</a>
+      <a href="/#offer">The audit</a>
+      <a href="/blog">Blog</a>
+    </div>
+    <a class="btn" href="/#offer">$3K · free if we find nothing ▸</a>
+  </nav>
+</header>
+
+<div class="wrap">
+  <p class="crumb"><a href="/">Home</a> <span>／</span> <a href="/blog">Blog</a> <span>／</span> <span>Coordination</span></p>
+</div>
+
+<!-- ============ ARTICLE HEADER ============ -->
+<section class="article-head">
+  <div class="article-wrap">
+    <div class="tags-row">
+      <span class="tag-chip">Coordination</span>
+      <span class="tag-chip">Bid Documents</span>
+      <span class="tag-chip">Owner's Rep</span>
+    </div>
+
+    <h1 class="post-title">Architect QC Isn't Owner Protection — Here's the Difference</h1>
+
+    <p class="deck">Why the two reviews already built into your project's process — the architect's and the contractor's — were never designed to catch the conflicts that end up costing you the most.</p>
+
+    <div class="byline-row">
+      <span class="sig">JR</span>
+      <div class="byline-meta">
+        <div class="name">Joe Rossi</div>
+        <div class="role">Founding Principal, Preempt Global</div>
+      </div>
+      <div class="byline-facts">
+        <span><time datetime="2026-07-20">July 20, 2026</time></span>
+        <span class="divider">·</span>
+        <span>4 min read</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="feature-art">
+  <div class="frame">
+    <svg viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Elevation schematic showing a structural beam overlapping a mechanical duct with a flagged conflict zone.">
+      <rect width="1000" height="400" fill="#12203F"/>
+      <defs>
+        <pattern id="gfeat" width="24" height="24" patternUnits="userSpaceOnUse">
+          <path d="M24 0H0V24" fill="none" stroke="#22345C" stroke-width="1"/>
+        </pattern>
+      </defs>
+      <rect width="1000" height="400" fill="url(#gfeat)"/>
+      <rect x="60" y="185" width="880" height="46" fill="#C99A3E"/>
+      <rect x="60" y="176" width="880" height="10" fill="#DDB463"/>
+      <rect x="60" y="228" width="880" height="10" fill="#B08331"/>
+      <text x="70" y="168" fill="#DDB463" font-family="IBM Plex Mono, monospace" font-size="13">S-204 · TRANSFER GIRDER</text>
+      <rect x="440" y="90" width="140" height="220" rx="14" fill="#2A4E8C" fill-opacity="0.92"/>
+      <rect x="440" y="90" width="140" height="220" rx="14" fill="none" stroke="#7FA6C9" stroke-width="2"/>
+      <text x="446" y="80" fill="#7FA6C9" font-family="IBM Plex Mono, monospace" font-size="13">M-302 · SUPPLY DUCT</text>
+      <rect x="440" y="185" width="140" height="46" fill="#B5502E" fill-opacity="0.6" stroke="#E8956E" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <text x="460" y="345" fill="#E8956E" font-family="IBM Plex Mono, monospace" font-size="14" font-weight="600">CONFLICT ZONE — 18" OVERLAP</text>
+    </svg>
+  </div>
+  <p class="feature-cap">Actual finding, anonymized — flagged during a pre-bid document review.</p>
+</div>
+
+
+<!-- ============ ARTICLE BODY ============ -->
+<article class="article-wrap article-body">
+
+  <p class="lede-p">Every large capital project already has two sets of eyes on the drawings before they reach the field. The architect checks the set against design intent. The contractor reads it for what can be priced later. Both reviews are real, thorough, and staffed by capable people — and neither one is built to protect the party writing the checks.</p>
+
+  <p>That gap isn't a failure of process. It's the process working exactly as designed, for someone else's incentives. Once you see it, the pattern shows up on nearly every $30M+ set we've reviewed.</p>
+
+  <h2>The two reviews your project already has</h2>
+
+  <p>Start with what's actually happening on a typical bid or IFC set. The architect of record runs quality control against their own design intent — checking that what got drawn matches what they meant to draw. Once that's confirmed, their review is complete. It was never scoped to catch a mechanical duct routed through a structural member on someone else's sheet.</p>
+
+  <p>The general contractor's coordination team reads the same set differently. Their incentive is to price the work accurately — which means a gap or ambiguity found during their own internal review often becomes a change order down the line, not a flagged issue during bid. <strong>Neither party is doing anything wrong.</strong> They're both doing their jobs as their contracts define them.</p>
+
+<div class="pull-quote">The only party with no one reading the set purely on their behalf is the one who pays for every miss.</div>
+
+  <h2>What an uncaught conflict actually costs</h2>
+
+  <p>The same clash carries a radically different price tag depending on when it's caught. At the design phase, a conflict costs nothing to fix — it's a redline. By permit, it's a coordination note. By bid, someone has already priced around the ambiguity. In the field, it's a stop-work RFI, a change order, and very likely schedule float that no one budgeted for.</p>
+
+<div class="mini-report">
+  <div class="rh"><span class="title">SAMPLE FINDING</span><span class="meta">Illustrative · pre-bid review</span></div>
+  <div class="mini-row"><span class="k">Sheets in conflict</span><span class="v">S-204 / M-302</span></div>
+  <div class="mini-row"><span class="k">Issue</span><span class="v">Girder / duct elevation overlap</span></div>
+  <div class="mini-row"><span class="k">Overlap</span><span class="v hot">18 inches</span></div>
+  <div class="mini-row"><span class="k">Caught pre-bid</span><span class="v">$0</span></div>
+  <div class="mini-row"><span class="k">Cost if built as issued</span><span class="v hot">$85,000–$140,000</span></div>
+</div>
+
+  <p>No clash detection software flagged it, because the model itself wasn't in conflict — it was a general note on one sheet contradicting a routing decision on another. That distinction matters more than it sounds like it should.</p>
+
+  <h3>Why BIM clash detection doesn't close this gap</h3>
+
+  <p>Clash detection is genuinely useful, and most large projects already run it. But it catches geometry — two coordinated elements physically overlapping inside the model. It doesn't catch a written note that prohibits what another sheet requires, a spec section that contradicts a detail, or an omission where no conflicting geometry exists at all because no one ever drew the connection. Those are the conflicts that live in the issued documents themselves, not in the model.</p>
+
+<div class="callout">
+  <div class="cl-label">Worth knowing</div>
+  <p>On one 133-sheet bid set for a large data center build — a set that had already been through a top-5 general contractor's own coordination process — an independent owner-side pass surfaced 26 cross-discipline conflicts, six of them critical, representing roughly $430,000 in confirmed field-cost exposure. None had been caught by anyone else on the project.</p>
+</div>
+
+  <h2>What owners can do before the set goes out</h2>
+
+  <p>The fix isn't more process from the same two parties — it's a third, independent read of the set, run for no one's interest but the owner's. In practice that means:</p>
+
+  <ul>
+    <li><strong>Reviewing the issued set, not just the model.</strong> Written notes, specs, and details matter as much as coordinated geometry.</li>
+    <li><strong>Pricing every finding in dollars.</strong> A "potential conflict" doesn't get budget attention. A documented exposure number does.</li>
+    <li><strong>Doing it before bid, not after.</strong> Every day the set sits uncorrected, the cheapest fix on the table keeps disappearing.</li>
+    <li><strong>Keeping the reviewer's incentives aligned with the owner's.</strong> Anyone paid by the GC or the design team is, structurally, reading for someone else.</li>
+  </ul>
+
+  <p>None of this requires slowing down a project. A focused, independent pass on a bid set typically takes 48 hours and changes nothing about the design or construction schedule — it just puts a number on what's hiding in the documents before the field finds it.</p>
+
+<div class="takeaways">
+  <h3>Key takeaways</h3>
+  <ul>
+    <li>The architect's QC and the contractor's coordination review are both real — and neither is scoped to protect the owner.</li>
+    <li>The same conflict gets exponentially more expensive the later it's caught: free at design, costly in the field.</li>
+    <li>BIM clash detection catches geometry, not contradictions between written notes, specs, and details.</li>
+    <li>An independent, owner-side review run before bid is the only check with incentives aligned to the owner alone.</li>
+  </ul>
+</div>
+
+  <p>Whichever direction a project ultimately goes, the sequencing rarely changes: the cheapest fix for any given conflict always exists before the set issues, never after. Every day a review gets pushed later is a day that fix gets more expensive for whoever's paying for it — and on projects this size, that's rarely a small difference.</p>
+
+  <hr class="divider">
+
+  <div class="inline-cta">
+    <p class="kicker">Pre-Bid Exposure Audit</p>
+    <h3>Curious what's sitting in your own set right now?</h3>
+    <p>We review one bid or IFC set in 48 hours and hand back a documented exposure number — every conflict located by sheet, severity-tiered, with a dollar figure on each. If we don't surface at least $50,000 in exposure, it's free.</p>
+    <div class="row">
+      <a class="btn hot" href="mailto:jrossi@preemptglobal.com?subject=Set%20for%20audit">Send a set for audit</a>
+      <span class="fine">$3,000 · 48 hours · credited in full if you move forward</span>
+    </div>
+  </div>
+
+  <div class="author-box">
+    <div class="sig-lg">JR</div>
+    <div>
+      <h4>About Joe Rossi</h4>
+      <span class="role">Founding Principal, Preempt Global</span>
+      <p>Joe spent five-plus years producing construction documents and running construction administration on large commercial projects, including multiple $50M+ builds — drawing the sets, then fielding the RFIs and change orders that came from documents nobody checked closely enough before they issued. He now oversees every Preempt Global review personally.</p>
+    </div>
+  </div>
+
+  <div class="share-row">
+    <span class="lbl">Share this</span>
+    <a href="mailto:?subject=Architect%20QC%20Isn%27t%20Owner%20Protection%20%E2%80%94%20Here%27s%20the%20Difference&amp;body=https://preemptglobal.com/blog/architect-qc-vs-owner-review/">Email</a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://preemptglobal.com/blog/architect-qc-vs-owner-review/" target="_blank" rel="noopener">LinkedIn</a>
+    <button type="button" class="js-copy-link" data-url="https://preemptglobal.com/blog/architect-qc-vs-owner-review/">Copy link</button>
+  </div>
+</article>
+
+
+
+<footer>
+  <b>Preempt Global</b> — Independent, owner-side document review · <a href="mailto:jrossi@preemptglobal.com">jrossi@preemptglobal.com</a>
+</footer>
+
+<script>
+  document.querySelectorAll('.js-copy-link').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      navigator.clipboard.writeText(btn.getAttribute('data-url')).then(function(){
+        var original = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(function(){ btn.textContent = original; }, 1600);
+      });
+    });
+  });
+</script>
+</body>
+</html>
