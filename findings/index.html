@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preempt Global — The UCCS Findings File: 26 conflicts, 4 critical, 0 caught by anyone else</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F6EFE2;
+    --paper:#FFFCF6;
+    --ink:#2B2620;
+    --muted:#7E7568;
+    --line:#E9E0D0;
+    --critical:#8A2A22;
+    --critical-bg:#F1DCD6;
+    --high:#B5502E;
+    --moderate:#C99A3E;
+    --moderate-bg:#F3E7CB;
+    --low:#6E8F6B;
+    --low-bg:#DEE9DA;
+    --navy:#12203F;
+    --navy-line:#22345C;
+    --crit-tint:rgba(138,42,34,.05);
+    --hover:rgba(43,38,32,.035);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;background:var(--bg);}
+  body{
+    margin:0;
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    -webkit-text-size-adjust:100%;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px;}
+  section{padding:84px 0;}
+  section[id]{scroll-margin-top:76px;}
+  h1,h2,h3{font-family:'Spectral',Georgia,serif;margin:0;}
+  .kicker{
+    font-family:'Inter',sans-serif;
+    font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--critical);font-weight:700;margin-bottom:14px;
+  }
+  h2{
+    font-weight:600;
+    font-size:clamp(27px,3.5vw,40px);
+    line-height:1.16;
+    letter-spacing:-.012em;
+    max-width:740px;
+  }
+  h3{font-weight:600;letter-spacing:-.005em;}
+  .lede{
+    max-width:640px;margin-top:16px;
+    font-size:16px;line-height:1.7;color:var(--muted);
+  }
+  .lede strong{color:var(--ink);}
+  .mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums;}
+  .btn{
+    background:var(--ink);color:#FFFCF6;
+    padding:12px 22px;border-radius:11px;
+    font-size:14px;font-weight:600;text-decoration:none;
+    display:inline-block;white-space:nowrap;
+    border:none;cursor:pointer;
+    font-family:'Inter',sans-serif;
+    transition:filter .2s ease;
+  }
+  .btn:hover{filter:brightness(1.15);}
+  .btn.hot{background:var(--critical);}
+  .btn.hot:hover{filter:none;background:#71211b;}
+  .btn.soft{background:#EDE5D4;color:var(--ink);}
+  a:focus-visible,.btn:focus-visible,button:focus-visible,th:focus-visible,tr.f:focus-visible{outline:2px solid var(--critical);outline-offset:2px;}
+
+  /* ===== NAV (identical to homepage) ===== */
+  header.site{
+    position:sticky;top:0;z-index:80;
+    background:rgba(246,239,226,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 24px;max-width:1040px;margin:0 auto;gap:16px;
+  }
+  .brand{display:flex;align-items:center;gap:8px;font-family:'Spectral',serif;font-weight:700;font-size:16px;text-decoration:none;}
+  .brand img{height:28px;width:28px;object-fit:contain;mix-blend-mode:multiply;display:block;}
+  .navlinks{display:flex;gap:26px;font-size:14px;color:var(--muted);}
+  .navlinks a{text-decoration:none;}
+  .navlinks a:hover{color:var(--ink);}
+  @media (max-width:860px){.navlinks{display:none;}}
+
+  /* ===== HERO (centered, identical structure to homepage) ===== */
+  .hero{padding:76px 0 0;text-align:center;}
+  h1{
+    font-weight:600;
+    font-size:clamp(33px,5.4vw,58px);
+    line-height:1.1;
+    letter-spacing:-.018em;
+    max-width:840px;margin:0 auto;
+  }
+  h1 .accent{color:var(--critical);}
+  .positioning{
+    margin:24px auto 0;
+    font-size:clamp(16px,2vw,18.5px);line-height:1.6;
+    color:var(--muted);max-width:660px;
+  }
+  .positioning strong{color:var(--ink);font-weight:600;}
+  .hero-ctas{margin-top:34px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:center;}
+  .guarantee-line{margin-top:15px;font-size:13px;color:var(--muted);font-family:'IBM Plex Mono',monospace;}
+  .byline{
+    margin:26px auto 0;font-size:13px;color:var(--muted);font-style:italic;
+    display:flex;align-items:center;justify-content:center;gap:10px;max-width:620px;
+  }
+  .byline .sig{
+    width:32px;height:32px;border-radius:50%;
+    background:var(--critical);
+    color:#F8F4ED;font-style:normal;font-weight:700;font-size:11px;
+    display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;
+    letter-spacing:.04em;flex-shrink:0;
+  }
+
+  /* stat cards (homepage .stats style, light variant) */
+  .stats{margin:52px auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:860px;}
+  .stat{
+    background:var(--paper);border:1px solid var(--line);border-radius:16px;
+    padding:22px 16px;text-align:center;
+  }
+  .stat .num{font-family:'Spectral',serif;font-weight:700;font-size:30px;color:var(--ink);letter-spacing:-.01em;}
+  .stat.alarm .num{color:var(--critical);}
+  .stat .lbl{font-size:12.5px;color:var(--muted);margin-top:6px;line-height:1.4;}
+  @media (max-width:760px){.stats{grid-template-columns:repeat(2,1fr);}}
+
+  /* ===== spine (identical to homepage) ===== */
+  .spine{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+  .spine .step-n{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;
+    color:var(--critical);background:var(--critical-bg);
+    padding:3px 10px;border-radius:20px;
+  }
+  .spine .kicker{margin:0;}
+
+  /* ===== REGISTER ===== */
+  .controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:36px;}
+  .ctrl-label{font-family:'Inter',sans-serif;font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-right:2px;}
+  .chip{
+    font-family:'IBM Plex Mono',monospace;font-size:12.5px;
+    background:var(--paper);border:1px solid var(--line);border-radius:20px;
+    color:var(--muted);padding:7px 14px;cursor:pointer;transition:all .15s ease;line-height:1.2;
+  }
+  .chip:hover{border-color:var(--ink);color:var(--ink);}
+  .chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper);}
+  .chip[data-sev="critical"][aria-pressed="true"]{background:var(--critical);border-color:var(--critical);}
+  .chip .dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:7px;vertical-align:1px;}
+  .chip[aria-pressed="true"] .dot{opacity:.85;}
+  .dot.critical{background:var(--critical);} .dot.high{background:var(--high);}
+  .dot.medium{background:var(--moderate);} .dot.low{background:var(--low);}
+  .count{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted);}
+  .count b{color:var(--ink);font-weight:500;}
+
+  .table-card{
+    margin-top:16px;background:var(--paper);border:1px solid var(--line);border-radius:16px;
+    overflow:hidden;
+  }
+  .table-scroll{overflow-x:auto;}
+  table.reg{width:100%;border-collapse:collapse;min-width:940px;}
+  table.reg thead th{
+    position:sticky;top:0;z-index:40;background:var(--paper);
+    font-family:'Inter',sans-serif;font-weight:700;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--muted);text-align:left;padding:13px 14px;border-bottom:1.5px solid var(--ink);
+    white-space:nowrap;cursor:pointer;user-select:none;
+  }
+  table.reg thead th::after{content:"";display:inline-block;width:0;height:0;margin-left:7px;vertical-align:2px;
+    border-left:3.5px solid transparent;border-right:3.5px solid transparent;border-top:4.5px solid var(--line);}
+  table.reg thead th[aria-sort="ascending"]{color:var(--ink);}
+  table.reg thead th[aria-sort="ascending"]::after{border-top:none;border-bottom:4.5px solid var(--critical);}
+  table.reg thead th[aria-sort="descending"]{color:var(--ink);}
+  table.reg thead th[aria-sort="descending"]::after{border-top:4.5px solid var(--critical);}
+  th.num,td.num{text-align:right;}
+
+  table.reg tbody tr.f{border-bottom:1px solid var(--line);cursor:pointer;transition:background .12s ease;}
+  table.reg tbody tr.f:hover{background:var(--hover);}
+  table.reg tbody tr.f.critical{background:var(--crit-tint);}
+  table.reg tbody tr.f.critical:hover{background:rgba(138,42,34,.09);}
+  table.reg tbody tr.f.open{background:var(--bg);}
+  table.reg td{padding:13px 14px;vertical-align:top;}
+
+  td.c-id{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted);width:52px;}
+  td.c-sev{width:104px;}
+  .sev-chip{
+    font-family:'Inter',sans-serif;font-weight:700;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;
+    display:inline-block;padding:3px 9px 2px;border-radius:6px;border:1px solid;line-height:1.5;white-space:nowrap;
+  }
+  .sev-chip.critical{color:#fff;background:var(--critical);border-color:var(--critical);}
+  .sev-chip.high{color:var(--high);border-color:var(--high);background:rgba(181,80,46,.07);}
+  .sev-chip.medium{color:#8A7124;border-color:var(--moderate);background:var(--moderate-bg);}
+  .sev-chip.low{color:var(--low);border-color:var(--low);background:var(--low-bg);}
+
+  td.c-cat{font-family:'Inter',sans-serif;font-weight:600;font-size:13px;color:var(--ink);width:190px;line-height:1.4;}
+  td.c-ref{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);width:190px;line-height:1.5;}
+  td.c-desc{font-size:14px;line-height:1.5;color:var(--muted);}
+  td.c-desc .caret{color:var(--line);font-family:'IBM Plex Mono',monospace;font-size:11px;margin-left:8px;}
+  tr.f.open td.c-desc .caret{color:var(--critical);}
+  td.c-cost{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;color:var(--ink);white-space:nowrap;width:132px;}
+  tr.f.critical td.c-cost{color:var(--critical);}
+  td.c-sched{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--muted);white-space:nowrap;width:92px;}
+
+  tr.detail{border-bottom:1px solid var(--line);}
+  tr.detail td{background:var(--bg);padding:0 14px 0 66px;}
+  tr.detail .inner{padding:6px 0 24px;max-width:78ch;}
+  tr.detail p{margin:0 0 16px;font-size:14.5px;line-height:1.65;color:var(--ink);}
+  .detail-meta{display:flex;gap:34px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:13px;border-top:1px solid var(--line);padding-top:14px;}
+  .detail-meta .l{font-family:'Inter',sans-serif;font-weight:700;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
+  .detail-meta .v{font-size:14px;color:var(--ink);}
+  .detail-meta .v.red{color:var(--critical);font-weight:600;}
+  .empty{padding:40px 14px;font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--muted);}
+  .table-foot{
+    border-top:1.5px solid var(--ink);padding:14px 16px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+    font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted);background:var(--paper);
+  }
+  .table-foot b{font-weight:500;color:var(--ink);}
+  .table-foot .tot{color:var(--critical);font-weight:600;}
+  .hint{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-top:14px;}
+
+  /* ===== CRITICAL EXHIBITS (homepage card style) ===== */
+  .exhibits{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px;}
+  @media (max-width:800px){.exhibits{grid-template-columns:1fr;}}
+  .exhibit{
+    background:var(--paper);border:1px solid var(--line);border-radius:16px;
+    display:flex;flex-direction:column;overflow:hidden;
+  }
+  .exhibit-head{
+    display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 24px;
+    border-bottom:1px solid var(--line);
+    font-family:'Inter',sans-serif;font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+  }
+  .exhibit-head .sev{
+    color:#fff;background:var(--critical);padding:3px 10px;border-radius:6px;font-size:9.5px;
+  }
+  .exhibit-body{padding:22px 24px 20px;display:flex;flex-direction:column;flex:1;}
+  .exhibit-ref{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--muted);margin-bottom:12px;}
+  .exhibit-ref b{display:block;color:var(--ink);font-weight:500;font-size:13.5px;margin-top:3px;}
+  .exhibit p{margin:0 0 18px;font-size:14.5px;line-height:1.65;color:var(--muted);flex:1;}
+  .exhibit-cost{display:flex;gap:28px;border-top:1px solid var(--line);padding-top:16px;}
+  .exhibit-cost .l{display:block;font-family:'Inter',sans-serif;font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:4px;font-weight:600;}
+  .exhibit-cost .v{display:block;font-family:'Spectral',serif;font-weight:700;font-size:18px;}
+  .exhibit-cost .built .v{color:var(--critical);}
+  .exhibit-cost .sched .v{color:var(--ink);}
+
+  /* ===== PRIORITIES + LADDER ===== */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start;margin-top:40px;}
+  @media (max-width:860px){.two-col{grid-template-columns:1fr;}}
+
+  .offer-box{
+    background:var(--paper);border:1.5px solid var(--ink);border-radius:20px;
+    padding:34px 32px;position:relative;
+  }
+  .offer-box::before{
+    content:"FROM THE DEBRIEF CALL";position:absolute;top:-12px;left:28px;
+    font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;font-weight:600;
+    background:var(--critical);color:#fff;padding:4px 12px;border-radius:6px;
+  }
+  .offer-box h3{font-size:22px;margin:4px 0 4px;}
+  .offer-box .offer-lead{font-size:14px;color:var(--muted);margin:0 0 14px;font-style:italic;font-family:'Spectral',serif;}
+  .offer-box ol{list-style:none;margin:0;padding:0;counter-reset:pri;}
+  .offer-box ol li{counter-increment:pri;padding:15px 0;border-bottom:1px solid var(--line);display:flex;gap:16px;font-size:14.5px;line-height:1.6;align-items:flex-start;color:var(--ink);}
+  .offer-box ol li:last-child{border-bottom:none;padding-bottom:0;}
+  .offer-box ol li::before{
+    content:counter(pri);font-family:'Spectral',serif;font-weight:700;font-size:16px;
+    color:transparent;-webkit-text-stroke:1.2px var(--critical);
+    width:27px;height:27px;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:1px;
+  }
+
+  .ladder{margin-top:26px;background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;}
+  .ladder-row{display:flex;justify-content:space-between;align-items:baseline;padding:16px 22px;border-bottom:1px solid var(--line);gap:16px;}
+  .ladder-row:last-child{border-bottom:none;}
+  .ladder-row .phase{font-family:'Inter',sans-serif;font-weight:700;font-size:13px;color:var(--ink);}
+  .ladder-row .phase span{display:block;font-family:'Inter',sans-serif;font-weight:400;font-size:12.5px;color:var(--muted);margin-top:3px;line-height:1.45;}
+  .ladder-row .amt{font-family:'IBM Plex Mono',monospace;font-size:15px;color:var(--ink);text-align:right;white-space:nowrap;font-weight:500;}
+  .ladder-row.crit{background:var(--crit-tint);border-bottom:2px solid var(--critical);}
+  .ladder-row.crit .phase,.ladder-row.crit .amt{color:var(--critical);}
+  .ladder-row.total{border-top:1.5px solid var(--ink);background:var(--paper);}
+  .ladder-row.total .amt{font-weight:600;color:var(--critical);}
+
+  .after-note{margin-top:22px;font-size:14.5px;color:var(--muted);line-height:1.7;max-width:640px;}
+  .after-note strong{color:var(--ink);}
+
+  /* ===== METHOD ===== */
+  .pull{
+    margin-top:36px;padding:22px 26px;border-left:3px solid var(--critical);
+    background:var(--critical-bg);border-radius:0 12px 12px 0;
+    font-family:'Spectral',serif;font-style:italic;font-weight:600;font-size:19px;line-height:1.5;
+    max-width:660px;
+  }
+  .source-note{
+    margin-top:32px;padding:22px 26px;background:var(--moderate-bg);border:1px solid #E3D3AC;
+    border-radius:14px;font-size:13px;color:var(--ink);line-height:1.7;max-width:820px;
+  }
+  .source-note b{font-weight:700;}
+
+  /* ===== CLOSE (identical navy block to homepage) ===== */
+  .close-cta{text-align:center;background:var(--navy);border-radius:24px;padding:64px 32px;color:#EDE6D8;}
+  .close-cta .kicker{color:#E8A26C;}
+  .close-cta h2{color:#fff;margin:0 auto;}
+  .close-cta .sub{max-width:560px;margin:16px auto 0;font-size:15px;line-height:1.65;color:#A9B4CE;}
+  .close-cta .sub strong{color:#fff;}
+  .close-ctas{margin-top:30px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  .close-cta .btn{background:#fff;color:var(--navy);}
+  .close-cta .btn.hot{background:var(--critical);color:#fff;}
+  .close-cta .contact{margin-top:24px;font-size:13.5px;color:#8FA0C4;font-family:'IBM Plex Mono',monospace;}
+  .close-cta .contact a{text-decoration:underline;}
+  .close-sign{margin-top:22px;font-family:'Spectral',serif;font-style:italic;font-size:16px;color:#C9D2E6;}
+  .close-sign b{font-style:normal;font-weight:600;color:#fff;}
+
+  /* ===== reveal (identical to homepage) ===== */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* ===== MOBILE (mirrors homepage pass) ===== */
+  @media (max-width:640px){
+    section{padding:60px 0;}
+    .wrap{padding:0 18px;}
+    nav{padding:12px 16px;}
+    .brand{font-size:14px;}
+    .brand img{height:22px;width:22px;}
+    nav > .btn{padding:9px 14px;font-size:12.5px;}
+    .hero{padding-top:48px;}
+    .hero-ctas{flex-direction:column;width:100%;}
+    .hero-ctas .btn{width:100%;text-align:center;padding:15px 20px;}
+    .byline{padding:0 8px;text-align:left;}
+    .spine{flex-wrap:wrap;gap:10px;}
+    h2{font-size:25px;}
+    .lede{font-size:15px;}
+    .stat{padding:16px 10px;}
+    .stat .num{font-size:24px;}
+    .stat .lbl{font-size:11px;}
+    .controls{gap:8px;}
+    .count{width:100%;margin-left:0;}
+    table.reg thead th{position:static;}
+    tr.detail td{padding-left:16px;}
+    .exhibit-body{padding:20px 18px;}
+    .exhibit-cost{flex-direction:column;gap:12px;}
+    .offer-box{padding:26px 20px;}
+    .offer-box::before{left:18px;font-size:10px;}
+    .ladder-row{padding:14px 16px;flex-direction:column;gap:6px;}
+    .ladder-row .amt{text-align:left;}
+    .pull{font-size:16.5px;padding:18px 20px;}
+    .source-note{padding:16px 18px;font-size:12.5px;}
+    .close-cta{padding:44px 22px;border-radius:18px;}
+    .close-ctas{flex-direction:column;}
+    .close-ctas .btn{width:100%;text-align:center;}
+    .close-cta .contact{font-size:11.5px;line-height:1.7;}
+  }
+  @media (hover:none){.btn{padding-top:14px;padding-bottom:14px;}}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1;transform:none;transition:none;}
+    *{transition:none!important;}
+  }
+
+  footer{padding:40px 24px;text-align:center;font-size:13px;color:var(--muted);background:var(--bg);border-top:1px solid var(--line);}
+  footer a{text-decoration:none;}
+  footer a:hover{color:var(--ink);}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <nav>
+    <a class="brand" href="/">
+      <img src="https://preemptglobal.com/wp-content/uploads/2026/06/Untitled_design_1_-removebg-preview.png" alt="Preempt Global logo">
+      Preempt Global
+    </a>
+    <div class="navlinks">
+      <a href="#register">The register</a>
+      <a href="#critical">Critical findings</a>
+      <a href="#priorities">Priorities</a>
+      <a href="#method">Method</a>
+    </div>
+    <a class="btn hot" href="preempt-global-send-a-set.html">Send a set ▸</a>
+  </nav>
+</header>
+
+<div class="wrap">
+
+  <!-- ============ HERO (centered, matching homepage) ============ -->
+  <section class="hero">
+    <h1>One bid set. 26 conflicts. <span class="accent">Zero caught by anyone else.</span></h1>
+
+    <p class="positioning">The actual UCCS findings file a client receives from a review — anonymized and unedited. 133 sheets, already run through a top-5 GC's own coordination process. <strong>Every finding below survived that review before we opened the set.</strong></p>
+
+    <div class="hero-ctas">
+      <a class="btn soft" href="#register">Explore the register</a>
+      <a class="btn hot" href="preempt-global-send-a-set.html">Get this for your set</a>
+    </div>
+    <p class="guarantee-line">Sort it, filter it, open any row for the full write-up</p>
+
+    <p class="byline"><span class="sig">JR</span>Prepared by Joe Rossi, Founding Principal, Preempt Global.</p>
+
+    <div class="stats">
+      <div class="stat reveal"><div class="num">26</div><div class="lbl">findings</div></div>
+      <div class="stat alarm reveal"><div class="num">4</div><div class="lbl">critical — permit or life-safety</div></div>
+      <div class="stat alarm reveal"><div class="num">$327K–$975K</div><div class="lbl">total cost exposure</div></div>
+      <div class="stat reveal"><div class="num">343–716</div><div class="lbl">days of schedule risk</div></div>
+    </div>
+  </section>
+
+  <!-- ============ 01 THE REGISTER ============ -->
+  <section id="register">
+    <div class="spine"><span class="step-n">01</span><p class="kicker">The full register</p></div>
+    <h2>Every finding, at the standard a paying client gets.</h2>
+    <p class="lede">Sheet reference, mechanism, dollar range, schedule impact — one line each. Click any row for the full write-up; click a column header to sort.</p>
+
+    <div class="controls">
+      <span class="ctrl-label">Filter</span>
+      <button class="chip" data-sev="all" aria-pressed="true">All 26</button>
+      <button class="chip" data-sev="critical" aria-pressed="false"><span class="dot critical"></span>Critical 4</button>
+      <button class="chip" data-sev="high" aria-pressed="false"><span class="dot high"></span>High 11</button>
+      <button class="chip" data-sev="medium" aria-pressed="false"><span class="dot medium"></span>Medium 9</button>
+      <button class="chip" data-sev="low" aria-pressed="false"><span class="dot low"></span>Low 2</button>
+      <span class="count"><b id="shown">26</b> of 26 shown</span>
+    </div>
+
+    <div class="table-card">
+      <div class="table-scroll">
+        <table class="reg">
+          <thead>
+            <tr>
+              <th data-sort="id" aria-sort="none" scope="col">#</th>
+              <th data-sort="sev" aria-sort="ascending" scope="col">Severity</th>
+              <th data-sort="cat" aria-sort="none" scope="col">Category</th>
+              <th data-sort="ref" aria-sort="none" scope="col">Sheet reference</th>
+              <th data-sort="desc" aria-sort="none" scope="col">Finding</th>
+              <th data-sort="cost" aria-sort="none" class="num" scope="col">Cost exposure</th>
+              <th data-sort="sched" aria-sort="none" class="num" scope="col">Schedule</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+      <div class="table-foot">
+        <span>Cost and schedule shown as <b>low – high</b> range. Field-cost exposure if the finding survives to construction.</span>
+        <span>Filtered total: <span class="tot" id="footTotal">$326,970 – $975,240</span></span>
+      </div>
+    </div>
+    <p class="hint">Click any row for the full finding. Click a column header to sort.</p>
+  </section>
+
+  <!-- ============ 02 CRITICAL EXHIBITS ============ -->
+  <section id="critical">
+    <div class="spine"><span class="step-n">02</span><p class="kicker">The four critical findings, in full</p></div>
+    <h2>The ones that stop a project.</h2>
+    <p class="lede">Permit blockers, missing life-safety systems, and scope no trade can price. Every finding in the register is written to this standard — these four get the long form because they're the ones that don't wait.</p>
+
+    <div class="exhibits">
+      <div class="exhibit reveal">
+        <div class="exhibit-head"><span>Finding 04 · Missing system</span><span class="sev">Critical</span></div>
+        <div class="exhibit-body">
+          <div class="exhibit-ref">Sheet reference<b>Data/Server Room S103 — all disciplines</b></div>
+          <p>No UPS or emergency generator is shown anywhere in the set for the server rooms, the Watch Center, or the security panels. On a mission-critical facility, backup power is not an optional system — it's the reason the building exists.</p>
+          <div class="exhibit-cost">
+            <div class="built"><span class="l">Field-cost exposure</span><span class="v">$189K – $504K</span></div>
+            <div class="sched"><span class="l">Schedule risk</span><span class="v">56 – 112 days</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exhibit reveal">
+        <div class="exhibit-head"><span>Finding 05 · Permit blocker</span><span class="sev">Critical</span></div>
+        <div class="exhibit-body">
+          <div class="exhibit-ref">Sheet reference<b>FP2.1 / P2.1.C / S103</b></div>
+          <p>Wet-pipe sprinkler is explicitly prohibited above S103, but no alternative suppression system — clean agent or pre-action — is specified anywhere in the set. As drawn, this room cannot pass permit.</p>
+          <div class="exhibit-cost">
+            <div class="built"><span class="l">Field-cost exposure</span><span class="v">$25.2K – $75.6K</span></div>
+            <div class="sched"><span class="l">Schedule risk</span><span class="v">56 – 84 days</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exhibit reveal">
+        <div class="exhibit-head"><span>Finding 01 · Missing sheets</span><span class="sev">Critical</span></div>
+        <div class="exhibit-body">
+          <div class="exhibit-ref">Sheet reference<b>G0.0 / G2.4.X series</b></div>
+          <p>The G2.4.X additive alternate drawings are referenced 12+ times across every discipline in the set — and do not exist anywhere in the issued package. No trade can price the full scope of work without them.</p>
+          <div class="exhibit-cost">
+            <div class="built"><span class="l">Field-cost exposure</span><span class="v">$10.1K – $31.5K</span></div>
+            <div class="sched"><span class="l">Schedule risk</span><span class="v">21 – 42 days</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exhibit reveal">
+        <div class="exhibit-head"><span>Finding 11 · Rated penetration</span><span class="sev">Critical</span></div>
+        <div class="exhibit-body">
+          <div class="exhibit-ref">Sheet reference<b>P2.1.C / M7.1 / fire ratings</b></div>
+          <p>The CRAC condensate pump discharge route passes through a fire-rated assembly with no firestop detail or listed system called out anywhere in the set. An unaddressed penetration of a rated assembly is a life-safety code violation — it fails inspection as drawn and, if built, compromises the rating of the assembly.</p>
+          <div class="exhibit-cost">
+            <div class="built"><span class="l">Field-cost exposure</span><span class="v">$3.8K – $12.6K</span></div>
+            <div class="sched"><span class="l">Schedule risk</span><span class="v">5 – 14 days</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 PRIORITIES + LADDER ============ -->
+  <section id="priorities">
+    <div class="spine"><span class="step-n">03</span><p class="kicker">What to resolve before award</p></div>
+    <h2>Ranked, not just listed.</h2>
+
+    <div class="two-col">
+      <div>
+        <div class="offer-box reveal">
+          <h3>Top 3 priorities</h3>
+          <p class="offer-lead">Exactly as they'd appear in your debrief call.</p>
+          <ol>
+            <li>Issue the missing G2.4.X alternate drawings. Referenced 12+ times across every discipline; the set cannot be fully priced without them.</li>
+            <li>Design and add backup power (UPS/generator) and server-room fire suppression. Both are complete omissions — S103 is permit-blocked without a suppression system.</li>
+            <li>Lock down the CRAC package: correct the condenser model number, then reconcile the feeder and breaker sizing on panel ISACHA against the selected unit's actual nameplate MCA/MOCP. With precision-cooling lead times running 20–40 weeks, this is the finding with the least room to be late.</li>
+          </ol>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size:20px;margin-bottom:4px;">Exposure by severity</h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.65;margin:6px 0 0;max-width:52ch;">Critical means permit-blocking, life-safety, or unbiddable scope. Documentation errors land in Medium no matter how widespread.</p>
+        <div class="ladder reveal">
+          <div class="ladder-row crit"><div class="phase">Critical <span>4 findings — permit blockers, life-safety, missing scope</span></div><div class="amt">$228,060 – $623,700</div></div>
+          <div class="ladder-row"><div class="phase">High <span>11 findings — coordination gaps, undefined scope, long-lead risk</span></div><div class="amt">$70,560 – $254,520</div></div>
+          <div class="ladder-row"><div class="phase">Medium <span>9 findings — documentation errors, VIF dimensions, ambiguity</span></div><div class="amt">$27,090 – $91,980</div></div>
+          <div class="ladder-row"><div class="phase">Low <span>2 findings — unresolved tags, minor field verifications</span></div><div class="amt">$1,260 – $5,040</div></div>
+          <div class="ladder-row total"><div class="phase">Total exposure <span>if none are caught before bid</span></div><div class="amt">$326,970 – $975,240</div></div>
+        </div>
+        <p class="after-note">Schedule risk runs alongside the dollars: <strong>138–252 days</strong> tied up in the four critical findings alone, against <strong>343–716 days</strong> across the full register. On a mission-critical build, that is the difference between hitting a lease commencement date and missing it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 METHOD ============ -->
+  <section id="method">
+    <div class="spine"><span class="step-n">04</span><p class="kicker">Why this file exists</p></div>
+    <h2>A description of what we do isn't evidence that we do it well.</h2>
+    <p class="lede">So instead of telling you about the process, we're giving you the output — unedited except for the names, at the same level of specificity a paying client gets: sheet reference, mechanism, dollar range, schedule impact, one line each.</p>
+    <p class="lede" style="margin-top:14px;">Twenty-six findings. Four critical. All twenty-six survived a general contractor's own internal coordination review before we ever opened the set — which is the entire argument for why an owner-side pass exists at all. One independent, cross-discipline pass: drawings vs. drawings, drawings vs. specs, trade vs. trade.</p>
+
+    <p class="pull">Software flags maybes. This file puts a dollar figure — and our own fee — on every one of them.</p>
+
+    <div class="source-note reveal">
+      <b>Note on cost basis.</b> Five line items in the original review (backup power, fire suppression, storefront, wet-pipe reroute, dimension corrections) reflect figures from that review, used as-is. The remaining line items are order-of-magnitude estimates for comparable RFI, redesign, and engineering scope, informed by current (Q1–Q2 2026) nonresidential construction cost trends. All 2021 dollar figures are escalated by a 1.26x factor to mid-2026 dollars. That factor is deliberately conservative: nonresidential buildings final-cost inflation ran roughly 8% in 2021 and 12% in 2022 — the sharpest two-year run since 1980–81 — and cumulative final-cost indices from mid-2021 to mid-2026 track closer to 1.35–1.40x (per Construction Analytics' composite index; the Mortenson Quarterly Cost Index alone rose 6.8% in the trailing 12 months as of Q1 2026). We carry the lower factor so every figure on this page understates, rather than overstates, current-dollar exposure. Actual costs should be verified against qualified contractor and current supplier quotes — this is a coordination-risk estimate, not a bid.
+    </div>
+  </section>
+
+  <!-- ============ CLOSE (navy block, matching homepage) ============ -->
+  <section id="get-yours">
+    <div class="close-cta reveal">
+      <p class="kicker">What this looks like on your project</p>
+      <h2>This is the file. Here's how to get one for your set.</h2>
+      <p class="sub">One set. 48-hour turnaround. Every conflict located by sheet and detail, with a dollar range and a fix — at the exact standard you just read. <strong>If we don't find at least $50,000 in exposure, you pay nothing.</strong> If we do, it's $3,000 — credited in full toward a full-project engagement.</p>
+      <div class="close-ctas">
+        <a class="btn hot" href="preempt-global-send-a-set.html">Send a set for review</a>
+        <a class="btn" href="mailto:jrossi@preemptglobal.com?subject=One%20set%20for%20review">Email Joe directly</a>
+      </div>
+      <p class="contact">jrossi@preemptglobal.com · (570) 776-5660 · NDA before any document changes hands</p>
+      <p class="close-sign">— <b>Joe Rossi</b>, Founding Principal, Preempt Global</p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <b>Preempt Global</b> — Independent, owner-side document review · <a href="mailto:jrossi@preemptglobal.com">jrossi@preemptglobal.com</a>
+</footer>
+
+<script>
+const F = [
+ {id:1,sev:"critical",cat:"Missing sheets",ref:"G0.0 / G2.4.X series",short:"Alternate drawings referenced 12+ times, absent from the set.",cmin:10080,cmax:31500,smin:21,smax:42,
+  full:"The G2.4.X additive alternate drawings are referenced 12+ times across every discipline in the set — and do not exist anywhere in the issued package. No trade can price the full scope of work without them."},
+ {id:2,sev:"medium",cat:"Wrong sheet reference, set-wide",ref:"All E-series plans",short:"Every electrical sheet cites E0.01; the sheet is E0.1.",cmin:630,cmax:2520,smin:3,smax:10,
+  full:"Every electrical plan in the set cites sheet \"E0.01\" for its abbreviations legend. The actual sheet is E0.1 — E0.01 does not exist. Cheap to fix, but a documentation error repeated on every single electrical sheet says something about the QC pass the set received."},
+ {id:3,sev:"high",cat:"Electrical coordination unverified",ref:"M7.1 / E8.1 — Panel ISACHA",short:"Feeder and breaker sizing never reconciled to CRAC nameplate.",cmin:2520,cmax:12600,smin:5,smax:15,
+  full:"CRAC-1 and CRAC-2 are scheduled at 460V nameplate — the standard utilization voltage for a 480Y/277V system, so no transformer is needed — but the feeder and breaker sizing on panel ISACHA has never been reconciled against the units' MCA/MOCP, and the scheduled condenser pairing is wrong (Finding 07). Electrical scope can't be confirmed until a real unit selection exists."},
+ {id:4,sev:"critical",cat:"Missing system",ref:"Data/Server Room S103 — all disciplines",short:"No UPS or generator shown anywhere for the server rooms.",cmin:189000,cmax:504000,smin:56,smax:112,
+  full:"No UPS or emergency generator is shown anywhere in the set for the server rooms, the Watch Center, or the security panels. On a mission-critical facility, backup power is not an optional system — it's the reason the building exists."},
+ {id:5,sev:"critical",cat:"Missing system, permit blocker",ref:"FP2.1 / P2.1.C / S103",short:"Wet-pipe prohibited above S103; no alternative suppression specified.",cmin:25200,cmax:75600,smin:56,smax:84,
+  full:"Wet-pipe sprinkler is explicitly prohibited above S103, but no alternative suppression system — clean agent or pre-action — is specified anywhere in the set. As drawn, this room cannot pass permit."},
+ {id:6,sev:"medium",cat:"Placeholder date",ref:"G0.0 — Addendum 01",short:"Addendum 01 revision date left as \"XXMAY2021\".",cmin:630,cmax:2520,smin:3,smax:7,
+  full:"The Addendum 01 revision date shows an unfilled placeholder: \"XXMAY2021.\" Bidders have no way to confirm they're pricing the current version of the addendum."},
+ {id:7,sev:"high",cat:"Equipment specification",ref:"M7.1 — CRAC schedule",short:"Condenser model doesn't pair with the specified indoor unit.",cmin:6300,cmax:18900,smin:7,smax:21,
+  full:"Condenser model MCL110E8 does not correspond to a known model for the specified VS070AD indoor unit — a mismatched pair that won't be caught until submittal, on equipment with 20–40 week lead times in the current market."},
+ {id:8,sev:"high",cat:"VIF dimensions",ref:"S1.0 / A2.1.2–A2.1.4",short:"Primary building grid dimensions tagged VIF on both buildings.",cmin:12600,cmax:44100,smin:5,smax:15,
+  full:"Primary building grid dimensions for the North and South buildings are tagged \"VIF\" — every trade is bidding against floating dimensions with no fixed reference."},
+ {id:9,sev:"high",cat:"Undefined scope",ref:"P2.1.C / mechanical plans",short:"\"?\" marks stand in for keynote descriptions.",cmin:3780,cmax:12600,smin:5,smax:14,
+  full:"\"?\" marks appear in place of keynote descriptions on the plumbing demolition and mechanical plans — scope that was never actually written."},
+ {id:10,sev:"high",cat:"Dead sheet reference",ref:"P2.1.C — plumbing demolition",short:"Note cites Sheet G.2.40. That sheet doesn't exist.",cmin:1260,cmax:5040,smin:3,smax:10,
+  full:"A note refers to Architectural Sheet G.2.40 for restroom alternates. That sheet does not exist anywhere in the set."},
+ {id:11,sev:"critical",cat:"Unprotected rated penetration",ref:"P2.1.C / M7.1 / fire ratings",short:"Condensate route crosses a rated assembly with no firestop.",cmin:3780,cmax:12600,smin:5,smax:14,
+  full:"The CRAC condensate pump discharge route passes through a fire-rated assembly with no firestop detail or listed system called out anywhere in the set. An unaddressed penetration of a rated assembly is a life-safety code violation — it fails inspection as drawn and, if built, compromises the rating of the assembly."},
+ {id:12,sev:"high",cat:"Responsibility gap",ref:"AF2.1–AF2.3 / E206",short:"ESD floor grounding listed \"provided by others\", unassigned.",cmin:6300,cmax:18900,smin:7,smax:21,
+  full:"ESD static-control flooring grounding in CVL S102 is listed \"provided by others\" with no scope assignment or detail — a gap that will surface as a change order fight."},
+ {id:13,sev:"high",cat:"Commissioning conflict",ref:"E2.4 / Panel ISACSA",short:"Video wall setup needs circuits de-energized; no phasing plan.",cmin:6300,cmax:25200,smin:10,smax:30,
+  full:"The video wall's initial setup draws 3x normal load, requiring all ISACSA circuits to be de-energized during setup — and there is no phasing plan anywhere in the set."},
+ {id:14,sev:"high",cat:"TBD finishes",ref:"AF2.4 — Applied Finish List",short:"Multiple finishes carry \"INSTALL: TBD\" with no deadline.",cmin:12600,cmax:50400,smin:14,smax:45,
+  full:"Multiple finish items — tile, millwork, specialty finishes — carry \"INSTALL: TBD\" with no decision deadline attached, leaving open-ended allowance risk."},
+ {id:15,sev:"high",cat:"Circular reference",ref:"S1.0 slab detail / P2.1 series",short:"Structural points to MEP; MEP points back. Width undefined.",cmin:2520,cmax:10080,smin:5,smax:15,
+  full:"The structural slab trench detail directs readers to \"see MEP\"; the MEP set directs readers to \"refer to structural.\" Trench width is undefined in both."},
+ {id:16,sev:"medium",cat:"VIF / no timeline",ref:"A8.1.1–A8.1.4 — interiors",short:"Dispensers tagged \"Coordinate with Owner\" — no contact, no date.",cmin:1260,cmax:3780,smin:5,smax:10,
+  full:"Soap and toilet paper dispensers are tagged \"Coordinate with Owner\" with no contact or decision deadline attached."},
+ {id:17,sev:"medium",cat:"Missing sheet series",ref:"A0.1 — assembly symbols",short:"Assembly types cite A5.0.X and A5.4.X; neither is indexed.",cmin:6300,cmax:22680,smin:10,smax:25,
+  full:"Wall and fenestration assembly types reference sheets A5.0.X and A5.4.X for exterior details. Neither series appears in the sheet index."},
+ {id:18,sev:"medium",cat:"Panel voltage verification",ref:"M7.1 / Panel UCCSSA",short:"FCU-3 needs 208V single-phase; panel voltage never confirmed.",cmin:1890,cmax:6300,smin:5,smax:10,
+  full:"FCU-3, serving Data Room N124, is specified single-phase 208V. 208V single-phase only exists on a 208Y/120V system — if panel UCCSSA is 480Y/277V, it cannot serve this unit at all without a transformer. The panel's system voltage is never confirmed in the set."},
+ {id:19,sev:"medium",cat:"Incomplete alternates",ref:"E6.1 and sheet index",short:"Three deductive alternates referenced; one sheet exists.",cmin:3780,cmax:12600,smin:10,smax:20,
+  full:"Deductive alternates reference DA#1, DA#2 (implied), and DA#3 — only one electrical alternate sheet actually exists in the set."},
+ {id:20,sev:"high",cat:"VIF storefront, long-lead",ref:"A4.1.2 — exterior elevations",short:"Fabricate-to-measure storefront tagged VIF, no survey data.",cmin:6300,cmax:25200,smin:56,smax:84,
+  full:"The entry storefront panel layout is dimensioned \"VIF\" and fabricated to field dimensions — with no survey data provided anywhere in the set. On a fabricate-to-measure assembly, that VIF tag alone carries more schedule exposure than most findings in this register."},
+ {id:21,sev:"medium",cat:"Sprinkler coordination",ref:"FP2.1 / P2.1.C",short:"No exclusion zone shown for the S103 wet-pipe prohibition.",cmin:2520,cmax:10080,smin:10,smax:25,
+  full:"No exclusion zone is shown on FP2.1 for the S103 wet-pipe prohibition — real risk of rough-in proceeding without coordination against Finding 05."},
+ {id:22,sev:"medium",cat:"Thermal management gap",ref:"A2.1.4 / E2.4 / M-series",short:"No rack plan or hot/cold aisle layout for server room S103.",cmin:6300,cmax:18900,smin:10,smax:20,
+  full:"No hot/cold aisle layout or rack plan exists for server room S103, so CRAC plenum orientation cannot be confirmed against actual equipment placement."},
+ {id:23,sev:"low",cat:"VIF counter dimension",ref:"A8.1.1 — women's restroom",short:"Vanity counter tagged 6'-0\" VIF; fabrication is blocked.",cmin:630,cmax:2520,smin:5,smax:10,
+  full:"Vanity counter length is tagged \"6'-0\" VIF\" — fabrication can't proceed until a field measurement is taken, a minor but avoidable delay."},
+ {id:24,sev:"medium",cat:"Scope ambiguity",ref:"P2.1.C / AD2.1",short:"Plumbing implies a restroom alternate; demo plan has no keynotes.",cmin:3780,cmax:12600,smin:10,smax:20,
+  full:"Plumbing demolition implies a restroom renovation exists as an alternate; the architectural demo plan carries no keynotes to confirm it."},
+ {id:25,sev:"low",cat:"Unresolved circuit tags",ref:"E2.3 / E2.4 — enlarged rooms",short:"\"?\" appears as a circuit identifier on enlarged plans.",cmin:630,cmax:2520,smin:3,smax:7,
+  full:"\"?\" appears as a circuit identifier on the enlarged electrical room plans — possibly unassigned circuits that were never resolved before issue."},
+ {id:26,sev:"high",cat:"Deferred submittal, undefined basis",ref:"G2.1.1 — building code summary",short:"Partition design deferred; wall heights and bracing undefined.",cmin:10080,cmax:31500,smin:14,smax:30,
+  full:"Partition structure design is listed as a deferred submittal, but wall heights and bracing for the tall open spaces are not yet defined anywhere — leaving bidders to carry unpriced structural scope on assumptions."}
+];
+
+const RANK = {critical:0,high:1,medium:2,low:3};
+const tbody = document.getElementById('tbody');
+const shownEl = document.getElementById('shown');
+const footTotal = document.getElementById('footTotal');
+let filter = 'all', sortKey = 'sev', sortDir = 1, open = new Set();
+
+const pad = n => String(n).padStart(2,'0');
+const full = n => '$' + n.toLocaleString('en-US');
+const kd = n => n >= 100000 ? '$' + Math.round(n/1000) + 'K'
+              : n >= 10000  ? '$' + (n/1000).toFixed(1).replace(/\.0$/,'') + 'K'
+              : '$' + n.toLocaleString('en-US');
+
+function rows(){
+  const list = F.filter(f => filter === 'all' || f.sev === filter);
+  const cmp = {
+    id:   (a,b) => a.id - b.id,
+    sev:  (a,b) => (RANK[a.sev] - RANK[b.sev]) || (a.id - b.id),
+    cat:  (a,b) => a.cat.localeCompare(b.cat),
+    ref:  (a,b) => a.ref.localeCompare(b.ref),
+    desc: (a,b) => a.short.localeCompare(b.short),
+    cost: (a,b) => (b.cmax - a.cmax) || (b.cmin - a.cmin),
+    sched:(a,b) => (b.smax - a.smax) || (b.smin - a.smin)
+  }[sortKey];
+  return list.sort((a,b) => cmp(a,b) * sortDir);
+}
+
+function render(){
+  const list = rows();
+  tbody.innerHTML = '';
+  if(!list.length){
+    tbody.innerHTML = '<tr><td colspan="7" class="empty">No findings at this severity.</td></tr>';
+  }
+  list.forEach(f => {
+    const tr = document.createElement('tr');
+    tr.className = 'f ' + f.sev + (open.has(f.id) ? ' open' : '');
+    tr.tabIndex = 0;
+    tr.setAttribute('aria-expanded', open.has(f.id));
+    tr.innerHTML =
+      '<td class="c-id">'+pad(f.id)+'</td>' +
+      '<td class="c-sev"><span class="sev-chip '+f.sev+'">'+f.sev+'</span></td>' +
+      '<td class="c-cat">'+f.cat+'</td>' +
+      '<td class="c-ref">'+f.ref+'</td>' +
+      '<td class="c-desc">'+f.short+'<span class="caret">'+(open.has(f.id)?'▲':'▼')+'</span></td>' +
+      '<td class="c-cost num">'+kd(f.cmin)+' – '+kd(f.cmax)+'</td>' +
+      '<td class="c-sched num">'+f.smin+'–'+f.smax+' d</td>';
+    const toggle = () => { open.has(f.id) ? open.delete(f.id) : open.add(f.id); render(); };
+    tr.addEventListener('click', toggle);
+    tr.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){ e.preventDefault(); toggle(); }});
+    tbody.appendChild(tr);
+
+    if(open.has(f.id)){
+      const dr = document.createElement('tr');
+      dr.className = 'detail';
+      dr.innerHTML = '<td colspan="7"><div class="inner"><p>'+f.full+'</p><div class="detail-meta">' +
+        '<div><div class="l">Field-cost exposure</div><div class="v red">'+full(f.cmin)+' – '+full(f.cmax)+'</div></div>' +
+        '<div><div class="l">Schedule risk</div><div class="v">'+f.smin+' – '+f.smax+' days</div></div>' +
+        '<div><div class="l">Sheet reference</div><div class="v">'+f.ref+'</div></div>' +
+        '</div></div></td>';
+      tbody.appendChild(dr);
+    }
+  });
+
+  shownEl.textContent = list.length;
+  const lo = list.reduce((s,f)=>s+f.cmin,0), hi = list.reduce((s,f)=>s+f.cmax,0);
+  footTotal.textContent = full(lo) + ' – ' + full(hi);
+}
+
+document.querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => {
+  filter = c.dataset.sev;
+  document.querySelectorAll('.chip').forEach(x => x.setAttribute('aria-pressed', x === c));
+  open.clear();
+  render();
+}));
+
+document.querySelectorAll('th[data-sort]').forEach(th => {
+  th.tabIndex = 0;
+  const act = () => {
+    const k = th.dataset.sort;
+    if(sortKey === k){ sortDir *= -1; } else { sortKey = k; sortDir = 1; }
+    document.querySelectorAll('th[data-sort]').forEach(x => x.setAttribute('aria-sort','none'));
+    th.setAttribute('aria-sort', sortDir === 1 ? 'ascending' : 'descending');
+    render();
+  };
+  th.addEventListener('click', act);
+  th.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){ e.preventDefault(); act(); }});
+});
+
+render();
+
+// scroll reveal (identical to homepage)
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:.08,rootMargin:"0px 0px -6% 0px"});
+document.querySelectorAll('.reveal').forEach(function(s){ io.observe(s); });
+</script>
+</body>
+</html>
