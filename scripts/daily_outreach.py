@@ -33,7 +33,7 @@ import argparse
 import json
 import re
 import sys
-from datetime import date
+from datetime import date, datetime
 
 EMAIL_RE = re.compile(r"[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}")
 PHONE_RE = re.compile(r"(\+?1[\s\-.])?\(?\d{3}\)?[\s\-.]\d{3}[\s\-.]\d{4}")
@@ -135,48 +135,70 @@ def html_escape(text):
     )
 
 
-def render_contact_row(contact, channel_value):
+def due_phrase(followup_date, today):
+    days_over = (date.fromisoformat(today) - date.fromisoformat(followup_date)).days
+    if days_over <= 0:
+        return "due today"
+    if days_over == 1:
+        return "a day overdue"
+    return f"{days_over} days overdue"
+
+
+def format_time(iso_str):
+    try:
+        return datetime.fromisoformat(iso_str).strftime("%-I:%M %p")
+    except (ValueError, TypeError):
+        return iso_str or ""
+
+
+def channel_sentence(channel, value):
+    if channel == "Email":
+        return f"Reach out by email — {html_escape(value)}."
+    if channel == "LinkedIn":
+        return "Reach out on LinkedIn (link below)."
+    if channel == "Call/Text":
+        return f"Reach out by call or text — {html_escape(value)}."
+    return "No direct contact info on file for them — worth checking LinkedIn or your notes."
+
+
+def render_contact_row(contact, channel, value, today):
     name = html_escape(contact.get("name") or "Unknown")
     company = html_escape(contact.get("company"))
     linkedin = contact.get("linkedin_url")
     notes = html_escape(context_for(contact))
-    followup_date = html_escape(contact.get("followup_date"))
 
     header = name
     if company:
-        header += f" &mdash; {company}"
+        header += f" <span style=\"font-weight:400;color:#777;\">({company})</span>"
 
-    links = []
-    if linkedin:
-        links.append(f'<a href="{html_escape(linkedin)}">LinkedIn profile</a>')
-    links_html = f'<div style="margin:2px 0;">{" | ".join(links)}</div>' if links else ""
+    due = due_phrase(contact.get("followup_date"), today)
+    sentence = channel_sentence(channel, value)
 
-    contact_value_html = ""
-    if channel_value and channel_value != linkedin:
-        contact_value_html = f'<div style="margin:2px 0;color:#333;">{html_escape(channel_value)}</div>'
+    linkedin_html = ""
+    if linkedin and channel != "LinkedIn":
+        linkedin_html = f' <a href="{html_escape(linkedin)}">LinkedIn →</a>'
+    elif linkedin and channel == "LinkedIn":
+        linkedin_html = f' <a href="{html_escape(linkedin)}">Open profile →</a>'
 
     return f"""
-    <li style="margin-bottom:14px;">
-      <div style="font-weight:600;">{header}</div>
-      <div style="font-size:12px;color:#888;">Follow-up due: {followup_date}</div>
-      {contact_value_html}
-      {links_html}
-      <div style="font-size:13px;color:#444;margin-top:2px;">{notes}</div>
+    <li style="margin-bottom:18px;">
+      <div style="font-weight:600;font-size:15px;">{header} <span style="font-weight:400;font-size:12px;color:#999;">— {due}</span></div>
+      <div style="font-size:14px;color:#333;margin-top:2px;">{sentence}{linkedin_html}</div>
+      <div style="font-size:13px;color:#666;margin-top:4px;">Where you left off: {notes}</div>
     </li>"""
 
 
 def render_scheduled_row(contact, event):
     name = html_escape(contact.get("name") or "Unknown")
     company = html_escape(contact.get("company"))
-    summary = html_escape(event.get("summary") or "")
-    start = html_escape(event.get("start") or "")
-    header = name
+    summary = html_escape(event.get("summary") or "a meeting")
+    time_str = html_escape(format_time(event.get("start")))
+    who = name
     if company:
-        header += f" &mdash; {company}"
+        who += f" ({company})"
     return f"""
-    <li style="margin-bottom:8px;">
-      <div style="font-weight:600;">{header}</div>
-      <div style="font-size:13px;color:#444;">Already on calendar: "{summary}" at {start}</div>
+    <li style="margin-bottom:8px;font-size:14px;color:#333;">
+      You've already got <strong>{who}</strong> on the calendar today{f' at {time_str}' if time_str else ''} — "{summary}." No extra nudge needed.
     </li>"""
 
 
@@ -195,43 +217,48 @@ def build_email(contacts, events, today):
             scheduled_today.append((contact, event))
             continue
         channel, value = pick_channel(contact)
-        grouped[channel].append((contact, value))
+        grouped[channel].append((contact, channel, value))
 
     total_outreach = sum(len(v) for v in grouped.values())
 
     if total_outreach == 0 and not scheduled_today:
         html = f"""
-        <div style="font-family:-apple-system,Segoe UI,Arial,sans-serif;max-width:600px;">
-          <h2 style="margin-bottom:4px;">Daily Outreach List &mdash; {html_escape(today_display)}</h2>
-          <p style="color:#555;">Nothing on deck today. No contacts have a follow-up due, and nothing overdue is unresolved.</p>
-          <p style="font-size:12px;color:#999;">(This confirms the routine ran successfully this morning.)</p>
+        <div style="font-family:-apple-system,Segoe UI,Arial,sans-serif;max-width:600px;font-size:15px;color:#222;">
+          <p>Morning — nothing on your outreach list today. No follow-ups are due, and nothing's overdue.</p>
+          <p style="color:#999;font-size:12px;">(Just confirming the routine ran fine this morning — no action needed from you.)</p>
         </div>"""
-        log_line = f"contacts_due=0 scheduled_today=0"
+        log_line = "contacts_due=0 scheduled_today=0"
         return subject, html, log_line
+
+    people_word = "person" if total_outreach == 1 else "people"
+    intro = f"Morning — {total_outreach} {people_word} to reach out to today."
+    if scheduled_today:
+        cal_word = "person" if len(scheduled_today) == 1 else "people"
+        intro += f" Also flagging {len(scheduled_today)} {cal_word} already on your calendar, so no separate nudge needed there."
 
     sections_html = ""
     for channel in CHANNEL_ORDER:
         items = grouped[channel]
         if not items:
             continue
-        rows = "".join(render_contact_row(c, v) for c, v in items)
+        rows = "".join(render_contact_row(c, ch, v, today) for c, ch, v in items)
         sections_html += f"""
-        <h3 style="margin-bottom:6px;border-bottom:2px solid #eee;padding-bottom:4px;">{channel} ({len(items)})</h3>
+        <h3 style="margin:20px 0 8px;font-size:14px;color:#555;text-transform:uppercase;letter-spacing:0.03em;border-bottom:1px solid #eee;padding-bottom:6px;">{channel} &middot; {len(items)}</h3>
         <ul style="list-style:none;padding-left:0;margin-top:0;">{rows}</ul>"""
 
     scheduled_html = ""
     if scheduled_today:
         rows = "".join(render_scheduled_row(c, e) for c, e in scheduled_today)
         scheduled_html = f"""
-        <h3 style="margin-top:24px;margin-bottom:6px;color:#777;">Already scheduled today ({len(scheduled_today)})</h3>
+        <h3 style="margin:24px 0 8px;font-size:14px;color:#777;">Already on your calendar</h3>
         <ul style="list-style:none;padding-left:0;">{rows}</ul>"""
 
     html = f"""
-    <div style="font-family:-apple-system,Segoe UI,Arial,sans-serif;max-width:600px;">
-      <h2 style="margin-bottom:4px;">Daily Outreach List &mdash; {html_escape(today_display)}</h2>
-      <p style="color:#555;margin-top:0;">{total_outreach} contact(s) need outreach today.</p>
+    <div style="font-family:-apple-system,Segoe UI,Arial,sans-serif;max-width:600px;font-size:15px;color:#222;">
+      <p style="margin-top:0;">{intro}</p>
       {sections_html}
       {scheduled_html}
+      <p style="color:#999;font-size:12px;margin-top:24px;">That's everything for today.</p>
     </div>"""
 
     log_line = f"contacts_due={total_outreach} scheduled_today={len(scheduled_today)}"
@@ -242,11 +269,10 @@ def build_error_email(error_message, today):
     today_display = date.fromisoformat(today).strftime("%B %-d, %Y")
     subject = f"Daily Outreach List — RUN FAILED — {today_display}"
     html = f"""
-    <div style="font-family:-apple-system,Segoe UI,Arial,sans-serif;max-width:600px;">
-      <h2 style="color:#b00020;">Daily outreach routine failed this morning</h2>
-      <p>The 4am run on {html_escape(today_display)} did not complete. No outreach list was generated.</p>
-      <p style="background:#f5f5f5;padding:10px;border-radius:4px;font-family:monospace;font-size:13px;">{html_escape(error_message)}</p>
-      <p style="color:#777;font-size:13px;">Check the log at logs/daily_outreach.log for details.</p>
+    <div style="font-family:-apple-system,Segoe UI,Arial,sans-serif;max-width:600px;font-size:15px;color:#222;">
+      <p>Heads up — this morning's outreach run didn't finish, so there's no list today.</p>
+      <p style="background:#f5f5f5;padding:10px;border-radius:4px;font-family:monospace;font-size:13px;color:#333;">{html_escape(error_message)}</p>
+      <p style="color:#777;font-size:13px;">Details are in logs/daily_outreach.log if you want to dig in.</p>
     </div>"""
     log_line = f"run=fail error={error_message!r}"
     return subject, html, log_line
