@@ -124,6 +124,39 @@ def context_for(contact):
     return " — ".join(parts) if parts else "(no notes on file)"
 
 
+DATE_LINE_RE = re.compile(r"(\d{1,2}/\d{1,2})\s*[—\-:]\s*(.+)$")
+
+
+def parse_timeline(contact):
+    """Turns Source Signal + Notes into a chronological (date_label, text) log.
+
+    Notes are typically written as dated lines already (e.g. "7/15 — Messaged
+    Ray..."); this just splits on those markers instead of dumping the raw
+    blob, so the email reads as a history instead of a paragraph.
+    """
+    entries = []
+    source_signal = (contact.get("source_signal") or "").strip()
+    if source_signal:
+        entries.append((None, source_signal))
+
+    notes = (contact.get("notes") or "").strip()
+    for raw_line in notes.split("\n"):
+        raw_line = raw_line.strip()
+        if not raw_line:
+            continue
+        match = DATE_LINE_RE.search(raw_line)
+        if match:
+            entries.append((match.group(1), match.group(2).strip()))
+        else:
+            entries.append((None, raw_line))
+    return entries
+
+
+def short_today(today):
+    d = date.fromisoformat(today)
+    return f"{d.month}/{d.day}"
+
+
 def html_escape(text):
     if text is None:
         return ""
@@ -151,41 +184,42 @@ def format_time(iso_str):
         return iso_str or ""
 
 
-def channel_sentence(channel, value):
+def channel_sentence(channel, value, linkedin):
     if channel == "Email":
-        return f"Reach out by email — {html_escape(value)}."
+        return f"Reach out by email — {value}"
     if channel == "LinkedIn":
-        return "Reach out on LinkedIn (link below)."
+        return f"Reach out on LinkedIn — {linkedin}"
     if channel == "Call/Text":
-        return f"Reach out by call or text — {html_escape(value)}."
-    return "No direct contact info on file for them — worth checking LinkedIn or your notes."
+        return f"Reach out by call or text — {value}"
+    return "No direct contact info on file — check LinkedIn or your notes"
 
 
 def render_contact_row(contact, channel, value, today):
     name = html_escape(contact.get("name") or "Unknown")
     company = html_escape(contact.get("company"))
     linkedin = contact.get("linkedin_url")
-    notes = html_escape(context_for(contact))
 
     header = name
     if company:
         header += f" <span style=\"font-weight:400;color:#777;\">({company})</span>"
 
-    due = due_phrase(contact.get("followup_date"), today)
-    sentence = channel_sentence(channel, value)
+    history_lines = ""
+    for date_label, text in parse_timeline(contact):
+        label = html_escape(date_label) if date_label else "&nbsp;&nbsp;&nbsp;"
+        history_lines += f"""
+        <div style="font-size:13px;color:#666;margin-top:3px;"><span style="display:inline-block;width:38px;color:#999;">{label}</span>&mdash; {html_escape(text)}</div>"""
 
-    linkedin_html = ""
-    if linkedin and channel != "LinkedIn":
-        linkedin_html = f' <a href="{html_escape(linkedin)}">LinkedIn →</a>'
-    elif linkedin and channel == "LinkedIn":
-        linkedin_html = f' <a href="{html_escape(linkedin)}">Open profile →</a>'
+    due = due_phrase(contact.get("followup_date"), today)
+    action = channel_sentence(channel, value, linkedin)
+    action_line = f"""
+        <div style="font-size:14px;color:#111;font-weight:600;margin-top:6px;"><span style="display:inline-block;width:38px;color:#999;font-weight:400;">{short_today(today)}</span>&mdash; {html_escape(action)} <span style="font-weight:400;color:#999;">({due})</span></div>"""
 
     return f"""
-    <li style="margin-bottom:18px;">
-      <div style="font-weight:600;font-size:15px;">{header} <span style="font-weight:400;font-size:12px;color:#999;">— {due}</span></div>
-      <div style="font-size:14px;color:#333;margin-top:2px;">{sentence}{linkedin_html}</div>
-      <div style="font-size:13px;color:#666;margin-top:4px;">Where you left off: {notes}</div>
-    </li>"""
+    <div style="margin-bottom:20px;">
+      <div style="font-weight:600;font-size:15px;">{header}</div>
+      {history_lines}
+      {action_line}
+    </div>"""
 
 
 def render_scheduled_row(contact, event):
@@ -196,10 +230,11 @@ def render_scheduled_row(contact, event):
     who = name
     if company:
         who += f" ({company})"
+    when = f" at {time_str}" if time_str else ""
     return f"""
-    <li style="margin-bottom:8px;font-size:14px;color:#333;">
-      You've already got <strong>{who}</strong> on the calendar today{f' at {time_str}' if time_str else ''} — "{summary}." No extra nudge needed.
-    </li>"""
+    <div style="font-size:14px;color:#333;margin-bottom:6px;">
+      <strong>{who}</strong> &mdash; already on your calendar today{when} ("{summary}"). No outreach needed.
+    </div>"""
 
 
 def build_email(contacts, events, today):
@@ -244,14 +279,14 @@ def build_email(contacts, events, today):
         rows = "".join(render_contact_row(c, ch, v, today) for c, ch, v in items)
         sections_html += f"""
         <h3 style="margin:20px 0 8px;font-size:14px;color:#555;text-transform:uppercase;letter-spacing:0.03em;border-bottom:1px solid #eee;padding-bottom:6px;">{channel} &middot; {len(items)}</h3>
-        <ul style="list-style:none;padding-left:0;margin-top:0;">{rows}</ul>"""
+        {rows}"""
 
     scheduled_html = ""
     if scheduled_today:
         rows = "".join(render_scheduled_row(c, e) for c, e in scheduled_today)
         scheduled_html = f"""
         <h3 style="margin:24px 0 8px;font-size:14px;color:#777;">Already on your calendar</h3>
-        <ul style="list-style:none;padding-left:0;">{rows}</ul>"""
+        {rows}"""
 
     html = f"""
     <div style="font-family:-apple-system,Segoe UI,Arial,sans-serif;max-width:600px;font-size:15px;color:#222;">
