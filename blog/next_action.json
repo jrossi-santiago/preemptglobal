@@ -1,5 +1,9 @@
 {
+  "date": null,
+  "topic": null,
   "decision_type": null,
   "route_to": null,
-  "target": null
+  "target": null,
+  "existing_page": null,
+  "reasoning": null
 }
