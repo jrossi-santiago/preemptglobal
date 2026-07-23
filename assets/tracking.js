@@ -13,8 +13,8 @@
  * so it's safe to have deployed before you've created your accounts.
  */
 (function () {
-  var GA_MEASUREMENT_ID = "G-XXXXXXXXXX";        // Google Analytics 4 "Measurement ID", from GA4 Admin > Data Streams
-  var POSTHOG_API_KEY    = "phc_XXXXXXXXXXXXXXXX"; // PostHog "Project API Key", from PostHog Project Settings
+  var GA_MEASUREMENT_ID = "G-TD21TYC3BM";        // Google Analytics 4 "Measurement ID", from GA4 Admin > Data Streams
+  var POSTHOG_API_KEY    = "phc_oSnhALmdadUFghdFYrRzs7rphWRMzUdqBHcJ4WHG7CLN"; // PostHog "Project API Key", from PostHog Project Settings
   var POSTHOG_HOST       = "https://us.i.posthog.com"; // use https://eu.i.posthog.com if your PostHog project is EU-hosted
 
   var isPlaceholder = function (value) { return !value || value.indexOf("XXXX") !== -1; };
