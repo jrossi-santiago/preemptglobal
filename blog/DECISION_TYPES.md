@@ -1,0 +1,6 @@
+- "alternatives" in keyword → type: alternatives
+- "vs" / "versus" → type: comparison
+- "pricing" / "cost" → type: pricing
+- "review" → type: review
+- "free trial" / "discount" → type: trial_or_discount
+- anything else → type: informational
