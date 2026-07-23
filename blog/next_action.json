@@ -1,9 +1,10 @@
 {
-  "date": null,
-  "topic": null,
-  "decision_type": null,
-  "route_to": null,
-  "target": null,
+  "date": "2026-07-23",
+  "topic": "Data Center Construction Docs: Why This Asset Class Sees More Conflicts Than Any Other",
+  "keyword": "constructability review consultant",
+  "decision_type": "informational",
+  "route_to": "blog/prompts/daily-post.md",
+  "target": "new_post",
   "existing_page": null,
-  "reasoning": null
+  "reasoning": "Keyword 'constructability review consultant' does not match alternatives, comparison, pricing, or trial_or_discount rules. It also does not match the review rule: DECISION_TYPES.md explicitly lists 'constructability review consultant' as a non-match example for rule 4 (review), since it's a generic service-category term with hire-me intent rather than a named product/vendor review-checking query. Falls through to rule 6 (informational default) -> blog/prompts/daily-post.md."
 }
