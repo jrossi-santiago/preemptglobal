@@ -9,9 +9,9 @@ Already published:
 - [x] Architect QC Isn't Owner Protection — Here's the Difference — `architect-qc-vs-owner-review` — 2026-07-20
 - [x] The Hidden Cost of Coordination Conflicts: Why RFI Count Is the Wrong Metric — `rfi-reduction-coordination-conflicts` — 2026-07-22 (RFI reduction)
 - [x] Pre-Bid vs. IFC Review: When to Catch Conflicts (And Why Timing Changes the Price) — `pre-bid-drawing-review-vs-ifc-timing` — 2026-07-22 (pre-bid drawing review)
+- [x] How a Single Missed MEP Clash Turns Into a $400K Change Order — `missed-mep-clash-change-order-cost` — 2026-07-23 (MEP/structural drawing coordination conflicts)
 
 Queue:
-- [ ] How a Single Missed MEP Clash Turns Into a $400K Change Order (MEP/structural drawing coordination conflicts)
 - [ ] Data Center Construction Docs: Why This Asset Class Sees More Conflicts Than Any Other (constructability review consultant)
 - [ ] Anatomy of a Findings Report: What a Real Document Audit Looks Like (third-party plan review)
 - [ ] Why "It Passed QA/QC" Doesn't Mean the Set Is Coordinated (catching design errors before construction)
