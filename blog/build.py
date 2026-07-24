@@ -21,7 +21,7 @@ BLOG_DIR = Path(__file__).resolve().parent
 SITE_DIR = BLOG_DIR.parent
 POSTS_DIR = BLOG_DIR / "posts"
 SITE_URL = "https://preemptglobal.com"
-DEFAULT_OG_IMAGE = "https://preemptglobal.com/wp-content/uploads/2026/06/Untitled_design_1_-removebg-preview.png"
+DEFAULT_OG_IMAGE = "https://preemptglobal.com/preempt_global_logo.jpg"
 
 
 # ---------- frontmatter + markdown parsing ----------
