@@ -7,13 +7,13 @@ deck: "Every project management dashboard tracks RFI count going down. Almost no
 tags: [Coordination, RFIs, Change Orders]
 ---
 
-!lede RFI reduction has become the metric everyone on a project claims credit for. The GC points to a lower RFI log than last quarter's job. The design team cites it as proof the drawings were clean. The owner sees a shrinking number and assumes the project is running smoother than the last one. None of that is necessarily true, and on $30M+ builds, the gap between "fewer RFIs" and "fewer conflicts" is exactly where the expensive change orders live.
+!lede RFI reduction has become the metric everyone on a project claims credit for. The GC points to a lower RFI log than last quarter's job. The design team cites it as proof the drawings were clean. The owner sees a shrinking number and assumes the project is running smoother than the last one. None of that is necessarily true, and on large, multi-discipline builds, the gap between "fewer RFIs" and "fewer conflicts" is exactly where the expensive change orders live.
 
 An RFI count is a count of questions asked, not a count of problems that existed. A drawing set can generate very few RFIs and still be full of unresolved cross-discipline conflicts — because nobody in the field happened to notice the girder and the duct were fighting for the same six inches until the steel was already up. At that point there's no RFI. There's a change order, a schedule hit, and a much more expensive version of the same conversation.
 
 ## What RFI count actually measures
 
-A 2013 Navigant Construction Forum study, still the most-cited benchmark in the industry, analyzed roughly one million RFIs across 1,300 major construction projects and found an average of 796 RFIs per project, at an average processing cost of $1,080 each (in 2013 dollars) with a median response time of 9.7 days. Industry estimates for the fully-loaded cost per RFI today — factoring in the design team's review time, the GC's coordination time, and downstream schedule effects — put the number closer to $2,000–$3,000. Separately, benchmark data on RFI volume puts typical generation in the range of 15–20 RFIs per $1 million of project value, meaning a $30M project should expect somewhere in the range of 450–600 RFIs as a matter of course, independent of how well-coordinated the set actually is.
+A 2013 Navigant Construction Forum study, still the most-cited benchmark in the industry, analyzed roughly one million RFIs across 1,300 major construction projects and found an average of 796 RFIs per project, at an average processing cost of $1,080 each (in 2013 dollars) with a median response time of 9.7 days. Industry estimates for the fully-loaded cost per RFI today — factoring in the design team's review time, the GC's coordination time, and downstream schedule effects — put the number closer to $2,000–$3,000. Separately, benchmark data on RFI volume puts typical generation in the range of 15–20 RFIs per $1 million of project value, meaning a large project should expect a proportional volume of RFIs as a matter of course, independent of how well-coordinated the set actually is.
 
 That's the first problem with treating RFI count as a health metric: a large chunk of it is just the size of the project talking, not the quality of the documents.
 
@@ -29,9 +29,9 @@ The second problem is worse: RFI count can go down for reasons that have nothing
 
 ## Why a shrinking RFI log isn't automatically good news
 
-Zero RFIs on a set that size isn't a sign of a perfectly coordinated project — it's usually a sign that people in the field have stopped asking questions and started making field calls on their own, or that a subcontractor priced around an ambiguity instead of flagging it, betting they'd recover the cost later through a change order. Either way, the conflict didn't disappear. It just moved out of the RFI log and into a line item nobody sees until the pay application.
+Zero RFIs on a set that size isn't a sign of a perfectly coordinated project — it's usually a sign that people in the field have stopped asking questions and started making field calls on their own, or that a subcontractor priced around an ambiguity instead of flagging it, and the conflict simply never generated a formal question. Either way, the conflict didn't disappear. It just moved out of the RFI log and into a line item nobody sees until the pay application.
 
-This is the same dynamic that shows up whenever a single metric gets optimized in isolation from what it's supposed to represent. Superintendents under schedule pressure have every incentive to resolve small field conflicts informally rather than route them through a formal RFI that takes 9.7 days to answer. A GC tracking RFI count as a KPI has every incentive to discourage the practice of filing one for anything that can plausibly be resolved on-site. Neither of those behaviors makes the drawings more coordinated. They just make the dashboard look better.
+This is the same dynamic that shows up whenever a single metric gets optimized in isolation from what it's supposed to represent. Superintendents under schedule pressure have every incentive to resolve small field conflicts informally rather than route them through a formal RFI that takes 9.7 days to answer. When RFI count gets tracked as a KPI, there's a natural pull toward resolving anything that can plausibly be handled on-site informally rather than through a formal RFI. Neither of those behaviors makes the drawings more coordinated. They just make the dashboard look better.
 
 <div class="callout">
   <div class="cl-label">Worth knowing</div>
@@ -44,7 +44,7 @@ Some of the most expensive conflicts in a document set never generate an RFI in 
 
 Those are exactly the conflicts that skip the RFI process entirely. They show up as change orders with no RFI trail behind them, which means an owner looking only at RFI count as a leading indicator has no visibility into them until the invoice.
 
-Design-related change orders are a meaningful share of total cost exposure on projects this size. Industry estimates put change order costs due specifically to architectural and engineering errors and omissions at roughly 3–5% of the total construction budget, and total change order costs on major projects at 10–15% of contract value, with some projects running well past that. On a $30M project, even the lower end of that range is $900,000–$1.5M in exposure that a shrinking RFI count would never have predicted.
+Design-related change orders are a meaningful share of total cost exposure on projects this size. Industry estimates put change order costs due specifically to architectural and engineering errors and omissions at roughly 3–5% of the total construction budget, and total change order costs on major projects at 10–15% of contract value, with some projects running well past that. On a project this size, even the lower end of that range can mean $900,000–$1.5M in exposure that a shrinking RFI count would never have predicted.
 
 ## A better metric: conflicts caught before they cost anything
 
@@ -67,9 +67,9 @@ Tracking RFI count isn't wrong — it's just incomplete. It tells you how much f
 
 ## Frequently Asked Questions
 
-### What's a good number of RFIs for a $30M construction project?
+### What's a good number of RFIs for a large construction project?
 
-There isn't a universal target, because RFI volume scales with project size and complexity — industry benchmarks suggest a range of roughly 15–20 RFIs per $1 million of project value as a baseline. A $30M project generating well outside that range in either direction is worth a closer look, but the count alone doesn't tell you whether the underlying documents were coordinated.
+There isn't a universal target, because RFI volume scales with project size and complexity — industry benchmarks suggest a range of roughly 15–20 RFIs per $1 million of project value as a baseline. A project generating well outside that range in either direction is worth a closer look, but the count alone doesn't tell you whether the underlying documents were coordinated.
 
 ### Does a low RFI count mean the drawing set was well-coordinated?
 
@@ -94,10 +94,10 @@ On its own, no — it rewards whoever is best at keeping conflicts out of the fo
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What's a good number of RFIs for a $30M construction project?",
+      "name": "What's a good number of RFIs for a large construction project?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "There isn't a universal target, because RFI volume scales with project size and complexity — industry benchmarks suggest a range of roughly 15–20 RFIs per $1 million of project value as a baseline. A $30M project generating well outside that range in either direction is worth a closer look, but the count alone doesn't tell you whether the underlying documents were coordinated."
+        "text": "There isn't a universal target, because RFI volume scales with project size and complexity — industry benchmarks suggest a range of roughly 15–20 RFIs per $1 million of project value as a baseline. A project generating well outside that range in either direction is worth a closer look, but the count alone doesn't tell you whether the underlying documents were coordinated."
       }
     },
     {
