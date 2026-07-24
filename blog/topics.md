@@ -11,9 +11,9 @@ Already published:
 - [x] Pre-Bid vs. IFC Review: When to Catch Conflicts (And Why Timing Changes the Price) — `pre-bid-drawing-review-vs-ifc-timing` — 2026-07-22 (pre-bid drawing review)
 - [x] How a Single Missed MEP Clash Turns Into a $400K Change Order — `missed-mep-clash-change-order-cost` — 2026-07-23 (MEP/structural drawing coordination conflicts)
 - [x] Why Data Centers Need a Constructability Review Consultant More Than Any Other Asset Class — `data-center-constructability-review-consultant` — 2026-07-23 (constructability review consultant)
+- [x] Anatomy of a Findings Report: What a Real Document Audit Looks Like — `anatomy-of-a-findings-report-third-party-plan-review` — 2026-07-24 (third-party plan review)
 
 Queue:
-- [ ] Anatomy of a Findings Report: What a Real Document Audit Looks Like (third-party plan review)
 - [ ] Why "It Passed QA/QC" Doesn't Mean the Set Is Coordinated (catching design errors before construction)
 - [ ] Change Order Math: Calculating Real Exposure Before You Bid (change order risk mitigation)
 - [ ] E&O Insurance and Independent Review: What Owners Should Ask For (cost of design errors and omissions)

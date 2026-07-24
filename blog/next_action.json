@@ -1,10 +1,10 @@
 {
-  "date": "2026-07-23",
-  "topic": "Data Center Construction Docs: Why This Asset Class Sees More Conflicts Than Any Other",
-  "keyword": "constructability review consultant",
+  "date": "2026-07-24",
+  "topic": "Anatomy of a Findings Report: What a Real Document Audit Looks Like",
+  "keyword": "third-party plan review",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword 'constructability review consultant' does not match alternatives, comparison, pricing, or trial_or_discount rules. It also does not match the review rule: DECISION_TYPES.md explicitly lists 'constructability review consultant' as a non-match example for rule 4 (review), since it's a generic service-category term with hire-me intent rather than a named product/vendor review-checking query. Falls through to rule 6 (informational default) -> blog/prompts/daily-post.md."
+  "reasoning": "Keyword 'third-party plan review' does not contain 'alternatives'/'alternative to' (rule 1), does not contain 'vs'/'versus'/'or' between two product names (rule 2), does not contain 'pricing'/'cost'/'price'/'how much' (rule 3), does not contain 'free trial'/'discount'/'coupon'/'promo code' (rule 5). It also does not match the review rule (rule 4): it is a generic service-category term (Tier 1 hire-me intent) that does not name a specific product or vendor, so per DECISION_TYPES.md's explicit guidance ('Does NOT match generic service-category terms that merely contain the word review') it falls through. Falls through to rule 6 (informational default) -> blog/prompts/daily-post.md."
 }
