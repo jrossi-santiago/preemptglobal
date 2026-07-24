@@ -366,6 +366,14 @@
   footer{padding:40px 24px;text-align:center;font-size:13px;color:var(--muted);background:var(--bg);border-top:1px solid var(--line);}
   footer a{text-decoration:none;}
   footer a:hover{color:var(--ink);}
+
+  .copy-toast{
+    position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(12px);
+    background:var(--ink);color:#FFFCF6;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;
+    padding:10px 18px;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.18);
+    opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;z-index:100;
+  }
+  .copy-toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 </style>
 </head>
 <body>
@@ -382,7 +390,7 @@
       <a href="#priorities">Priorities</a>
       <a href="#method">Method</a>
     </div>
-    <a class="btn hot" href="preempt-global-send-a-set.html">Send a set ▸</a>
+    <a class="btn hot" href="/send">Send a set ▸</a>
   </nav>
 </header>
 
@@ -396,7 +404,7 @@
 
     <div class="hero-ctas">
       <a class="btn soft" href="#register">Explore the register</a>
-      <a class="btn hot" href="preempt-global-send-a-set.html">Get this for your set</a>
+      <a class="btn hot" href="/send">Get this for your set</a>
     </div>
     <p class="guarantee-line">Sort it, filter it, open any row for the full write-up</p>
 
@@ -561,8 +569,8 @@
       <h2>This is the file. Here's how to get one for your set.</h2>
       <p class="sub">One set. 48-hour turnaround. Every conflict located by sheet and detail, with a dollar range and a fix — at the exact standard you just read. <strong>If we don't find at least $50,000 in exposure, you pay nothing.</strong> If we do, it's $3,000 — credited in full toward a full-project engagement.</p>
       <div class="close-ctas">
-        <a class="btn hot" href="preempt-global-send-a-set.html">Send a set for review</a>
-        <a class="btn" href="mailto:jrossi@preemptglobal.com?subject=One%20set%20for%20review">Email Joe directly</a>
+        <a class="btn hot" href="/send">Send a set for review</a>
+        <button type="button" class="btn js-copy-email" data-email="jrossi@preemptglobal.com">Email Joe directly</button>
       </div>
       <p class="contact">jrossi@preemptglobal.com · (570) 776-5660 · NDA before any document changes hands</p>
       <p class="close-sign">— <b>Joe Rossi</b>, Founding Principal, Preempt Global</p>
@@ -574,6 +582,8 @@
 <footer>
   <b>Preempt Global</b> — Independent, owner-side document review · <a href="mailto:jrossi@preemptglobal.com">jrossi@preemptglobal.com</a>
 </footer>
+
+<div class="copy-toast" id="copyToast" role="status" aria-live="polite">Email copied to clipboard</div>
 
 <script>
 const F = [
@@ -725,6 +735,37 @@ var io=new IntersectionObserver(function(es){
   es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
 },{threshold:.08,rootMargin:"0px 0px -6% 0px"});
 document.querySelectorAll('.reveal').forEach(function(s){ io.observe(s); });
+
+// copy-email buttons
+(function(){
+  var toast=document.getElementById('copyToast');
+  var toastTimer;
+  function showToast(msg){
+    if(!toast) return;
+    toast.textContent=msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer=setTimeout(function(){ toast.classList.remove('show'); },2200);
+  }
+  document.querySelectorAll('.js-copy-email').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var email=btn.getAttribute('data-email')||'jrossi@preemptglobal.com';
+      var done=function(){ showToast('Email copied to clipboard'); };
+      var fail=function(){ showToast('Copy failed — email is '+email); };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(email).then(done).catch(fail);
+      } else {
+        try{
+          var ta=document.createElement('textarea');
+          ta.value=email; ta.style.position='fixed'; ta.style.left='-9999px';
+          document.body.appendChild(ta); ta.focus(); ta.select();
+          document.execCommand('copy'); document.body.removeChild(ta);
+          done();
+        }catch(e){ fail(); }
+      }
+    });
+  });
+})();
 </script>
 </body>
 </html>
