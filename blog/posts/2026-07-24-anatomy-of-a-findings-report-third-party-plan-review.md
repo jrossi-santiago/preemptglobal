@@ -7,7 +7,7 @@ deck: "Most owners commission a third-party plan review before they've ever seen
 tags: [Document Review, Coordination, Bid Documents]
 ---
 
-!lede Every owner who commissions a third-party plan review has some version of the same question once the engagement letter is signed: what actually comes back? Not the sales pitch — the document. Most owners on a $30M+ project have sat through an architect's QC process and a GC's coordination pass before, but neither of those produces anything close to what an independent, owner-side findings report looks like. The report is the entire product. It's worth knowing what's actually in it before you're staring at one for the first time.
+!lede Every owner who commissions a third-party plan review has some version of the same question once the engagement letter is signed: what actually comes back? Not the sales pitch — the document. Most owners on a large, multi-discipline project have sat through an architect's QC process and a GC's coordination pass before, but neither of those produces anything close to what an independent, owner-side findings report looks like. The report is the entire product. It's worth knowing what's actually in it before you're staring at one for the first time.
 
 A findings report is not a punch list. It's not a marked-up set of drawings with circles and arrows. It's a structured document that names every conflict found, where it lives in the set, what it would cost if it made it to the field, and what fixing it now requires — organized so an owner with no drafting background can read it in twenty minutes and know exactly what to send back to the design team.
 
@@ -22,7 +22,7 @@ Every individual finding in a real report follows the same skeleton, regardless 
 - **Estimated exposure** — a dollar range if one can be reasonably estimated from the scope of the conflict, or a qualitative description of consequence if a number isn't supportable. Never a guessed figure dressed up as a real one.
 - **Recommended resolution path** — who needs to weigh in (structural EOR, mechanical engineer, spec writer) and what kind of fix is likely: a redline, a coordination meeting, or a formal design revision.
 
-That's the whole structure, repeated for every finding in the set. A review of a $30M-scale project's bid set typically turns up findings across a wide range — some sets are cleaner than others — and each one gets logged this way rather than as a general narrative comment.
+That's the whole structure, repeated for every finding in the set. A review of a large project's bid set typically turns up findings across a wide range — some sets are cleaner than others — and each one gets logged this way rather than as a general narrative comment.
 
 <div class="callout">
   <div class="cl-label">Worth knowing</div>
@@ -52,13 +52,13 @@ That's not a hypothetical gap — it's the same math behind [how a single missed
 
 ## Why the report has to name a dollar figure, not just describe the problem
 
-A findings report that only describes conflicts qualitatively is useful to a design team. It's not enough for an owner deciding whether to push back before bid closes, because "coordination issue" and "$380,000 change order if missed" don't compete for attention the same way on an owner's desk. Where a defensible range can be estimated — based on scope of rework, likely engineering re-review, and typical schedule impact for that class of conflict — the report should include it. Where it can't be responsibly estimated, the report says so plainly rather than manufacturing a number. Design-related change orders industry-wide run an estimated 3–5% of total construction budget, and total change order costs on major projects frequently reach 10–15% of contract value — real exposure on a $30M job, not a rounding error, which is the frame every dollar figure in a findings report is meant to translate into something specific and page-referenced rather than left as an industry average.
+A findings report that only describes conflicts qualitatively is useful to a design team. It's not enough for an owner deciding whether to push back before bid closes, because "coordination issue" and "$380,000 change order if missed" don't compete for attention the same way on an owner's desk. Where a defensible range can be estimated — based on scope of rework, likely engineering re-review, and typical schedule impact for that class of conflict — the report should include it. Where it can't be responsibly estimated, the report says so plainly rather than manufacturing a number. Design-related change orders industry-wide run an estimated 3–5% of total construction budget, and total change order costs on major projects frequently reach 10–15% of contract value — real exposure on a large project, not a rounding error, which is the frame every dollar figure in a findings report is meant to translate into something specific and page-referenced rather than left as an industry average.
 
 ## What a real audit is not
 
 It's worth being explicit about what doesn't count, because the term "review" gets used loosely in construction:
 
-- **Not a rubber stamp.** A findings report with zero or near-zero findings on a $30M+ set is a red flag about the review, not a clean bill of health for the drawings — cross-discipline conflicts of some kind are close to universal at this project scale.
+- **Not a rubber stamp.** A findings report with zero or near-zero findings on a large, multi-discipline set is a red flag about the review, not a clean bill of health for the drawings — cross-discipline conflicts of some kind are close to universal at this project scale.
 - **Not a general narrative memo.** "The set appears generally coordinated with some areas warranting attention" isn't a finding. It's not actionable by anyone.
 - **Not the architect's QC repackaged.** As covered in [architect QC vs. owner-side review](/blog/architect-qc-vs-owner-review/), the architect's own quality control checks the drawings against design intent — did the mechanical sheet match what the mechanical engineer meant to draw. It isn't scoped to catch a contradiction between two disciplines' sheets, or between a spec section and the detail it's supposed to govern, which is precisely the category an independent findings report exists to cover.
 - **Not a substitute for BIM clash detection, or replaced by it.** Clash detection catches modeled geometry conflicts reliably. It doesn't catch a written note that contradicts a drawn detail or a spec clearance the drawing doesn't allow for — conflicts that live in the documents, not the model, and that a document-level findings report is built specifically to surface.
@@ -86,7 +86,7 @@ None of this requires an owner to become fluent in reading construction drawings
 
 A punch list is generated during or after construction, tracking incomplete or defective installed work against the contract documents. A findings report is generated before construction — usually pre-bid or at issued-for-construction — and tracks contradictions and coordination conflicts within the documents themselves, before anything has been built to check against.
 
-### How many findings does a typical $30M project's drawing set have?
+### How many findings does a typical large project's drawing set have?
 
 It varies significantly by project complexity and how coordinated the design team's own process was, so there's no single benchmark number worth quoting. What's consistent across project types is that some cross-discipline conflicts are close to universal at this scale — a report that comes back with zero findings on a set this size is more often a sign of a shallow review than a genuinely clean set of drawings.
 
@@ -117,7 +117,7 @@ They're related but scoped differently. A peer review typically evaluates whethe
     },
     {
       "@type": "Question",
-      "name": "How many findings does a typical $30M project's drawing set have?",
+      "name": "How many findings does a typical large project's drawing set have?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "It varies significantly by project complexity and how coordinated the design team's own process was, so there's no single benchmark number worth quoting. What's consistent across project types is that some cross-discipline conflicts are close to universal at this scale, a report that comes back with zero findings on a set this size is more often a sign of a shallow review than a genuinely clean set of drawings."
