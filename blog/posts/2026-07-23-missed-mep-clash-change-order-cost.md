@@ -7,7 +7,7 @@ deck: "One duct-versus-beam conflict, caught in the field instead of on the shee
 tags: [Coordination, MEP, Change Orders]
 ---
 
-!lede Every $30M+ project has at least one sheet where a mechanical routing decision and a structural member are drawn as if the other doesn't exist. Most of the time, someone catches it before it matters. Sometimes nobody does — and a single missed MEP/structural drawing coordination conflict, invisible on paper, turns into one of the most expensive line items on the job.
+!lede Every large, multi-discipline project has at least one sheet where a mechanical routing decision and a structural member are drawn as if the other doesn't exist. Most of the time, someone catches it before it matters. Sometimes nobody does — and a single missed MEP/structural drawing coordination conflict, invisible on paper, turns into one of the most expensive line items on the job.
 
 The conflict itself is rarely dramatic. A duct run drawn at one elevation on the mechanical sheet. A wide-flange girder drawn at a conflicting elevation on the structural sheet, twenty feet away in the same set. Neither drawing is wrong on its own terms — the mechanical engineer routed to serve the space, the structural engineer sized and placed the member to carry the load. The conflict only exists in the overlap between the two sheets, and if no one is reading both sheets together, looking specifically for that overlap, it survives all the way to the field.
 
@@ -38,7 +38,7 @@ Add those up and a single clash — one conflict, on two sheets, that a document
 
 This is the part owners find hardest to believe: a set this size already had multiple qualified people reviewing it before it ever reached the field, and the conflict still made it through. As we've [written about separately](/blog/architect-qc-vs-owner-review/), the architect's QC checks the design against its own intent — did the mechanical sheet match what the mechanical engineer meant to draw, did the structural sheet match what the structural engineer meant to draw. That review, done correctly, still doesn't catch a conflict between the two disciplines' sheets, because it was never scoped to compare them against each other.
 
-The GC's own coordination review reads the set differently, and for a different purpose: to price it. An ambiguity or overlap found during that pass has a real incentive attached to staying quiet — flag it during bid and a competitor can undercut on a cleaner number; price around it and recover the gap later. That's not a GC acting in bad faith. It's the same structural incentive we've described in [why RFI count is the wrong metric](/blog/rfi-reduction-coordination-conflicts/): the people closest to the conflict aren't necessarily the people motivated to surface it before it's locked in.
+The GC's own coordination review reads the set differently, and for a different purpose: to price it accurately. An ambiguity or overlap found during that pass is easy to price around rather than flag — raising it during bid risks a competitor undercutting on a cleaner number. That's not a GC acting in bad faith; it's the same structural incentive we've described in [why RFI count is the wrong metric](/blog/rfi-reduction-coordination-conflicts/): the people closest to the conflict aren't necessarily the people scoped to surface it before it's locked in.
 
 <div class="callout">
   <div class="cl-label">Worth knowing</div>
@@ -47,7 +47,7 @@ The GC's own coordination review reads the set differently, and for a different 
 
 ## The math that makes "just one clash" a real number
 
-It's tempting to treat a single missed clash as an outlier — bad luck on one sheet out of hundreds. The industry data doesn't support treating it that way. Separate research on construction rework consistently puts total rework cost in the range of 5–9% of project value, and design-related change orders specifically — the category a missed MEP/structural conflict falls into — run an estimated 3–5% of total construction budget on their own, with total change order costs on major projects frequently reaching 10–15% of contract value. On a $30M project, the low end of just the design-error share of that range is close to $1M in exposure, spread across however many conflicts like this one are sitting in the set, uncaught, right now.
+It's tempting to treat a single missed clash as an outlier — bad luck on one sheet out of hundreds. The industry data doesn't support treating it that way. Separate research on construction rework consistently puts total rework cost in the range of 5–9% of project value, and design-related change orders specifically — the category a missed MEP/structural conflict falls into — run an estimated 3–5% of total construction budget on their own, with total change order costs on major projects frequently reaching 10–15% of contract value. On a project this size, the low end of just the design-error share of that range can still mean roughly $1M in exposure, spread across however many conflicts like this one are sitting in the set, uncaught, right now.
 
 That's the frame that matters for an owner deciding whether a review is worth the cost: it's not "will this specific clash happen." On a set this size, some version of it almost always does. The question is whether it's found while it's still a redline, or found by a mechanical sub standing under a beam that was drawn to occupy the same six inches as the ductwork.
 
@@ -76,7 +76,7 @@ That's the gap an independent, document-level review is built to close — not i
     <li>A single MEP/structural conflict caught in the field — not on the sheet — routinely compounds into $300,000–$400,000+ once demo, re-fabrication, engineering re-stamps, and schedule float are priced in.</li>
     <li>The architect's QC and the GC's coordination review are both real, and neither is scoped to catch a conflict between two disciplines' sheets specifically.</li>
     <li>FMI and PlanGrid's industry study puts total U.S. construction rework cost at $177.5 billion a year, with poor communication between parties responsible for 26% of it.</li>
-    <li>Design-related change orders run an estimated 3–5% of total project budget industry-wide — a real number on a $30M job, not a rounding error.</li>
+    <li>Design-related change orders run an estimated 3–5% of total project budget industry-wide — a real number on a large project, not a rounding error.</li>
     <li>BIM clash detection reliably catches modeled geometry conflicts (a documented $230M project case study returned 10x on coordination spend) but structurally misses contradictions between written notes, specs, and drawn details — the gap a document-level review is scoped to close.</li>
   </ul>
 </div>
@@ -99,7 +99,7 @@ Because everything downstream of "steel's already up" turns into a claim instead
 
 ### Is a $400,000 change order from one clash realistic, or is that an exaggerated number?
 
-It's a realistic upper-middle range once the full cost stack is priced in — demo and rework, an engineering re-stamp, expedited fabrication, and several weeks of schedule float on a $30M-scale project routinely add up to $300,000–$400,000+ for a single significant clash. It isn't a guaranteed outcome for every conflict, but it isn't an outlier either; it's closer to what industry rework and change-order cost data would predict for a conflict caught this late.
+It's a realistic upper-middle range once the full cost stack is priced in — demo and rework, an engineering re-stamp, expedited fabrication, and several weeks of schedule float on a project at that scale routinely add up to $300,000–$400,000+ for a single significant clash. It isn't a guaranteed outcome for every conflict, but it isn't an outlier either; it's closer to what industry rework and change-order cost data would predict for a conflict caught this late.
 
 ### What actually closes this gap, if the existing reviews already miss it?
 
@@ -139,7 +139,7 @@ An independent, document-level review scoped specifically to find cross-discipli
       "name": "Is a $400,000 change order from one clash realistic, or is that an exaggerated number?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It's a realistic upper-middle range once the full cost stack is priced in, demo and rework, an engineering re-stamp, expedited fabrication, and several weeks of schedule float on a $30M-scale project routinely add up to $300,000 to $400,000-plus for a single significant clash. It isn't a guaranteed outcome for every conflict, but it isn't an outlier either; it's closer to what industry rework and change-order cost data would predict for a conflict caught this late."
+        "text": "It's a realistic upper-middle range once the full cost stack is priced in, demo and rework, an engineering re-stamp, expedited fabrication, and several weeks of schedule float on a project at that scale routinely add up to $300,000 to $400,000-plus for a single significant clash. It isn't a guaranteed outcome for every conflict, but it isn't an outlier either; it's closer to what industry rework and change-order cost data would predict for a conflict caught this late."
       }
     },
     {
