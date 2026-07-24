@@ -7,10 +7,18 @@ this: pull this file fresh every run. Do not hardcode any of it in your own prom
 ## What the business does
 
 Preempt Global does independent, owner-side document review (bid/IFC construction
-drawing sets) for $30M+ commercial and industrial projects. It is a third-party
-review, paid by the owner, that catches cross-discipline coordination conflicts
-(the kind that turn into RFIs and change orders) — conflicts the architect's own QC
-and the GC's coordination process are structurally not incentivized to catch.
+drawing sets) for large multifamily, warehouse/industrial, higher education, and
+commercial projects, across all project sizes — no minimum construction value. It
+is a third-party review, paid by the owner, that catches cross-discipline
+coordination conflicts (the kind that turn into RFIs and change orders) —
+conflicts the architect's own QC and the GC's coordination process aren't scoped
+to catch, since each is doing a different, legitimate job on the project.
+
+Positioning note: never frame the architect or GC as the obstacle, the "old way,"
+or something we replace/bypass. The pitch is anti-confusion, anti-schedule-delay,
+anti-rework, pro-coordination, pro-clarity — we make every stakeholder's job
+easier, including the GC's and architect's. Don't state or imply a minimum
+project size or dollar threshold to work with us anywhere in generated content.
 
 - Founder: Joe Rossi
 - Price: $3,000
