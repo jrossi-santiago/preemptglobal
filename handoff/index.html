@@ -109,8 +109,6 @@
     color:var(--muted);max-width:640px;
   }
   .positioning strong{color:var(--ink);font-weight:600;}
-  .hero-ctas{margin-top:34px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:center;}
-  .guarantee-line{margin-top:15px;font-size:13px;color:var(--muted);font-family:'IBM Plex Mono',monospace;}
   .byline{
     margin:26px auto 0;font-size:13px;color:var(--muted);font-style:italic;
     display:flex;align-items:center;justify-content:center;gap:10px;max-width:620px;
@@ -231,7 +229,7 @@
   }
 
   /* ===== CLOSE (identical navy block to homepage) ===== */
-  .close-cta{text-align:center;background:var(--navy);border-radius:24px;padding:64px 32px;color:#EDE6D8;}
+  .close-cta{text-align:center;background:var(--navy);border-radius:24px;padding:64px 32px;color:#EDE6D8;margin-top:34px;}
   .close-cta .kicker{color:#E8A26C;}
   .close-cta h2{color:#fff;margin:0 auto;}
   .close-cta .sub{max-width:560px;margin:16px auto 0;font-size:15px;line-height:1.65;color:#A9B4CE;}
@@ -337,8 +335,6 @@
     .brand img{height:22px;width:22px;}
     nav > .btn{padding:9px 14px;font-size:12.5px;}
     .hero{padding-top:48px;}
-    .hero-ctas{flex-direction:column;width:100%;}
-    .hero-ctas .btn{width:100%;text-align:center;padding:15px 20px;}
     .byline{padding:0 8px;text-align:left;}
     .hero-report{margin-top:40px;}
     .report{padding:20px 18px 18px;transform:none;}
@@ -398,11 +394,19 @@
 
     <p class="positioning">Interest is easy. The hard part is sending confidential, competitively-sensitive documents to a firm you're still getting to know. So before you do — <strong>every protection is already in place</strong>, waiting on nothing but your click.</p>
 
-    <div class="hero-ctas">
-      <button class="btn soft" type="button" data-modal-open="pg-eo-overlay">Request E&amp;O certificate</button>
-      <button class="btn hot" type="button" data-modal-open="pg-nda-overlay">Sign the mutual NDA</button>
+    <!-- ============ ACTION BLOCK (moved up so it's visible with no scrolling) ============ -->
+    <div class="close-cta" id="start">
+      <p class="kicker">Clear the handoff</p>
+      <h2>Two clicks and the review starts.</h2>
+      <p class="sub">Sign the mutual NDA first. Then drop your set into the secure upload — <strong style="color:#fff;">the 48-hour clock starts the moment it lands.</strong></p>
+      <p class="seq">SEQUENCE: NDA → SECURE UPLOAD → 48-HOUR REVIEW</p>
+      <div class="close-ctas">
+        <button type="button" class="btn hot" data-modal-open="pg-nda-overlay"><span class="n">01</span>Sign the mutual NDA</button>
+        <button type="button" class="btn" data-modal-open="pg-upload-overlay"><span class="n">02</span>Upload your set securely</button>
+        <button type="button" class="btn" data-modal-open="pg-eo-overlay">Request E&amp;O certificate</button>
+      </div>
+      <p class="contact">jrossi@preemptglobal.com · (570) 776-5660 · NDA before any document changes hands</p>
     </div>
-    <p class="guarantee-line">NDA → secure upload → 48-hour review · nothing moves before the NDA is signed</p>
 
     <p class="byline"><span class="sig">JR</span>I spent five years drawing these sets. I know what a bid set is worth — and I treat yours like it's worth exactly that.</p>
 
@@ -510,22 +514,6 @@
     </div>
 
     <p class="capacity-note"><strong>One more thing worth knowing:</strong> this page is a description of practice, but the signed mutual NDA is what governs — it's the binding document, and you hold a countersigned copy.</p>
-  </section>
-
-  <!-- ============ CLOSE (navy block, matching homepage) ============ -->
-  <section id="start">
-    <div class="close-cta reveal">
-      <p class="kicker">Clear the handoff</p>
-      <h2>Two clicks and the review starts.</h2>
-      <p class="sub">Sign the mutual NDA first. Then drop your set into the secure upload — <strong style="color:#fff;">the 48-hour clock starts the moment it lands.</strong></p>
-      <p class="seq">SEQUENCE: NDA → SECURE UPLOAD → 48-HOUR REVIEW</p>
-      <div class="close-ctas">
-        <button type="button" class="btn hot" data-modal-open="pg-nda-overlay"><span class="n">01</span>Sign the mutual NDA</button>
-        <button type="button" class="btn" data-modal-open="pg-upload-overlay"><span class="n">02</span>Upload your set securely</button>
-        <button type="button" class="btn" data-modal-open="pg-eo-overlay">Request E&amp;O certificate</button>
-      </div>
-      <p class="contact">jrossi@preemptglobal.com · (570) 776-5660 · NDA before any document changes hands</p>
-    </div>
   </section>
 
   <!-- ============ WHY THIS EXISTS ============ -->
