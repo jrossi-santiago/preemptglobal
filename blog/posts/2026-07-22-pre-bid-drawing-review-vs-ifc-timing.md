@@ -30,18 +30,18 @@ This isn't unique to construction. A widely cited NASA analysis of error-cost es
   <div class="mini-row"><span class="k">Caught mid-construction</span><span class="v hot">7–16x the early-phase cost</span></div>
 </div>
 
-Applied to a $30M project, that escalation isn't abstract. Research on design-related rework consistently puts the direct and indirect cost of design errors and deviations somewhere in the range of 1–9% of total project cost, with some studies splitting that into roughly 7% direct cost and a comparable indirect cost from schedule and productivity impacts. Separate rework studies on completed projects have found correction costs running 4–10% of total construction value. None of those studies are describing conflicts that were unfixable — they're describing conflicts that were fixable for close to nothing at an earlier point, and weren't caught until later made them expensive.
+Applied to a large capital project, that escalation isn't abstract. Research on design-related rework consistently puts the direct and indirect cost of design errors and deviations somewhere in the range of 1–9% of total project cost, with some studies splitting that into roughly 7% direct cost and a comparable indirect cost from schedule and productivity impacts. Separate rework studies on completed projects have found correction costs running 4–10% of total construction value. None of those studies are describing conflicts that were unfixable — they're describing conflicts that were fixable for close to nothing at an earlier point, and weren't caught until later made them expensive.
 
 <div class="callout">
   <div class="cl-label">Worth knowing</div>
-  <p>On an industrial project we reviewed at IFC stage — after the GC had already been awarded the contract — we found a structural note on one sheet that directly contradicted an equipment clearance requirement on the mechanical set. The same conflict, caught during the bid window instead, would have been a one-line addendum. Caught at IFC with a signed contract in place, it became a negotiated change order, because the GC now had a priced number to hold to and no incentive to absorb a fix that wasn't in their bid.</p>
+  <p>On an industrial project we reviewed at IFC stage — after the GC had already been awarded the contract — we found a structural note on one sheet that directly contradicted an equipment clearance requirement on the mechanical set. The same conflict, caught during the bid window instead, would have been a one-line addendum. Caught at IFC with a signed contract in place, it became a negotiated change order, because the GC now had a signed, priced contract — and any fix outside that scope was, by definition, a change to the deal both sides had already agreed to.</p>
 </div>
 
 ## What the bid window actually buys an owner
 
-The reason timing matters isn't just that fixes are cheaper early in some general sense — it's that the bid window specifically is the last point where a contractor has no leverage over the fix. During bidding, every bidder is still competing on price. An addendum that corrects a conflict simply changes what everyone bids against; no single contractor can claim a change order for a fix that landed before contracts were signed. The moment the contract is awarded, that dynamic flips. The GC has a number, the number is contractual, and any correction to the documents from that point forward is a negotiation, not a clarification.
+The reason timing matters isn't just that fixes are cheaper early in some general sense — it's that the bid window specifically is the last point where no one yet has contractual leverage over the fix. During bidding, every bidder is still competing on price. An addendum that corrects a conflict simply changes what everyone bids against; no single contractor can claim a change order for a fix that landed before contracts were signed. The moment the contract is awarded, that dynamic flips. The GC has a number, the number is contractual, and any correction to the documents from that point forward is a negotiation, not a clarification.
 
-That's also why "we'll catch it at IFC" is a weaker plan than it sounds. As we've [written about separately](/blog/architect-qc-vs-owner-review/), the architect's own QC and the GC's coordination review are both real, competent processes — but neither is scoped to protect the owner specifically, and neither is incentivized to surface a conflict that's cheaper for someone else to leave alone. A GC that finds an ambiguity during pricing has a rational reason to price around it quietly rather than flag it during bid, which is part of why relying on a shrinking RFI count as a sign of a coordinated set is unreliable — [a low RFI count doesn't mean a coordinated set](/blog/rfi-reduction-coordination-conflicts/); it can just as easily mean a well-priced ambiguity that's waiting to surface as a change order later.
+That's also why "we'll catch it at IFC" is a weaker plan than it sounds. As we've [written about separately](/blog/architect-qc-vs-owner-review/), the architect's own QC and the GC's coordination review are both real, competent processes — but neither is scoped to protect the owner specifically. An ambiguity found during pricing is easy for a bidder to price around rather than flag — competitive bidding rewards a clean number, not a raised hand — which is part of why relying on a shrinking RFI count as a sign of a coordinated set is unreliable — [a low RFI count doesn't mean a coordinated set](/blog/rfi-reduction-coordination-conflicts/); it can just as easily mean a well-priced ambiguity that's waiting to surface as a change order later.
 
 > The bid window is the only point in the entire project where a fix is still free and no one has a contractual reason to prefer that it stay hidden.
 
@@ -80,7 +80,7 @@ A focused, independent review of a bid set typically takes about 48 hours and is
 
 ### Why would a contractor price around a conflict instead of flagging it during bidding?
 
-A bidder who spots an ambiguity during pricing has an incentive to price around it conservatively and stay quiet, rather than flag it and risk a competitor undercutting them on a "cleaner" number. That's a rational response to how competitive bidding works — it just means the conflict doesn't surface as an addendum. It resurfaces later as a change order, once the same bidder has a signed contract and no reason to have caught it for free.
+A bidder who spots an ambiguity during pricing has every reason to price around it conservatively rather than flag it and risk a competitor undercutting them on a "cleaner" number. That's just how competitive bidding works — it means the conflict doesn't surface as an addendum. It resurfaces later as a change order, once a contract is signed and the fix is no longer free for anyone to catch.
 
 ### Does BIM clash detection make a separate pre-bid drawing review unnecessary?
 
@@ -120,7 +120,7 @@ No. Clash detection is useful and widely run, but it only catches geometry — t
       "name": "Why would a contractor price around a conflict instead of flagging it during bidding?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A bidder who spots an ambiguity during pricing has an incentive to price around it conservatively and stay quiet, rather than flag it and risk a competitor undercutting them on a cleaner number. That's a rational response to how competitive bidding works, it just means the conflict doesn't surface as an addendum. It resurfaces later as a change order, once the same bidder has a signed contract and no reason to have caught it for free."
+        "text": "A bidder who spots an ambiguity during pricing has every reason to price around it conservatively rather than flag it and risk a competitor undercutting them on a cleaner number. That's just how competitive bidding works, it means the conflict doesn't surface as an addendum. It resurfaces later as a change order, once a contract is signed and the fix is no longer free for anyone to catch."
       }
     },
     {

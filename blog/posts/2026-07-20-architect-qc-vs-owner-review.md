@@ -1,21 +1,21 @@
 ---
-title: "Architect QC Isn't Owner Protection — Here's the Difference"
+title: "What Architect QC Covers — and Where an Owner-Side Review Picks Up"
 slug: architect-qc-vs-owner-review
 date: 2026-07-20
 description: "The architect's QC and the GC's coordination review are both real — but neither is scoped to protect the owner. Here's what closes that gap."
-deck: "Why the two reviews already built into your project's process — the architect's and the contractor's — were never designed to catch the conflicts that end up costing you the most."
+deck: "Why the two reviews already built into your project's process — the architect's and the contractor's — aren't scoped to catch the conflicts that end up costing you the most."
 tags: [Coordination, Bid Documents, Owner's Rep]
 ---
 
-!lede Every large capital project already has two sets of eyes on the drawings before they reach the field. The architect checks the set against design intent. The contractor reads it for what can be priced later. Both reviews are real, thorough, and staffed by capable people — and neither one is built to protect the party writing the checks.
+!lede Every large capital project already has two sets of eyes on the drawings before they reach the field. The architect checks the set against design intent. The contractor's coordination review is scoped to pricing the work accurately. Both reviews are real, thorough, and staffed by capable people — and neither one is scoped to protect the party writing the checks.
 
-That gap isn't a failure of process. It's the process working exactly as designed, for someone else's incentives. Once you see it, the pattern shows up on nearly every $30M+ set we've reviewed.
+That gap isn't a failure of process. It's the process working exactly as designed, for a different, legitimate purpose. Once you see it, the pattern shows up on nearly every large, multi-discipline set we've reviewed — commercial, multifamily, industrial, or higher-ed.
 
 ## The two reviews your project already has
 
 Start with what's actually happening on a typical bid or IFC set. The architect of record runs quality control against their own design intent — checking that what got drawn matches what they meant to draw. Once that's confirmed, their review is complete. It was never scoped to catch a mechanical duct routed through a structural member on someone else's sheet.
 
-The general contractor's coordination team reads the same set differently. Their incentive is to price the work accurately — which means a gap or ambiguity found during their own internal review often becomes a change order down the line, not a flagged issue during bid. **Neither party is doing anything wrong.** They're both doing their jobs as their contracts define them.
+The general contractor's coordination team reads the same set differently. Their review is scoped to pricing the work accurately — not to flagging cross-discipline conflicts on the owner's behalf, which is a different task with a different objective. **Neither party is doing anything wrong.** They're both doing their jobs as their contracts define them.
 
 > The only party with no one reading the set purely on their behalf is the one who pays for every miss.
 
@@ -50,7 +50,7 @@ The fix isn't more process from the same two parties — it's a third, independe
 - **Reviewing the issued set, not just the model.** Written notes, specs, and details matter as much as coordinated geometry.
 - **Pricing every finding in dollars.** A "potential conflict" doesn't get budget attention. A documented exposure number does.
 - **Doing it before bid, not after.** Every day the set sits uncorrected, the cheapest fix on the table keeps disappearing.
-- **Keeping the reviewer's incentives aligned with the owner's.** Anyone paid by the GC or the design team is, structurally, reading for someone else.
+- **Adding a review whose incentives are aligned with the owner's from the start.** A dedicated, owner-paid read focused specifically on cross-discipline exposure, run alongside the architect's QC and the GC's coordination review — not instead of them.
 
 None of this requires slowing down a project. A focused, independent pass on a bid set typically takes 48 hours and changes nothing about the design or construction schedule — it just puts a number on what's hiding in the documents before the field finds it.
 
