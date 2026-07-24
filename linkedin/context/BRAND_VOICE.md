@@ -1,14 +1,16 @@
-# Preempt Global — Brand Voice Guide (Track 1: Data Centers & Large Commercial)
+# Preempt Global — Brand Voice Guide (Track 1: Commercial, Multifamily, Industrial & Higher-Ed)
 
 **Purpose:** This file governs all SEO blog content for Preempt Global. It is written for an AI writing agent to pattern-match against — not for a human to skim once and forget. Read the whole thing before drafting. When in doubt, default to the example paragraph in Section 8.
 
-**Scope:** Track 1 only — data center and large commercial buyers (owner-side VPs/PMs) and secondary readers (architects/engineers who may hire Preempt for internal QA/QC). This voice does NOT apply to Track 2 (residential) content if that track is ever built — Track 2 has an inverted voice rule (explains jargon; this one doesn't) and needs its own guide.
+**Scope:** Track 1 only — owner-side buyers across Preempt Global's core verticals (large multifamily, warehouse/industrial, higher education, and commercial — including data centers) and secondary readers (architects/engineers who may hire Preempt for internal QA/QC). No project-size floor — this voice reads the same whether the project is a mid-size multifamily rehab or an $80M data center; never imply a minimum construction value. This voice does NOT apply to Track 2 (single-family residential) content if that track is ever built — Track 2 has an inverted voice rule (explains jargon; this one doesn't) and needs its own guide.
+
+See `PREEMPT_CONTEXT.md` (repo root) for business facts and positioning guardrails — pull it fresh every run, same as this file.
 
 ---
 
 ## 1. Who's reading this
 
-**Primary:** Owner-side buyers — VP Real Estate, VP Data Center Operations, Development VPs, owner's reps, PMs with $100K–$2M budget authority. 30–90 days from bid date. They live in construction documents daily. They are not impressed by explanations of what an RFI is.
+**Primary:** Owner-side buyers across multifamily, warehouse/industrial, higher-ed, and commercial (including data centers) — VP Real Estate, VP Construction or Capital Projects, VP Data Center Operations, Development VPs, owner's reps, campus/facilities directors, PMs with $100K–$2M budget authority. 30–90 days from bid date. They live in construction documents daily. They are not impressed by explanations of what an RFI is.
 
 **Secondary:** Architects and engineers who read the same content but convert on a different offer — hiring Preempt to run internal QA/QC on their own firm's output before it goes out the door.
 
@@ -28,6 +30,7 @@ The tension to hold: **knowledgeable but humble.** Confident enough to be the mo
 - **Jargon-stuffed** — see Section 5. This is the opposite failure mode from #2 below — sounding smart by using invented or borrowed "consultant" vocabulary nobody in the field actually says
 - **A know-it-all** — never "obviously," never "as any experienced PM knows," never implying the reader missed something dumb
 - **Better-than-them** — the frame is always "here's what slips through even on good projects with good people," never "here's what you did wrong"
+- **Anti-GC/architect** — never frames the general contractor or design team as the obstacle, the "old way," or something Preempt replaces or works around. The architect's QC and the GC's coordination review are real, competent, scoped-differently reviews — not failures. Findings position Preempt as making every stakeholder's job easier, GC and architect included, not as catching what they got wrong.
 
 ---
 
