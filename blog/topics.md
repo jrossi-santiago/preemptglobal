@@ -6,7 +6,7 @@ slug + date used. Add new topics to the bottom as this list runs low —
 keep roughly 8+ topics unused at all times.
 
 Already published:
-- [x] Architect QC Isn't Owner Protection — Here's the Difference — `architect-qc-vs-owner-review` — 2026-07-20
+- [x] What Architect QC Covers — and Where an Owner-Side Review Picks Up — `architect-qc-vs-owner-review` — 2026-07-20
 - [x] The Hidden Cost of Coordination Conflicts: Why RFI Count Is the Wrong Metric — `rfi-reduction-coordination-conflicts` — 2026-07-22 (RFI reduction)
 - [x] Pre-Bid vs. IFC Review: When to Catch Conflicts (And Why Timing Changes the Price) — `pre-bid-drawing-review-vs-ifc-timing` — 2026-07-22 (pre-bid drawing review)
 - [x] How a Single Missed MEP Clash Turns Into a $400K Change Order — `missed-mep-clash-change-order-cost` — 2026-07-23 (MEP/structural drawing coordination conflicts)
@@ -19,7 +19,7 @@ Queue:
 - [ ] E&O Insurance and Independent Review: What Owners Should Ask For (cost of design errors and omissions)
 - [ ] The NDA Question: Vetting an Independent Reviewer's Confidentiality (owner's representative drawing review)
 - [ ] 7 Bid Set Red Flags That Mean Your Documents Aren't Field-Ready (document review checklist)
-- [ ] Who Actually Pays for Coordination Errors — Owner or GC? (why so many change orders)
+- [ ] Where Coordination-Error Costs Actually Come From — and How to Catch Them Before Bid (why so many change orders)
 - [ ] Constructability Review vs. Peer Review: What's the Actual Difference? (constructability review vs peer review)
 - [ ] What Counts as a "Set" Ready for Bid? A Document Review Checklist for Owners (document review checklist)
 - [ ] Average Change Order Percentage by Project Type: What the Data Actually Shows (average change order percentage by project type)

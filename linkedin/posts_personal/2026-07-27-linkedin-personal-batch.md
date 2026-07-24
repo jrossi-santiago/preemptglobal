@@ -12,7 +12,7 @@ Day 7: flag it to the PM directly, not just the log. A red cell in a spreadsheet
 
 Day 14: if it's still open, it's a delay claim in the making. Document the cost impact now, not after the fact when nobody remembers why the wall got framed wrong.
 
-Run this on a $30M project and the pattern shows up fast: it's rarely the RFI that gets answered slow that causes damage. It's the one that gets answered wrong because nobody flagged it as urgent until the trade was already standing around waiting.
+Run this on a large project and the pattern shows up fast: it's rarely the RFI that gets answered slow that causes damage. It's the one that gets answered wrong because nobody flagged it as urgent until the trade was already standing around waiting.
 
 Pull your open RFI log this week and check it against these three checkpoints. If more than a handful are past day 7, you already know where next month's delay claim is coming from.
 
@@ -70,7 +70,7 @@ The owner's rep didn't dispute that the change was legitimate. The design revisi
 
 Revised backup came back within a week. Same scope, $41K lower, because the actual quote at time of order and an itemized labor breakdown were now on the table.
 
-Most change order disputes aren't about whether the work happened. They're about whether the backup supports the number. GCs know most owner's reps don't have time to check a quote date against a steel price index.
+Most change order disputes aren't about whether the work happened. They're about whether the backup supports the number — and that's an easy gap to miss when nobody has time to check a quote date against a steel price index.
 
 Before you approve the next change order over $25K, check the quote date against current material pricing. It's a five-minute check that pays for itself more often than not.
 
