@@ -1,10 +1,10 @@
 {
-  "date": "2026-07-24",
-  "topic": "Anatomy of a Findings Report: What a Real Document Audit Looks Like",
-  "keyword": "third-party plan review",
+  "date": "2026-07-25",
+  "topic": "Why \"It Passed QA/QC\" Doesn't Mean the Set Is Coordinated",
+  "keyword": "catching design errors before construction",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword 'third-party plan review' does not contain 'alternatives'/'alternative to' (rule 1), does not contain 'vs'/'versus'/'or' between two product names (rule 2), does not contain 'pricing'/'cost'/'price'/'how much' (rule 3), does not contain 'free trial'/'discount'/'coupon'/'promo code' (rule 5). It also does not match the review rule (rule 4): it is a generic service-category term (Tier 1 hire-me intent) that does not name a specific product or vendor, so per DECISION_TYPES.md's explicit guidance ('Does NOT match generic service-category terms that merely contain the word review') it falls through. Falls through to rule 6 (informational default) -> blog/prompts/daily-post.md."
+  "reasoning": "Keyword 'catching design errors before construction' does not contain 'alternatives'/'alternative to' (rule 1), does not contain 'vs'/'versus'/'or' between two product names (rule 2), does not contain 'pricing'/'cost'/'price'/'how much' (rule 3), does not name a specific product/vendor asking whether it's good or worth using (rule 4), and does not contain 'free trial'/'discount'/'coupon'/'promo code' (rule 5). Falls through to rule 6 (informational default) -> blog/prompts/daily-post.md."
 }
