@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1A1A1A">
   <title>Preempt Global</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +12,10 @@
   <style>
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      overflow-x: hidden;
     }
 
     body {
@@ -78,14 +83,6 @@
       text-align: center;
     }
 
-    .display.text-white.text-\[42px\].sm\:text-\[48px\].leading-none {
-      font-size: 40px;
-    }
-
-    .display.text-\[\#FFD700\].text-\[42px\].sm\:text-\[48px\].leading-none {
-      font-size: 40px;
-    }
-
     .faq-item summary {
       list-style: none;
     }
@@ -97,8 +94,6 @@
 </head>
 
 <body>
-
-  <body>
     <div class="bg-[#1A1A1A] text-white mono text-[11px] tracking-widest px-4 py-1.5 flex justify-between items-center border-b-2 border-[#FF5722]"><span id="i14r">DRAWING SET: DOC-REVIEW / PRE-BUILD AUDITS</span><span class="hidden sm:inline">SCALE: 1:1 · STATUS: <span class="text-[#FFD700]">LIVE</span></span></div>
     <header class="border-b-2 border-[#1A1A1A] sticky top-0 bg-white z-40">
       <div class="max-w-[1400px] mx-auto flex items-center justify-between px-5 sm:px-8 py-4">
@@ -106,9 +101,25 @@
             <circle cx="12" cy="6" r="3" stroke="#1A1A1A" stroke-width="2"></circle>
             <line x1="12" y1="9" x2="12" y2="20" stroke="#1A1A1A" stroke-width="2"></line>
             <polygon points="12,20 9,15 15,15" fill="#FF5722"></polygon>
-          </svg><span class="display text-xl">Preempt Global</span></div>
-        <nav class="hidden lg:flex items-center gap-8 mono text-[13px] tracking-wide uppercase"><a href="#" class="hover-underline">Submittals</a><a href="#" class="hover-underline">RFIs</a><a href="#" class="hover-underline">Change Orders</a><a href="#" class="hover-underline">Clash Log</a><a href="#" class="hover-underline">Pricing</a></nav><a href="#" class="mono text-[12px] uppercase tracking-wide bg-[#FF5722] text-[#1A1A1A] font-bold px-4 py-2.5 border-2 border-[#1A1A1A] hard-shadow-sm">BOOK YOUR MEETING</a>
+          </svg><span class="display text-lg sm:text-xl">Preempt Global</span></div>
+        <nav class="hidden lg:flex items-center gap-8 mono text-[13px] tracking-wide uppercase"><a href="#" class="hover-underline">Submittals</a><a href="#" class="hover-underline">RFIs</a><a href="#" class="hover-underline">Change Orders</a><a href="#" class="hover-underline">Clash Log</a><a href="#" class="hover-underline">Pricing</a></nav>
+        <div class="flex items-center gap-2 sm:gap-3">
+          <a href="#" class="mono text-[11px] sm:text-[12px] uppercase tracking-wide bg-[#FF5722] text-[#1A1A1A] font-bold px-3.5 sm:px-4 py-2.5 border-2 border-[#1A1A1A] hard-shadow-sm whitespace-nowrap"><span class="hidden sm:inline">BOOK YOUR MEETING</span><span class="sm:hidden">BOOK NOW</span></a>
+          <button id="nav-toggle-btn" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Toggle navigation menu" class="lg:hidden inline-flex items-center justify-center w-10 h-10 shrink-0 border-2 border-[#1A1A1A]">
+            <svg id="icon-bars" width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M0 1H18" stroke="#1A1A1A" stroke-width="2"></path><path d="M0 7H18" stroke="#1A1A1A" stroke-width="2"></path><path d="M0 13H18" stroke="#1A1A1A" stroke-width="2"></path></svg>
+            <svg id="icon-close" class="hidden" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 1L15 15" stroke="#1A1A1A" stroke-width="2"></path><path d="M15 1L1 15" stroke="#1A1A1A" stroke-width="2"></path></svg>
+          </button>
+        </div>
       </div>
+      <nav id="mobile-nav" class="hidden lg:hidden bg-white border-t-2 border-[#1A1A1A]">
+        <div class="max-w-[1400px] mx-auto flex flex-col mono text-[13px] tracking-wide uppercase px-5 sm:px-8">
+          <a href="#" class="py-3.5 border-b border-[#1A1A1A]/10">Submittals</a>
+          <a href="#" class="py-3.5 border-b border-[#1A1A1A]/10">RFIs</a>
+          <a href="#" class="py-3.5 border-b border-[#1A1A1A]/10">Change Orders</a>
+          <a href="#" class="py-3.5 border-b border-[#1A1A1A]/10">Clash Log</a>
+          <a href="#" class="py-3.5">Pricing</a>
+        </div>
+      </nav>
     </header>
     <section class="relative border-b-2 border-[#1A1A1A]">
       <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2">
@@ -141,19 +152,19 @@
       </div>
       <div class="max-w-[1400px] mx-auto grid grid-cols-2 lg:grid-cols-4">
         <div class="border-r-2 border-[#FF5722] px-6 py-10 lg:py-14">
-          <div class="display text-white text-[42px] sm:text-[48px] leading-none">$177 billion</div>
+          <div class="display text-white text-[26px] sm:text-[42px] lg:text-[48px] leading-none">$177 billion</div>
           <div class="mono text-[11px] uppercase tracking-widest text-white/60 mt-3">yearly cost of un-coordinated construction items</div>
         </div>
         <div class="lg:border-r-2 border-[#FF5722] px-6 py-10 lg:py-14">
-          <div class="display text-[#FFD700] text-[42px] sm:text-[48px] leading-none">3-5 weeks</div>
+          <div class="display text-[#FFD700] text-[26px] sm:text-[42px] lg:text-[48px] leading-none">3-5 weeks</div>
           <div class="mono text-[11px] uppercase tracking-widest text-white/60 mt-3">avg. schedules delays per commercial project</div>
         </div>
         <div class="border-r-2 border-[#FF5722] px-6 py-10 lg:py-14 border-t-2 lg:border-t-0">
-          <div class="display text-white text-[42px] sm:text-[48px] leading-none">12%</div>
+          <div class="display text-white text-[26px] sm:text-[42px] lg:text-[48px] leading-none">12%</div>
           <div class="mono text-[11px] uppercase tracking-widest text-white/60 mt-3">of total project budget goes to change orders</div>
         </div>
         <div class="px-6 py-10 lg:py-14 border-t-2 lg:border-t-0">
-          <div class="display text-white text-[42px] sm:text-[48px] leading-none">76%</div>
+          <div class="display text-white text-[26px] sm:text-[42px] lg:text-[48px] leading-none">76%</div>
           <div class="mono text-[11px] uppercase tracking-widest text-white/60 mt-3">of projects fall behind schedule do to poor qa qc processes</div>
         </div>
       </div>
@@ -163,7 +174,8 @@
       <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16">
         <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">Review Output</p>
         <h2 class="display text-[10vw] sm:text-[44px] lg:text-[50px] leading-[0.95] mb-3">EVERY FINDING, RANKED BY<br />WHAT IT COSTS YOU.</h2>
-        <p class="mono text-[13px] text-[#1A1A1A]/60 mb-10 max-w-[560px]">Priority, dollar exposure, and schedule impact — attached to every item, automatically. No more guessing which redline actually matters.</p>
+        <p class="mono text-[13px] text-[#1A1A1A]/60 mb-6 max-w-[560px]">Priority, dollar exposure, and schedule impact — attached to every item, automatically. No more guessing which redline actually matters.</p>
+        <p class="lg:hidden mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 mb-2">Swipe to see full table →</p>
         <div class="border-2 border-[#1A1A1A] overflow-x-auto">
           <table class="w-full min-w-[720px] border-collapse mono text-[13px]">
             <thead>
@@ -283,25 +295,25 @@
         <h2 class="display text-[10vw] sm:text-[44px] lg:text-[50px] leading-[0.95] mb-3">FOUR STEPS TO A<br />FULL BREAKDOWN — <span class="text-[#FF5722]">48 HRS.</span></h2>
         <p class="mono text-[13px] text-[#1A1A1A]/60 mb-10 max-w-[560px]">No onboarding call after onboarding call. Four steps, and you're holding a ranked list of what to fix before it costs you.</p>
         <div class="border-2 border-[#1A1A1A]">
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-            <div class="border-b-2 sm:border-r-2 lg:border-r-2 border-[#1A1A1A] px-6 py-8 lg:py-10">
+          <div class="grid grid-cols-1 lg:grid-cols-4">
+            <div class="border-b-2 lg:border-b-0 lg:border-r-2 border-[#1A1A1A] px-6 py-8 lg:py-10">
               <span class="inline-flex items-center justify-center w-9 h-9 border-2 border-[#1A1A1A] mono text-[13px] font-bold">01</span>
-              <div class="display text-[#1A1A1A] text-[24px] sm:text-[26px] leading-none mt-4 mb-3">DEMO MEETING</div>
+              <div class="display text-[#1A1A1A] text-[22px] sm:text-[26px] leading-none mt-4 mb-3">DEMO MEETING</div>
               <p class="text-[14px] leading-relaxed text-[#1A1A1A]/70">30 minutes. We look at the set, your risk points, and confirm a review makes sense — before anything is signed.</p>
             </div>
-            <div class="border-b-2 lg:border-r-2 border-[#1A1A1A] px-6 py-8 lg:py-10">
+            <div class="border-b-2 lg:border-b-0 lg:border-r-2 border-[#1A1A1A] px-6 py-8 lg:py-10">
               <span class="inline-flex items-center justify-center w-9 h-9 border-2 border-[#1A1A1A] mono text-[13px] font-bold">02</span>
-              <div class="display text-[#1A1A1A] text-[24px] sm:text-[26px] leading-none mt-4 mb-3">NDA SIGNED</div>
+              <div class="display text-[#1A1A1A] text-[22px] sm:text-[26px] leading-none mt-4 mb-3">NDA SIGNED</div>
               <p class="text-[14px] leading-relaxed text-[#1A1A1A]/70">Nothing moves until confidentiality is in place. Your set is protected before a single sheet leaves your hands.</p>
             </div>
-            <div class="border-b-2 sm:border-b-0 sm:border-r-2 lg:border-r-2 border-[#1A1A1A] px-6 py-8 lg:py-10">
+            <div class="border-b-2 lg:border-b-0 lg:border-r-2 border-[#1A1A1A] px-6 py-8 lg:py-10">
               <span class="inline-flex items-center justify-center w-9 h-9 border-2 border-[#1A1A1A] mono text-[13px] font-bold">03</span>
-              <div class="display text-[#1A1A1A] text-[24px] sm:text-[26px] leading-none mt-4 mb-3">DOCUMENT UPLOAD</div>
+              <div class="display text-[#1A1A1A] text-[22px] sm:text-[26px] leading-none mt-4 mb-3">DOCUMENT UPLOAD</div>
               <p class="text-[14px] leading-relaxed text-[#1A1A1A]/70">Send the current issued set. No special software, no template — drawings and specs, however you have them.</p>
             </div>
             <div class="px-6 py-8 lg:py-10">
               <span class="inline-flex items-center justify-center w-9 h-9 border-2 border-[#FF5722] text-[#FF5722] mono text-[13px] font-bold">04</span>
-              <div class="display text-[#FF5722] text-[24px] sm:text-[26px] leading-none mt-4 mb-3">48 HRS LATER</div>
+              <div class="display text-[#FF5722] text-[22px] sm:text-[26px] leading-none mt-4 mb-3">48 HRS LATER</div>
               <p class="text-[14px] leading-relaxed text-[#1A1A1A]/70">A full written breakdown, ranked by cost and schedule impact, walked through live in a meeting — nothing left buried in a PDF.</p>
             </div>
           </div>
@@ -321,19 +333,19 @@
             <div class="grid grid-cols-2">
               <div class="border-r-2 border-b-2 border-white/20 px-5 py-6">
                 <p class="mono text-[10px] uppercase tracking-widest text-white/40">Experience</p>
-                <p class="display text-white text-[24px] mt-1">5+ YEARS</p>
+                <p class="display text-white text-[19px] sm:text-[24px] mt-1">5+ YEARS</p>
               </div>
               <div class="border-b-2 border-white/20 px-5 py-6">
                 <p class="mono text-[10px] uppercase tracking-widest text-white/40">Largest Project</p>
-                <p class="display text-[#FFD700] text-[24px] mt-1">$60M</p>
+                <p class="display text-[#FFD700] text-[19px] sm:text-[24px] mt-1">$60M</p>
               </div>
               <div class="border-r-2 border-white/20 px-5 py-6">
                 <p class="mono text-[10px] uppercase tracking-widest text-white/40">Reviews / Month</p>
-                <p class="display text-white text-[24px] mt-1">CAPPED AT 4</p>
+                <p class="display text-white text-[19px] sm:text-[24px] mt-1">CAPPED AT 4</p>
               </div>
               <div class="px-5 py-6">
                 <p class="mono text-[10px] uppercase tracking-widest text-white/40">On Every Finding</p>
-                <p class="display text-[#FFD700] text-[24px] mt-1">MY NAME</p>
+                <p class="display text-[#FFD700] text-[19px] sm:text-[24px] mt-1">MY NAME</p>
               </div>
             </div>
           </div>
@@ -451,7 +463,46 @@
         </div>
       </div>
     </footer>
+    <script>
+      (function () {
+        var btn = document.getElementById('nav-toggle-btn');
+        var menu = document.getElementById('mobile-nav');
+        var iconBars = document.getElementById('icon-bars');
+        var iconClose = document.getElementById('icon-close');
+        if (!btn || !menu) return;
+
+        function closeMenu() {
+          menu.classList.add('hidden');
+          iconBars.classList.remove('hidden');
+          iconClose.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+
+        function openMenu() {
+          menu.classList.remove('hidden');
+          iconBars.classList.add('hidden');
+          iconClose.classList.remove('hidden');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+
+        btn.addEventListener('click', function () {
+          if (menu.classList.contains('hidden')) {
+            openMenu();
+          } else {
+            closeMenu();
+          }
+        });
+
+        menu.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', closeMenu);
+        });
+
+        var desktopQuery = window.matchMedia('(min-width: 1024px)');
+        desktopQuery.addEventListener('change', function (e) {
+          if (e.matches) closeMenu();
+        });
+      })();
+    </script>
   </body>
-</body>
 
 </html>
