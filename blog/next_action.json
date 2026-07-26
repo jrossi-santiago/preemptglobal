@@ -1,10 +1,10 @@
 {
-  "date": "2026-07-25",
-  "topic": "Why \"It Passed QA/QC\" Doesn't Mean the Set Is Coordinated",
-  "keyword": "catching design errors before construction",
+  "date": "2026-07-26",
+  "topic": "Change Order Math: Calculating Real Exposure Before You Bid",
+  "keyword": "change order risk mitigation",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword 'catching design errors before construction' does not contain 'alternatives'/'alternative to' (rule 1), does not contain 'vs'/'versus'/'or' between two product names (rule 2), does not contain 'pricing'/'cost'/'price'/'how much' (rule 3), does not name a specific product/vendor asking whether it's good or worth using (rule 4), and does not contain 'free trial'/'discount'/'coupon'/'promo code' (rule 5). Falls through to rule 6 (informational default) -> blog/prompts/daily-post.md."
+  "reasoning": "Keyword 'change order risk mitigation' does not contain 'alternatives'/'alternative to' (rule 1), does not contain 'vs'/'versus'/'or' between two product names (rule 2), does not contain 'pricing'/'cost'/'price'/'how much' (rule 3), does not name a specific product/vendor asking whether it's good or worth using (rule 4), and does not contain 'free trial'/'discount'/'coupon'/'promo code' (rule 5). Falls through to rule 6 (informational default) -> blog/prompts/daily-post.md."
 }

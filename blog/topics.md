@@ -13,9 +13,9 @@ Already published:
 - [x] Why Data Centers Need a Constructability Review Consultant More Than Any Other Asset Class — `data-center-constructability-review-consultant` — 2026-07-23 (constructability review consultant)
 - [x] Anatomy of a Findings Report: What a Real Document Audit Looks Like — `anatomy-of-a-findings-report-third-party-plan-review` — 2026-07-24 (third-party plan review)
 - [x] Why "It Passed QA/QC" Doesn't Mean the Set Is Coordinated — `qa-qc-passed-doesnt-mean-set-coordinated` — 2026-07-25 (catching design errors before construction)
+- [x] Change Order Math: Calculating Real Exposure Before You Bid — `change-order-math-calculating-real-exposure` — 2026-07-26 (change order risk mitigation)
 
 Queue:
-- [ ] Change Order Math: Calculating Real Exposure Before You Bid (change order risk mitigation)
 - [ ] E&O Insurance and Independent Review: What Owners Should Ask For (cost of design errors and omissions)
 - [ ] The NDA Question: Vetting an Independent Reviewer's Confidentiality (owner's representative drawing review)
 - [ ] 7 Bid Set Red Flags That Mean Your Documents Aren't Field-Ready (document review checklist)
