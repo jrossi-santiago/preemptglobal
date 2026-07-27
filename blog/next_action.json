@@ -1,10 +1,12 @@
 {
-  "date": "2026-07-26",
-  "topic": "Change Order Math: Calculating Real Exposure Before You Bid",
-  "keyword": "change order risk mitigation",
-  "decision_type": "informational",
-  "route_to": "blog/prompts/daily-post.md",
+  "date": "2026-07-27",
+  "topic": "E&O Insurance and Independent Review: What Owners Should Ask For",
+  "keyword": "cost of design errors and omissions",
+  "decision_type": "pricing",
+  "route_to": "blog/prompts/pricing-update.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword 'change order risk mitigation' does not contain 'alternatives'/'alternative to' (rule 1), does not contain 'vs'/'versus'/'or' between two product names (rule 2), does not contain 'pricing'/'cost'/'price'/'how much' (rule 3), does not name a specific product/vendor asking whether it's good or worth using (rule 4), and does not contain 'free trial'/'discount'/'coupon'/'promo code' (rule 5). Falls through to rule 6 (informational default) -> blog/prompts/daily-post.md."
+  "reasoning": "Keyword 'cost of design errors and omissions' contains the substring 'cost', matching DECISION_TYPES.md rule 3 (pricing) ahead of the rule 6 informational default, per the documented first-match-wins order. A scan of blog/posts/ found no existing page targeting this cost/pricing decision, so target is new_post per triage.md step 5.",
+  "status": "blocked",
+  "blocked_reason": "blog/prompts/pricing-update.md is empty (1 byte) while every other prompt file (daily-post.md, comparison.md, review-brief.md, conversion-check.md) is fully populated (100+ lines, 5-6KB). Per PREEMPT_CONTEXT.md guardrails ('If a file this agent depends on ... is missing or has changed shape significantly, stop and report what you found. Don't guess and proceed'), execution halted before writing any content. Topic left unchecked in blog/topics.md since nothing was published this run."
 }
