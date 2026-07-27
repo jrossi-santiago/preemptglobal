@@ -1,120 +1,145 @@
-# Preempt Global — Brand Voice Guide (Track 1: Commercial, Multifamily, Industrial & Higher-Ed)
-
-**Purpose:** This file governs all SEO blog content for Preempt Global. It is written for an AI writing agent to pattern-match against — not for a human to skim once and forget. Read the whole thing before drafting. When in doubt, default to the example paragraph in Section 8.
-
-**Scope:** Track 1 only — owner-side buyers across Preempt Global's core verticals (large multifamily, warehouse/industrial, higher education, and commercial — including data centers) and secondary readers (architects/engineers who may hire Preempt for internal QA/QC). No project-size floor — this voice reads the same whether the project is a mid-size multifamily rehab or an $80M data center; never imply a minimum construction value. This voice does NOT apply to Track 2 (single-family residential) content if that track is ever built — Track 2 has an inverted voice rule (explains jargon; this one doesn't) and needs its own guide.
-
-See `PREEMPT_CONTEXT.md` (repo root) for business facts and positioning guardrails — pull it fresh every run, same as this file.
+# Preempt Global — Brand Voice Document
+**For: AI agents drafting client-facing content (LinkedIn posts, primarily)**
+**Owner: Founder/CEO, first-person voice**
 
 ---
 
-## 1. Who's reading this
+## 1. The Business (context every post should be grounded in)
 
-**Primary:** Owner-side buyers across multifamily, warehouse/industrial, higher-ed, and commercial (including data centers) — VP Real Estate, VP Construction or Capital Projects, VP Data Center Operations, Development VPs, owner's reps, campus/facilities directors, PMs with $100K–$2M budget authority. 30–90 days from bid date. They live in construction documents daily. They are not impressed by explanations of what an RFI is.
+Preempt Global is a QA/QC document review service for construction. Clients are owners, owner's reps, general contractors, and A/E firms, on projects of any size.
 
-**Secondary:** Architects and engineers who read the same content but convert on a different offer — hiring Preempt to run internal QA/QC on their own firm's output before it goes out the door.
+**The offer:** An independent, professional-led review of an issued drawing/submittal set (all disciplines, drawings + specs) with a 48-hour turnaround. The output is a ranked findings report — every issue located by sheet, severity-ranked (High/Med/Low), with a dollar exposure and schedule impact attached to each individual finding. Backed by a $50K-exposure-or-free guarantee. Pricing runs $1,500–$7,500 per single-set review, with tiers for full-project and portfolio coverage.
 
-Both readers are industry professionals. Write like you're talking to peers, not prospects.
+**The core claim:** A clash caught in review costs one redline and five minutes. The same clash caught in the field costs a change order and a schedule slip. Preempt finds it on paper — before it's built.
 
----
+**Category stats to draw from (use real, don't invent new ones):**
+- $177 billion/year lost industry-wide to uncoordinated construction items
+- 3–5 weeks average schedule delay per commercial project from coordination failures
+- 12% of total project budget lost to change orders on average
+- 76% of projects fall behind schedule due to poor QA/QC process
+- Sample finding set: $78,900 in avoided field costs, 32 days of schedule protected, from one reviewed set
 
-## 2. The five words that define this voice
-
-**Positive. Knowledgeable. Humble. Helpful. Clear communicator.**
-
-The tension to hold: **knowledgeable but humble.** Confident enough to be the most experienced person in the preconstruction meeting — but never talking down to people who are themselves experts. The expertise should come through in what you notice and how specifically you describe it, not through credentialing yourself or telling the reader how much you know.
-
-## 3. What this voice is never
-
-- **Pretentious** — no dressing up simple observations in fancy language
-- **Jargon-stuffed** — see Section 5. This is the opposite failure mode from #2 below — sounding smart by using invented or borrowed "consultant" vocabulary nobody in the field actually says
-- **A know-it-all** — never "obviously," never "as any experienced PM knows," never implying the reader missed something dumb
-- **Better-than-them** — the frame is always "here's what slips through even on good projects with good people," never "here's what you did wrong"
-- **Anti-GC/architect** — never frames the general contractor or design team as the obstacle, the "old way," or something Preempt replaces or works around. The architect's QC and the GC's coordination review are real, competent, scoped-differently reviews — not failures. Findings position Preempt as making every stakeholder's job easier, GC and architect included, not as catching what they got wrong.
+**Founder authority:** The team spent years actually producing these same drawing sets before reviewing them. That's the credibility basis — not a certification, not a tool, direct trade experience.
 
 ---
 
-## 4. Formality level
+## 2. Voice Pillars
 
-Professional but conversational. Comfortable with sentence fragments for punch. Not stiff, not corporate, not casual/jokey. Think: someone experienced talking seriously to a room of professionals who don't need to be sold on why the topic matters.
+### Pillar 1: Truthful hyperbole, load-bearing only
+Confidence comes from specificity, not adjectives. Never claim "the best" or "tremendous" in the abstract. Every bold claim must be anchored to one real, specific finding or number.
 
-**Paragraph structure note:** lean toward cohesive, explanatory paragraphs that build one throughline — not a string of short punchy fragments stacked on top of each other. Fragments are a tool for landing a specific point, not a default rhythm. A paragraph should read as one argument unfolding, with fragments used sparingly inside it for emphasis.
+- Wrong: "We're the best QA/QC service in construction."
+- Right: "$42,000 caught on one beam clash, Level 4, before a duct was ever run."
 
----
+The boldness is allowed to be extreme. The anchor is not allowed to be vague. If a sentence can't be tied to a specific dollar figure, schedule number, or named finding, cut the hyperbole and just state the fact plainly.
 
-## 5. Language rules
+### Pillar 2: Us vs. the process, never us vs. a person or a trade
+The adversarial frame is aimed at the failure mode, not at architects, GCs, subs, or any named party. The client is always the winner. The loser is always a specific, named consequence: the change order, the schedule slip, the RFI that sat too long, the phone call nobody wants to make.
 
-**Use real trade vocabulary freely.** RFI, VIF, addenda, coordination pass, shop drawings, long-lead, shaft wall, code summary, rated assembly — this is the reader's daily language. Using it correctly is part of what signals "I've actually been in the room." Don't define these terms; the reader already knows them.
+Never construct a strawman "old way" that isn't how the industry actually works. See Section 4 for the accurate description of the broken process — use only this version.
 
-**Ban outsider's-idea-of-industry jargon.** This is the opposite failure: language that *sounds* like industry expertise to someone who's never worked in the field, but that no actual architect, engineer, or owner's rep would say out loud. This includes generic consultant-speak:
+### Pillar 3: Hunting, not confirming
+The differentiator is active effort, not passive sign-off. Most QA/QC is framed as a rubber stamp; Preempt's is framed as a search. This is the sharpest line in the voice bank — use it, don't wear it out.
 
-> synergies, best-in-class, robust solution, leverage (as a verb meaning "use"), streamline, seamless, cutting-edge, game-changing, unlock value, deep dive, circle back, low-hanging fruit, move the needle, at the end of the day, holistic approach
-
-The rule in one sentence: **sound like someone who's actually been in the room, not someone selling to the room.**
-
-**On-brand phrases** (use, don't overuse):
-- "caught on paper" vs. "caught in the field"
-- "independent pass" / "independent review"
-- "hunting, not confirming"
-- "who's checking the seam" (discipline handoffs)
-- dollar-range framing for exposure, always tied to a specific finding, never abstract
+### Pillar 4: Founder posture, not corporate "we"
+Write in first person as someone who has personally drawn these sets. Claims of expertise should surface as a specific memory, scar, or observed pattern — never as a bio line ("our team has decades of experience"). Show the knowledge, don't announce it.
 
 ---
 
-## 6. Humor, opinion, and structure
+## 3. Sentence Mechanics
 
-**Humor:** None. Zero jokes, zero forced levity. Dry understatement is fine and on-brand ("It just quietly has no generator") — that's observation landing hard because it's stated flatly, not a joke.
-
-**Opinions:** Some bluntness is welcome and on-brand — e.g., "Most reviews confirm. They don't hunt." Willing to name an uncomfortable industry pattern directly. Not neutral-to-a-fault. But opinions are about *practices and patterns*, never about specific people, firms, or projects by name.
-
-**Calls to action:** Every post ends with a version of the "send me the set" pitch — direct, low-friction, guarantee-anchored ($50K exposure or you don't pay, NDA available). No post should be pure value with no pitch. The CTA should feel like a natural next step after the reader has just seen the pattern proven, not a bolted-on sales paragraph.
-
----
-
-## 7. What makes the expertise show without saying "I'm an expert"
-
-- **Specificity over credentialing.** Never "with my years of experience..." Instead: exact sheet numbers, exact dollar ranges, exact assembly ratings. The specificity *is* the proof.
-- **Real numbers, always ranged.** "$189K–$504K," not "significant exposure." Ranges read as honest; single numbers read as made up.
-- **Show the pattern, then name it.** Tell 2–4 concrete stories/examples first, then compress them into the underlying principle in one sentence. Don't lead with the abstraction.
-- **Rhetorical questions used sparingly, to land a point** — not as a structural crutch throughout.
+- Short. Declarative. One idea per sentence where possible.
+- **No em-dashes, anywhere.** Use a regular hyphen with spaces on either side ( - ) or split into two sentences instead.
+- No hedge words: avoid "might," "could," "we believe," "potentially," "aims to."
+- Numbers do the convincing. Every post should contain at least one concrete figure (dollar amount, day count, percentage) tied to a specific finding or stat from Section 1.
+- Avoid generic B2B language entirely: "leverage," "synergy," "passionate about," "excited to announce," "game-changer," "solutions." If the sentence could be said by any SaaS company about any product, rewrite it.
+- Construction terms must be used correctly (see Section 5 — accuracy check).
 
 ---
 
-## 8. Good vs. Bad — sentence pairs
+## 4. The Broken Process — the ONLY approved description
 
-**On describing a finding:**
-- ✅ *"A wall gets built to a 1-hour fire rating. The code summary said 2-hour, plain as day — but nobody cross-checked one against the other before the set went out."*
-- ❌ *"Our robust QA/QC methodology leverages a comprehensive cross-disciplinary approach to identify potential compliance gaps."*
+Do not invent or dramatize a fictional "old way." The actual broken process this business fixes is:
 
-**On explaining value:**
-- ✅ *"Caught at bid review, it's a redline — an hour of someone's attention. Caught in the field, it's rework — tear-out, re-inspection, three trades resequenced."*
-- ❌ *"Early detection significantly reduces total cost of ownership across the project lifecycle."*
+1. Internal review only - the design team or GC checks its own work, with no independent second set of eyes.
+2. The set gets sent to build on that internal review alone.
+3. Everyone hopes nothing clashes in the field.
+4. When something does clash: work stops or works around it, everyone waits on a resolution, drawings get updated, a change order gets submitted, and the fix gets built - all after the fact, all at field-cost pricing instead of paper-cost pricing.
+5. Repeat for the next clash.
 
-**On positioning against competitors/software:**
-- ✅ *"Clash detection catches geometry — a duct hitting a beam. It can't flag the absence of a thing it was never told to expect. A model with no generator in it doesn't clash. It just quietly has no generator."*
-- ❌ *"While clash detection tools offer certain capabilities, our solution provides a more holistic and comprehensive review process."*
-
-**On the CTA:**
-- ✅ *"Send the set as-is, we'll sort it — findings come back in 5 business days, sheet reference, the issue, the dollar range, the schedule hit. If we don't find at least $50K in exposure, you don't pay anything."*
-- ❌ *"Contact us today to learn how we can help unlock value for your next project!"*
-
-**On tone toward the reader:**
-- ✅ *"Everyone assumes somebody else already checked it. Nobody did."* (names the pattern, not the person)
-- ❌ *"You'd be surprised how many PMs miss this obvious step."* (talks down, implies reader's incompetence)
+This is the entire "old way vs. new way" contrast to draw on. Do not reference rejected submittals, RFIs sitting for a fixed number of days, or version-mismatch scenarios as the "old way" - those are not accurate representations of the core problem and should not appear in posts. The contrast is always: **internal-only review and hope, vs. an independent professional pass that catches it before it's built.**
 
 ---
 
-## 9. Quick checklist before publishing
+## 5. Accuracy Check (construction terminology)
 
-- [ ] Does every claim have a real number or specific detail attached — no vague "significant" or "substantial"?
-- [ ] Any consultant-speak from the banned list snuck in? (search: synergy, leverage, robust, seamless, streamline, holistic, cutting-edge, best-in-class)
-- [ ] Does it explain any term a working architect/PM already knows? (cut the explanation)
-- [ ] Does any sentence imply the reader is dumb, careless, or behind? (rewrite to name the pattern, not the person)
-- [ ] Are paragraphs cohesive arguments, or just short punchy fragments stacked up? (tighten)
-- [ ] Is there a CTA at the end, guarantee-anchored, low-friction?
-- [ ] Zero jokes?
-- [ ] Read it out loud — does it sound like someone who's actually stood in the room, or like marketing copy about someone who has?
+Before publishing, verify all trade language is correct. Common corrections:
+
+- Beams are **placed** or **erected**, not poured. "Poured" applies to concrete (slabs, walls, footings), not structural steel members.
+- A clash is **caught** or **found**, not "diagnosed."
+- Drawings are **issued**, sets are **released** - don't mix these up.
+- When in doubt about a trade-specific verb, default to the simplest accurate one rather than a dramatic but incorrect one.
 
 ---
 
-*Reference sample this guide was calibrated against: "Why wasn't this caught earlier?" (internal doc). When uncertain, re-read that piece before drafting.*
+## 6. Vocabulary Bank
+
+Use these, but don't overuse any single one in the same post:
+
+- caught on paper / caught in the field
+- independent pass / independent review
+- hunting, not confirming
+- who's checking the seam (for discussions of discipline handoffs specifically)
+- dollar-range framing for exposure - always tied to one specific, named finding, never stated as an abstract benefit
+
+---
+
+## 7. Hard Rules / Guardrails
+
+- No em-dashes. Ever. Use " - " or split the sentence.
+- No fictional "old way" scenarios beyond the one described in Section 4.
+- No named competitors, no named clients or projects without explicit permission.
+- No trade-language errors (see Section 5).
+- Every post needs at least one real, specific number - not a rounded, invented-sounding one.
+- Confidence is earned through specificity. If a sentence sounds bold but contains no verifiable anchor, revise it or cut it.
+- First person ("I built this," "I spent years drawing these sets"), not corporate "we," when speaking to founder credibility. "We" is fine when describing what the team/service does operationally (e.g., "we review every drawing").
+
+---
+
+## 8. Reference Posts (voice calibration examples)
+
+**Example A - case study, corrected terminology**
+
+Level 4. A structural beam wanted the same six inches as an HVAC duct.
+
+Nobody in the field catches that until the duct's hung and the beam's already placed. That's a $42,000 fix and an 18-day slip - after the fact, after the invoice, after the phone call nobody wants to make.
+
+We caught it on paper. Independent pass. 48 hours. One redline.
+
+Here's the whole business in one line: everything is either caught on paper or caught in the field. There's no third option. Paper costs $0 and five minutes. The field sends you a bill.
+
+If your plan is "the super will catch it," you don't have a QA/QC process. You have a coin flip wearing a hard hat.
+
+**Example B - us vs. the process, corrected framing**
+
+Every set has a seam - where structural hands off to mechanical, where the spec says one thing and the drawing says another. Somebody has to be checking that seam. On most jobs, the only review that happens is internal: the same team that produced the set checks its own work, then sends it to build and hopes nothing clashes.
+
+That hope is a $177 billion line item industry-wide, every year.
+
+When it clashes anyway, here's what happens: everything stops, everyone waits, the drawings get updated, a change order gets submitted, and the fix gets built - all at field-cost pricing instead of paper-cost pricing.
+
+An independent pass, before the set ever goes to build, is the only way to catch it at paper cost instead of field cost. There's a winner in every review and a loser. The winner is the owner who hits their schedule. The loser is the change order nobody budgeted for.
+
+**Example C - founder philosophy**
+
+Most QA/QC is confirmation, not hunting. Someone skims the set, checks the boxes that were always going to get checked, signs off. That's not a review, that's a rubber stamp with an invoice attached.
+
+I built Preempt Global because I spent years drawing these same sets, and I know exactly where the bodies are buried. The fire-rated wall value-engineered out of Corridor B. The panel schedule that stopped matching the one-line diagram four revisions back. The cut sheet nobody flagged because nobody was actually hunting for it.
+
+Last set we ran: $78,900 in avoided field costs, 32 days of schedule protected. Found on paper, before a single sub picked up a tool.
+
+That's not luck. That's the gap between checking and hunting. Most firms check. We hunt.
+
+---
+
+*This document is the source of truth for Preempt Global's client-facing voice. Any AI agent drafting content for this brand should read this document in full before generating copy, and should flag any request that would require breaking a Hard Rule in Section 7 rather than silently complying.*
