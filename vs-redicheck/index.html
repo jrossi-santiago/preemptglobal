@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1A1A1A">
+  <title>Preempt Global vs. RediCheck — Who's the Review Actually Working For?</title>
+  <meta name="description" content="RediCheck is retained by the design and construction team. Preempt Global is paid by the owner, reports to no one else, and turns a set around in 48 hours instead of 2–3 weeks. See the full comparison.">
+  <link rel="canonical" href="https://preemptglobal.com/vs-redicheck/">
+  <link rel="icon" type="image/x-icon" href="/assets/favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicons/android-chrome-512x512.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    :root {
+      --orange: #FF5722;
+      --orange-deep: #F4511E;
+      --onyx: #1A1A1A;
+      --white: #FFFFFF;
+      --blueprint: #004B87;
+      --caution: #FFD700;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      color: var(--onyx);
+    }
+
+    .display {
+      font-family: "Archivo Black", "Arial Black", sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    .mono {
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    .blueprint-grid {
+      background-image: linear-gradient(rgba(0, 75, 135, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 75, 135, 0.1) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .blueprint-grid-dark {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .hard-shadow-orange {
+      box-shadow: 8px 8px 0 0 var(--orange);
+    }
+
+    .hard-shadow-sm {
+      box-shadow: 5px 5px 0 0 var(--onyx);
+    }
+
+    .hard-shadow-blue {
+      box-shadow: 6px 6px 0 0 var(--blueprint);
+    }
+
+    .ruler-top {
+      background-image: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.35) 0px, rgba(255, 255, 255, 0.35) 2px, transparent 2px, transparent 40px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.15) 0px, rgba(255, 255, 255, 0.15) 2px, transparent 2px, transparent 8px);
+      height: 14px;
+    }
+
+    .hover-underline:hover {
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-color: var(--blueprint);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg-[#1A1A1A] text-white mono text-[11px] tracking-widest px-4 py-1.5 flex justify-between items-center border-b-2 border-[#FF5722]"><span>DRAWING SET: COMPARISON / PREEMPT GLOBAL VS. REDICHECK</span><span class="hidden sm:inline">SCALE: 1:1 · STATUS: <span class="text-[#FFD700]">LIVE</span></span></div>
+  <header class="border-b-2 border-[#1A1A1A] sticky top-0 bg-white z-40">
+    <div class="max-w-[1400px] mx-auto flex items-center justify-between px-5 sm:px-8 py-4">
+      <a href="/" class="flex items-center gap-2"><img src="/assets/images/preempt_global_logo.png" width="26" height="26" alt="Preempt Global logo" class="object-contain"><span class="display text-base whitespace-nowrap sm:text-xl">Preempt Global</span></a>
+      <nav class="hidden lg:flex items-center gap-8 mono text-[13px] tracking-wide uppercase"><a href="/#friction" class="hover-underline">What We Do</a><a href="/#process" class="hover-underline">How It Works</a><a href="/#about" class="hover-underline">About</a><a href="/#pricing" class="hover-underline">Pricing</a><a href="/#faq" class="hover-underline">FAQ</a></nav>
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="mono text-[11px] sm:text-[12px] uppercase tracking-wide bg-[#FF5722] text-[#1A1A1A] font-bold px-3.5 sm:px-4 py-2.5 border-2 border-[#1A1A1A] hard-shadow-sm whitespace-nowrap"><span class="hidden sm:inline">BOOK YOUR MEETING</span><span class="sm:hidden">BOOK NOW</span></a>
+        <button id="nav-toggle-btn" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Toggle navigation menu" class="lg:hidden inline-flex items-center justify-center w-10 h-10 shrink-0 border-2 border-[#1A1A1A]">
+          <svg id="icon-bars" width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M0 1H18" stroke="#1A1A1A" stroke-width="2"></path><path d="M0 7H18" stroke="#1A1A1A" stroke-width="2"></path><path d="M0 13H18" stroke="#1A1A1A" stroke-width="2"></path></svg>
+          <svg id="icon-close" class="hidden" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 1L15 15" stroke="#1A1A1A" stroke-width="2"></path><path d="M15 1L1 15" stroke="#1A1A1A" stroke-width="2"></path></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="hidden lg:hidden bg-white border-t-2 border-[#1A1A1A]">
+      <div class="max-w-[1400px] mx-auto flex flex-col mono text-[13px] tracking-wide uppercase px-5 sm:px-8">
+        <a href="/#friction" class="py-3.5 border-b border-[#1A1A1A]/10">What We Do</a>
+        <a href="/#process" class="py-3.5 border-b border-[#1A1A1A]/10">How It Works</a>
+        <a href="/#about" class="py-3.5 border-b border-[#1A1A1A]/10">About</a>
+        <a href="/#pricing" class="py-3.5 border-b border-[#1A1A1A]/10">Pricing</a>
+        <a href="/#faq" class="py-3.5">FAQ</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative border-b-2 border-[#1A1A1A] bg-white blueprint-grid">
+    <div class="max-w-[1000px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      <p class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 mb-6"><a href="/" class="hover-underline">Home</a><span class="mx-2 text-[#1A1A1A]/25">/</span>Compare<span class="mx-2 text-[#1A1A1A]/25">/</span>vs. RediCheck</p>
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-6">Sheet 01 · Respectfully, They're Not Wrong. They're Just Not Yours.</p>
+      <h1 class="display leading-[0.95] break-words text-[10.5vw] sm:text-[48px] lg:text-[54px] max-w-[820px]">REDICHECK HAS BEEN AT THIS SINCE 1981.<br /><span class="text-[#FF5722]">THE QUESTION IS: WHO'S IT WORKING FOR?</span></h1>
+      <p class="mt-7 text-[16px] leading-relaxed text-[#1A1A1A]/80 max-w-[620px]">RediCheck is a respected name, hired by the design team to check the design team's own coordination. Preempt Global is hired by you, reports to no one else, and turns a set around in 48 hours instead of 2–3 weeks.</p>
+      <div class="mt-9 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="display text-[15px] tracking-wide bg-[#1A1A1A] text-white px-7 py-4 border-2 border-[#1A1A1A] hard-shadow-orange">BOOK YOUR DEMO MEETING →</a>
+        <a href="#compare-table" class="mono text-[13px] uppercase tracking-wide hover-underline">See the full comparison ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK COMPARISON TABLE -->
+  <section id="compare-table" class="border-b-2 border-[#1A1A1A] bg-white">
+    <div class="max-w-[1100px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">At A Glance</p>
+      <h2 class="display break-words text-[9vw] sm:text-[36px] lg:text-[42px] leading-[0.95] mb-6">SEVEN LINES. ONE REAL DIFFERENCE.</h2>
+      <p class="lg:hidden mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 mb-2">Swipe to see full table →</p>
+      <div class="border-2 border-[#1A1A1A] overflow-x-auto">
+        <table class="w-full min-w-[680px] border-collapse mono text-[13px]">
+          <thead>
+            <tr class="bg-[#1A1A1A] text-white uppercase text-[11px] tracking-widest">
+              <th class="text-left px-4 py-3 border-r border-white/20 w-[26%]">&nbsp;</th>
+              <th class="text-left px-4 py-3 border-r border-white/20 text-[#FF5722]">Preempt Global</th>
+              <th class="text-left px-4 py-3 text-white/60">RediCheck</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t-2 border-[#1A1A1A]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Who it's for</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">Paid by and reports to the owner</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">Retained by the design/construction team</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A] bg-[#1A1A1A]/[0.02]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Turnaround</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">48 hours</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">2–3 weeks</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Guarantee</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">$50K exposure found, or it's free</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">Satisfaction-based refund</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A] bg-[#1A1A1A]/[0.02]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Findings format</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">Ranked (High/Med/Low) + $ exposure + schedule impact, per item</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">Redlined PDF markup</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Pricing</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">Published, on this site</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">Proposal request only</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A] bg-[#1A1A1A]/[0.02]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Ongoing coverage</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">Unlimited re-review of bulletins/addenda (Tier 2+)</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">Not stated as standard</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Track record</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">Founder-reviewed, capped at 4 sets/month</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">3,200+ projects, $65B+ reviewed since 1981</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-6 mono text-[12px] text-[#1A1A1A]/50 max-w-[720px]">RediCheck figures above are RediCheck's own published claims, not independently verified. See the sections below for the sourcing on each row.</p>
+    </div>
+  </section>
+
+  <!-- WHO'S IT ACTUALLY WORKING FOR -->
+  <section class="bg-[#1A1A1A] border-b-2 border-[#FF5722] relative overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-6">The Core Difference</p>
+      <h2 class="display break-words text-white leading-[0.92] text-[10vw] sm:text-[48px] lg:text-[56px] max-w-[900px]">SAME COORDINATION REVIEW.<br /><span class="text-[#FF5722]">DIFFERENT BOSS.</span></h2>
+      <p class="mt-8 text-[16px] leading-relaxed text-white/70 max-w-[680px]">RediCheck's own site lists who they serve: "leading design, construction, and development firms." Their flagship testimonial comes from a project manager on the construction side. That's not a knock — it's just who's paying the invoice, and whoever pays the invoice gets the benefit of the doubt in a proposal.</p>
+      <p class="mt-4 text-[16px] leading-relaxed text-white/70 max-w-[680px]">Preempt Global works one way: paid by the owner, reporting to the owner, running alongside your architect's QC and your GC's coordination review — not replacing it, and not answerable to it. When the review is scoped to check the design team's own work, there's a limit to how hard it's going to look. When it's scoped to protect you, there isn't.</p>
+    </div>
+    <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 border-t-2 border-white/10">
+      <div class="border-r-0 lg:border-r-2 border-white/10 px-5 sm:px-8 py-10">
+        <div class="flex items-center justify-between mb-6 border-b border-white/20 pb-3"><span class="display text-lg text-white">REDICHECK</span><span class="mono text-[11px] text-[#5B9BD5] uppercase tracking-widest">Retained by: Design Team</span></div>
+        <div class="space-y-3">
+          <div class="relative border-2 border-white/20 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#004B87]"></div>
+            <p class="text-[14px] text-white/70 leading-snug">By their own site: serves "leading design, construction, and development firms."</p>
+          </div>
+          <div class="relative border-2 border-white/20 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#004B87]"></div>
+            <p class="text-[14px] text-white/70 leading-snug">Flagship testimonial is from a project manager on the construction side.</p>
+          </div>
+          <div class="relative border-2 border-white/20 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#004B87]"></div>
+            <p class="text-[14px] text-white/70 leading-snug">Real, necessary work — scoped to check the design team's own coordination.</p>
+          </div>
+        </div>
+      </div>
+      <div class="px-5 sm:px-8 py-10">
+        <div class="flex items-center justify-between mb-6 border-b border-white/20 pb-3"><span class="display text-lg text-white">PREEMPT GLOBAL</span><span class="mono text-[11px] text-[#FF5722] uppercase tracking-widest">Retained by: The Owner</span></div>
+        <div class="space-y-3">
+          <div class="relative bg-white/[0.04] border-2 border-[#FF5722]/60 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#FF5722]"></div>
+            <p class="text-[14px] text-white/85 leading-snug"><span class="text-[#FF5722] font-bold">✓</span>&nbsp; Paid by the owner. Reports to no one else.</p>
+          </div>
+          <div class="relative bg-white/[0.04] border-2 border-[#FF5722]/60 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#FF5722]"></div>
+            <p class="text-[14px] text-white/85 leading-snug"><span class="text-[#FF5722] font-bold">✓</span>&nbsp; Runs alongside your architect's QC and GC's coordination review — not instead of it.</p>
+          </div>
+          <div class="relative bg-white/[0.04] border-2 border-[#FF5722]/60 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#FF5722]"></div>
+            <p class="text-[14px] text-white/85 leading-snug"><span class="text-[#FF5722] font-bold">✓</span>&nbsp; Scoped to protect you — not to check anyone's own work.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALLOUT Q&A -->
+  <section class="border-b-2 border-[#1A1A1A] bg-white blueprint-grid">
+    <div class="max-w-[900px] mx-auto px-5 sm:px-8 py-14">
+      <div class="border-2 border-[#004B87] bg-white p-6 sm:p-8 hard-shadow-blue">
+        <p class="mono text-[12px] uppercase tracking-widest text-[#004B87] font-bold mb-3">Doesn't our architect's or GC's review already cover this?</p>
+        <p class="text-[15px] sm:text-[16px] leading-relaxed text-[#1A1A1A]/80">No — and that's the whole point. The architect's QC checks the set against design intent. The contractor's coordination review is scoped to pricing the work accurately. Both are real and necessary. Neither is scoped to work for the owner alone.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE GUARANTEE -->
+  <section class="border-b-2 border-[#1A1A1A] bg-white">
+    <div class="max-w-[1200px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">The Guarantee</p>
+      <h2 class="display break-words text-[9vw] sm:text-[38px] lg:text-[44px] leading-[0.95] mb-10 max-w-[860px]">ONE OF US GUARANTEES A FEELING. THE OTHER GUARANTEES A NUMBER.</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-7">
+        <div class="border-2 border-[#1A1A1A]/25 bg-[#1A1A1A]/[0.02] p-6 sm:p-7">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 mb-2">RediCheck</p>
+          <p class="display text-[20px] sm:text-[22px] mb-3">"UNCONDITIONAL" GUARANTEE</p>
+          <p class="text-[15px] leading-relaxed text-[#1A1A1A]/70">"If you're not satisfied with the results, you don't have to pay." A satisfaction guarantee protects against a bad experience. It doesn't commit to finding anything specific — it just means nobody has to have an awkward conversation about a refund.</p>
+        </div>
+        <div class="border-2 border-[#1A1A1A] bg-white p-6 sm:p-7 hard-shadow-orange">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#FF5722] font-bold mb-2">Preempt Global</p>
+          <p class="display text-[20px] sm:text-[22px] mb-3">$50K-EXPOSURE-OR-FREE</p>
+          <p class="text-[15px] leading-relaxed text-[#1A1A1A]/80">If the review doesn't surface at least $50,000 in documented cost exposure, it's free. No partial credit, no fine print, no "satisfied" to argue about. On a set of this size and complexity, there's always something to find — which is exactly why we're willing to put a number on it in writing.</p>
+        </div>
+      </div>
+      <p class="mt-8 mono text-[13px] text-[#1A1A1A]/60 max-w-[680px]">A satisfaction guarantee says: we tried. Ours says: we found it, and here's what it would've cost you.</p>
+    </div>
+  </section>
+
+  <!-- SPEED -->
+  <section class="bg-[#1A1A1A] blueprint-grid-dark border-b-2 border-[#FF5722]">
+    <div class="max-w-[1200px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-4">Speed</p>
+      <h2 class="display break-words text-white leading-[0.95] text-[9vw] sm:text-[38px] lg:text-[44px] mb-6 max-w-[820px]">YOUR SET IS ALREADY LATE. THEIRS TAKES 2–3 WEEKS.</h2>
+      <p class="text-[16px] leading-relaxed text-white/70 max-w-[680px] mb-10">RediCheck's own FAQ puts their turnaround at 2–3 weeks from the time they receive your documents. That's three weeks where the set sits, the schedule holds its breath, and the next submittal date gets closer. Preempt Global turns the same kind of review around in 48 hours — because the whole point of catching something on paper is catching it before it becomes a decision made in the field.</p>
+      <div class="max-w-[640px] space-y-4">
+        <div class="flex items-center gap-4">
+          <span class="mono text-[11px] uppercase tracking-widest text-white/50 w-[110px] shrink-0">Preempt</span>
+          <div class="flex-1 h-9 bg-[#1A1A1A] border-2 border-white/10"><div class="h-full bg-[#FF5722] flex items-center px-3" style="width: 7%; min-width: 90px;"><span class="mono text-[11px] font-bold text-[#1A1A1A] whitespace-nowrap">48 HRS</span></div></div>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="mono text-[11px] uppercase tracking-widest text-white/50 w-[110px] shrink-0">RediCheck</span>
+          <div class="flex-1 h-9 bg-[#1A1A1A] border-2 border-white/10"><div class="h-full bg-white/25 flex items-center px-3" style="width: 100%;"><span class="mono text-[11px] font-bold text-white/70 whitespace-nowrap">2–3 WEEKS</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU GET BACK -->
+  <section class="border-b-2 border-[#1A1A1A] bg-white blueprint-grid">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">The Deliverable</p>
+      <h2 class="display break-words text-[9vw] sm:text-[38px] lg:text-[44px] leading-[0.95] mb-3 max-w-[860px]">THEY HAND YOU REDLINES. WE HAND YOU A PRICE TAG.</h2>
+      <p class="mono text-[13px] text-[#1A1A1A]/60 mb-10 max-w-[680px]">RediCheck's deliverable, by their own description: PDFs marked up in Bluebeam, discrepancies highlighted in red, plus an online debrief — a real, useful thing that leaves the hardest part of the job to you. Every Preempt finding comes ranked, with a dollar exposure and schedule impact attached automatically.</p>
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 items-start">
+        <div class="lg:col-span-3">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 mb-2">What you actually get back — Preempt Global</p>
+          <div class="border-2 border-[#1A1A1A] overflow-x-auto">
+            <table class="w-full min-w-[560px] border-collapse mono text-[12px]">
+              <thead>
+                <tr class="bg-[#1A1A1A] text-white uppercase text-[10px] tracking-widest">
+                  <th class="text-left px-3 py-2.5 border-r border-white/20">Priority</th>
+                  <th class="text-left px-3 py-2.5 border-r border-white/20">Finding</th>
+                  <th class="text-left px-3 py-2.5 border-r border-white/20">Est. Field Cost</th>
+                  <th class="text-left px-3 py-2.5">Schedule</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-t-2 border-[#1A1A1A]">
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]"><span class="bg-[#FF5722] text-[#1A1A1A] font-bold px-2 py-1">HIGH</span></td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]">Structural beam clash — HVAC duct routing, Lvl 4</td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A] font-bold">$42,000</td>
+                  <td class="px-3 py-3 font-bold">18 days</td>
+                </tr>
+                <tr class="border-t-2 border-[#1A1A1A] bg-[#1A1A1A]/[0.02]">
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]"><span class="bg-[#FFD700] text-[#1A1A1A] font-bold px-2 py-1">MED</span></td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]">Electrical panel schedule vs. one-line mismatch</td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A] font-bold">$6,200</td>
+                  <td class="px-3 py-3 font-bold">3 days</td>
+                </tr>
+                <tr class="border-t-2 border-[#1A1A1A]">
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]"><span class="bg-[#004B87] text-white font-bold px-2 py-1">LOW</span></td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]">Door hardware finish mismatch — Suite 220</td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A] font-bold">$400</td>
+                  <td class="px-3 py-3 font-bold">0 days</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="mt-3 mono text-[12px] text-[#1A1A1A]/60">Ranked. Priced. Scheduled. Nothing left for you to triage.</p>
+        </div>
+        <div class="lg:col-span-2">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 mb-2">Typical redlined PDF markup (illustrative)</p>
+          <div class="border-2 border-[#1A1A1A]/25 bg-[#1A1A1A]/[0.02] p-5 space-y-3">
+            <p class="text-[13px] text-[#1A1A1A]/50 leading-snug border-b border-dashed border-[#1A1A1A]/20 pb-3">"See markup — check clearance."</p>
+            <p class="text-[13px] text-[#1A1A1A]/50 leading-snug border-b border-dashed border-[#1A1A1A]/20 pb-3">"Coordinate w/ MEP."</p>
+            <p class="text-[13px] text-[#1A1A1A]/50 leading-snug border-b border-dashed border-[#1A1A1A]/20 pb-3">"Verify spec section 09 21 16."</p>
+            <p class="text-[13px] text-[#1A1A1A]/50 leading-snug">"Confirm w/ architect of record."</p>
+          </div>
+          <p class="mt-3 mono text-[12px] text-[#1A1A1A]/60">Real, useful markup. No rank, no dollar figure, no schedule impact attached — that part's still yours to work out.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRACK RECORD -->
+  <section class="bg-[#1A1A1A] border-b-2 border-[#FF5722]">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16 lg:py-20 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+      <div class="lg:col-span-7">
+        <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-6">Track Record, Addressed Honestly</p>
+        <h2 class="display break-words text-white leading-[0.95] text-[9vw] sm:text-[36px] lg:text-[40px] mb-6 max-w-[600px]">THEY'VE DONE MORE VOLUME.<br /><span class="text-[#FF5722]">WE DO MORE PER SET.</span></h2>
+        <p class="text-[16px] leading-relaxed text-white/70 max-w-[600px]">RediCheck has reviewed over $65 billion in construction cost since 1981, by their own site — that's real, and nobody should pretend otherwise. But volume and attention aren't the same thing. Preempt caps capacity at four sets a month on purpose, so every set gets a founder who's personally drawn these documents, not a rotation through a larger team. RediCheck built a name over four decades by reviewing a lot of sets. We're building ours by making sure yours doesn't get lost in the queue.</p>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="border-2 border-white/20">
+          <div class="grid grid-cols-2">
+            <div class="border-r-2 border-b-2 border-white/20 px-5 py-6">
+              <p class="mono text-[10px] uppercase tracking-widest text-white/40">RediCheck, since 1981</p>
+              <p class="display text-white text-[19px] sm:text-[24px] mt-1">$65B+ reviewed</p>
+            </div>
+            <div class="border-b-2 border-white/20 px-5 py-6">
+              <p class="mono text-[10px] uppercase tracking-widest text-white/40">RediCheck</p>
+              <p class="display text-white text-[19px] sm:text-[24px] mt-1">3,200+ projects</p>
+            </div>
+            <div class="border-r-2 border-white/20 px-5 py-6">
+              <p class="mono text-[10px] uppercase tracking-widest text-white/40">Preempt / month</p>
+              <p class="display text-[#FF5722] text-[17px] sm:text-[24px] mt-1 whitespace-nowrap">CAPPED AT 4</p>
+            </div>
+            <div class="px-5 py-6">
+              <p class="mono text-[10px] uppercase tracking-widest text-white/40">Preempt, every finding</p>
+              <p class="display text-[#FF5722] text-[19px] sm:text-[24px] mt-1">FOUNDER'S NAME</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIM OBJECTION -->
+  <section class="border-b-2 border-[#1A1A1A] bg-white">
+    <div class="max-w-[900px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">One More Objection</p>
+      <div class="border-t-2 border-b-2 border-[#1A1A1A] py-7">
+        <h2 class="display text-[7.5vw] sm:text-[28px] leading-[1.05] mb-4">"DOESN'T CLASH DETECTION ALREADY CATCH THIS?"</h2>
+        <p class="text-[15px] sm:text-[16px] leading-relaxed text-[#1A1A1A]/75 max-w-[760px]">Clash detection catches geometry — two elements overlapping inside a coordinated model. It doesn't catch the model contradicting the written spec, a general note that prohibits what another sheet requires, or details that never physically overlap in the model but still stop work in the field. Neither RediCheck's process nor a BIM coordination pass is built to read the issued set the way this review does — which is exactly where most real-world conflicts live.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING TRANSPARENCY -->
+  <section class="bg-[#1A1A1A] blueprint-grid-dark border-b-2 border-[#FF5722]">
+    <div class="max-w-[1200px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-4">Pricing Transparency</p>
+      <h2 class="display break-words text-white leading-[0.95] text-[9vw] sm:text-[38px] lg:text-[44px] mb-6 max-w-[760px]">SEE THE NUMBER BEFORE YOU BOOK THE CALL.</h2>
+      <p class="text-[16px] leading-relaxed text-white/70 max-w-[680px] mb-9">RediCheck doesn't publish pricing — every engagement starts with a proposal request. Preempt Global's pricing is public: $1,500–$7,500 for a single-set review, $10,000–$25,000 per project with unlimited re-review through permit/GMP, or a $3,500–$7,500/mo retainer if you've got more than one project running. You'll know what this costs before you ever get on a call.</p>
+      <a href="/#pricing" class="inline-block mono text-[13px] uppercase tracking-wide bg-[#FF5722] text-[#1A1A1A] font-bold px-6 py-3.5 border-2 border-white hard-shadow-sm">See Full Pricing →</a>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section id="cta" class="bg-[#1A1A1A] blueprint-grid-dark relative overflow-hidden">
+    <div class="ruler-top w-full"></div>
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-20 lg:py-24 text-center">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-6">Sheet 01 of 01 — Last Call</p>
+      <h2 class="display break-words text-white leading-[0.92] text-[9vw] sm:text-[46px] lg:text-[56px] max-w-[900px] mx-auto">REDICHECK CHECKS THE DESIGN.<br /><span class="text-[#FF5722]">WE CHECK FOR YOU.</span></h2>
+      <p class="mt-7 text-[16px] leading-relaxed text-white/70 max-w-[520px] mx-auto">Book a 30-minute demo. Nothing's shared until the NDA is signed, and nothing's billed unless we find something worth the fee.</p>
+      <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="display text-[15px] tracking-wide bg-[#FF5722] text-[#1A1A1A] px-8 py-4 border-2 border-[#1A1A1A] hard-shadow-sm">BOOK YOUR DEMO MEETING →</a>
+        <span class="mono text-[11px] uppercase tracking-widest text-white/40 border-2 border-white/20 px-4 py-2">STATUS: <span class="text-[#FFD700]">ACCEPTING 4 SETS / MONTH</span></span>
+      </div>
+    </div>
+    <div class="ruler-top w-full"></div>
+  </section>
+
+  <footer class="bg-white">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-6">
+      <div class="grid grid-cols-2 sm:grid-cols-5 border-2 border-[#1A1A1A] mono text-[11px]">
+        <div class="border-r border-[#1A1A1A] p-3">
+          <p class="text-[#1A1A1A]/50 uppercase">Drawn by</p>
+          <p class="font-bold mt-1">Preempt Global</p>
+        </div>
+        <div class="border-r border-[#1A1A1A] p-3">
+          <p class="text-[#1A1A1A]/50 uppercase">Checked by</p>
+          <p class="font-bold mt-1">Joe Rossi</p>
+        </div>
+        <div class="border-r border-[#1A1A1A] p-3 hidden sm:block">
+          <p class="text-[#1A1A1A]/50 uppercase">Scale</p>
+          <p class="font-bold mt-1">1 : 1</p>
+        </div>
+        <div class="border-r border-[#1A1A1A] p-3">
+          <p class="text-[#1A1A1A]/50 uppercase">Date</p>
+          <p class="font-bold mt-1">2026.07.27</p>
+        </div>
+        <div class="p-3">
+          <p class="text-[#1A1A1A]/50 uppercase">Sheet</p>
+          <p class="font-bold mt-1">CMP-01</p>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-6 gap-4">
+        <a href="/" class="flex items-center gap-2"><img src="/assets/images/preempt_global_logo.png" width="20" height="20" alt="Preempt Global logo" class="object-contain"><span class="display text-sm">Preempt Global</span></a>
+        <nav class="mono text-[11px] uppercase tracking-wide flex gap-6 text-[#1A1A1A]/60"><a href="mailto:jrossi@preemptglobal.com" class="hover-underline">Contact</a><a href="/privacy-policy/" class="hover-underline">Privacy Policy</a><a href="/terms-and-conditions/" class="hover-underline">Terms &amp; Conditions</a><a href="/service-agreement/" class="hover-underline">Service Agreement</a></nav><span class="mono text-[11px] text-[#1A1A1A]/40">© 2026 Preempt Global — All Rights Reserved</span>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.getElementById('nav-toggle-btn');
+      var menu = document.getElementById('mobile-nav');
+      var iconBars = document.getElementById('icon-bars');
+      var iconClose = document.getElementById('icon-close');
+      if (!btn || !menu) return;
+
+      function closeMenu() {
+        menu.classList.add('hidden');
+        iconBars.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+
+      function openMenu() {
+        menu.classList.remove('hidden');
+        iconBars.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+
+      btn.addEventListener('click', function () {
+        if (menu.classList.contains('hidden')) {
+          openMenu();
+        } else {
+          closeMenu();
+        }
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      var desktopQuery = window.matchMedia('(min-width: 1024px)');
+      desktopQuery.addEventListener('change', function (e) {
+        if (e.matches) closeMenu();
+      });
+    })();
+  </script>
+</body>
+
+</html>
