@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1A1A1A">
+  <title>Preempt Global vs. CHECKSET — Great Software, No Guarantee</title>
+  <meta name="description" content="CHECKSET built a genuinely capable review platform — dashboards, overlays, a rotating team of reviewers. What's not on their site: a guarantee, a published price, or one accountable name on your findings. See the full comparison.">
+  <link rel="canonical" href="https://preemptglobal.com/vs-checkset/">
+  <link rel="icon" type="image/x-icon" href="/assets/favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicons/android-chrome-512x512.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    :root {
+      --orange: #FF5722;
+      --orange-deep: #F4511E;
+      --onyx: #1A1A1A;
+      --white: #FFFFFF;
+      --blueprint: #004B87;
+      --caution: #FFD700;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      color: var(--onyx);
+    }
+
+    .display {
+      font-family: "Archivo Black", "Arial Black", sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    .mono {
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    .blueprint-grid {
+      background-image: linear-gradient(rgba(0, 75, 135, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 75, 135, 0.1) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .blueprint-grid-dark {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .blueprint-grid-navy {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .hard-shadow-orange {
+      box-shadow: 8px 8px 0 0 var(--orange);
+    }
+
+    .hard-shadow-sm {
+      box-shadow: 5px 5px 0 0 var(--onyx);
+    }
+
+    .hard-shadow-blue {
+      box-shadow: 6px 6px 0 0 var(--blueprint);
+    }
+
+    .hard-shadow-caution {
+      box-shadow: 7px 7px 0 0 var(--caution);
+    }
+
+    .ruler-top {
+      background-image: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.35) 0px, rgba(255, 255, 255, 0.35) 2px, transparent 2px, transparent 40px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.15) 0px, rgba(255, 255, 255, 0.15) 2px, transparent 2px, transparent 8px);
+      height: 14px;
+    }
+
+    .hover-underline:hover {
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-color: var(--blueprint);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg-[#1A1A1A] text-white mono text-[11px] tracking-widest px-4 py-1.5 flex justify-between items-center border-b-2 border-[#FF5722]"><span>DRAWING SET: COMPARISON / PREEMPT GLOBAL VS. CHECKSET</span><span class="hidden sm:inline">SCALE: 1:1 · STATUS: <span class="text-[#FFD700]">LIVE</span></span></div>
+  <header class="border-b-2 border-[#1A1A1A] sticky top-0 bg-white z-40">
+    <div class="max-w-[1400px] mx-auto flex items-center justify-between px-5 sm:px-8 py-4">
+      <a href="/" class="flex items-center gap-2"><img src="/assets/images/preempt_global_logo.png" width="26" height="26" alt="Preempt Global logo" class="object-contain"><span class="display text-base whitespace-nowrap sm:text-xl">Preempt Global</span></a>
+      <nav class="hidden lg:flex items-center gap-8 mono text-[13px] tracking-wide uppercase"><a href="/#friction" class="hover-underline">What We Do</a><a href="/#process" class="hover-underline">How It Works</a><a href="/#about" class="hover-underline">About</a><a href="/#pricing" class="hover-underline">Pricing</a><a href="/#faq" class="hover-underline">FAQ</a></nav>
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="mono text-[11px] sm:text-[12px] uppercase tracking-wide bg-[#FF5722] text-[#1A1A1A] font-bold px-3.5 sm:px-4 py-2.5 border-2 border-[#1A1A1A] hard-shadow-sm whitespace-nowrap"><span class="hidden sm:inline">BOOK YOUR MEETING</span><span class="sm:hidden">BOOK NOW</span></a>
+        <button id="nav-toggle-btn" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Toggle navigation menu" class="lg:hidden inline-flex items-center justify-center w-10 h-10 shrink-0 border-2 border-[#1A1A1A]">
+          <svg id="icon-bars" width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M0 1H18" stroke="#1A1A1A" stroke-width="2"></path><path d="M0 7H18" stroke="#1A1A1A" stroke-width="2"></path><path d="M0 13H18" stroke="#1A1A1A" stroke-width="2"></path></svg>
+          <svg id="icon-close" class="hidden" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 1L15 15" stroke="#1A1A1A" stroke-width="2"></path><path d="M15 1L1 15" stroke="#1A1A1A" stroke-width="2"></path></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="hidden lg:hidden bg-white border-t-2 border-[#1A1A1A]">
+      <div class="max-w-[1400px] mx-auto flex flex-col mono text-[13px] tracking-wide uppercase px-5 sm:px-8">
+        <a href="/#friction" class="py-3.5 border-b border-[#1A1A1A]/10">What We Do</a>
+        <a href="/#process" class="py-3.5 border-b border-[#1A1A1A]/10">How It Works</a>
+        <a href="/#about" class="py-3.5 border-b border-[#1A1A1A]/10">About</a>
+        <a href="/#pricing" class="py-3.5 border-b border-[#1A1A1A]/10">Pricing</a>
+        <a href="/#faq" class="py-3.5">FAQ</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative border-b-2 border-[#1A1A1A] bg-white blueprint-grid">
+    <div class="max-w-[1000px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      <p class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 mb-6"><a href="/" class="hover-underline">Home</a><span class="mx-2 text-[#1A1A1A]/25">/</span>Compare<span class="mx-2 text-[#1A1A1A]/25">/</span>vs. CHECKSET</p>
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-6">Sheet 01 · The Most Built-Out Competitor Isn't the Most Accountable One</p>
+      <h1 class="display leading-[0.95] break-words text-[10.5vw] sm:text-[48px] lg:text-[54px] max-w-[820px]">CHECKSET BUILT A DASHBOARD.<br /><span class="text-[#FF5722]">WE BUILT A GUARANTEE.</span></h1>
+      <p class="mt-7 text-[16px] leading-relaxed text-[#1A1A1A]/80 max-w-[620px]">CHECKSET's platform is genuinely well-built — mark-ups, overlays, dashboards, a rotating team of licensed reviewers. What it doesn't have anywhere on its site: a guarantee, a published price, or one accountable person with their name on your findings.</p>
+      <div class="mt-9 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="display text-[15px] tracking-wide bg-[#1A1A1A] text-white px-7 py-4 border-2 border-[#1A1A1A] hard-shadow-orange">BOOK YOUR DEMO MEETING →</a>
+        <a href="#compare-table" class="mono text-[13px] uppercase tracking-wide hover-underline">See the full comparison ↓</a>
+      </div>
+      <p class="mt-8 mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40">$50K Exposure Guarantee · Published Pricing · Founder-Reviewed</p>
+    </div>
+  </section>
+
+  <!-- QUICK COMPARISON TABLE -->
+  <section id="compare-table" class="border-b-2 border-[#1A1A1A] bg-white">
+    <div class="max-w-[1100px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">At A Glance</p>
+      <h2 class="display break-words text-[9vw] sm:text-[36px] lg:text-[42px] leading-[0.95] mb-6">THE MOST SOPHISTICATED PLATFORM. STILL NO GUARANTEE.</h2>
+      <p class="lg:hidden mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 mb-2">Swipe to see full table →</p>
+      <div class="border-2 border-[#1A1A1A] overflow-x-auto">
+        <table class="w-full min-w-[680px] border-collapse mono text-[13px]">
+          <thead>
+            <tr class="bg-[#1A1A1A] text-white uppercase text-[11px] tracking-widest">
+              <th class="text-left px-4 py-3 border-r border-white/20 w-[26%]">&nbsp;</th>
+              <th class="text-left px-4 py-3 border-r border-white/20 text-[#FF5722]">Preempt Global</th>
+              <th class="text-left px-4 py-3 text-white/60">CHECKSET</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t-2 border-[#1A1A1A]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Guarantee</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">$50K exposure found, or it's free</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">None stated</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A] bg-[#1A1A1A]/[0.02]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Pricing</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">Published bands, visible up front</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">Custom hourly quote after set review</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Payment terms</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">Pay only if the guarantee clears</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">50% deposit before review starts, 50% on completion</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A] bg-[#1A1A1A]/[0.02]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Who reviews your set</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">Founder-reviewed, capped at 4 sets/month</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">Rotating team of 4–12 reviewers</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Turnaround</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">48 hours to full findings + walkthrough</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">24-hr proposal, next-business-day start; review duration scoped per project</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A] bg-[#1A1A1A]/[0.02]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Findings format</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">Every item ranked + dollarized + schedule impact</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">Mark-ups, priority levels 1–3, Top 10 Critical Findings, analytics dashboard</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Track record</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">Founder-led, new entrant</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">350+ active clients, 94% retention, 208M+ sq ft reviewed</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-6 mono text-[12px] text-[#1A1A1A]/50 max-w-[720px]">CHECKSET figures above are CHECKSET's own published claims, not independently verified. See the sections below for the sourcing on each row.</p>
+    </div>
+  </section>
+
+  <!-- THE GUARANTEE GAP -->
+  <section class="bg-[#1A1A1A] border-b-2 border-[#FF5722] relative overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-6">The Guarantee Gap</p>
+      <h2 class="display break-words text-white leading-[0.92] text-[9.5vw] sm:text-[44px] lg:text-[52px] max-w-[960px]">THEY ANSWER SIX QUESTIONS IN THEIR FAQ. NONE OF THEM ARE <span class="text-[#FF5722]">"WHAT IF YOU DON'T FIND ANYTHING?"</span></h2>
+      <p class="mt-8 text-[16px] leading-relaxed text-white/70 max-w-[700px]">Read CHECKSET's FAQ and you'll find clear answers on scope customization, lead time, and local code expertise. What you won't find, anywhere on their site: any guarantee tied to outcome, or even a satisfaction guarantee like some of the other players in this space offer. We didn't find one stated — you pay for the hours quoted, full stop.</p>
+      <p class="mt-4 text-[16px] leading-relaxed text-white/70 max-w-[700px]">Preempt Global's guarantee is $50,000-exposure-or-free — in writing, on every tier. If the review doesn't surface at least $50K in documented cost exposure, you don't pay for it. No fine print, no asterisk.</p>
+    </div>
+    <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 border-t-2 border-white/10">
+      <div class="border-r-0 lg:border-r-2 border-white/10 px-5 sm:px-8 py-10">
+        <div class="flex items-center justify-between mb-6 border-b border-white/20 pb-3"><span class="display text-lg text-white">CHECKSET</span><span class="mono text-[11px] text-[#5B9BD5] uppercase tracking-widest">FAQ Topics: 6</span></div>
+        <div class="space-y-3">
+          <div class="relative border-2 border-white/20 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#004B87]"></div>
+            <p class="text-[14px] text-white/70 leading-snug">Scope customization — answered</p>
+          </div>
+          <div class="relative border-2 border-white/20 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#004B87]"></div>
+            <p class="text-[14px] text-white/70 leading-snug">Lead time &amp; local code expertise — answered</p>
+          </div>
+          <div class="relative border-2 border-white/20 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#004B87]"></div>
+            <p class="text-[14px] text-white/70 leading-snug">"What if the review comes back thin?" — not addressed</p>
+          </div>
+        </div>
+      </div>
+      <div class="px-5 sm:px-8 py-10">
+        <div class="flex items-center justify-between mb-6 border-b border-white/20 pb-3"><span class="display text-lg text-white">PREEMPT GLOBAL</span><span class="mono text-[11px] text-[#FF5722] uppercase tracking-widest">In Writing, Every Tier</span></div>
+        <div class="space-y-3">
+          <div class="relative bg-white/[0.04] border-2 border-[#FF5722]/60 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#FF5722]"></div>
+            <p class="text-[14px] text-white/85 leading-snug"><span class="text-[#FF5722] font-bold">✓</span>&nbsp; $50,000-exposure-or-free, no fine print.</p>
+          </div>
+          <div class="relative bg-white/[0.04] border-2 border-[#FF5722]/60 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#FF5722]"></div>
+            <p class="text-[14px] text-white/85 leading-snug"><span class="text-[#FF5722] font-bold">✓</span>&nbsp; Tied to outcome, not satisfaction.</p>
+          </div>
+          <div class="relative bg-white/[0.04] border-2 border-[#FF5722]/60 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#FF5722]"></div>
+            <p class="text-[14px] text-white/85 leading-snug"><span class="text-[#FF5722] font-bold">✓</span>&nbsp; If it doesn't clear the bar, you owe nothing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALLOUT KICKER -->
+  <section class="border-b-2 border-[#1A1A1A] bg-white blueprint-grid">
+    <div class="max-w-[900px] mx-auto px-5 sm:px-8 py-14">
+      <div class="border-2 border-[#004B87] bg-white p-6 sm:p-8 hard-shadow-blue">
+        <p class="mono text-[12px] uppercase tracking-widest text-[#004B87] font-bold mb-3">A platform with dashboards and analytics is still just a platform.</p>
+        <p class="text-[15px] sm:text-[16px] leading-relaxed text-[#1A1A1A]/80">A guarantee is a promise. We're the only one of the two making one.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING & PAYMENT STRUCTURE -->
+  <section class="border-b-2 border-[#1A1A1A] bg-white">
+    <div class="max-w-[1200px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">Pricing &amp; Payment Structure</p>
+      <h2 class="display break-words text-[9vw] sm:text-[38px] lg:text-[44px] leading-[0.95] mb-6 max-w-[860px]">THEY QUOTE HOURS. WE QUOTE A NUMBER.</h2>
+      <p class="text-[16px] leading-relaxed text-[#1A1A1A]/80 max-w-[760px] mb-4">CHECKSET's own FAQ is direct about it: "every project is unique, so we create custom proposals" based on estimated hours — issued after they've seen your drawing set. Their process requires 50% of the fee upfront before the review even starts, with the remaining 50% due on completion, before you've had a chance to evaluate whether the findings were worth it.</p>
+      <p class="text-[16px] leading-relaxed text-[#1A1A1A]/80 max-w-[760px] mb-10">Preempt publishes real pricing bands on this page before you ever request a proposal: $1,500–$7,500 for a single-set review, $10,000–$25,000 per project, or a $3,500–$7,500/mo retainer. You know the range before the first call, and nothing's billed unless the review clears the guarantee threshold.</p>
+      <div class="border-2 border-[#1A1A1A] overflow-x-auto">
+        <table class="w-full min-w-[640px] border-collapse mono text-[13px]">
+          <thead>
+            <tr class="bg-[#1A1A1A] text-white uppercase text-[11px] tracking-widest">
+              <th class="text-left px-4 py-3 border-r border-white/20 w-[26%]">&nbsp;</th>
+              <th class="text-left px-4 py-3 border-r border-white/20 text-white/60">CHECKSET</th>
+              <th class="text-left px-4 py-3 text-[#FF5722]">Preempt Global</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t-2 border-[#1A1A1A]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">How pricing works</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] text-[#1A1A1A]/70">Custom hourly estimate, issued after seeing your set</td>
+              <td class="px-4 py-4 font-bold">Published bands, visible before you talk to anyone</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A] bg-[#1A1A1A]/[0.02]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Payment structure</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] text-[#1A1A1A]/70">50% deposit before review starts, 50% due on completion</td>
+              <td class="px-4 py-4 font-bold">Pay for a result that's already cleared a $50K exposure bar</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Risk if findings are thin</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] text-[#1A1A1A]/70">You've already paid the deposit</td>
+              <td class="px-4 py-4 font-bold">Nothing owed</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO ACTUALLY DOES YOUR REVIEW -->
+  <section class="bg-[#004B87] blueprint-grid-navy border-b-2 border-[#FF5722]">
+    <div class="max-w-[1000px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-4">Who Actually Does Your Review</p>
+      <h2 class="display break-words text-white leading-[0.95] text-[9vw] sm:text-[38px] lg:text-[44px] mb-8 max-w-[820px]">A ROTATING TEAM OF 4–12 STRANGERS VS. ONE NAME YOU CAN CALL.</h2>
+      <p class="text-[16px] leading-relaxed text-white/80 max-w-[720px] mb-4">CHECKSET is upfront that reviews are "never performed by a single individual" — each project gets a team of 4 to 12 reviewers assigned based on relevant experience, managed by a lead reviewer who oversees the group. That's a real operational model, and for some clients the bench depth is the whole appeal.</p>
+      <p class="text-[16px] leading-relaxed text-white/80 max-w-[720px]">But it also means the person explaining your findings on the post-review call isn't necessarily one of the people who actually reviewed your set — and the team composition can change project to project. Preempt caps capacity at four sets a month for the opposite reason: Joe Rossi, who spent 5+ years producing construction documents and running PM on jobs up to $60M, reviews personally and puts his name on every finding. Not a rotating bench. One accountable person.</p>
+      <p class="mt-8 mono text-[13px] text-white/60 max-w-[680px]">Depth vs. single-point accountability — a real tradeoff, not a flaw on either side.</p>
+    </div>
+  </section>
+
+  <!-- THE DELIVERABLE -->
+  <section class="border-b-2 border-[#1A1A1A] bg-white blueprint-grid">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">The Deliverable</p>
+      <h2 class="display break-words text-[9vw] sm:text-[38px] lg:text-[44px] leading-[0.95] mb-6 max-w-[860px]">THEIR DASHBOARD IS IMPRESSIVE. IT'S ALSO HOMEWORK.</h2>
+      <p class="text-[16px] leading-relaxed text-[#1A1A1A]/80 max-w-[760px] mb-4">Credit where it's due: CHECKSET's deliverable is the most feature-rich in this space — interactive drawing mark-ups, discipline overlays, priority levels, a "Top 10 Critical Findings" list, and analytics dashboards, all hosted in a client web app. If your team wants to self-serve through a platform, it's a genuinely capable one.</p>
+      <p class="text-[16px] leading-relaxed text-[#1A1A1A]/80 max-w-[760px] mb-10">Preempt takes a different bet: instead of handing you a dashboard to explore, every finding already comes ranked (High/Med/Low) with a dollar exposure and schedule impact attached — and a live walkthrough where Joe explains what actually matters, in order, out loud. Less software to learn. More decisions made in the room.</p>
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 items-start mb-10">
+        <div class="lg:col-span-3">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 mb-2">What you actually get back — Preempt Global</p>
+          <div class="border-2 border-[#1A1A1A] overflow-x-auto">
+            <table class="w-full min-w-[560px] border-collapse mono text-[12px]">
+              <thead>
+                <tr class="bg-[#1A1A1A] text-white uppercase text-[10px] tracking-widest">
+                  <th class="text-left px-3 py-2.5 border-r border-white/20">Priority</th>
+                  <th class="text-left px-3 py-2.5 border-r border-white/20">Finding</th>
+                  <th class="text-left px-3 py-2.5 border-r border-white/20">Est. Field Cost</th>
+                  <th class="text-left px-3 py-2.5">Schedule</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-t-2 border-[#1A1A1A]">
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]"><span class="bg-[#FF5722] text-[#1A1A1A] font-bold px-2 py-1">HIGH</span></td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]">Structural beam clash — HVAC duct routing, Lvl 4</td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A] font-bold">$42,000</td>
+                  <td class="px-3 py-3 font-bold">18 days</td>
+                </tr>
+                <tr class="border-t-2 border-[#1A1A1A] bg-[#1A1A1A]/[0.02]">
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]"><span class="bg-[#FFD700] text-[#1A1A1A] font-bold px-2 py-1">MED</span></td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]">Electrical panel schedule vs. one-line mismatch</td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A] font-bold">$6,200</td>
+                  <td class="px-3 py-3 font-bold">3 days</td>
+                </tr>
+                <tr class="border-t-2 border-[#1A1A1A]">
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]"><span class="bg-[#004B87] text-white font-bold px-2 py-1">LOW</span></td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]">Door hardware finish mismatch — Suite 220</td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A] font-bold">$400</td>
+                  <td class="px-3 py-3 font-bold">0 days</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="mt-3 mono text-[12px] text-[#1A1A1A]/60">Ranked. Priced. Scheduled. Nothing left for you to triage.</p>
+        </div>
+        <div class="lg:col-span-2">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 mb-2">CHECKSET web app (illustrative)</p>
+          <div class="border-2 border-[#1A1A1A]/25 bg-[#1A1A1A]/[0.02] p-5 space-y-3">
+            <div class="flex items-center justify-between border-b border-dashed border-[#1A1A1A]/20 pb-3">
+              <p class="text-[13px] text-[#1A1A1A]/50 leading-snug">MEP overlay — Lvl 4 clash</p>
+              <span class="mono text-[9px] uppercase tracking-widest bg-[#1A1A1A]/10 text-[#1A1A1A]/50 px-1.5 py-0.5">Priority 1</span>
+            </div>
+            <div class="flex items-center justify-between border-b border-dashed border-[#1A1A1A]/20 pb-3">
+              <p class="text-[13px] text-[#1A1A1A]/50 leading-snug">Spec vs. finish schedule note</p>
+              <span class="mono text-[9px] uppercase tracking-widest bg-[#1A1A1A]/10 text-[#1A1A1A]/50 px-1.5 py-0.5">Priority 2</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <p class="text-[13px] text-[#1A1A1A]/50 leading-snug">Door hardware finish note</p>
+              <span class="mono text-[9px] uppercase tracking-widest bg-[#1A1A1A]/10 text-[#1A1A1A]/50 px-1.5 py-0.5">Priority 3</span>
+            </div>
+          </div>
+          <p class="mt-3 mono text-[12px] text-[#1A1A1A]/60">A capable dashboard — comments, overlays, priority tags. No dollar figure or schedule impact attached; still yours to work out.</p>
+        </div>
+      </div>
+      <div class="border-2 border-[#1A1A1A] bg-[#FFFDF3] p-6 sm:p-7 hard-shadow-caution">
+        <p class="text-[15px] sm:text-[16px] leading-relaxed text-[#1A1A1A]/85">CHECKSET's Top 10 Critical Findings list is a smart idea — it's effectively conceding that most of what a review turns up isn't urgent. Preempt starts from that same premise: every finding is pre-ranked and dollarized, not just the top ten. You don't have to dig through comment filters to find the ten that matter.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPEED & MOBILIZATION -->
+  <section class="bg-[#1A1A1A] blueprint-grid-dark border-b-2 border-[#FF5722]">
+    <div class="max-w-[1200px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-4">Speed &amp; Mobilization</p>
+      <h2 class="display break-words text-white leading-[0.95] text-[9vw] sm:text-[38px] lg:text-[44px] mb-6 max-w-[820px]">THEY QUOTE FAST. WE FINISH FAST.</h2>
+      <p class="text-[16px] leading-relaxed text-white/70 max-w-[720px] mb-12">To CHECKSET's credit, they typically issue proposals within 24 hours and can mobilize the next business day — that's a real strength worth acknowledging. But mobilizing isn't the same as delivering. Once a Preempt review starts, you have a full written, ranked, dollarized findings report and a live walkthrough in 48 hours. Fast to start is good. Fast to finish is what actually protects your schedule.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <div class="border-2 border-white/20 px-6 py-6">
+          <p class="mono text-[11px] uppercase tracking-widest text-white/50 mb-4">CHECKSET</p>
+          <div class="flex flex-wrap items-center gap-3"><span class="mono text-[12px] font-bold text-white bg-white/10 border border-white/20 px-2.5 py-1">PROPOSAL: 24 HRS</span><span class="text-white/30">→</span><span class="mono text-[12px] font-bold text-white bg-white/10 border border-white/20 px-2.5 py-1">MOBILIZE: NEXT DAY</span><span class="text-white/30">→</span><span class="mono text-[12px] font-bold text-white bg-white/10 border border-white/20 px-2.5 py-1">REVIEW: SCOPED PER PROJECT</span></div>
+        </div>
+        <div class="border-2 border-[#FF5722]/60 bg-white/[0.03] px-6 py-6">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#FF5722] font-bold mb-4">Preempt Global</p>
+          <div class="flex flex-wrap items-center gap-3"><span class="mono text-[12px] font-bold text-[#1A1A1A] bg-[#FF5722] px-2.5 py-1">UPLOAD</span><span class="text-white/30">→</span><span class="mono text-[12px] font-bold text-[#1A1A1A] bg-[#FF5722] px-2.5 py-1">FULL FINDINGS REPORT</span><span class="text-white/30">→</span><span class="mono text-[12px] font-bold text-[#1A1A1A] bg-[#FF5722] px-2.5 py-1">LIVE WALKTHROUGH — 48 HRS</span></div>
+        </div>
+      </div>
+      <p class="mt-8 mono text-[13px] text-white/50 max-w-[680px]">Fast to start is good. Fast to finish is what actually protects your schedule.</p>
+    </div>
+  </section>
+
+  <!-- SCALE, HONESTLY ADDRESSED -->
+  <section class="bg-[#1A1A1A] border-b-2 border-[#FF5722]">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16 lg:py-20 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+      <div class="lg:col-span-7">
+        <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-6">Scale, Honestly Addressed</p>
+        <h2 class="display break-words text-white leading-[0.95] text-[9vw] sm:text-[36px] lg:text-[40px] mb-6 max-w-[620px]">350+ ACTIVE CLIENTS IS REAL. SO IS WHAT YOU LOSE AT THAT SCALE.</h2>
+        <p class="text-[16px] leading-relaxed text-white/70 max-w-[620px]">CHECKSET reports 350+ active clients and 94% retention — that's a legitimately strong track record, and their case-study list includes national developers and GCs. We're not going to pretend that doesn't matter.</p>
+        <p class="mt-4 text-[16px] leading-relaxed text-white/70 max-w-[620px]">What that scale requires operationally is a larger bench, standardized workflows, and AI-assisted processing to keep throughput up. Preempt made the opposite bet: capacity capped at four sets a month, so scale never becomes the reason your set gets a rotating team instead of a founder's direct attention.</p>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="border-2 border-white/20">
+          <div class="grid grid-cols-2">
+            <div class="border-r-2 border-b-2 border-white/20 px-5 py-6">
+              <p class="mono text-[10px] uppercase tracking-widest text-white/40">CHECKSET states</p>
+              <p class="display text-white text-[19px] sm:text-[24px] mt-1">350+ active clients</p>
+            </div>
+            <div class="border-b-2 border-white/20 px-5 py-6">
+              <p class="mono text-[10px] uppercase tracking-widest text-white/40">CHECKSET states</p>
+              <p class="display text-white text-[19px] sm:text-[24px] mt-1">94% retention</p>
+            </div>
+            <div class="border-r-2 border-white/20 px-5 py-6">
+              <p class="mono text-[10px] uppercase tracking-widest text-white/40">Preempt / month</p>
+              <p class="display text-[#FF5722] text-[17px] sm:text-[24px] mt-1 whitespace-nowrap">CAPPED AT 4</p>
+            </div>
+            <div class="px-5 py-6">
+              <p class="mono text-[10px] uppercase tracking-widest text-white/40">Preempt, every finding</p>
+              <p class="display text-[#FF5722] text-[19px] sm:text-[24px] mt-1">FOUNDER'S NAME</p>
+            </div>
+          </div>
+        </div>
+        <p class="mt-4 mono text-[12px] text-white/50">208M+ sq ft reviewed, by CHECKSET's own numbers. Scale is a real advantage. Focus is a different one.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHERE CHECKSET MAY BE THE BETTER FIT -->
+  <section class="bg-[#FFFDF3] border-b-2 border-[#1A1A1A]">
+    <div class="max-w-[1100px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#B8860B] font-bold mb-4">Fair's Fair</p>
+      <h2 class="display break-words text-[9vw] sm:text-[36px] lg:text-[42px] leading-[0.95] mb-6 max-w-[820px]">CHECKSET MAY BE THE BETTER FIT IF...</h2>
+      <div class="border-2 border-[#1A1A1A] bg-white p-6 sm:p-8 hard-shadow-caution">
+        <p class="text-[15px] sm:text-[16px] leading-relaxed text-[#1A1A1A]/80 mb-4">Choose CHECKSET when your team wants a self-serve web platform with interactive mark-ups, discipline overlays, and analytics dashboards — and you're comfortable with a custom hourly quote that arrives after they've seen your set.</p>
+        <p class="text-[15px] sm:text-[16px] leading-relaxed text-[#1A1A1A]/80">Choose Preempt when you want a published price before the first call, one accountable name on every finding, and a written guarantee that's tied to what the review actually turns up — not just your satisfaction with the process.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section id="cta" class="bg-[#1A1A1A] blueprint-grid-dark relative overflow-hidden">
+    <div class="ruler-top w-full"></div>
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-20 lg:py-24 text-center">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-6">Sheet 01 of 01 — Last Call</p>
+      <h2 class="display break-words text-white leading-[0.92] text-[9vw] sm:text-[44px] lg:text-[54px] max-w-[920px] mx-auto">THE ONLY GUARANTEE ON THIS PAGE THAT'S <span class="text-[#FF5722]">ACTUALLY A GUARANTEE.</span></h2>
+      <p class="mt-7 text-[16px] leading-relaxed text-white/70 max-w-[520px] mx-auto">Book a 30-minute demo. Nothing's shared until the NDA is signed, and nothing's billed unless we find something worth the fee.</p>
+      <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="display text-[15px] tracking-wide bg-[#FF5722] text-[#1A1A1A] px-8 py-4 border-2 border-[#1A1A1A] hard-shadow-sm">BOOK YOUR DEMO MEETING →</a>
+        <span class="mono text-[11px] uppercase tracking-widest text-white/40 border-2 border-white/20 px-4 py-2">STATUS: <span class="text-[#FFD700]">ACCEPTING 4 SETS / MONTH</span></span>
+      </div>
+    </div>
+    <div class="ruler-top w-full"></div>
+  </section>
+
+  <footer class="bg-white">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-6">
+      <div class="grid grid-cols-2 sm:grid-cols-5 border-2 border-[#1A1A1A] mono text-[11px]">
+        <div class="border-r border-[#1A1A1A] p-3">
+          <p class="text-[#1A1A1A]/50 uppercase">Drawn by</p>
+          <p class="font-bold mt-1">Preempt Global</p>
+        </div>
+        <div class="border-r border-[#1A1A1A] p-3">
+          <p class="text-[#1A1A1A]/50 uppercase">Checked by</p>
+          <p class="font-bold mt-1">Joe Rossi</p>
+        </div>
+        <div class="border-r border-[#1A1A1A] p-3 hidden sm:block">
+          <p class="text-[#1A1A1A]/50 uppercase">Scale</p>
+          <p class="font-bold mt-1">1 : 1</p>
+        </div>
+        <div class="border-r border-[#1A1A1A] p-3">
+          <p class="text-[#1A1A1A]/50 uppercase">Date</p>
+          <p class="font-bold mt-1">2026.07.27</p>
+        </div>
+        <div class="p-3">
+          <p class="text-[#1A1A1A]/50 uppercase">Sheet</p>
+          <p class="font-bold mt-1">CMP-03</p>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-6 gap-4">
+        <a href="/" class="flex items-center gap-2"><img src="/assets/images/preempt_global_logo.png" width="20" height="20" alt="Preempt Global logo" class="object-contain"><span class="display text-sm">Preempt Global</span></a>
+        <nav class="mono text-[11px] uppercase tracking-wide flex gap-6 text-[#1A1A1A]/60"><a href="mailto:jrossi@preemptglobal.com" class="hover-underline">Contact</a><a href="/privacy-policy/" class="hover-underline">Privacy Policy</a><a href="/terms-and-conditions/" class="hover-underline">Terms &amp; Conditions</a><a href="/service-agreement/" class="hover-underline">Service Agreement</a></nav><span class="mono text-[11px] text-[#1A1A1A]/40">© 2026 Preempt Global — All Rights Reserved</span>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.getElementById('nav-toggle-btn');
+      var menu = document.getElementById('mobile-nav');
+      var iconBars = document.getElementById('icon-bars');
+      var iconClose = document.getElementById('icon-close');
+      if (!btn || !menu) return;
+
+      function closeMenu() {
+        menu.classList.add('hidden');
+        iconBars.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+
+      function openMenu() {
+        menu.classList.remove('hidden');
+        iconBars.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+
+      btn.addEventListener('click', function () {
+        if (menu.classList.contains('hidden')) {
+          openMenu();
+        } else {
+          closeMenu();
+        }
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      var desktopQuery = window.matchMedia('(min-width: 1024px)');
+      desktopQuery.addEventListener('change', function (e) {
+        if (e.matches) closeMenu();
+      });
+    })();
+  </script>
+</body>
+
+</html>
