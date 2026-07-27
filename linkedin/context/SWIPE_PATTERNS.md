@@ -9,7 +9,6 @@ This is a **structural performance record**, not a voice or style guide. It docu
 
 **Any AI agent using this file must defer to `BRAND_VOICE.md` for all tone, vocabulary, sentence mechanics, terminology, and hard rules.** This file tells you which *structures* tend to perform. The brand voice document tells you how those structures should sound in Preempt Global's voice. If anything in this file could be read as a tone or wording suggestion, the brand voice document overrides it — this file's job is pattern data only.
 
-Section 9 of the brand voice document ("Performance-Informed Structure Rules") already converts the key findings below into governing rules. This file is the underlying evidence for those rules — keep it as a reference for *why* those rules exist, and as raw material to re-analyze once more posts are published.
 
 **Sample size note:** With only 6 posts, "top 20%" and "bottom 20%" are really "top 2" and "bottom 2." Treat every pattern below as directional signal to test on the next 10–15 posts, not settled fact. Where a finding rests on a single post, it's flagged explicitly.
 
