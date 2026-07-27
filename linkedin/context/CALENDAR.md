@@ -1,5 +1,12 @@
 LinkedIn Content Calendar — one line per post, most recent at top. Check the last 4 weeks before writing new topics.
 
+2026-08-09 | Conversion | Case study: elevator hoistway framed 3" narrower than manufacturer's required cab clearance
+2026-08-08 | Nurture | The Elevator Shaft Coordination Check — 3-pass framework for hoistway dimensions, pit/overhead, and machine room venting
+2026-08-07 | Growth | Why a $2M renovation carries the same blind spots as an $80M build — just fewer people watching for them
+2026-08-06 | Conversion | Case study: switchgear submittal delay against schedule buffer cost $84K in expedite fees
+2026-08-05 | Nurture | The Long-Lead Delivery Trace — 3-pass framework reconciling manufacturer lead time against schedule need-by dates
+2026-08-04 | Nurture | The Corridor Wall Cross-Check — 3-pass framework reconciling fire rating and STC rating on the same wall
+2026-08-03 | Growth | Why I diff the permit set against the IFC set instead of assuming they match
 2026-08-02 | Conversion | Case study: mezzanine-mounted 4,000-lb rooftop unit missing structural connection detail
 2026-08-01 | Nurture | The Panel Schedule Cross-Check — 2-pass framework reconciling panel schedules against one-line diagrams
 2026-07-31 | Growth | Why a clean, polished bid set is a reason to slow down, not a reason to relax
