@@ -134,3 +134,10 @@ not clearly resolved when this file was last updated. Agents should not
   sample findings table figures) do not have a visible source. Confirm sourcing
   before reusing these numbers in blog or outreach content, per the
   "never invent statistics" rule above.
+- linkedin/context/BRAND_VOICE.md's "Category stats to draw from" section lists
+  this same set of numbers ($177B, 3–5 weeks, 12%, 76%, plus a $78,900/32-day
+  sample finding) as "real, don't invent new ones" with no sourcing caveat —
+  contradicting the unresolved item directly above. The two docs are
+  independently maintained (the blog routine does not read BRAND_VOICE.md) and
+  have drifted apart on this point. Not yet reconciled; confirm which framing
+  is correct before either doc's numbers get reused elsewhere.

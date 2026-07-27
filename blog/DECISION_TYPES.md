@@ -13,14 +13,28 @@ Route to: blog/prompts/comparison.md
 Target: new_post
 
 ## 2. comparison
-Keyword contains: "vs", "versus", "or" (between two product names)
-Example: "asana vs monday"
+Keyword contains: "vs", "versus", "or" — naming two specific commercial
+products/vendors head-to-head.
+Does NOT match generic method/practice comparisons where neither side is
+a named commercial product (e.g. "constructability review vs peer review",
+"spec vs drawing conflicts") — those are informational, not buy-intent.
+If neither side of the "vs"/"versus"/"or" names a specific product/vendor,
+this rule does not match; fall through to rule 6.
+Example match: "asana vs monday"
+Example non-match: "constructability review vs peer review"
 Route to: blog/prompts/comparison.md
 Target: new_post
 
 ## 3. pricing
-Keyword contains: "pricing", "cost", "price", "how much"
-Example: "asana pricing"
+Keyword contains: "pricing", "cost", "price", "how much" — asking about a
+specific named product/vendor's price.
+Does NOT match generic cost/impact topics with no named product/vendor
+(e.g. "cost of design errors and omissions", "average change order
+percentage by project type") — those are informational, not a pricing
+lookup. If the keyword doesn't name a specific product/vendor whose price
+is in question, this rule does not match; fall through to rule 6.
+Example match: "asana pricing"
+Example non-match: "cost of design errors and omissions"
 Route to: blog/prompts/pricing-update.md
 Target: update_existing (check blog/posts/ and any pricing page first —
 if one already exists for this product, update it instead of writing a new post)

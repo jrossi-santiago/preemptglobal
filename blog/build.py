@@ -21,7 +21,7 @@ BLOG_DIR = Path(__file__).resolve().parent
 SITE_DIR = BLOG_DIR.parent
 POSTS_DIR = BLOG_DIR / "posts"
 SITE_URL = "https://preemptglobal.com"
-DEFAULT_OG_IMAGE = "https://preemptglobal.com/preempt_global_logo.jpg"
+DEFAULT_OG_IMAGE = "https://preemptglobal.com/assets/images/preempt_global_logo.png"
 
 
 # ---------- frontmatter + markdown parsing ----------
@@ -202,7 +202,7 @@ def render_index(all_posts: list, index_template: str) -> str:
 
 
 def build_sitemap(all_posts: list) -> str:
-    static_pages = ["", "findings/", "handoff/", "send/", "blog/"]
+    static_pages = ["", "findings/", "blog/"]
     urls = [f"{SITE_URL}/{p}" for p in static_pages]
     urls += [f"{SITE_URL}/blog/{p['slug']}/" for p in all_posts]
     entries = "\n".join(f"  <url><loc>{u}</loc></url>" for u in urls)

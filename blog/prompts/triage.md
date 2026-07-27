@@ -33,6 +33,7 @@ Do this, fully autonomously, no confirmation needed:
 {
   "date": "YYYY-MM-DD",
   "topic": "<the topic text from topics.md>",
+  "keyword": "<the target keyword from topics.md, in parentheses>",
   "decision_type": "<matched type, e.g. alternatives>",
   "route_to": "<the route_to path from DECISION_TYPES.md for this type>",
   "target": "<new_post or update_existing>",
