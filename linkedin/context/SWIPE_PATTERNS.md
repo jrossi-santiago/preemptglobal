@@ -101,4 +101,4 @@ Apply a reader-address hook + named framework + explicit CTA structure to a "mis
 
 ---
 
-*Wording, tone, terminology, and vocabulary for any new post must come from `preempt-global-brand-voice.md`, not from this file. This file exists to identify which structures to build inside that voice — never to supply phrasing directly.*
+*Wording, tone, terminology, and vocabulary for any new post must come from `BRAND_VOICE.md`, not from this file. This file exists to identify which structures to build inside that voice — never to supply phrasing directly.*

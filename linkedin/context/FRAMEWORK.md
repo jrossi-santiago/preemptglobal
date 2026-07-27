@@ -28,13 +28,13 @@ Every post is one of these 7 types. Each type maps to specific rules in the othe
   *Voice tie-in:* built on Pillar 2 (us vs. the process) — the belief should target a specific failure mode from Section 4, never a vague industry complaint.
 
 - **Story** — one specific moment with a lesson the reader can steal. Reader sees themselves in it.
-  *Structure tie-in:* hook must follow Swipe-Patterns Rule 1 (direct address to the reader's own situation), not first-person discovery. Founder first-person, if used, goes in the body per Rule 2 — never the hook.
+  *Structure tie-in:* hook must follow SWIPE_PATTERNS.md's direct-address lever (Section 5, #1 — reframe the hook around what's true of the reader's own situation, not first-person discovery). Founder first-person, if used, goes in the body per BRAND_VOICE.md Pillar 4 (Founder posture) — never the hook.
 
 - **Midas** — a result first (numbers, outcome), explanation after. Teach through the win, don't flex.
   *Voice tie-in:* pull real figures from Brand Voice Section 1 (e.g., $78,900 avoided, 32 days protected) or a specific finding-level number per Pillar 1 — never a rounded or invented-sounding figure.
 
 - **Doc** — a named framework or system, presented as a shareable reference. Problem it kills, then walkthrough.
-  *Structure tie-in:* this is the highest-performing structure in the swipe-pattern data (Rule 3 — named framework + explicit imperative CTA). Default to this type when the topic is teachable as a repeatable method.
+  *Structure tie-in:* this is the highest-performing structure in the swipe-pattern data (Section 5, #2 — named framework + explicit imperative CTA). Default to this type when the topic is teachable as a repeatable method.
 
 - **Hot Take** — a contrarian critique of how the industry does something, backed by receipts, not just opinion.
   *Voice tie-in:* the critique targets the process described in Brand Voice Section 4 (internal-only review, hope, redo-after-the-fact) — never a fictionalized "old way," never a named competitor or trade.
@@ -45,7 +45,7 @@ Every post is one of these 7 types. Each type maps to specific rules in the othe
 - **Vulnerability** — a real failure and what it taught you. Rare — only use if it's been 3+ weeks since the last one.
   *Voice tie-in:* still follows every Hard Rule in Brand Voice Section 7 (no em-dashes, accurate terminology, no invented old-way scenarios). Vulnerability doesn't mean loosening the voice, just narrowing the topic to a real setback.
 
-Hook should always fit the type *and* Swipe-Patterns Rule 1 — e.g., Conviction posts open with the stated belief reframed at the reader ("Your bid set has this problem" rather than "I believe..."), Doc posts open by naming the framework and the problem it kills for the reader specifically.
+Hook should always fit the type *and* SWIPE_PATTERNS.md's direct-address lever (Section 5, #1) — e.g., Conviction posts open with the stated belief reframed at the reader ("Your bid set has this problem" rather than "I believe..."), Doc posts open by naming the framework and the problem it kills for the reader specifically.
 
 ---
 
@@ -87,8 +87,8 @@ When a topic overlaps directly with Preempt Global's own offer (QA/QC review, cl
 
 - 165–215 words per post (matches the length band with performance data behind it — see swipe-patterns file).
 - No links in the post body — LinkedIn suppresses reach on posts with outbound links. If a post needs a link, note "[link in first comment]" instead.
-- Hook: direct address to the reader, never "I found/reviewed X" (Swipe-Patterns Rule 1).
-- CTA: always end with a concrete action or a stated principle/opinion — never "DM me if interested" (collapses trust). Doc and Midas posts especially should close with an explicit imperative per Swipe-Patterns Rule 3.
+- Hook: direct address to the reader, never "I found/reviewed X" (SWIPE_PATTERNS.md, Section 5, #1).
+- CTA: always end with a concrete action or a stated principle/opinion — never "DM me if interested" (collapses trust). Doc and Midas posts especially should close with an explicit imperative per SWIPE_PATTERNS.md, Section 5, #2.
 - Sentence rhythm: vary sentence length; avoid dense uniform paragraphs.
 - No em-dashes anywhere — use a regular hyphen with spaces, per Brand Voice Section 3.
 - Match `BRAND_VOICE.md` exactly on tone, vocabulary, and terminology accuracy (Section 5 — beams are placed, not poured, etc.).
