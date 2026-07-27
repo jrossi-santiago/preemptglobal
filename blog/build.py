@@ -126,7 +126,10 @@ def render_post(meta: dict, template: str, related_html: str) -> str:
     slug = meta["slug"]
     url = f"{SITE_URL}/blog/{slug}/"
     tags = meta.get("tags") or []
-    tag_chips = "\n".join(f'      <span class="tag-chip">{t}</span>' for t in tags)
+    tag_chips = "\n".join(
+        f'        <span class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/70 border-2 border-[#1A1A1A]/15 px-3 py-1">{t}</span>'
+        for t in tags
+    )
     content_html = markdown_to_html(meta["_body"])
 
     feature_file = meta["_source"].with_suffix("").with_suffix(".feature.html")
@@ -167,20 +170,20 @@ def render_related(all_posts: list, current_slug: str) -> str:
         tag = (p.get("tags") or ["Insights"])[0]
         rt = read_time(markdown_to_html(p["_body"]))
         cards.append(
-            f'      <a class="related-card" href="/blog/{p["slug"]}/">\n'
-            f'        <span class="rc-tag">{tag}</span>\n'
-            f'        <h4>{p["title"]}</h4>\n'
-            f'        <span class="rc-meta">{rt}</span>\n'
-            f'      </a>'
+            f'        <a href="/blog/{p["slug"]}/" class="block bg-white border-2 border-[#1A1A1A] p-5 hard-shadow-sm hover:-translate-y-0.5 transition-transform">\n'
+            f'          <span class="mono text-[10.5px] uppercase tracking-widest text-[#FF5722] font-bold">{tag}</span>\n'
+            f'          <h4 class="display text-[16px] leading-snug mt-3 mb-3 text-[#1A1A1A]">{p["title"]}</h4>\n'
+            f'          <span class="mono text-[11.5px] text-[#1A1A1A]/50">{rt}</span>\n'
+            f'        </a>'
         )
     return (
-        '<section class="related">\n'
-        '  <div class="article-wrap">\n'
-        '    <p class="kicker">Keep reading</p>\n'
-        '    <h2 style="margin-top:8px;">More from the field</h2>\n'
-        '    <div class="related-grid">\n'
+        '  <section class="bg-white border-t-2 border-[#1A1A1A] blueprint-grid">\n'
+        '    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16">\n'
+        '      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">Keep Reading</p>\n'
+        '      <h2 class="display break-words text-[8vw] sm:text-[32px] leading-[1.05] mb-8 text-[#1A1A1A]">MORE FROM THE FIELD.</h2>\n'
+        '      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">\n'
         + "\n".join(cards) +
-        '\n    </div>\n  </div>\n</section>'
+        '\n      </div>\n    </div>\n  </section>'
     )
 
 
@@ -190,19 +193,19 @@ def render_index(all_posts: list, index_template: str) -> str:
         tag = (p.get("tags") or ["Insights"])[0]
         rt = read_time(markdown_to_html(p["_body"]))
         cards.append(
-            f'      <a class="post-card" href="/blog/{p["slug"]}/">\n'
-            f'        <span class="pc-tag">{tag}</span>\n'
-            f'        <h3>{p["title"]}</h3>\n'
-            f'        <p>{p["deck"]}</p>\n'
-            f'        <span class="pc-meta"><time datetime="{p["date"]}">{date_display(p["date"])}</time> · {rt}</span>\n'
+            f'      <a href="/blog/{p["slug"]}/" class="block bg-white border-2 border-[#1A1A1A] p-6 hard-shadow-sm hover:-translate-y-0.5 transition-transform">\n'
+            f'        <span class="mono text-[11px] uppercase tracking-widest text-[#FF5722] font-bold border-2 border-[#FF5722]/25 px-3 py-1 inline-block mb-4">{tag}</span>\n'
+            f'        <h3 class="display text-[19px] sm:text-[21px] leading-snug mb-3 text-[#1A1A1A]">{p["title"]}</h3>\n'
+            f'        <p class="text-[14px] leading-relaxed text-[#1A1A1A]/65 mb-5">{p["deck"]}</p>\n'
+            f'        <span class="mono text-[12px] text-[#1A1A1A]/50"><time datetime="{p["date"]}">{date_display(p["date"])}</time> · {rt}</span>\n'
             f'      </a>'
         )
-    cards_html = "\n".join(cards) if cards else '      <p class="pc-empty">First post coming soon.</p>'
+    cards_html = "\n".join(cards) if cards else '      <p class="text-[#1A1A1A]/50 text-[15px] col-span-full">First post coming soon.</p>'
     return index_template.replace("{{POST_CARDS}}", cards_html)
 
 
 def build_sitemap(all_posts: list) -> str:
-    static_pages = ["", "findings/", "blog/"]
+    static_pages = ["", "findings/", "blog/", "privacy-policy/", "terms-and-conditions/", "service-agreement/"]
     urls = [f"{SITE_URL}/{p}" for p in static_pages]
     urls += [f"{SITE_URL}/blog/{p['slug']}/" for p in all_posts]
     entries = "\n".join(f"  <url><loc>{u}</loc></url>" for u in urls)
