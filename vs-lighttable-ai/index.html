@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1A1A1A">
+  <title>Preempt Global vs. LightTable — Who Tells the Owner What the Findings Mean?</title>
+  <meta name="description" content="LightTable's AI helps the project team find more issues, faster. Preempt Global is an independent owner-side review that ranks what the AI finds, prices the exposure, and stands behind the result with a $50K guarantee. See the full comparison.">
+  <link rel="canonical" href="https://preemptglobal.com/vs-lighttable-ai/">
+  <link rel="icon" type="image/x-icon" href="/assets/favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicons/android-chrome-512x512.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    :root {
+      --orange: #FF5722;
+      --orange-deep: #F4511E;
+      --onyx: #1A1A1A;
+      --white: #FFFFFF;
+      --blueprint: #004B87;
+      --caution: #FFD700;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      color: var(--onyx);
+    }
+
+    .display {
+      font-family: "Archivo Black", "Arial Black", sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    .mono {
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    .blueprint-grid {
+      background-image: linear-gradient(rgba(0, 75, 135, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 75, 135, 0.1) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .blueprint-grid-dark {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .blueprint-grid-navy {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .hard-shadow-orange {
+      box-shadow: 8px 8px 0 0 var(--orange);
+    }
+
+    .hard-shadow-sm {
+      box-shadow: 5px 5px 0 0 var(--onyx);
+    }
+
+    .hard-shadow-blue {
+      box-shadow: 6px 6px 0 0 var(--blueprint);
+    }
+
+    .hard-shadow-caution {
+      box-shadow: 7px 7px 0 0 var(--caution);
+    }
+
+    .ruler-top {
+      background-image: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.35) 0px, rgba(255, 255, 255, 0.35) 2px, transparent 2px, transparent 40px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.15) 0px, rgba(255, 255, 255, 0.15) 2px, transparent 2px, transparent 8px);
+      height: 14px;
+    }
+
+    .hover-underline:hover {
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-color: var(--blueprint);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg-[#1A1A1A] text-white mono text-[11px] tracking-widest px-4 py-1.5 flex justify-between items-center border-b-2 border-[#FF5722]"><span>DRAWING SET: COMPARISON / PREEMPT GLOBAL VS. LIGHTTABLE</span><span class="hidden sm:inline">SCALE: 1:1 · STATUS: <span class="text-[#FFD700]">LIVE</span></span></div>
+  <header class="border-b-2 border-[#1A1A1A] sticky top-0 bg-white z-40">
+    <div class="max-w-[1400px] mx-auto flex items-center justify-between px-5 sm:px-8 py-4">
+      <a href="/" class="flex items-center gap-2"><img src="/assets/images/preempt_global_logo.png" width="26" height="26" alt="Preempt Global logo" class="object-contain"><span class="display text-base whitespace-nowrap sm:text-xl">Preempt Global</span></a>
+      <nav class="hidden lg:flex items-center gap-8 mono text-[13px] tracking-wide uppercase"><a href="/#friction" class="hover-underline">What We Do</a><a href="/#process" class="hover-underline">How It Works</a><a href="/#about" class="hover-underline">About</a><a href="/#pricing" class="hover-underline">Pricing</a><a href="/#faq" class="hover-underline">FAQ</a></nav>
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="mono text-[11px] sm:text-[12px] uppercase tracking-wide bg-[#FF5722] text-[#1A1A1A] font-bold px-3.5 sm:px-4 py-2.5 border-2 border-[#1A1A1A] hard-shadow-sm whitespace-nowrap"><span class="hidden sm:inline">BOOK YOUR MEETING</span><span class="sm:hidden">BOOK NOW</span></a>
+        <button id="nav-toggle-btn" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Toggle navigation menu" class="lg:hidden inline-flex items-center justify-center w-10 h-10 shrink-0 border-2 border-[#1A1A1A]">
+          <svg id="icon-bars" width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M0 1H18" stroke="#1A1A1A" stroke-width="2"></path><path d="M0 7H18" stroke="#1A1A1A" stroke-width="2"></path><path d="M0 13H18" stroke="#1A1A1A" stroke-width="2"></path></svg>
+          <svg id="icon-close" class="hidden" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 1L15 15" stroke="#1A1A1A" stroke-width="2"></path><path d="M15 1L1 15" stroke="#1A1A1A" stroke-width="2"></path></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="hidden lg:hidden bg-white border-t-2 border-[#1A1A1A]">
+      <div class="max-w-[1400px] mx-auto flex flex-col mono text-[13px] tracking-wide uppercase px-5 sm:px-8">
+        <a href="/#friction" class="py-3.5 border-b border-[#1A1A1A]/10">What We Do</a>
+        <a href="/#process" class="py-3.5 border-b border-[#1A1A1A]/10">How It Works</a>
+        <a href="/#about" class="py-3.5 border-b border-[#1A1A1A]/10">About</a>
+        <a href="/#pricing" class="py-3.5 border-b border-[#1A1A1A]/10">Pricing</a>
+        <a href="/#faq" class="py-3.5">FAQ</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative border-b-2 border-[#1A1A1A] bg-white blueprint-grid">
+    <div class="max-w-[1000px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      <p class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 mb-6"><a href="/" class="hover-underline">Home</a><span class="mx-2 text-[#1A1A1A]/25">/</span>Compare<span class="mx-2 text-[#1A1A1A]/25">/</span>vs. LightTable</p>
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-6">Sheet 01 · The AI Found the Issues. Who's Telling You Which Ones Matter?</p>
+      <h1 class="display leading-[0.95] break-words text-[10.5vw] sm:text-[48px] lg:text-[54px] max-w-[820px]">THE SOFTWARE REVIEWS THE SET.<br /><span class="text-[#FF5722]">WE REVIEW THE RISK TO YOU.</span></h1>
+      <p class="mt-7 text-[16px] leading-relaxed text-[#1A1A1A]/80 max-w-[620px]">LightTable uses AI to surface coordination and constructability issues across the project team. Preempt Global is an independent owner-side review that ranks the findings, estimates the exposure, and gives you a clear picture of what deserves attention before it reaches the field.</p>
+      <div class="mt-9 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="display text-[15px] tracking-wide bg-[#1A1A1A] text-white px-7 py-4 border-2 border-[#1A1A1A] hard-shadow-orange">BOOK YOUR DEMO MEETING →</a>
+        <a href="#compare-table" class="mono text-[13px] uppercase tracking-wide hover-underline">See the full comparison ↓</a>
+      </div>
+      <p class="mt-8 mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40">Owner-Side Review · 48-Hour Turnaround · $50K Exposure Guarantee</p>
+    </div>
+  </section>
+
+  <!-- QUICK COMPARISON TABLE -->
+  <section id="compare-table" class="border-b-2 border-[#1A1A1A] bg-white">
+    <div class="max-w-[1100px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">At A Glance</p>
+      <h2 class="display break-words text-[9vw] sm:text-[36px] lg:text-[42px] leading-[0.95] mb-6">A SOFTWARE PLATFORM. AN OWNER-SIDE REVIEW. NOT THE SAME JOB.</h2>
+      <p class="lg:hidden mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 mb-2">Swipe to see full table →</p>
+      <div class="border-2 border-[#1A1A1A] overflow-x-auto">
+        <table class="w-full min-w-[680px] border-collapse mono text-[13px]">
+          <thead>
+            <tr class="bg-[#1A1A1A] text-white uppercase text-[11px] tracking-widest">
+              <th class="text-left px-4 py-3 border-r border-white/20 w-[26%]">&nbsp;</th>
+              <th class="text-left px-4 py-3 border-r border-white/20 text-[#FF5722]">Preempt Global</th>
+              <th class="text-left px-4 py-3 text-white/60">LightTable</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t-2 border-[#1A1A1A]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Primary model</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">Independent owner-side review service</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">AI-powered QA/QC software platform</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A] bg-[#1A1A1A]/[0.02]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Who it's for</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">Retained by and reports to the owner alone</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">Architects, developers, and general contractors</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Turnaround</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">48-hour standard turnaround</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">LightTable states AI findings in minutes; 24-hr avg. to first findings</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A] bg-[#1A1A1A]/[0.02]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Findings format</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">High/Medium/Low + estimated $ exposure + schedule impact</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">AI issue detection with collaborative review and tracking</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Guarantee</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">$50K documented exposure found, or it's free</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">No equivalent outcome guarantee identified on the public site</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A] bg-[#1A1A1A]/[0.02]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Pricing</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">Published, on this site</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">Demo / proposal inquiry</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Best fit</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">Owner wants an independent, decision-ready risk review</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">Team wants scalable, continuous AI-assisted QA/QC</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-6 mono text-[12px] text-[#1A1A1A]/50 max-w-[720px]">LightTable figures above are LightTable's own published claims, not independently verified. See the sections below for the sourcing on each row.</p>
+    </div>
+  </section>
+
+  <!-- WHO'S THE REVIEW WORKING FOR -->
+  <section class="bg-[#1A1A1A] border-b-2 border-[#FF5722] relative overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-6">The Core Difference</p>
+      <h2 class="display break-words text-white leading-[0.92] text-[10vw] sm:text-[48px] lg:text-[56px] max-w-[900px]">ONE PLATFORM. MANY STAKEHOLDERS.<br /><span class="text-[#FF5722]">ONE REVIEW. ONE CLIENT.</span></h2>
+      <p class="mt-8 text-[16px] leading-relaxed text-white/70 max-w-[680px]">LightTable states its platform supports architects, developers, and general contractors. That broad workflow is a strength — the software is built to help the whole project team surface issues, collaborate, track responsibility, and resolve findings across preconstruction.</p>
+      <p class="mt-4 text-[16px] leading-relaxed text-white/70 max-w-[680px]">Preempt Global is intentionally narrower. We're retained by the owner, report to the owner, and evaluate the issued set through the owner's exposure: cost, schedule, scope, and decisions that get expensive once construction starts. That doesn't make LightTable's platform work against the owner — it means the platform is built to support the whole project team, and Preempt is built to give the owner an independent point of view alongside that team.</p>
+    </div>
+    <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 border-t-2 border-white/10">
+      <div class="border-r-0 lg:border-r-2 border-white/10 px-5 sm:px-8 py-10">
+        <div class="flex items-center justify-between mb-6 border-b border-white/20 pb-3"><span class="display text-lg text-white">LIGHTTABLE</span><span class="mono text-[11px] text-[#5B9BD5] uppercase tracking-widest">Retained by: Project Team</span></div>
+        <div class="space-y-3">
+          <div class="relative border-2 border-white/20 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#004B87]"></div>
+            <p class="text-[14px] text-white/70 leading-snug">By its own site: supports architects, developers, and general contractors scaling their internal QA process.</p>
+          </div>
+          <div class="relative border-2 border-white/20 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#004B87]"></div>
+            <p class="text-[14px] text-white/70 leading-snug">Built for collaboration: comments, issue ownership, and resolution tracking across the whole team.</p>
+          </div>
+          <div class="relative border-2 border-white/20 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#004B87]"></div>
+            <p class="text-[14px] text-white/70 leading-snug">Real, useful work — scoped to help the project team find and manage issues as a shared workflow.</p>
+          </div>
+        </div>
+      </div>
+      <div class="px-5 sm:px-8 py-10">
+        <div class="flex items-center justify-between mb-6 border-b border-white/20 pb-3"><span class="display text-lg text-white">PREEMPT GLOBAL</span><span class="mono text-[11px] text-[#FF5722] uppercase tracking-widest">Retained by: The Owner</span></div>
+        <div class="space-y-3">
+          <div class="relative bg-white/[0.04] border-2 border-[#FF5722]/60 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#FF5722]"></div>
+            <p class="text-[14px] text-white/85 leading-snug"><span class="text-[#FF5722] font-bold">✓</span>&nbsp; Paid by the owner. Reports to no one else.</p>
+          </div>
+          <div class="relative bg-white/[0.04] border-2 border-[#FF5722]/60 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#FF5722]"></div>
+            <p class="text-[14px] text-white/85 leading-snug"><span class="text-[#FF5722] font-bold">✓</span>&nbsp; Evaluates the set through cost, schedule, and scope exposure — the owner's lens, specifically.</p>
+          </div>
+          <div class="relative bg-white/[0.04] border-2 border-[#FF5722]/60 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#FF5722]"></div>
+            <p class="text-[14px] text-white/85 leading-snug"><span class="text-[#FF5722] font-bold">✓</span>&nbsp; An independent point of view alongside the project team — not a seat inside its workflow.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALLOUT Q&A -->
+  <section class="border-b-2 border-[#1A1A1A] bg-white blueprint-grid">
+    <div class="max-w-[900px] mx-auto px-5 sm:px-8 py-14">
+      <div class="border-2 border-[#004B87] bg-white p-6 sm:p-8 hard-shadow-blue">
+        <p class="mono text-[12px] uppercase tracking-widest text-[#004B87] font-bold mb-3">Doesn't our project team already have QA/QC covered?</p>
+        <p class="text-[15px] sm:text-[16px] leading-relaxed text-[#1A1A1A]/80">Your architect, consultants, contractor, and internal team should all be reviewing the documents — those reviews are necessary, and Preempt doesn't replace them. What it adds is a separate review focused on the gaps, conflicts, and ambiguities that can become financial or schedule exposure, run for the owner alone rather than as part of the design or construction team's internal workflow.</p>
+      </div>
+      <p class="mt-6 mono text-[12px] uppercase tracking-widest text-[#1A1A1A]/50">Collaboration is valuable. Independence is also.</p>
+    </div>
+  </section>
+
+  <!-- AI FINDS. PEOPLE DECIDE. -->
+  <section class="border-b-2 border-[#1A1A1A] bg-white">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">AI Finds. People Decide.</p>
+      <h2 class="display break-words text-[9vw] sm:text-[38px] lg:text-[44px] leading-[0.95] mb-6 max-w-[860px]">FINDING AN ISSUE IS NOT THE SAME AS OWNING THE ANSWER.</h2>
+      <p class="text-[16px] leading-relaxed text-[#1A1A1A]/80 max-w-[760px] mb-4">LightTable's AI is built to identify coordination and constructability issues quickly, and its platform includes expert validation, issue tracking, comments, and workflow tools. That helps a project team process a large volume of information much faster.</p>
+      <p class="text-[16px] leading-relaxed text-[#1A1A1A]/80 max-w-[760px] mb-4">But an owner still has a different question: <span class="font-bold">which findings can materially affect my budget, schedule, or scope — and what should I push to resolve first?</span></p>
+      <p class="text-[16px] leading-relaxed text-[#1A1A1A]/80 max-w-[760px] mb-10">Preempt's deliverable isn't a software queue. It's a focused owner-side report — findings ranked by priority, translated into estimated exposure and schedule impact, presented as a decision-ready list. The goal isn't more items to review. It's making the important ones harder to miss.</p>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-7">
+        <div class="border-2 border-[#1A1A1A]/25 bg-[#1A1A1A]/[0.02] p-6 sm:p-7">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 mb-3">LightTable — AI Detection + Collaborative Workflow</p>
+          <ul class="space-y-2.5 text-[14px] text-[#1A1A1A]/75 leading-snug">
+            <li class="flex gap-2"><span class="text-[#1A1A1A]/30">—</span>Cross-discipline issue detection</li>
+            <li class="flex gap-2"><span class="text-[#1A1A1A]/30">—</span>Comments and review tracking</li>
+            <li class="flex gap-2"><span class="text-[#1A1A1A]/30">—</span>Issue ownership and resolution history</li>
+            <li class="flex gap-2"><span class="text-[#1A1A1A]/30">—</span>Repeat reviews across project milestones</li>
+          </ul>
+        </div>
+        <div class="border-2 border-[#1A1A1A] bg-white p-6 sm:p-7 hard-shadow-orange">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#FF5722] font-bold mb-3">Preempt Global — Owner-Side Risk Review</p>
+          <ul class="space-y-2.5 text-[14px] text-[#1A1A1A]/85 leading-snug">
+            <li class="flex gap-2"><span class="text-[#FF5722] font-bold">✓</span>Independent review for the owner</li>
+            <li class="flex gap-2"><span class="text-[#FF5722] font-bold">✓</span>High / Medium / Low prioritization</li>
+            <li class="flex gap-2"><span class="text-[#FF5722] font-bold">✓</span>Estimated cost exposure</li>
+            <li class="flex gap-2"><span class="text-[#FF5722] font-bold">✓</span>Schedule impact</li>
+            <li class="flex gap-2"><span class="text-[#FF5722] font-bold">✓</span>Clear action order</li>
+          </ul>
+        </div>
+      </div>
+      <p class="mt-8 mono text-[13px] text-[#1A1A1A]/60 max-w-[680px]">More findings do not automatically mean more clarity.</p>
+    </div>
+  </section>
+
+  <!-- THE GUARANTEE -->
+  <section class="border-b-2 border-[#1A1A1A] bg-white blueprint-grid">
+    <div class="max-w-[1200px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">The Guarantee</p>
+      <h2 class="display break-words text-[9vw] sm:text-[38px] lg:text-[44px] leading-[0.95] mb-10 max-w-[860px]">ONE SELLS SOFTWARE. THE OTHER STANDS BEHIND THE REVIEW.</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-7">
+        <div class="border-2 border-[#1A1A1A]/25 bg-white p-6 sm:p-7">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 mb-2">LightTable</p>
+          <p class="display text-[20px] sm:text-[22px] mb-3">AI-POWERED QA/QC PLATFORM</p>
+          <p class="text-[15px] leading-relaxed text-[#1A1A1A]/70">LightTable provides software and expert-supported workflows for identifying, reviewing, assigning, and resolving project issues. Its public materials emphasize speed, collaboration, prioritization, and repeatable review throughout design. The value is in helping teams find and manage issues earlier — the owner still evaluates the findings and decides what action to take.</p>
+        </div>
+        <div class="border-2 border-[#1A1A1A] bg-white p-6 sm:p-7 hard-shadow-orange">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#FF5722] font-bold mb-2">Preempt Global</p>
+          <p class="display text-[20px] sm:text-[22px] mb-3">$50K EXPOSURE FOUND — OR THE REVIEW IS FREE</p>
+          <p class="text-[15px] leading-relaxed text-[#1A1A1A]/80">If the review doesn't surface at least $50,000 in documented cost exposure, the review is free. That's a commitment to the result of the engagement — not access to a tool, a dashboard, or a volume of findings. The review is built around identifying meaningful owner exposure and making it visible before it becomes a field decision.</p>
+        </div>
+      </div>
+      <p class="mt-8 mono text-[13px] text-[#1A1A1A]/60 max-w-[680px]">A platform helps your team review. Our guarantee puts a number on what the review must deliver.</p>
+    </div>
+  </section>
+
+  <!-- SPEED -->
+  <section class="bg-[#1A1A1A] blueprint-grid-dark border-b-2 border-[#FF5722]">
+    <div class="max-w-[1200px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-4">Speed</p>
+      <h2 class="display break-words text-white leading-[0.95] text-[9vw] sm:text-[38px] lg:text-[44px] mb-6 max-w-[820px]">FAST IS GOOD. FAST AND DECISION-READY IS BETTER.</h2>
+      <p class="text-[16px] leading-relaxed text-white/70 max-w-[680px] mb-12">LightTable states its AI can generate findings in minutes, with an average of 24 hours to first findings — speed that makes repeated review possible throughout design and preconstruction. Preempt's standard review turns around in 48 hours. The difference isn't a race to the first alert. It's what arrives at the end: a focused owner-side report with prioritized findings, estimated exposure, schedule impact, and a clear order of attention. LightTable is built for continuous QA/QC. Preempt is built for a decisive owner review when you need an independent read on the set.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <div class="border-2 border-white/20 px-6 py-6">
+          <p class="mono text-[11px] uppercase tracking-widest text-white/50 mb-4">LightTable</p>
+          <div class="flex items-center gap-3 mb-3"><span class="mono text-[12px] font-bold text-white bg-white/10 border border-white/20 px-2.5 py-1">UPLOAD</span><span class="text-white/30">→</span><span class="mono text-[12px] font-bold text-white bg-white/10 border border-white/20 px-2.5 py-1">AI FINDINGS</span><span class="text-white/30">→</span><span class="mono text-[12px] font-bold text-white bg-white/10 border border-white/20 px-2.5 py-1">TEAM WORKFLOW</span></div>
+        </div>
+        <div class="border-2 border-[#FF5722]/60 bg-white/[0.03] px-6 py-6">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#FF5722] font-bold mb-4">Preempt Global</p>
+          <div class="flex flex-wrap items-center gap-3"><span class="mono text-[12px] font-bold text-[#1A1A1A] bg-[#FF5722] px-2.5 py-1">UPLOAD</span><span class="text-white/30">→</span><span class="mono text-[12px] font-bold text-[#1A1A1A] bg-[#FF5722] px-2.5 py-1">INDEPENDENT REVIEW</span><span class="text-white/30">→</span><span class="mono text-[12px] font-bold text-[#1A1A1A] bg-[#FF5722] px-2.5 py-1">OWNER DECISION REPORT</span></div>
+        </div>
+      </div>
+      <p class="mt-8 mono text-[13px] text-white/50 max-w-[680px]">The fastest alert is only useful if the right person knows what to do next.</p>
+    </div>
+  </section>
+
+  <!-- WHAT YOU GET BACK -->
+  <section class="border-b-2 border-[#1A1A1A] bg-white blueprint-grid">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">The Deliverable</p>
+      <h2 class="display break-words text-[9vw] sm:text-[38px] lg:text-[44px] leading-[0.95] mb-3 max-w-[860px]">THEY GIVE THE TEAM A WORKFLOW. WE GIVE THE OWNER A PRIORITY LIST.</h2>
+      <p class="mono text-[13px] text-[#1A1A1A]/60 mb-10 max-w-[720px]">LightTable's platform is built for ongoing collaboration: teams review issues, add comments, track ownership, monitor resolution, compare versions, and rerun documents as the project develops — useful when many stakeholders are actively coordinating the work. Preempt's output is deliberately simpler: every finding is organized around the owner's decision.</p>
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 items-start">
+        <div class="lg:col-span-3">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 mb-2">What the owner actually gets back — Preempt Global</p>
+          <div class="border-2 border-[#1A1A1A] overflow-x-auto">
+            <table class="w-full min-w-[560px] border-collapse mono text-[12px]">
+              <thead>
+                <tr class="bg-[#1A1A1A] text-white uppercase text-[10px] tracking-widest">
+                  <th class="text-left px-3 py-2.5 border-r border-white/20">Priority</th>
+                  <th class="text-left px-3 py-2.5 border-r border-white/20">Finding</th>
+                  <th class="text-left px-3 py-2.5 border-r border-white/20">Est. Field Cost</th>
+                  <th class="text-left px-3 py-2.5">Schedule</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-t-2 border-[#1A1A1A]">
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]"><span class="bg-[#FF5722] text-[#1A1A1A] font-bold px-2 py-1">HIGH</span></td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]">Structural / architectural scope conflict</td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A] font-bold">$85,000</td>
+                  <td class="px-3 py-3 font-bold">3–5 weeks</td>
+                </tr>
+                <tr class="border-t-2 border-[#1A1A1A] bg-[#1A1A1A]/[0.02]">
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]"><span class="bg-[#FF5722] text-[#1A1A1A] font-bold px-2 py-1">HIGH</span></td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]">MEP coordination omission</td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A] font-bold">$62,000</td>
+                  <td class="px-3 py-3 font-bold">2–4 weeks</td>
+                </tr>
+                <tr class="border-t-2 border-[#1A1A1A]">
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]"><span class="bg-[#FFD700] text-[#1A1A1A] font-bold px-2 py-1">MED</span></td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]">Specification / detail inconsistency</td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A] font-bold">$18,000</td>
+                  <td class="px-3 py-3 font-bold">1–2 weeks</td>
+                </tr>
+                <tr class="border-t-2 border-[#1A1A1A] bg-[#1A1A1A]/[0.02]">
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]"><span class="bg-[#004B87] text-white font-bold px-2 py-1">LOW</span></td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]">Clarification required before procurement</td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A] font-bold">$4,500</td>
+                  <td class="px-3 py-3 font-bold">Minimal</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="mt-3 mono text-[12px] text-[#1A1A1A]/60">What the owner actually gets back — ranked, priced, scheduled.</p>
+        </div>
+        <div class="lg:col-span-2">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 mb-2">What still requires project-team judgment (illustrative)</p>
+          <div class="border-2 border-[#1A1A1A]/25 bg-[#1A1A1A]/[0.02] p-5 space-y-3">
+            <div class="flex items-center justify-between border-b border-dashed border-[#1A1A1A]/20 pb-3">
+              <p class="text-[13px] text-[#1A1A1A]/50 leading-snug">Duct routing vs. beam — Lvl 4</p>
+              <span class="mono text-[9px] uppercase tracking-widest bg-[#1A1A1A]/10 text-[#1A1A1A]/50 px-1.5 py-0.5">Open</span>
+            </div>
+            <div class="flex items-center justify-between border-b border-dashed border-[#1A1A1A]/20 pb-3">
+              <p class="text-[13px] text-[#1A1A1A]/50 leading-snug">Spec section 09 vs. finish sched.</p>
+              <span class="mono text-[9px] uppercase tracking-widest bg-[#1A1A1A]/10 text-[#1A1A1A]/50 px-1.5 py-0.5">Assigned</span>
+            </div>
+            <div class="flex items-center justify-between border-b border-dashed border-[#1A1A1A]/20 pb-3">
+              <p class="text-[13px] text-[#1A1A1A]/50 leading-snug">Panel schedule mismatch</p>
+              <span class="mono text-[9px] uppercase tracking-widest bg-[#1A1A1A]/10 text-[#1A1A1A]/50 px-1.5 py-0.5">In Review</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <p class="text-[13px] text-[#1A1A1A]/50 leading-snug">Door hardware finish — Suite 220</p>
+              <span class="mono text-[9px] uppercase tracking-widest bg-[#1A1A1A]/10 text-[#1A1A1A]/50 px-1.5 py-0.5">Open</span>
+            </div>
+          </div>
+          <p class="mt-3 mono text-[12px] text-[#1A1A1A]/60">A real, useful issue queue — no rank, no dollar figure, no schedule impact attached. That part is still the team's to work out.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REPEATABILITY VS. INDEPENDENCE -->
+  <section class="bg-[#004B87] blueprint-grid-navy border-b-2 border-[#FF5722]">
+    <div class="max-w-[1000px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-4">Repeatability vs. Independence</p>
+      <h2 class="display break-words text-white leading-[0.95] text-[9vw] sm:text-[38px] lg:text-[44px] mb-6 max-w-[780px]">RUN IT AGAIN. THEN LET SOMEONE OUTSIDE THE WORKFLOW LOOK TOO.</h2>
+      <p class="text-[16px] leading-relaxed text-white/80 max-w-[720px] mb-4">LightTable's ability to rerun drawings, compare versions, track changes, and carry lessons forward from project to project is one of its strongest advantages. For teams managing many active projects, repeatable QA/QC can become part of the operating system.</p>
+      <p class="text-[16px] leading-relaxed text-white/80 max-w-[720px] mb-4">Preempt serves a different purpose. We provide an independent review at the moments when the owner wants a separate assessment of the issued set — before permit, before GMP, before bid, before a major release, or when the project has accumulated enough complexity that another set of eyes is worth more than another internal workflow.</p>
+      <p class="text-[16px] leading-relaxed text-white/80 max-w-[720px]">These aren't mutually exclusive. A project can run continuous software-assisted coordination and still benefit from an independent owner-side review before a major decision.</p>
+      <p class="mt-8 mono text-[13px] text-white/60 max-w-[680px]">Automation scales the process. Independence tests the assumptions.</p>
+    </div>
+  </section>
+
+  <!-- TRACK RECORD -->
+  <section class="bg-[#1A1A1A] border-b-2 border-[#FF5722]">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16 lg:py-20 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+      <div class="lg:col-span-7">
+        <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-6">Track Record, Addressed Honestly</p>
+        <h2 class="display break-words text-white leading-[0.95] text-[9vw] sm:text-[36px] lg:text-[40px] mb-6 max-w-[620px]">THEY'VE REVIEWED MORE DOCUMENTS.<br /><span class="text-[#FF5722]">WE SPEND MORE TIME ON YOUR DECISION.</span></h2>
+        <p class="text-[16px] leading-relaxed text-white/70 max-w-[620px]">LightTable publicly states it has reviewed more than 20 million square feet, more than $10 billion in project costs, and hundreds of thousands of documents. Those are meaningful indicators of scale and momentum. Preempt isn't trying to compete on platform volume — we cap capacity so each review gets direct attention and owner-focused interpretation. The value isn't the number of documents processed. It's the quality of the conclusions, the visibility of the exposure, and the accountability attached to the review.</p>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="border-2 border-white/20">
+          <div class="grid grid-cols-2">
+            <div class="border-r-2 border-b-2 border-white/20 px-5 py-6">
+              <p class="mono text-[10px] uppercase tracking-widest text-white/40">LightTable states</p>
+              <p class="display text-white text-[19px] sm:text-[24px] mt-1">20M+ sq ft reviewed</p>
+            </div>
+            <div class="border-b-2 border-white/20 px-5 py-6">
+              <p class="mono text-[10px] uppercase tracking-widest text-white/40">LightTable states</p>
+              <p class="display text-white text-[19px] sm:text-[24px] mt-1">$10B+ project costs</p>
+            </div>
+            <div class="border-r-2 border-white/20 px-5 py-6">
+              <p class="mono text-[10px] uppercase tracking-widest text-white/40">Preempt / month</p>
+              <p class="display text-[#FF5722] text-[17px] sm:text-[24px] mt-1 whitespace-nowrap">CAPPED AT 4</p>
+            </div>
+            <div class="px-5 py-6">
+              <p class="mono text-[10px] uppercase tracking-widest text-white/40">Preempt, every finding</p>
+              <p class="display text-[#FF5722] text-[19px] sm:text-[24px] mt-1">FOUNDER'S NAME</p>
+            </div>
+          </div>
+        </div>
+        <p class="mt-4 mono text-[12px] text-white/50">Scale is a product advantage. Focus is a service advantage.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE AI OBJECTION -->
+  <section class="border-b-2 border-[#1A1A1A] bg-white">
+    <div class="max-w-[900px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">One More Objection</p>
+      <div class="border-t-2 border-b-2 border-[#1A1A1A] py-7">
+        <h2 class="display text-[7.5vw] sm:text-[28px] leading-[1.05] mb-4">"IF AI CAN REVIEW THE SET, WHY HIRE A REVIEWER?"</h2>
+        <p class="text-[15px] sm:text-[16px] leading-relaxed text-[#1A1A1A]/75 max-w-[760px] mb-3">AI can process large document sets quickly, compare information across disciplines, and surface patterns that would take a person much longer to find. That's valuable, and it's changing how construction QA/QC gets done. But AI output isn't the same as owner representation.</p>
+        <p class="text-[15px] sm:text-[16px] leading-relaxed text-[#1A1A1A]/75 max-w-[760px]">Someone still has to determine whether a finding is material, connect it to the project's contractual and financial exposure, understand the practical consequence of leaving it unresolved, and communicate it in a way that supports a decision. Preempt uses technology where it improves speed and coverage, but the engagement stays accountable to the owner. The final product isn't "the AI found this." It's "this is the exposure, this is why it matters, and this is what should be addressed now."</p>
+      </div>
+      <p class="mt-6 mono text-[12px] uppercase tracking-widest text-[#1A1A1A]/50">AI makes review faster. Accountability makes it useful.</p>
+    </div>
+  </section>
+
+  <!-- PRICING TRANSPARENCY -->
+  <section class="bg-[#1A1A1A] blueprint-grid-dark border-b-2 border-[#FF5722]">
+    <div class="max-w-[1200px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-4">Pricing Transparency</p>
+      <h2 class="display break-words text-white leading-[0.95] text-[9vw] sm:text-[38px] lg:text-[44px] mb-6 max-w-[760px]">SEE THE NUMBER BEFORE YOU BOOK THE CALL.</h2>
+      <p class="text-[16px] leading-relaxed text-white/70 max-w-[680px] mb-9">LightTable's public website directs prospective customers to book a demo and doesn't publish standard pricing — its platform may be priced to project scale, product scope, or enterprise needs. Preempt Global publishes its review pricing: $1,500–$7,500 for a single-set review, $10,000–$25,000 per project with unlimited re-review through permit/GMP, or $3,500–$7,500/mo for ongoing coverage across multiple projects. You can understand the range before you get on a call and decide whether an independent owner-side review belongs in the project budget.</p>
+      <a href="/#pricing" class="inline-block mono text-[13px] uppercase tracking-wide bg-[#FF5722] text-[#1A1A1A] font-bold px-6 py-3.5 border-2 border-white hard-shadow-sm">See Full Pricing →</a>
+    </div>
+  </section>
+
+  <!-- WHERE LIGHTTABLE MAY BE THE BETTER FIT -->
+  <section class="bg-[#FFFDF3] border-b-2 border-[#1A1A1A]">
+    <div class="max-w-[1100px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#B8860B] font-bold mb-4">Fair's Fair</p>
+      <h2 class="display break-words text-[9vw] sm:text-[36px] lg:text-[42px] leading-[0.95] mb-6 max-w-[820px]">LIGHTTABLE MAY BE THE BETTER FIT IF...</h2>
+      <div class="border-2 border-[#1A1A1A] bg-white p-6 sm:p-8 hard-shadow-caution mb-10">
+        <p class="text-[15px] sm:text-[16px] leading-relaxed text-[#1A1A1A]/80 mb-4">Choose LightTable when your team wants a software platform for repeated AI-assisted QA/QC, multi-user collaboration, issue assignment, version tracking, and continuous review across many projects or design milestones.</p>
+        <p class="text-[15px] sm:text-[16px] leading-relaxed text-[#1A1A1A]/80 mb-4">Choose Preempt when you want an independent owner-side assessment of a specific set, a concise prioritized report, estimated exposure and schedule impact, and a review engagement with a defined financial guarantee.</p>
+        <p class="text-[15px] sm:text-[16px] leading-relaxed text-[#1A1A1A]/80">If you already use LightTable, Preempt can still serve as an independent owner-side checkpoint before a major project decision.</p>
+      </div>
+      <div class="border-2 border-[#1A1A1A] overflow-x-auto">
+        <table class="w-full min-w-[560px] border-collapse mono text-[13px]">
+          <thead>
+            <tr class="bg-[#1A1A1A] text-white uppercase text-[11px] tracking-widest">
+              <th class="text-left px-4 py-3 border-r border-white/20">Your need</th>
+              <th class="text-left px-4 py-3">Better starting point</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t-2 border-[#1A1A1A]">
+              <td class="px-4 py-3.5 border-r-2 border-[#1A1A1A] text-[#1A1A1A]/75">Continuous AI-assisted QA/QC across projects</td>
+              <td class="px-4 py-3.5 font-bold">LightTable</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A] bg-[#1A1A1A]/[0.02]">
+              <td class="px-4 py-3.5 border-r-2 border-[#1A1A1A] text-[#1A1A1A]/75">Multi-user issue tracking and collaboration</td>
+              <td class="px-4 py-3.5 font-bold">LightTable</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A]">
+              <td class="px-4 py-3.5 border-r-2 border-[#1A1A1A] text-[#1A1A1A]/75">Version comparison and repeated review</td>
+              <td class="px-4 py-3.5 font-bold">LightTable</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A] bg-[#1A1A1A]/[0.02]">
+              <td class="px-4 py-3.5 border-r-2 border-[#1A1A1A] text-[#1A1A1A]/75">Independent review reporting only to the owner</td>
+              <td class="px-4 py-3.5 font-bold text-[#FF5722]">Preempt Global</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A]">
+              <td class="px-4 py-3.5 border-r-2 border-[#1A1A1A] text-[#1A1A1A]/75">Prioritized owner exposure and schedule impact</td>
+              <td class="px-4 py-3.5 font-bold text-[#FF5722]">Preempt Global</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A] bg-[#1A1A1A]/[0.02]">
+              <td class="px-4 py-3.5 border-r-2 border-[#1A1A1A] text-[#1A1A1A]/75">Defined $50K-exposure-or-free guarantee</td>
+              <td class="px-4 py-3.5 font-bold text-[#FF5722]">Preempt Global</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A]">
+              <td class="px-4 py-3.5 border-r-2 border-[#1A1A1A] text-[#1A1A1A]/75">A focused checkpoint before permit, GMP, or bid</td>
+              <td class="px-4 py-3.5 font-bold text-[#FF5722]">Preempt Global</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section id="cta" class="bg-[#1A1A1A] blueprint-grid-dark relative overflow-hidden">
+    <div class="ruler-top w-full"></div>
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-20 lg:py-24 text-center">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-6">Sheet 01 of 01 — Last Call</p>
+      <h2 class="display break-words text-white leading-[0.92] text-[9vw] sm:text-[42px] lg:text-[52px] max-w-[960px] mx-auto">LIGHTTABLE HELPS THE TEAM FIND THE ISSUES.<br /><span class="text-[#FF5722]">WE HELP THE OWNER DECIDE WHAT THEY MEAN.</span></h2>
+      <p class="mt-7 text-[16px] leading-relaxed text-white/70 max-w-[560px] mx-auto">Book a 30-minute demo. We'll show you how an independent owner-side review fits alongside your architect's QC, your contractor's coordination process, and any AI tools already in your workflow.</p>
+      <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="display text-[15px] tracking-wide bg-[#FF5722] text-[#1A1A1A] px-8 py-4 border-2 border-[#1A1A1A] hard-shadow-sm">BOOK YOUR DEMO MEETING →</a>
+        <span class="mono text-[11px] uppercase tracking-widest text-white/40 border-2 border-white/20 px-4 py-2">STATUS: <span class="text-[#FFD700]">ACCEPTING 4 SETS / MONTH</span></span>
+      </div>
+      <p class="mt-8 mono text-[12px] uppercase tracking-widest text-white/40">Not a replacement for your team. A second look that answers to you.</p>
+    </div>
+    <div class="ruler-top w-full"></div>
+  </section>
+
+  <footer class="bg-white">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-6">
+      <div class="grid grid-cols-2 sm:grid-cols-5 border-2 border-[#1A1A1A] mono text-[11px]">
+        <div class="border-r border-[#1A1A1A] p-3">
+          <p class="text-[#1A1A1A]/50 uppercase">Drawn by</p>
+          <p class="font-bold mt-1">Preempt Global</p>
+        </div>
+        <div class="border-r border-[#1A1A1A] p-3">
+          <p class="text-[#1A1A1A]/50 uppercase">Checked by</p>
+          <p class="font-bold mt-1">Joe Rossi</p>
+        </div>
+        <div class="border-r border-[#1A1A1A] p-3 hidden sm:block">
+          <p class="text-[#1A1A1A]/50 uppercase">Scale</p>
+          <p class="font-bold mt-1">1 : 1</p>
+        </div>
+        <div class="border-r border-[#1A1A1A] p-3">
+          <p class="text-[#1A1A1A]/50 uppercase">Date</p>
+          <p class="font-bold mt-1">2026.07.27</p>
+        </div>
+        <div class="p-3">
+          <p class="text-[#1A1A1A]/50 uppercase">Sheet</p>
+          <p class="font-bold mt-1">CMP-02</p>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-6 gap-4">
+        <a href="/" class="flex items-center gap-2"><img src="/assets/images/preempt_global_logo.png" width="20" height="20" alt="Preempt Global logo" class="object-contain"><span class="display text-sm">Preempt Global</span></a>
+        <nav class="mono text-[11px] uppercase tracking-wide flex gap-6 text-[#1A1A1A]/60"><a href="mailto:jrossi@preemptglobal.com" class="hover-underline">Contact</a><a href="/privacy-policy/" class="hover-underline">Privacy Policy</a><a href="/terms-and-conditions/" class="hover-underline">Terms &amp; Conditions</a><a href="/service-agreement/" class="hover-underline">Service Agreement</a></nav><span class="mono text-[11px] text-[#1A1A1A]/40">© 2026 Preempt Global — All Rights Reserved</span>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.getElementById('nav-toggle-btn');
+      var menu = document.getElementById('mobile-nav');
+      var iconBars = document.getElementById('icon-bars');
+      var iconClose = document.getElementById('icon-close');
+      if (!btn || !menu) return;
+
+      function closeMenu() {
+        menu.classList.add('hidden');
+        iconBars.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+
+      function openMenu() {
+        menu.classList.remove('hidden');
+        iconBars.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+
+      btn.addEventListener('click', function () {
+        if (menu.classList.contains('hidden')) {
+          openMenu();
+        } else {
+          closeMenu();
+        }
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      var desktopQuery = window.matchMedia('(min-width: 1024px)');
+      desktopQuery.addEventListener('change', function (e) {
+        if (e.matches) closeMenu();
+      });
+    })();
+  </script>
+</body>
+
+</html>
