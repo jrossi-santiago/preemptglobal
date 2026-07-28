@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1A1A1A">
+  <title>Preempt Global vs. BIM Clash Detection — The Model Checks Geometry. We Check the Paper.</title>
+  <meta name="description" content="BIM clash detection finds two objects overlapping inside a coordinated model. Preempt Global reads the issued set itself — specs, notes, schedules — in 48 hours, with a $50K guarantee. See the full comparison.">
+  <link rel="canonical" href="https://preemptglobal.com/vs-bim-clash/">
+  <link rel="icon" type="image/x-icon" href="/assets/favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicons/android-chrome-512x512.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    :root {
+      --orange: #FF5722;
+      --orange-deep: #F4511E;
+      --onyx: #1A1A1A;
+      --white: #FFFFFF;
+      --blueprint: #004B87;
+      --caution: #FFD700;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      color: var(--onyx);
+    }
+
+    .display {
+      font-family: "Archivo Black", "Arial Black", sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    .mono {
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    .blueprint-grid {
+      background-image: linear-gradient(rgba(0, 75, 135, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 75, 135, 0.1) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .blueprint-grid-dark {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .blueprint-grid-navy {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .hard-shadow-orange {
+      box-shadow: 8px 8px 0 0 var(--orange);
+    }
+
+    .hard-shadow-sm {
+      box-shadow: 5px 5px 0 0 var(--onyx);
+    }
+
+    .hard-shadow-blue {
+      box-shadow: 6px 6px 0 0 var(--blueprint);
+    }
+
+    .hard-shadow-caution {
+      box-shadow: 7px 7px 0 0 var(--caution);
+    }
+
+    .ruler-top {
+      background-image: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.35) 0px, rgba(255, 255, 255, 0.35) 2px, transparent 2px, transparent 40px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.15) 0px, rgba(255, 255, 255, 0.15) 2px, transparent 2px, transparent 8px);
+      height: 14px;
+    }
+
+    .hover-underline:hover {
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-color: var(--blueprint);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+
+    .loop-track {
+      background-image: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.25) 0px, rgba(255, 255, 255, 0.25) 10px, transparent 10px, transparent 20px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg-[#1A1A1A] text-white mono text-[11px] tracking-widest px-4 py-1.5 flex justify-between items-center border-b-2 border-[#FF5722]"><span>DRAWING SET: COMPARISON / PREEMPT GLOBAL VS. BIM CLASH DETECTION</span><span class="hidden sm:inline">SCALE: 1:1 · STATUS: <span class="text-[#FFD700]">LIVE</span></span></div>
+  <header class="border-b-2 border-[#1A1A1A] sticky top-0 bg-white z-40">
+    <div class="max-w-[1400px] mx-auto flex items-center justify-between px-5 sm:px-8 py-4">
+      <a href="/" class="flex items-center gap-2"><img src="/assets/images/preempt_global_logo.png" width="26" height="26" alt="Preempt Global logo" class="object-contain"><span class="display text-base whitespace-nowrap sm:text-xl">Preempt Global</span></a>
+      <nav class="hidden lg:flex items-center gap-8 mono text-[13px] tracking-wide uppercase"><a href="/#friction" class="hover-underline">What We Do</a><a href="/#process" class="hover-underline">How It Works</a><a href="/#about" class="hover-underline">About</a><a href="/#pricing" class="hover-underline">Pricing</a><div class="relative group"><button type="button" class="hover-underline flex items-center gap-1 uppercase">Comparisons<svg width="9" height="6" viewBox="0 0 9 6" fill="none" class="mt-0.5"><path d="M1 1L4.5 5L8 1" stroke="#1A1A1A" stroke-width="1.5"></path></svg></button><div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-opacity duration-150 absolute left-0 top-full pt-3 z-50"><div class="w-60 bg-white border-2 border-[#1A1A1A] hard-shadow-sm normal-case tracking-normal overflow-hidden"><a href="/vs-redicheck/" class="block px-4 py-3 border-b border-[#1A1A1A]/10 text-[13px] hover:bg-[#FF5722]/10">vs. RediCheck</a><a href="/vs-lighttable-ai/" class="block px-4 py-3 border-b border-[#1A1A1A]/10 text-[13px] hover:bg-[#FF5722]/10">vs. LightTable AI</a><a href="/vs-checkset/" class="block px-4 py-3 border-b border-[#1A1A1A]/10 text-[13px] hover:bg-[#FF5722]/10">vs. CHECKSET</a><a href="/vs-bim-clash/" class="block px-4 py-3 text-[13px] hover:bg-[#FF5722]/10">vs. BIM Clash Detection</a></div></div></div><a href="/#faq" class="hover-underline">FAQ</a></nav>
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="mono text-[11px] sm:text-[12px] uppercase tracking-wide bg-[#FF5722] text-[#1A1A1A] font-bold px-3.5 sm:px-4 py-2.5 border-2 border-[#1A1A1A] hard-shadow-sm whitespace-nowrap"><span class="hidden sm:inline">BOOK YOUR MEETING</span><span class="sm:hidden">BOOK NOW</span></a>
+        <button id="nav-toggle-btn" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Toggle navigation menu" class="lg:hidden inline-flex items-center justify-center w-10 h-10 shrink-0 border-2 border-[#1A1A1A]">
+          <svg id="icon-bars" width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M0 1H18" stroke="#1A1A1A" stroke-width="2"></path><path d="M0 7H18" stroke="#1A1A1A" stroke-width="2"></path><path d="M0 13H18" stroke="#1A1A1A" stroke-width="2"></path></svg>
+          <svg id="icon-close" class="hidden" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 1L15 15" stroke="#1A1A1A" stroke-width="2"></path><path d="M15 1L1 15" stroke="#1A1A1A" stroke-width="2"></path></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="hidden lg:hidden bg-white border-t-2 border-[#1A1A1A]">
+      <div class="max-w-[1400px] mx-auto flex flex-col mono text-[13px] tracking-wide uppercase px-5 sm:px-8">
+        <a href="/#friction" class="py-3.5 border-b border-[#1A1A1A]/10">What We Do</a>
+        <a href="/#process" class="py-3.5 border-b border-[#1A1A1A]/10">How It Works</a>
+        <a href="/#about" class="py-3.5 border-b border-[#1A1A1A]/10">About</a>
+        <a href="/#pricing" class="py-3.5 border-b border-[#1A1A1A]/10">Pricing</a><div class="border-b border-[#1A1A1A]/10 py-1.5"><p class="mono text-[10px] uppercase tracking-widest text-[#1A1A1A]/40 pt-2 pb-1">Comparisons</p><a href="/vs-redicheck/" class="block py-2 pl-3 normal-case tracking-normal text-[13px]">vs. RediCheck</a><a href="/vs-lighttable-ai/" class="block py-2 pl-3 normal-case tracking-normal text-[13px]">vs. LightTable AI</a><a href="/vs-checkset/" class="block py-2 pl-3 normal-case tracking-normal text-[13px]">vs. CHECKSET</a><a href="/vs-bim-clash/" class="block py-2 pb-2.5 pl-3 normal-case tracking-normal text-[13px]">vs. BIM Clash Detection</a></div>
+        <a href="/#faq" class="py-3.5">FAQ</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative border-b-2 border-[#1A1A1A] bg-white blueprint-grid">
+    <div class="max-w-[1000px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      <p class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 mb-6"><a href="/" class="hover-underline">Home</a><span class="mx-2 text-[#1A1A1A]/25">/</span>Compare<span class="mx-2 text-[#1A1A1A]/25">/</span>vs. BIM Clash Detection</p>
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-6">Sheet 01 · Respectfully, the Model Isn't Wrong. It Just Isn't the Whole Set.</p>
+      <h1 class="display leading-[0.95] break-words text-[10.5vw] sm:text-[48px] lg:text-[54px] max-w-[820px]">BIM CATCHES WHAT'S MODELED.<br /><span class="text-[#FF5722]">WE CATCH WHAT'S WRITTEN.</span></h1>
+      <p class="mt-7 text-[16px] leading-relaxed text-[#1A1A1A]/80 max-w-[640px]">BIM clash detection is real, and if you're running it, keep running it. It finds two elements overlapping inside a model that's been coordinated to that level of detail. Preempt Global reads the issued drawing set itself — the specs, general notes, and sheet-to-sheet conflicts that never show up as a clash because they were never modeled in the first place.</p>
+      <div class="mt-9 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="display text-[15px] tracking-wide bg-[#1A1A1A] text-white px-7 py-4 border-2 border-[#1A1A1A] hard-shadow-orange">BOOK YOUR DEMO MEETING →</a>
+        <a href="#compare-table" class="mono text-[13px] uppercase tracking-wide hover-underline">See the full comparison ↓</a>
+      </div>
+      <p class="mt-8 mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40">$50K Exposure Guarantee · No Model Required · 48-Hour Turnaround</p>
+    </div>
+  </section>
+
+  <!-- QUICK COMPARISON TABLE -->
+  <section id="compare-table" class="border-b-2 border-[#1A1A1A] bg-white">
+    <div class="max-w-[1100px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">At A Glance</p>
+      <h2 class="display break-words text-[9vw] sm:text-[36px] lg:text-[42px] leading-[0.95] mb-6">SAME GOAL — CATCH IT BEFORE THE FIELD DOES. DIFFERENT LAYER.</h2>
+      <p class="lg:hidden mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 mb-2">Swipe to see full table →</p>
+      <div class="border-2 border-[#1A1A1A] overflow-x-auto">
+        <table class="w-full min-w-[680px] border-collapse mono text-[13px]">
+          <thead>
+            <tr class="bg-[#1A1A1A] text-white uppercase text-[11px] tracking-widest">
+              <th class="text-left px-4 py-3 border-r border-white/20 w-[26%]">&nbsp;</th>
+              <th class="text-left px-4 py-3 border-r border-white/20 text-[#FF5722]">Preempt Global</th>
+              <th class="text-left px-4 py-3 text-white/60">BIM Clash Detection</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t-2 border-[#1A1A1A]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">What it checks</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">The full issued set — drawings, specs, notes, schedules</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">Geometry inside a coordinated 3D model</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A] bg-[#1A1A1A]/[0.02]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Prerequisite</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">None — works from the issued set as-is</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">A model built to coordination-ready LOD, by every discipline, kept current</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Who it's for</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">Paid by and reports to the owner</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">Typically run by the design team's or GC's VDC group</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A] bg-[#1A1A1A]/[0.02]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Turnaround</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">48 hours</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">Ongoing weekly / biweekly coordination cycle</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Guarantee</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">$50K exposure found, or it's free</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">None — it's a process, not a deliverable with a guarantee</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A] bg-[#1A1A1A]/[0.02]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Findings format</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">Ranked (High/Med/Low) + $ exposure + schedule impact per item</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">Raw clash list — hard/soft clashes, often with duplicates needing manual triage</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Pricing</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">Published, on this page</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">Typically bundled into design / VDC fees, not quoted standalone</td>
+            </tr>
+            <tr class="border-t-2 border-[#1A1A1A] bg-[#1A1A1A]/[0.02]">
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold uppercase text-[12px] text-[#1A1A1A]/60">Catches spec-vs-drawing or note-vs-note conflicts</td>
+              <td class="px-4 py-4 border-r-2 border-[#1A1A1A] font-bold">Yes</td>
+              <td class="px-4 py-4 text-[#1A1A1A]/70">Not designed to — those live outside the model entirely</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-6 mono text-[12px] text-[#1A1A1A]/50 max-w-[720px]">This isn't a case against BIM clash detection — it's the industry standard for a reason, and any team running full BIM should keep running it. The rows above are about scope, not quality.</p>
+    </div>
+  </section>
+
+  <!-- WHAT IT ACTUALLY CATCHES -->
+  <section class="bg-[#1A1A1A] blueprint-grid-dark border-b-2 border-[#FF5722] relative overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-6">What It Actually Catches</p>
+      <h2 class="display break-words text-white leading-[0.92] text-[9.5vw] sm:text-[44px] lg:text-[52px] max-w-[960px]">GEOMETRY IS ONE LAYER. <span class="text-[#FF5722]">THE SET IS THE WHOLE DOCUMENT.</span></h2>
+      <p class="mt-8 text-[16px] leading-relaxed text-white/70 max-w-[720px]">Clash detection is built to do one job extremely well: find two modeled elements occupying the same physical space, or violating a clearance rule, inside a federated model. When every trade has modeled to a coordination-ready level of development, it will find that duct-through-beam every time. That's not in dispute.</p>
+      <p class="mt-4 text-[16px] leading-relaxed text-white/70 max-w-[720px]">What it isn't built to catch: a general note on one sheet that prohibits what a detail on another sheet requires. A spec section that contradicts the drawing set it's paired with. A submittal missing a cut sheet. A fire-rated assembly called out in one place and dropped in another. A schedule that doesn't match the panel it describes. None of that is geometry — it's paper conflicting with paper, and a 3D model was never asked to check for it.</p>
+    </div>
+    <div class="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 border-t-2 border-white/10">
+      <div class="border-r-0 lg:border-r-2 border-white/10 px-5 sm:px-8 py-10">
+        <div class="flex items-center justify-between mb-6 border-b border-white/20 pb-3"><span class="display text-lg text-white">BIM CLASH DETECTION CATCHES</span><span class="mono text-[11px] text-[#5B9BD5] uppercase tracking-widest">Model-Scoped</span></div>
+        <div class="space-y-3">
+          <div class="relative border-2 border-white/20 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#004B87]"></div>
+            <p class="text-[14px] text-white/70 leading-snug"><span class="text-[#5B9BD5] font-bold">✓</span>&nbsp; Duct-through-beam and hard clashes between modeled elements</p>
+          </div>
+          <div class="relative border-2 border-white/20 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#004B87]"></div>
+            <p class="text-[14px] text-white/70 leading-snug"><span class="text-[#5B9BD5] font-bold">✓</span>&nbsp; Clearance and soft-clash rule violations, once modeled</p>
+          </div>
+          <div class="relative border-2 border-white/20 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#004B87]"></div>
+            <p class="text-[14px] text-white/50 leading-snug">A general note that contradicts a detail on another sheet — not designed to</p>
+          </div>
+          <div class="relative border-2 border-white/20 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#004B87]"></div>
+            <p class="text-[14px] text-white/50 leading-snug">A spec section that contradicts its own drawing set — not designed to</p>
+          </div>
+        </div>
+      </div>
+      <div class="px-5 sm:px-8 py-10">
+        <div class="flex items-center justify-between mb-6 border-b border-white/20 pb-3"><span class="display text-lg text-white">PREEMPT GLOBAL CATCHES</span><span class="mono text-[11px] text-[#FF5722] uppercase tracking-widest">Set-Scoped</span></div>
+        <div class="space-y-3">
+          <div class="relative bg-white/[0.04] border-2 border-[#FF5722]/60 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#FF5722]"></div>
+            <p class="text-[14px] text-white/85 leading-snug"><span class="text-[#FF5722] font-bold">✓</span>&nbsp; A general note that prohibits what a detail on another sheet requires</p>
+          </div>
+          <div class="relative bg-white/[0.04] border-2 border-[#FF5722]/60 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#FF5722]"></div>
+            <p class="text-[14px] text-white/85 leading-snug"><span class="text-[#FF5722] font-bold">✓</span>&nbsp; A spec section that contradicts the drawing set it's paired with</p>
+          </div>
+          <div class="relative bg-white/[0.04] border-2 border-[#FF5722]/60 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#FF5722]"></div>
+            <p class="text-[14px] text-white/85 leading-snug"><span class="text-[#FF5722] font-bold">✓</span>&nbsp; A fire-rated assembly called out in one place, dropped in another</p>
+          </div>
+          <div class="relative bg-white/[0.04] border-2 border-[#FF5722]/60 pl-5 py-4 pr-4">
+            <div class="absolute left-0 top-0 h-full w-1.5 bg-[#FF5722]"></div>
+            <p class="text-[14px] text-white/85 leading-snug"><span class="text-[#FF5722] font-bold">✓</span>&nbsp; A schedule that doesn't match the panel or assembly it describes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-12 border-t-2 border-white/10">
+      <div class="border-2 border-[#FFD700] bg-white/[0.03] p-6 sm:p-8 max-w-[820px]">
+        <p class="mono text-[12px] uppercase tracking-widest text-[#FFD700] font-bold mb-3">"If we're already running BIM coordination, why do we need this too?"</p>
+        <p class="text-[15px] sm:text-[16px] leading-relaxed text-white/80">Because BIM coordination is scoped to the model, and the model is scoped to what's been drawn in 3D. A construction document review is scoped to the entire issued set — drawings, specs, schedules, and notes — whether or not it's modeled yet. Both are real and worth running. Neither replaces the other. Preempt Global runs alongside your BIM coordination process, not instead of it, and reports to the owner directly instead of surfacing findings inside a design-team coordination meeting.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S REQUIRED TO EVEN RUN IT -->
+  <section class="bg-[#004B87] blueprint-grid-navy border-b-2 border-[#FF5722]">
+    <div class="max-w-[1000px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-4">What's Required To Even Run It</p>
+      <h2 class="display break-words text-white leading-[0.95] text-[9vw] sm:text-[38px] lg:text-[44px] mb-8 max-w-[820px]">CLASH DETECTION NEEDS A FINISHED MODEL. WE JUST NEED THE ISSUED SET.</h2>
+      <p class="text-[16px] leading-relaxed text-white/80 max-w-[720px] mb-4">Clash detection is only as good as what's been modeled — and modeled to a level of development where a clash is even detectable. Early in design, on smaller trades, on renovation work, or on any team where one discipline is behind on modeling, there's no coordinated model yet to run the software against. Until then, the conflicts sit in the drawings and specs with nothing checking them.</p>
+      <p class="text-[16px] leading-relaxed text-white/80 max-w-[720px]">Preempt Global doesn't require a model at all. Send the issued set — drawings and specs, in whatever format you already have them — and the review runs against what actually exists today, not against what would exist if every discipline were fully modeled and current.</p>
+      <div class="mt-10 inline-block border-2 border-[#FFD700] bg-white/[0.06] px-6 py-4">
+        <p class="display text-white text-[17px] sm:text-[20px]">NO MODEL, NO PROBLEM. <span class="text-[#FFD700]">IF IT'S AN ISSUED SET, IT'S REVIEWABLE.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE GUARANTEE -->
+  <section class="border-b-2 border-[#1A1A1A] bg-white blueprint-grid">
+    <div class="max-w-[1200px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">The Guarantee</p>
+      <h2 class="display break-words text-[9vw] sm:text-[38px] lg:text-[44px] leading-[0.95] mb-10 max-w-[900px]">ONE OF US IS A PROCESS. THE OTHER COMES WITH A NUMBER IN WRITING.</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <div class="border-2 border-[#1A1A1A]/25 bg-[#1A1A1A]/[0.02] p-6 sm:p-8">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/50 mb-3">BIM Clash Detection</p>
+          <p class="display text-[19px] sm:text-[22px] mb-4">NO GUARANTEE — IT'S A WORKFLOW, NOT A DELIVERABLE</p>
+          <p class="text-[15px] leading-relaxed text-[#1A1A1A]/70">Clash detection software returns whatever it returns: sometimes a handful of real conflicts, sometimes hundreds of duplicate or non-issue "clashes" that still need a coordinator to sort real from noise. There's no dollar figure attached to the output and nothing promised about what the process will find.</p>
+        </div>
+        <div class="border-2 border-[#FF5722] bg-white p-6 sm:p-8 hard-shadow-orange">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#FF5722] font-bold mb-3">Preempt Global</p>
+          <p class="display text-[19px] sm:text-[22px] mb-4">$50K-EXPOSURE-OR-FREE</p>
+          <p class="text-[15px] leading-relaxed text-[#1A1A1A]/80">If the review doesn't surface at least $50,000 in documented cost exposure, it's free. No partial credit, no fine print. On a set of this size and complexity, there's always something to find — which is exactly why we're willing to put a number on it in writing.</p>
+        </div>
+      </div>
+      <p class="mt-8 mono text-[13px] text-[#1A1A1A]/50 max-w-[700px]">BIM coordination tells you what clashed. Ours tells you what it would've cost you — and puts money behind that promise.</p>
+    </div>
+  </section>
+
+  <!-- SPEED -->
+  <section class="bg-[#1A1A1A] blueprint-grid-dark border-b-2 border-[#FF5722]">
+    <div class="max-w-[1200px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-4">Speed</p>
+      <h2 class="display break-words text-white leading-[0.95] text-[9vw] sm:text-[38px] lg:text-[44px] mb-6 max-w-[860px]">YOUR SET IS ALREADY LATE. THEIRS RUNS ON A MEETING CYCLE.</h2>
+      <p class="text-[16px] leading-relaxed text-white/70 max-w-[740px] mb-12">BIM coordination typically runs as a recurring process — weekly or biweekly coordination meetings across design development and into construction documents, with each cycle only as current as the models uploaded to it. That's real, necessary work, but it's built for the length of a design phase, not for a set that needs answers this week. Preempt Global turns a full review of the issued set around in 48 hours, because the whole point of catching something on paper is catching it before the next submittal date, not on the next coordination meeting's schedule.</p>
+      <div class="space-y-5">
+        <div>
+          <div class="flex items-center justify-between mb-2"><span class="mono text-[11px] uppercase tracking-widest text-[#FF5722] font-bold">Preempt Global</span><span class="mono text-[11px] uppercase tracking-widest text-[#FF5722] font-bold">48 HRS</span></div>
+          <div class="h-8 bg-[#FF5722] border-2 border-white/20 w-[14%] min-w-[90px]"></div>
+        </div>
+        <div>
+          <div class="flex items-center justify-between mb-2"><span class="mono text-[11px] uppercase tracking-widest text-white/50">BIM Clash Detection</span><span class="mono text-[11px] uppercase tracking-widest text-white/50">ONGOING WEEKLY CYCLE</span></div>
+          <div class="h-8 loop-track bg-white/10 border-2 border-white/20 w-full"></div>
+        </div>
+      </div>
+      <p class="mt-6 mono text-[12px] text-white/40 max-w-[680px]">Literal, to scale: a fixed 48-hour bar vs. a repeating cycle with no fixed end date.</p>
+    </div>
+  </section>
+
+  <!-- WHAT YOU GET BACK -->
+  <section class="border-b-2 border-[#1A1A1A] bg-white">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">What You Get Back</p>
+      <h2 class="display break-words text-[9vw] sm:text-[38px] lg:text-[44px] leading-[0.95] mb-6 max-w-[860px]">THEY HAND YOU A CLASH LIST. WE HAND YOU A PRICE TAG.</h2>
+      <p class="text-[16px] leading-relaxed text-[#1A1A1A]/80 max-w-[760px] mb-10">A clash detection run typically outputs a list — sometimes a long one — of hard and soft clashes, many of them duplicates, near-misses, or conflicts that don't actually matter once someone looks closer. Sorting the real problems from the noise is its own job, and it usually falls to whoever's running the coordination meeting. Every Preempt finding comes ranked — High, Medium, Low — with an estimated dollar exposure and schedule impact attached automatically. You're not triaging a raw output. You're reading a prioritized list of what to fix first and what it's costing you to wait.</p>
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 items-start">
+        <div class="lg:col-span-3">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 mb-2">What you actually get back — Preempt Global</p>
+          <div class="border-2 border-[#1A1A1A] overflow-x-auto">
+            <table class="w-full min-w-[560px] border-collapse mono text-[12px]">
+              <thead>
+                <tr class="bg-[#1A1A1A] text-white uppercase text-[10px] tracking-widest">
+                  <th class="text-left px-3 py-2.5 border-r border-white/20">Priority</th>
+                  <th class="text-left px-3 py-2.5 border-r border-white/20">Finding</th>
+                  <th class="text-left px-3 py-2.5 border-r border-white/20">Est. Field Cost</th>
+                  <th class="text-left px-3 py-2.5">Schedule</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-t-2 border-[#1A1A1A]">
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]"><span class="bg-[#FF5722] text-[#1A1A1A] font-bold px-2 py-1">HIGH</span></td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]">Fire-rated assembly called out on A-501, dropped from A-601</td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A] font-bold">$38,500</td>
+                  <td class="px-3 py-3 font-bold">14 days</td>
+                </tr>
+                <tr class="border-t-2 border-[#1A1A1A] bg-[#1A1A1A]/[0.02]">
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]"><span class="bg-[#FFD700] text-[#1A1A1A] font-bold px-2 py-1">MED</span></td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]">Spec Section 08 71 00 hardware set contradicts door schedule</td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A] font-bold">$5,800</td>
+                  <td class="px-3 py-3 font-bold">4 days</td>
+                </tr>
+                <tr class="border-t-2 border-[#1A1A1A]">
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]"><span class="bg-[#004B87] text-white font-bold px-2 py-1">LOW</span></td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A]">General note references a keynote removed from sheet set</td>
+                  <td class="px-3 py-3 border-r-2 border-[#1A1A1A] font-bold">$350</td>
+                  <td class="px-3 py-3 font-bold">0 days</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="mt-3 mono text-[12px] text-[#1A1A1A]/60">Ranked. Priced. Scheduled. Nothing left for you to triage.</p>
+        </div>
+        <div class="lg:col-span-2">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 mb-2">Raw clash list (illustrative)</p>
+          <div class="border-2 border-[#1A1A1A]/25 bg-[#1A1A1A]/[0.02] p-5 space-y-3">
+            <div class="flex items-center justify-between border-b border-dashed border-[#1A1A1A]/20 pb-3">
+              <p class="text-[13px] text-[#1A1A1A]/50 leading-snug">Hard clash — duct vs. beam, Lvl 4</p>
+              <span class="mono text-[9px] uppercase tracking-widest bg-[#1A1A1A]/10 text-[#1A1A1A]/50 px-1.5 py-0.5">Unresolved</span>
+            </div>
+            <div class="flex items-center justify-between border-b border-dashed border-[#1A1A1A]/20 pb-3">
+              <p class="text-[13px] text-[#1A1A1A]/50 leading-snug">Soft clash — clearance, Lvl 4 (dup.)</p>
+              <span class="mono text-[9px] uppercase tracking-widest bg-[#1A1A1A]/10 text-[#1A1A1A]/50 px-1.5 py-0.5">Duplicate</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <p class="text-[13px] text-[#1A1A1A]/50 leading-snug">Hard clash — pipe vs. conduit, Lvl 2</p>
+              <span class="mono text-[9px] uppercase tracking-widest bg-[#1A1A1A]/10 text-[#1A1A1A]/50 px-1.5 py-0.5">Unresolved</span>
+            </div>
+          </div>
+          <p class="mt-3 mono text-[12px] text-[#1A1A1A]/60">Real conflicts, duplicates, and near-misses in one undifferentiated list — no dollar figure or schedule impact attached, still someone's job to triage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADOPTION, ADDRESSED HONESTLY -->
+  <section class="bg-[#FFFDF3] border-b-2 border-[#1A1A1A]">
+    <div class="max-w-[1000px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#B8860B] font-bold mb-4">Adoption, Addressed Honestly</p>
+      <h2 class="display break-words text-[9vw] sm:text-[36px] lg:text-[42px] leading-[0.95] mb-6 max-w-[820px]">IT'S THE INDUSTRY STANDARD. IT'S ALSO ONLY AS GOOD AS THE MODEL.</h2>
+      <div class="border-2 border-[#1A1A1A] bg-white p-6 sm:p-8 hard-shadow-caution">
+        <p class="text-[15px] sm:text-[16px] leading-relaxed text-[#1A1A1A]/85 mb-4">BIM clash detection is standard practice on complex projects for good reason — it catches geometric conflicts before anyone breaks ground, and any team running full BIM should keep running it. But "standard practice" and "complete coverage" aren't the same claim. It only sees what's been modeled to a coordination-ready level, by every discipline, kept current.</p>
+        <p class="text-[15px] sm:text-[16px] leading-relaxed text-[#1A1A1A]/85">The written spec, the general notes, the schedules — the parts of the set that live outside the model entirely — none of that gets checked by a clash report, no matter how mature the BIM process is. Preempt Global reads the layer that sits underneath the model: the issued document itself.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE OWNER-SIDE OBJECTION -->
+  <section class="bg-[#004B87] blueprint-grid-navy border-b-2 border-[#FF5722]">
+    <div class="max-w-[1000px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-4">The Owner-Side Objection</p>
+      <h2 class="display break-words text-white leading-[0.95] text-[9vw] sm:text-[36px] lg:text-[40px] mb-8 max-w-[780px]">"ISN'T CLASH DETECTION ALREADY AN OWNER-SIDE CHECK?"</h2>
+      <p class="text-[16px] leading-relaxed text-white/80 max-w-[720px]">Usually not. BIM coordination is typically run by the design team's or GC's VDC group, scoped to keep the model buildable and the trades from literally colliding — a real and necessary function, but one that reports into the design/construction side of the table, the same way an architect's QC or a GC's coordination review does. Preempt Global is paid by the owner, reports to no one else, and runs alongside BIM coordination and your team's other QC/QA processes — not replacing any of them, and not answerable to them.</p>
+    </div>
+  </section>
+
+  <!-- PRICING TRANSPARENCY -->
+  <section id="pricing" class="border-b-2 border-[#1A1A1A] bg-white blueprint-grid">
+    <div class="max-w-[1100px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">Pricing Transparency</p>
+      <h2 class="display break-words text-[9vw] sm:text-[38px] lg:text-[44px] leading-[0.95] mb-6 max-w-[860px]">SEE THE NUMBER BEFORE YOU BOOK THE CALL.</h2>
+      <p class="text-[16px] leading-relaxed text-[#1A1A1A]/80 max-w-[760px] mb-10">Running BIM coordination well isn't free — it means software licenses, a dedicated coordinator's time, and recurring meeting hours across the length of the project, and that cost is usually folded into a design or GC fee rather than quoted on its own. Preempt Global's pricing is published up front. You'll know what this costs before you ever get on a call.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+        <div class="border-2 border-[#1A1A1A] p-6">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/50 mb-2">One-Time Set Review</p>
+          <p class="display text-[22px] sm:text-[26px]">$1.5K–$7.5K</p>
+        </div>
+        <div class="border-2 border-[#FF5722] bg-white p-6 hard-shadow-orange">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#FF5722] font-bold mb-2">Per-Project</p>
+          <p class="display text-[22px] sm:text-[26px]">$10K–$25K</p>
+        </div>
+        <div class="border-2 border-[#1A1A1A] p-6">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/50 mb-2">Monthly Retainer</p>
+          <p class="display text-[22px] sm:text-[26px]">$3.5K–$7.5K/mo</p>
+        </div>
+      </div>
+      <p class="mt-6 mono text-[12px] text-[#1A1A1A]/50 max-w-[720px]">Full tier breakdown and what's included in each on the <a href="/#pricing" class="hover-underline text-[#1A1A1A]/70 font-bold">homepage pricing table</a>. Every tier carries the same $50K guarantee.</p>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section id="cta" class="bg-[#1A1A1A] blueprint-grid-dark relative overflow-hidden">
+    <div class="ruler-top w-full"></div>
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-20 lg:py-24 text-center">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-6">Sheet 01 of 01 — Last Call</p>
+      <h2 class="display break-words text-white leading-[0.92] text-[9vw] sm:text-[44px] lg:text-[54px] max-w-[920px] mx-auto">THE MODEL CHECKS GEOMETRY. <span class="text-[#FF5722]">WE CHECK THE PAPER IT'S BUILT FROM.</span></h2>
+      <p class="mt-7 text-[16px] leading-relaxed text-white/70 max-w-[520px] mx-auto">Book a 30-minute demo. Nothing's shared until the NDA is signed, and nothing's billed unless we find something worth the fee.</p>
+      <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="display text-[15px] tracking-wide bg-[#FF5722] text-[#1A1A1A] px-8 py-4 border-2 border-[#1A1A1A] hard-shadow-sm">BOOK YOUR DEMO MEETING →</a>
+        <span class="mono text-[11px] uppercase tracking-widest text-white/40 border-2 border-white/20 px-4 py-2">STATUS: <span class="text-[#FFD700]">ACCEPTING 4 SETS / MONTH</span></span>
+      </div>
+      <p class="mt-8 mono text-[12px] text-white/40 max-w-[600px] mx-auto">Already running BIM coordination? Good — keep running it. See how the two fit together in the <a href="/#faq" class="hover-underline text-white/60">homepage FAQ</a>.</p>
+    </div>
+    <div class="ruler-top w-full"></div>
+  </section>
+
+  <footer class="bg-white">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-6">
+      <div class="grid grid-cols-2 sm:grid-cols-5 border-2 border-[#1A1A1A] mono text-[11px]">
+        <div class="border-r border-[#1A1A1A] p-3">
+          <p class="text-[#1A1A1A]/50 uppercase">Drawn by</p>
+          <p class="font-bold mt-1">Preempt Global</p>
+        </div>
+        <div class="border-r border-[#1A1A1A] p-3">
+          <p class="text-[#1A1A1A]/50 uppercase">Checked by</p>
+          <p class="font-bold mt-1">Joe Rossi</p>
+        </div>
+        <div class="border-r border-[#1A1A1A] p-3 hidden sm:block">
+          <p class="text-[#1A1A1A]/50 uppercase">Scale</p>
+          <p class="font-bold mt-1">1 : 1</p>
+        </div>
+        <div class="border-r border-[#1A1A1A] p-3">
+          <p class="text-[#1A1A1A]/50 uppercase">Date</p>
+          <p class="font-bold mt-1">2026.07.28</p>
+        </div>
+        <div class="p-3">
+          <p class="text-[#1A1A1A]/50 uppercase">Sheet</p>
+          <p class="font-bold mt-1">CMP-04</p>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-6 gap-4">
+        <a href="/" class="flex items-center gap-2"><img src="/assets/images/preempt_global_logo.png" width="20" height="20" alt="Preempt Global logo" class="object-contain"><span class="display text-sm">Preempt Global</span></a>
+        <nav class="mono text-[11px] uppercase tracking-wide flex gap-6 text-[#1A1A1A]/60"><a href="mailto:jrossi@preemptglobal.com" class="hover-underline">Contact</a><a href="/privacy-policy/" class="hover-underline">Privacy Policy</a><a href="/terms-and-conditions/" class="hover-underline">Terms &amp; Conditions</a><a href="/service-agreement/" class="hover-underline">Service Agreement</a></nav><span class="mono text-[11px] text-[#1A1A1A]/40">© 2026 Preempt Global — All Rights Reserved</span>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.getElementById('nav-toggle-btn');
+      var menu = document.getElementById('mobile-nav');
+      var iconBars = document.getElementById('icon-bars');
+      var iconClose = document.getElementById('icon-close');
+      if (!btn || !menu) return;
+
+      function closeMenu() {
+        menu.classList.add('hidden');
+        iconBars.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+
+      function openMenu() {
+        menu.classList.remove('hidden');
+        iconBars.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+
+      btn.addEventListener('click', function () {
+        if (menu.classList.contains('hidden')) {
+          openMenu();
+        } else {
+          closeMenu();
+        }
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      var desktopQuery = window.matchMedia('(min-width: 1024px)');
+      desktopQuery.addEventListener('change', function (e) {
+        if (e.matches) closeMenu();
+      });
+    })();
+  </script>
+</body>
+
+</html>
