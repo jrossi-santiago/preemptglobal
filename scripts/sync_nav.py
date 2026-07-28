@@ -24,12 +24,12 @@ PARTIALS = ROOT / "partials"
 
 LAST_LINK = {
     "faq": {
-        "desktop": '<a href="{PREFIX}#faq" class="hover-underline">FAQ</a>',
-        "mobile": '<a href="{PREFIX}#faq" class="py-3.5">FAQ</a>',
+        "desktop": '<a href="{PREFIX}#faq" class="hover-underline">FAQ</a><a href="/blog" class="hover-underline">Blog</a>',
+        "mobile": '<a href="{PREFIX}#faq" class="py-3.5 border-b border-[#1A1A1A]/10">FAQ</a><a href="/blog" class="py-3.5">Blog</a>',
     },
     "blog": {
-        "desktop": '<a href="/blog" class="hover-underline text-[#FF5722]">Blog</a>',
-        "mobile": '<a href="/blog" class="py-3.5 text-[#FF5722]">Blog</a>',
+        "desktop": '<a href="{PREFIX}#faq" class="hover-underline">FAQ</a><a href="/blog" class="hover-underline text-[#FF5722]">Blog</a>',
+        "mobile": '<a href="{PREFIX}#faq" class="py-3.5 border-b border-[#1A1A1A]/10">FAQ</a><a href="/blog" class="py-3.5 text-[#FF5722]">Blog</a>',
     },
 }
 
