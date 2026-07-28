@@ -14,9 +14,9 @@ Already published:
 - [x] Anatomy of a Findings Report: What a Real Document Audit Looks Like — `anatomy-of-a-findings-report-third-party-plan-review` — 2026-07-24 (third-party plan review)
 - [x] Why "It Passed QA/QC" Doesn't Mean the Set Is Coordinated — `qa-qc-passed-doesnt-mean-set-coordinated` — 2026-07-25 (catching design errors before construction)
 - [x] Change Order Math: Calculating Real Exposure Before You Bid — `change-order-math-calculating-real-exposure` — 2026-07-26 (change order risk mitigation)
+- [x] E&O Insurance and the Real Cost of Design Errors and Omissions: What Owners Should Ask For — `eo-insurance-cost-of-design-errors-and-omissions` — 2026-07-28 (cost of design errors and omissions)
 
 Queue:
-- [ ] E&O Insurance and Independent Review: What Owners Should Ask For (cost of design errors and omissions)
 - [ ] The NDA Question: Vetting an Independent Reviewer's Confidentiality (owner's representative drawing review)
 - [ ] 7 Bid Set Red Flags That Mean Your Documents Aren't Field-Ready (document review checklist)
 - [ ] Where Coordination-Error Costs Actually Come From — and How to Catch Them Before Bid (why so many change orders)
@@ -26,3 +26,10 @@ Queue:
 - [ ] When Spec Sections Contradict the Drawings: A Field Guide to Spec vs. Drawing Conflicts (spec vs drawing conflicts)
 - [ ] When Should an Owner Hire a Drawing Review Consultant? A Timing Guide (when to hire a drawing review consultant)
 - [ ] Construction Document Review Services: What's Actually in Scope (construction document review services)
+- [ ] Choosing a Pre-Bid Drawing Review Partner: What to Look for Beyond Price (pre-bid drawing review)
+- [ ] What a Constructability Review Consultant Actually Delivers, Project by Project (constructability review consultant)
+- [ ] How to Reduce Change Orders Without Adding Weeks to Your Schedule (how to reduce change orders)
+- [ ] RFI Volume Isn't a KPI: What to Track Instead (RFI reduction)
+- [ ] Structural vs. MEP: Where Coordination Conflicts Actually Originate on a Set (MEP/structural drawing coordination conflicts)
+- [ ] Document Review Checklist for GMP Sets: What Changes at 100% CDs (document review checklist)
+- [ ] Spec vs. Drawing Conflicts: Which One Wins When They Disagree? (spec vs drawing conflicts)
