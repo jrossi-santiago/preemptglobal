@@ -1,0 +1,6 @@
+[
+  { "path": "/vs-redicheck/", "label": "vs. RediCheck" },
+  { "path": "/vs-lighttable-ai/", "label": "vs. LightTable AI" },
+  { "path": "/vs-checkset/", "label": "vs. CHECKSET" },
+  { "path": "/vs-bim-clash/", "label": "vs. BIM Clash Detection" }
+]
