@@ -51,6 +51,8 @@ A pre-bid drawing review looks at the set that's about to go out to bidders and 
 
 An IFC-stage review, run after award, is still worth doing — it's better than no independent review at all, and it can still catch conflicts before they hit the field, which remains cheaper than a change order discovered mid-construction. But it starts from a worse negotiating position. The contract is signed. The price is set. Any finding that requires a design correction is now a conversation about who eats the cost of the fix, not a redline on an unissued sheet.
 
+The underlying procedure doesn't change between the two — see [what happens during a construction document audit](/construction-document-audit/) for the step-by-step version, from intake to the 48-hour turnaround.
+
 <div class="takeaways">
   <h3>Key takeaways</h3>
   <ul>
