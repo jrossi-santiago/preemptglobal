@@ -18,6 +18,7 @@ Already published:
 - [x] The NDA Question: Vetting an Independent Reviewer's Confidentiality — `nda-confidentiality-owners-representative-drawing-review` — 2026-07-29 (owner's representative drawing review)
 - [x] BIM Clash Detection: What It Catches (and Misses) — `bim-clash-detection-what-it-catches-and-misses` — 2026-07-29 (BIM clash detection — direct assignment, not from queue)
 - [x] The Real Cost of Construction Change Orders — `construction-change-order-costs` — 2026-07-29 (construction change order costs — direct assignment, not from queue)
+- [x] AI QA/QC Tools vs. Independent Document Review: Who Owns the Call? — `ai-qaqc-tools-vs-independent-document-review` — 2026-07-29 (AI document review software / lighttable ai — direct assignment, not from queue; links to /vs-lighttable-ai/)
 
 Queue:
 - [ ] 7 Bid Set Red Flags That Mean Your Documents Aren't Field-Ready (document review checklist)
