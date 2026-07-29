@@ -60,6 +60,8 @@ None of this means QA/QC is broken or unnecessary — it's doing exactly what it
 - **Reading every discipline's sheets against every other discipline's sheets** — not just against that discipline's own standards.
 - **Checking written notes and spec sections against drawn details**, not just details against their own detail library.
 - **Running the check before bid**, while the cheapest fix — a redline — is still on the table.
+
+That's the same distinction covered in more depth in [what is owner-side QA/QC?](/construction-qa-qc-review/) — why "passed QA/QC" and "checked for the owner" answer two different questions.
 - **Naming a dollar figure for what's found**, as covered in [anatomy of a findings report](/blog/anatomy-of-a-findings-report-third-party-plan-review/), so exposure competes for attention the way a general "coordination note" doesn't.
 
 <div class="takeaways">

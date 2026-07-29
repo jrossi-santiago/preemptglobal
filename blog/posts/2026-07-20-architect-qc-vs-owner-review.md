@@ -54,6 +54,8 @@ The fix isn't more process from the same two parties — it's a third, independe
 
 None of this requires slowing down a project. A focused, independent pass on a bid set typically takes 48 hours and changes nothing about the design or construction schedule — it just puts a number on what's hiding in the documents before the field finds it.
 
+For a fuller breakdown of what makes this kind of review distinct — who pays for it, who it reports to, and how that changes its scope — see [what owner-side QA/QC actually means](/construction-qa-qc-review/).
+
 <div class="takeaways">
   <h3>Key takeaways</h3>
   <ul>

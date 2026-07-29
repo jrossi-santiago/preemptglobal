@@ -207,7 +207,8 @@ def render_index(all_posts: list, index_template: str) -> str:
 def build_sitemap(all_posts: list) -> str:
     static_pages = [
         "", "findings/", "blog/", "privacy-policy/", "terms-and-conditions/", "service-agreement/",
-        "construction-document-review/", "vs-redicheck/", "vs-lighttable-ai/", "vs-checkset/", "vs-bim-clash/",
+        "construction-document-review/", "construction-qa-qc-review/",
+        "vs-redicheck/", "vs-lighttable-ai/", "vs-checkset/", "vs-bim-clash/",
     ]
     urls = [f"{SITE_URL}/{p}" for p in static_pages]
     urls += [f"{SITE_URL}/blog/{p['slug']}/" for p in all_posts]

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1A1A1A">
+  <title>What Is Owner-Side QA/QC? Construction QA/QC Review Explained | Preempt Global</title>
+  <meta name="description" content="A construction QA QC review run for the owner checks something the architect's QC and the GC's coordination review don't. Here's what owner-side QA/QC actually means and how it works.">
+  <meta property="og:title" content="What Is Owner-Side QA/QC? Construction QA/QC Review Explained | Preempt Global">
+  <meta property="og:description" content="A construction QA QC review run for the owner checks something the architect's QC and the GC's coordination review don't. Here's what owner-side QA/QC actually means and how it works.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://preemptglobal.com/construction-qa-qc-review/">
+  <link rel="icon" type="image/x-icon" href="/assets/favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicons/android-chrome-512x512.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    :root {
+      --orange: #FF5722;
+      --orange-deep: #F4511E;
+      --onyx: #1A1A1A;
+      --white: #FFFFFF;
+      --blueprint: #004B87;
+      --caution: #FFD700;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      color: var(--onyx);
+    }
+
+    .display {
+      font-family: "Archivo Black", "Arial Black", sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    .mono {
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    .blueprint-grid {
+      background-image: linear-gradient(rgba(0, 75, 135, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 75, 135, 0.1) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .blueprint-grid-dark {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .blueprint-grid-navy {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .hard-shadow-orange {
+      box-shadow: 8px 8px 0 0 var(--orange);
+    }
+
+    .hard-shadow-sm {
+      box-shadow: 5px 5px 0 0 var(--onyx);
+    }
+
+    .hard-shadow-blue {
+      box-shadow: 6px 6px 0 0 var(--blueprint);
+    }
+
+    .hard-shadow-caution {
+      box-shadow: 7px 7px 0 0 var(--caution);
+    }
+
+    .ruler-top {
+      background-image: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.35) 0px, rgba(255, 255, 255, 0.35) 2px, transparent 2px, transparent 40px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.15) 0px, rgba(255, 255, 255, 0.15) 2px, transparent 2px, transparent 8px);
+      height: 14px;
+    }
+
+    .hover-underline:hover {
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-color: var(--blueprint);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+
+    .faq-item summary {
+      list-style: none;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does \"owner-side QA/QC\" actually mean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It means a construction QA QC review paid for by the owner, reporting to the owner alone, and scoped to protect the owner's interest specifically — cost exposure and schedule risk — rather than design intent or bid accuracy. It runs alongside the architect's QC and the GC's coordination review, not instead of either one."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Isn't the architect's QC the same thing as owner's QA/QC construction review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The architect's QC checks the set against design intent — did the drawings end up matching what the design team meant to draw. Owner's QA/QC checks the set for cross-discipline conflicts that create cost and schedule exposure for the owner specifically, regardless of whether the set matches design intent."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the GC's coordination review cover owner-side QA/QC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not by itself. The GC's coordination review is scoped to price the work accurately and keep trades from colliding in the field. It's real and necessary, but it reports into the construction side of the table, the same way the architect's QC reports into the design side. Owner's QA/QC is the review that reports to no one but the owner."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a construction document QC process, step by step?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A demo/scoping call, an NDA signed before anything moves, the issued set (drawings and specs) sent over, and a 48-hour turnaround producing a written, severity-ranked findings report plus a live walkthrough meeting. No model or special software is required to start."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who should order an independent construction document review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The owner or the owner's rep, on any project with multiple trades sharing tight coordination — there's no minimum construction value. It's ordered specifically because neither the design team's QC nor the GC's coordination review is scoped to work for the owner alone."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div class="bg-[#1A1A1A] text-white mono text-[11px] tracking-widest px-4 py-1.5 flex justify-between items-center border-b-2 border-[#FF5722]"><span>DRAWING SET: OWNER'S QA/QC / SCOPE OF REVIEW</span><span class="hidden sm:inline">SCALE: 1:1 · STATUS: <span class="text-[#FFD700]">LIVE</span></span></div>
+  <header class="border-b-2 border-[#1A1A1A] sticky top-0 bg-white z-40">
+    <div class="max-w-[1400px] mx-auto flex items-center justify-between px-5 sm:px-8 py-4">
+      <a href="/" class="flex items-center gap-2"><img src="/assets/images/preempt_global_logo.png" width="26" height="26" alt="Preempt Global logo" class="object-contain"><span class="display text-base whitespace-nowrap sm:text-xl">Preempt Global</span></a>
+      <!-- NAV_DESKTOP:START --><nav class="hidden lg:flex items-center gap-8 mono text-[13px] tracking-wide uppercase"><a href="/#friction" class="hover-underline">What We Do</a><a href="/#process" class="hover-underline">How It Works</a><a href="/#about" class="hover-underline">About</a><a href="/#pricing" class="hover-underline">Pricing</a><div class="relative group"><button type="button" class="hover-underline flex items-center gap-1 uppercase">Comparisons<svg width="9" height="6" viewBox="0 0 9 6" fill="none" class="mt-0.5"><path d="M1 1L4.5 5L8 1" stroke="#1A1A1A" stroke-width="1.5"></path></svg></button><div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-opacity duration-150 absolute left-0 top-full pt-3 z-50"><div class="w-60 bg-white border-2 border-[#1A1A1A] hard-shadow-sm normal-case tracking-normal overflow-hidden"><a href="/vs-redicheck/" class="block px-4 py-3 border-b border-[#1A1A1A]/10 text-[13px] hover:bg-[#FF5722]/10">vs. RediCheck</a><a href="/vs-lighttable-ai/" class="block px-4 py-3 border-b border-[#1A1A1A]/10 text-[13px] hover:bg-[#FF5722]/10">vs. LightTable AI</a><a href="/vs-checkset/" class="block px-4 py-3 border-b border-[#1A1A1A]/10 text-[13px] hover:bg-[#FF5722]/10">vs. CHECKSET</a><a href="/vs-bim-clash/" class="block px-4 py-3 text-[13px] hover:bg-[#FF5722]/10">vs. BIM Clash Detection</a></div></div></div><a href="/#faq" class="hover-underline">FAQ</a><a href="/blog" class="hover-underline">Blog</a></nav><!-- NAV_DESKTOP:END -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="mono text-[11px] sm:text-[12px] uppercase tracking-wide bg-[#FF5722] text-[#1A1A1A] font-bold px-3.5 sm:px-4 py-2.5 border-2 border-[#1A1A1A] hard-shadow-sm whitespace-nowrap"><span class="hidden sm:inline">BOOK YOUR MEETING</span><span class="sm:hidden">BOOK NOW</span></a>
+        <button id="nav-toggle-btn" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Toggle navigation menu" class="lg:hidden inline-flex items-center justify-center w-10 h-10 shrink-0 border-2 border-[#1A1A1A]">
+          <svg id="icon-bars" width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M0 1H18" stroke="#1A1A1A" stroke-width="2"></path><path d="M0 7H18" stroke="#1A1A1A" stroke-width="2"></path><path d="M0 13H18" stroke="#1A1A1A" stroke-width="2"></path></svg>
+          <svg id="icon-close" class="hidden" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 1L15 15" stroke="#1A1A1A" stroke-width="2"></path><path d="M15 1L1 15" stroke="#1A1A1A" stroke-width="2"></path></svg>
+        </button>
+      </div>
+    </div>
+    <!-- NAV_MOBILE:START --><nav id="mobile-nav" class="hidden lg:hidden bg-white border-t-2 border-[#1A1A1A]">
+  <div class="max-w-[1400px] mx-auto flex flex-col mono text-[13px] tracking-wide uppercase px-5 sm:px-8">
+    <a href="/#friction" class="py-3.5 border-b border-[#1A1A1A]/10">What We Do</a>
+    <a href="/#process" class="py-3.5 border-b border-[#1A1A1A]/10">How It Works</a>
+    <a href="/#about" class="py-3.5 border-b border-[#1A1A1A]/10">About</a>
+    <a href="/#pricing" class="py-3.5 border-b border-[#1A1A1A]/10">Pricing</a><div class="border-b border-[#1A1A1A]/10 py-1.5"><p class="mono text-[10px] uppercase tracking-widest text-[#1A1A1A]/40 pt-2 pb-1">Comparisons</p><a href="/vs-redicheck/" class="block py-2 pl-3 normal-case tracking-normal text-[13px]">vs. RediCheck</a><a href="/vs-lighttable-ai/" class="block py-2 pl-3 normal-case tracking-normal text-[13px]">vs. LightTable AI</a><a href="/vs-checkset/" class="block py-2 pl-3 normal-case tracking-normal text-[13px]">vs. CHECKSET</a><a href="/vs-bim-clash/" class="block py-2 pb-2.5 pl-3 normal-case tracking-normal text-[13px]">vs. BIM Clash Detection</a></div>
+    <a href="/#faq" class="py-3.5 border-b border-[#1A1A1A]/10">FAQ</a><a href="/blog" class="py-3.5">Blog</a>
+  </div>
+</nav><!-- NAV_MOBILE:END -->
+  </header>
+
+  <!-- HERO -->
+  <section class="relative border-b-2 border-[#1A1A1A] bg-white blueprint-grid">
+    <div class="max-w-[1000px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      <p class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 mb-6"><a href="/" class="hover-underline">Home</a><span class="mx-2 text-[#1A1A1A]/25">/</span>Owner's QA/QC</p>
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-6">Sheet 01 · Who It's For, What It Checks, Why It's Separate</p>
+      <h1 class="display leading-[0.95] break-words text-[10.5vw] sm:text-[46px] lg:text-[52px] max-w-[900px]">WHAT IS OWNER-SIDE<br /><span class="text-[#FF5722]">CONSTRUCTION QA/QC REVIEW?</span></h1>
+      <p class="mt-7 text-[16px] leading-relaxed text-[#1A1A1A]/80 max-w-[680px]">A construction QA QC review isn't one single thing — it's whichever party is paying for it, checking for whatever that party cares about most. Owner's QA/QC construction review means the owner is the one paying, the owner is the one it reports to, and cost and schedule exposure to the owner is what it's actually scoped to catch — not design intent, and not bid accuracy.</p>
+      <div class="mt-9 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="display text-[15px] tracking-wide bg-[#1A1A1A] text-white px-7 py-4 border-2 border-[#1A1A1A] hard-shadow-orange">BOOK YOUR DEMO MEETING →</a>
+        <a href="#what-it-means" class="mono text-[13px] uppercase tracking-wide hover-underline">See the full breakdown ↓</a>
+      </div>
+      <p class="mt-8 mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40">Independent · Reports To The Owner Only · $50K Exposure Guarantee</p>
+    </div>
+  </section>
+
+  <!-- WHAT IT MEANS -->
+  <section id="what-it-means" class="bg-[#1A1A1A] blueprint-grid-dark border-b-2 border-[#FF5722] relative overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-6">What "Owner-Side" Actually Changes</p>
+      <h2 class="display break-words text-white leading-[0.92] text-[9.5vw] sm:text-[42px] lg:text-[50px] max-w-[960px]">SAME WORD, "QA/QC." <span class="text-[#FF5722]">DIFFERENT CLIENT, DIFFERENT SCOPE.</span></h2>
+      <p class="mt-8 text-[16px] leading-relaxed text-white/70 max-w-[760px]">Every large, multi-discipline project already has QA/QC happening on it — the design team runs it, the GC runs it, sometimes a code consultant runs it. Owner's QA/QC construction review isn't a fourth version of the same check. It's a review with a different client: paid for by the owner, reporting to no one else, scoped specifically to find the cross-discipline conflicts that turn into cost and schedule exposure for the party writing the checks.</p>
+      <p class="mt-4 text-[16px] leading-relaxed text-white/70 max-w-[760px]">That distinction is the whole point of an independent construction document review. Every other QA/QC pass on the set answers to someone with a different set of interests — necessary interests, just not the owner's specifically.</p>
+      <div class="mt-10 grid sm:grid-cols-3 gap-4 max-w-[920px]">
+        <div class="border-2 border-white/20 bg-white/[0.03] p-5">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#FF5722] font-bold mb-2">Owner's QA/QC Construction</p>
+          <p class="text-[14px] text-white/70 leading-snug">Paid by the owner. Scoped to owner cost and schedule exposure.</p>
+        </div>
+        <div class="border-2 border-white/20 bg-white/[0.03] p-5">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#FF5722] font-bold mb-2">Owner's Rep Construction Review</p>
+          <p class="text-[14px] text-white/70 leading-snug">The role most often ordering it — an owner's rep hiring the second set of eyes.</p>
+        </div>
+        <div class="border-2 border-white/20 bg-white/[0.03] p-5">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#FF5722] font-bold mb-2">Independent Construction Document Review</p>
+          <p class="text-[14px] text-white/70 leading-snug">The procurement phrase — independent from the design and construction teams both.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY IT'S DIFFERENT -->
+  <section class="bg-[#004B87] blueprint-grid-navy border-b-2 border-[#FF5722]">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-4">Why It's Different From Architect QC Or GC Review</p>
+      <h2 class="display break-words text-white leading-[0.95] text-[9vw] sm:text-[40px] lg:text-[46px] mb-10 max-w-[900px]">TWO REAL REVIEWS ALREADY HAPPEN. <span class="text-[#FF5722]">NEITHER IS SCOPED FOR YOU.</span></h2>
+      <p class="text-[16px] leading-relaxed text-white/75 max-w-[780px] mb-10">This isn't a case against either one — both are real, necessary, and should keep happening exactly as they do today. The point is narrower: neither was ever built to answer to the owner specifically, so neither one closes the gap an owner-side review is scoped to close.</p>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="border-2 border-white/25 bg-white/[0.05] p-6 sm:p-7">
+          <p class="mono text-[11px] uppercase tracking-widest text-white/50 mb-2">The Architect's QC</p>
+          <p class="display text-white text-[19px] mb-3">CHECKS THE SET AGAINST DESIGN INTENT</p>
+          <p class="text-[14px] text-white/75 leading-relaxed">Did the mechanical sheet end up matching what the mechanical engineer meant to draw. Did the structural sheet match structural intent. That's a real and necessary check — it's just not the same question as "does this conflict expose the owner to cost or schedule risk."</p>
+        </div>
+        <div class="border-2 border-white/25 bg-white/[0.05] p-6 sm:p-7">
+          <p class="mono text-[11px] uppercase tracking-widest text-white/50 mb-2">The GC's Coordination Review</p>
+          <p class="display text-white text-[19px] mb-3">SCOPED TO PRICE THE WORK ACCURATELY</p>
+          <p class="text-[14px] text-white/75 leading-relaxed">Run to keep trades from colliding in the field and to bid the set as drawn. Also real, also necessary — and also reporting into the construction side of the table, not the owner's.</p>
+        </div>
+      </div>
+      <div class="mt-8 border-2 border-[#FFD700] bg-white/[0.06] p-6 sm:p-8 max-w-[860px]">
+        <p class="mono text-[12px] uppercase tracking-widest text-[#FFD700] font-bold mb-3">"Doesn't our GC's or architect's review already cover this?"</p>
+        <p class="text-[15px] sm:text-[16px] leading-relaxed text-white/85">No — and that's the whole point. Both are real and necessary. Neither is scoped to work for the owner alone. Owner's QA/QC construction review is paid by the owner, reports to no one else, and runs alongside your usual QC/QA process — not instead of it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PROCESS -->
+  <section class="border-b-2 border-[#1A1A1A] bg-white blueprint-grid">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">The Construction Document QC Process</p>
+      <h2 class="display break-words text-[10vw] sm:text-[42px] lg:text-[48px] leading-[0.95] mb-6 max-w-[900px]">FOUR STEPS. NO MODEL REQUIRED TO START.</h2>
+      <p class="text-[16px] leading-relaxed text-[#1A1A1A]/80 max-w-[760px] mb-10">Owner's QA/QC doesn't require the project to be at any particular stage of BIM maturity, and it doesn't require special software on your end. It runs directly against the issued set.</p>
+      <div class="border-2 border-[#1A1A1A]">
+        <div class="grid grid-cols-1 lg:grid-cols-4">
+          <div class="border-b-2 lg:border-b-0 lg:border-r-2 border-[#1A1A1A] px-6 py-8 lg:py-10">
+            <span class="inline-flex items-center justify-center w-9 h-9 border-2 border-[#1A1A1A] mono text-[13px] font-bold">01</span>
+            <div class="display text-[#1A1A1A] text-[20px] sm:text-[24px] leading-none mt-4 mb-3">DEMO MEETING</div>
+            <p class="text-[14px] leading-relaxed text-[#1A1A1A]/70">30 minutes to look at the set and confirm an owner-side review makes sense before anything is signed.</p>
+          </div>
+          <div class="border-b-2 lg:border-b-0 lg:border-r-2 border-[#1A1A1A] px-6 py-8 lg:py-10">
+            <span class="inline-flex items-center justify-center w-9 h-9 border-2 border-[#1A1A1A] mono text-[13px] font-bold">02</span>
+            <div class="display text-[#1A1A1A] text-[20px] sm:text-[24px] leading-none mt-4 mb-3">NDA SIGNED</div>
+            <p class="text-[14px] leading-relaxed text-[#1A1A1A]/70">Nothing moves until confidentiality is in place — the set is protected before a sheet leaves your hands.</p>
+          </div>
+          <div class="border-b-2 lg:border-b-0 lg:border-r-2 border-[#1A1A1A] px-6 py-8 lg:py-10">
+            <span class="inline-flex items-center justify-center w-9 h-9 border-2 border-[#1A1A1A] mono text-[13px] font-bold">03</span>
+            <div class="display text-[#1A1A1A] text-[20px] sm:text-[24px] leading-none mt-4 mb-3">SET SENT OVER</div>
+            <p class="text-[14px] leading-relaxed text-[#1A1A1A]/70">Drawings and specs, however you already have them — no template, no required software.</p>
+          </div>
+          <div class="px-6 py-8 lg:py-10">
+            <span class="inline-flex items-center justify-center w-9 h-9 border-2 border-[#FF5722] text-[#FF5722] mono text-[13px] font-bold">04</span>
+            <div class="display text-[#FF5722] text-[20px] sm:text-[24px] leading-none mt-4 mb-3">48 HRS LATER</div>
+            <p class="text-[14px] leading-relaxed text-[#1A1A1A]/70">A severity-ranked findings report, with $ exposure and schedule impact per item, walked through live.</p>
+          </div>
+        </div>
+      </div>
+      <p class="mt-6 text-[15px] text-[#1A1A1A]/60">Full process detail on the <a href="/#process" class="hover-underline font-bold text-[#1A1A1A]">homepage</a>.</p>
+    </div>
+  </section>
+
+  <!-- WHO RUNS IT -->
+  <section class="bg-[#1A1A1A] border-b-2 border-[#FF5722] relative overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16 lg:py-20 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+      <div class="lg:col-span-7">
+        <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-6">Who Runs An Owner's Rep Construction Review</p>
+        <h2 class="display break-words text-white leading-[0.95] text-[8.5vw] sm:text-[34px] lg:text-[40px] mb-6">A REVIEWER WHO'S DRAWN THESE SETS — <span class="text-[#FF5722]">NOT JUST AUDITED THEM.</span></h2>
+        <p class="text-[16px] leading-relaxed text-white/70 max-w-[560px]">Joe Rossi oversees every review personally — five-plus years producing construction documents and running project administration on jobs up to $60 million before founding Preempt Global. The work is done by reviewers who've drawn these sets themselves, never outsourced and never a black box, with his name on every finding. That's why capacity is capped at four sets a month.</p>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="border-2 border-white/20">
+          <div class="grid grid-cols-2">
+            <div class="border-r-2 border-b-2 border-white/20 px-5 py-6">
+              <p class="mono text-[10px] uppercase tracking-widest text-white/40">Reports To</p>
+              <p class="display text-white text-[17px] sm:text-[22px] mt-1">OWNER ONLY</p>
+            </div>
+            <div class="border-b-2 border-white/20 px-5 py-6">
+              <p class="mono text-[10px] uppercase tracking-widest text-white/40">Turnaround</p>
+              <p class="display text-[#FFD700] text-[19px] sm:text-[24px] mt-1">48 HRS</p>
+            </div>
+            <div class="border-r-2 border-white/20 px-5 py-6">
+              <p class="mono text-[10px] uppercase tracking-widest text-white/40">Reviews / Month</p>
+              <p class="display text-white text-[17px] sm:text-[24px] mt-1 whitespace-nowrap">CAPPED AT 4</p>
+            </div>
+            <div class="px-5 py-6">
+              <p class="mono text-[10px] uppercase tracking-widest text-white/40">On Every Finding</p>
+              <p class="display text-[#FFD700] text-[19px] sm:text-[24px] mt-1">MY NAME</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY IT MATTERS -->
+  <section class="border-b-2 border-[#1A1A1A] bg-white blueprint-grid">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">Why Independent Construction Document Review Matters</p>
+      <h2 class="display break-words text-[10vw] sm:text-[42px] lg:text-[48px] leading-[0.95] mb-6 max-w-[900px]">THE GAP ISN'T A LACK OF QA/QC. IT'S A LACK OF QA/QC THAT ANSWERS TO YOU.</h2>
+      <p class="text-[16px] leading-relaxed text-[#1A1A1A]/80 max-w-[760px] mb-10">A set can pass architect QC and GC coordination review and still carry six-figure exposure for the owner, because neither check was ever scoped to look for that specifically. That's not a failure of either process — it's a gap in coverage that only an owner-side review is positioned to close.</p>
+      <div class="grid grid-cols-2 lg:grid-cols-4 border-2 border-[#1A1A1A]">
+        <div class="border-r-2 border-[#1A1A1A] px-6 py-8">
+          <a href="https://www.autodesk.com/blogs/construction/construction-disconnected-fmi-report/" target="_blank" rel="noopener noreferrer" class="hover-underline"><div class="display text-[#1A1A1A] text-[24px] sm:text-[36px] leading-none">$177 billion</div></a>
+          <div class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/60 mt-3">yearly cost of un-coordinated construction items</div>
+        </div>
+        <div class="lg:border-r-2 border-[#1A1A1A] px-6 py-8">
+          <a href="https://www.justanswer.com/finance/0xmgq-current-usa-average-change-order-percent-versus.html" target="_blank" rel="noopener noreferrer" class="hover-underline"><div class="display text-[#1A1A1A] text-[24px] sm:text-[36px] leading-none">12%</div></a>
+          <div class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/60 mt-3">of total project budget goes to change orders</div>
+        </div>
+        <div class="border-r-2 border-[#1A1A1A] px-6 py-8 border-t-2 lg:border-t-0">
+          <a href="https://www.openspace.ai/blog/construction-project-delay-statistics/" target="_blank" rel="noopener noreferrer" class="hover-underline"><div class="display text-[#1A1A1A] text-[24px] sm:text-[36px] leading-none">76%</div></a>
+          <div class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/60 mt-3">of projects fall behind schedule due to poor QA/QC</div>
+        </div>
+        <div class="px-6 py-8 border-t-2 lg:border-t-0">
+          <div class="display text-[#FF5722] text-[24px] sm:text-[36px] leading-none">$50K</div>
+          <div class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/60 mt-3">minimum exposure found, or the review is free</div>
+        </div>
+      </div>
+      <p class="mt-6 text-[15px] leading-relaxed text-[#1A1A1A]/70 max-w-[760px]">See how this plays out concretely in <a href="/blog/qa-qc-passed-doesnt-mean-set-coordinated/" class="hover-underline font-bold text-[#1A1A1A]">why "it passed QA/QC" doesn't mean the set is coordinated</a>, and how the roles actually divide in <a href="/blog/architect-qc-vs-owner-review/" class="hover-underline font-bold text-[#1A1A1A]">what architect QC covers — and where an owner-side review picks up</a>.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="border-b-2 border-[#1A1A1A] bg-white">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">Before You Ask</p>
+      <h2 class="display break-words text-[10vw] sm:text-[44px] lg:text-[50px] leading-[0.95] mb-10 max-w-[820px]">STILL GOT QUESTIONS?<br /><span class="text-[#FF5722]">HERE'S THE STRAIGHT ANSWER.</span></h2>
+      <div class="max-w-[860px] border-t-2 border-[#1A1A1A]">
+        <details class="faq-item group border-b-2 border-[#1A1A1A] py-5" open>
+          <summary class="flex items-start justify-between gap-6 cursor-pointer">
+            <span class="display text-[17px] sm:text-[19px]">What does "owner-side QA/QC" actually mean?</span>
+            <span class="mono text-[22px] leading-none text-[#FF5722] font-bold shrink-0 mt-0.5 group-open:hidden">+</span>
+            <span class="mono text-[22px] leading-none text-[#FF5722] font-bold shrink-0 mt-0.5 hidden group-open:inline">–</span>
+          </summary>
+          <p class="mt-3 text-[15px] leading-relaxed text-[#1A1A1A]/70 max-w-[760px]">It means a construction QA QC review paid for by the owner, reporting to the owner alone, and scoped to protect the owner's interest specifically — cost exposure and schedule risk — rather than design intent or bid accuracy. It runs alongside the architect's QC and the GC's coordination review, not instead of either one.</p>
+        </details>
+        <details class="faq-item group border-b-2 border-[#1A1A1A] py-5">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer">
+            <span class="display text-[17px] sm:text-[19px]">Isn't the architect's QC the same thing as owner's QA/QC construction review?</span>
+            <span class="mono text-[22px] leading-none text-[#FF5722] font-bold shrink-0 mt-0.5 group-open:hidden">+</span>
+            <span class="mono text-[22px] leading-none text-[#FF5722] font-bold shrink-0 mt-0.5 hidden group-open:inline">–</span>
+          </summary>
+          <p class="mt-3 text-[15px] leading-relaxed text-[#1A1A1A]/70 max-w-[760px]">No. The architect's QC checks the set against design intent — did the drawings end up matching what the design team meant to draw. Owner's QA/QC checks the set for cross-discipline conflicts that create cost and schedule exposure for the owner specifically, regardless of whether the set matches design intent.</p>
+        </details>
+        <details class="faq-item group border-b-2 border-[#1A1A1A] py-5">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer">
+            <span class="display text-[17px] sm:text-[19px]">Does the GC's coordination review cover owner-side QA/QC?</span>
+            <span class="mono text-[22px] leading-none text-[#FF5722] font-bold shrink-0 mt-0.5 group-open:hidden">+</span>
+            <span class="mono text-[22px] leading-none text-[#FF5722] font-bold shrink-0 mt-0.5 hidden group-open:inline">–</span>
+          </summary>
+          <p class="mt-3 text-[15px] leading-relaxed text-[#1A1A1A]/70 max-w-[760px]">Not by itself. The GC's coordination review is scoped to price the work accurately and keep trades from colliding in the field. It's real and necessary, but it reports into the construction side of the table, the same way the architect's QC reports into the design side. Owner's QA/QC is the review that reports to no one but the owner.</p>
+        </details>
+        <details class="faq-item group border-b-2 border-[#1A1A1A] py-5">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer">
+            <span class="display text-[17px] sm:text-[19px]">What is a construction document QC process, step by step?</span>
+            <span class="mono text-[22px] leading-none text-[#FF5722] font-bold shrink-0 mt-0.5 group-open:hidden">+</span>
+            <span class="mono text-[22px] leading-none text-[#FF5722] font-bold shrink-0 mt-0.5 hidden group-open:inline">–</span>
+          </summary>
+          <p class="mt-3 text-[15px] leading-relaxed text-[#1A1A1A]/70 max-w-[760px]">A demo/scoping call, an NDA signed before anything moves, the issued set (drawings and specs) sent over, and a 48-hour turnaround producing a written, severity-ranked findings report plus a live walkthrough meeting. No model or special software is required to start.</p>
+        </details>
+        <details class="faq-item group border-b-2 border-[#1A1A1A] py-5">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer">
+            <span class="display text-[17px] sm:text-[19px]">Who should order an independent construction document review?</span>
+            <span class="mono text-[22px] leading-none text-[#FF5722] font-bold shrink-0 mt-0.5 group-open:hidden">+</span>
+            <span class="mono text-[22px] leading-none text-[#FF5722] font-bold shrink-0 mt-0.5 hidden group-open:inline">–</span>
+          </summary>
+          <p class="mt-3 text-[15px] leading-relaxed text-[#1A1A1A]/70 max-w-[760px]">The owner or the owner's rep, on any project with multiple trades sharing tight coordination — there's no minimum construction value. It's ordered specifically because neither the design team's QC nor the GC's coordination review is scoped to work for the owner alone.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section id="cta" class="bg-[#1A1A1A] blueprint-grid-dark relative overflow-hidden">
+    <div class="ruler-top w-full"></div>
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-20 lg:py-24 text-center">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-6">Sheet 01 of 01 — Next Step</p>
+      <h2 class="display break-words text-white leading-[0.92] text-[9vw] sm:text-[42px] lg:text-[52px] max-w-[920px] mx-auto">NOW YOU KNOW WHAT IT IS. <span class="text-[#FF5722]">SEE WHAT IT COSTS.</span></h2>
+      <p class="mt-7 text-[16px] leading-relaxed text-white/70 max-w-[560px] mx-auto">One-time set reviews, per-project coverage, or a monthly retainer — every tier is owner's QA/QC, run the same way, with the same $50K-exposure-or-free guarantee.</p>
+      <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/#pricing" class="display text-[15px] tracking-wide bg-[#FF5722] text-[#1A1A1A] px-8 py-4 border-2 border-[#1A1A1A] hard-shadow-sm">SEE PRICING TIERS →</a>
+        <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="mono text-[13px] uppercase tracking-wide hover-underline text-white/70">Or book a demo meeting first ↗</a>
+      </div>
+      <p class="mt-8 mono text-[12px] text-white/40 max-w-[600px] mx-auto">Full pitch, process, and FAQ on the <a href="/" class="hover-underline text-white/60">Preempt Global homepage</a>.</p>
+    </div>
+    <div class="ruler-top w-full"></div>
+  </section>
+
+  <footer class="bg-white">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-6">
+      <div class="grid grid-cols-2 sm:grid-cols-5 border-2 border-[#1A1A1A] mono text-[11px]">
+        <div class="border-r border-[#1A1A1A] p-3">
+          <p class="text-[#1A1A1A]/50 uppercase">Drawn by</p>
+          <p class="font-bold mt-1">Preempt Global</p>
+        </div>
+        <div class="border-r border-[#1A1A1A] p-3">
+          <p class="text-[#1A1A1A]/50 uppercase">Checked by</p>
+          <p class="font-bold mt-1">Joe Rossi</p>
+        </div>
+        <div class="border-r border-[#1A1A1A] p-3 hidden sm:block">
+          <p class="text-[#1A1A1A]/50 uppercase">Scale</p>
+          <p class="font-bold mt-1">1 : 1</p>
+        </div>
+        <div class="border-r border-[#1A1A1A] p-3">
+          <p class="text-[#1A1A1A]/50 uppercase">Date</p>
+          <p class="font-bold mt-1">2026.07.29</p>
+        </div>
+        <div class="p-3">
+          <p class="text-[#1A1A1A]/50 uppercase">Sheet</p>
+          <p class="font-bold mt-1">QAQC-01</p>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-6 gap-4">
+        <a href="/" class="flex items-center gap-2"><img src="/assets/images/preempt_global_logo.png" width="20" height="20" alt="Preempt Global logo" class="object-contain"><span class="display text-sm">Preempt Global</span></a>
+        <!-- FOOTER_LINKS:START --><nav class="mono text-[11px] uppercase tracking-wide flex gap-6 text-[#1A1A1A]/60"><a href="mailto:jrossi@preemptglobal.com" class="hover-underline">Contact</a><a href="/privacy-policy/" class="hover-underline">Privacy Policy</a><a href="/terms-and-conditions/" class="hover-underline">Terms &amp; Conditions</a><a href="/service-agreement/" class="hover-underline">Service Agreement</a></nav><!-- FOOTER_LINKS:END --><span class="mono text-[11px] text-[#1A1A1A]/40">© 2026 Preempt Global — All Rights Reserved</span>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.getElementById('nav-toggle-btn');
+      var menu = document.getElementById('mobile-nav');
+      var iconBars = document.getElementById('icon-bars');
+      var iconClose = document.getElementById('icon-close');
+      if (!btn || !menu) return;
+
+      function closeMenu() {
+        menu.classList.add('hidden');
+        iconBars.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+
+      function openMenu() {
+        menu.classList.remove('hidden');
+        iconBars.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+
+      btn.addEventListener('click', function () {
+        if (menu.classList.contains('hidden')) {
+          openMenu();
+        } else {
+          closeMenu();
+        }
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      var desktopQuery = window.matchMedia('(min-width: 1024px)');
+      desktopQuery.addEventListener('change', function (e) {
+        if (e.matches) closeMenu();
+      });
+    })();
+  </script>
+</body>
+
+</html>
