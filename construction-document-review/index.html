@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1A1A1A">
+  <title>Construction Document Review — What It Is & Why It Matters | Preempt Global</title>
+  <meta name="description" content="Construction document review is an owner-side audit of your issued drawing set — cross-discipline conflicts, spec-to-drawing gaps, code issues. See what a construction drawing review covers and how it's different.">
+  <meta property="og:title" content="Construction Document Review — What It Is & Why It Matters | Preempt Global">
+  <meta property="og:description" content="Construction document review is an owner-side audit of your issued drawing set — cross-discipline conflicts, spec-to-drawing gaps, code issues. See what a construction drawing review covers and how it's different.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://preemptglobal.com/construction-document-review/">
+  <link rel="icon" type="image/x-icon" href="/assets/favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicons/android-chrome-512x512.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    :root {
+      --orange: #FF5722;
+      --orange-deep: #F4511E;
+      --onyx: #1A1A1A;
+      --white: #FFFFFF;
+      --blueprint: #004B87;
+      --caution: #FFD700;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      color: var(--onyx);
+    }
+
+    .display {
+      font-family: "Archivo Black", "Arial Black", sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    .mono {
+      font-family: "IBM Plex Mono", monospace;
+    }
+
+    .blueprint-grid {
+      background-image: linear-gradient(rgba(0, 75, 135, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 75, 135, 0.1) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .blueprint-grid-dark {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .blueprint-grid-navy {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    .hard-shadow-orange {
+      box-shadow: 8px 8px 0 0 var(--orange);
+    }
+
+    .hard-shadow-sm {
+      box-shadow: 5px 5px 0 0 var(--onyx);
+    }
+
+    .hard-shadow-blue {
+      box-shadow: 6px 6px 0 0 var(--blueprint);
+    }
+
+    .hard-shadow-caution {
+      box-shadow: 7px 7px 0 0 var(--caution);
+    }
+
+    .ruler-top {
+      background-image: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.35) 0px, rgba(255, 255, 255, 0.35) 2px, transparent 2px, transparent 40px), repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.15) 0px, rgba(255, 255, 255, 0.15) 2px, transparent 2px, transparent 8px);
+      height: 14px;
+    }
+
+    .hover-underline:hover {
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-color: var(--blueprint);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+
+    .faq-item summary {
+      list-style: none;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What's the difference between a construction document review and a construction drawing review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nothing — they're the same service under two names the industry uses interchangeably, along with \"drawing set review.\" All three describe an independent, owner-side check of the issued set: drawings and specs, cross-checked against each other and across every trade, before construction starts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's actually included in drawing set review services?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every sheet and spec section, checked against itself and against every other discipline: submittal cross-checks, spec-to-drawing alignment, code compliance, and MEP/structural coordination. The output is a written findings report — every conflict located by sheet and detail, severity-ranked, with an estimated dollar exposure and schedule impact on each."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who orders a construction document review — the owner, the GC, or the architect?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The owner (or the owner's rep). That's what separates it from architect QC or GC coordination review — both real, both necessary, neither scoped to work for the owner alone. This review is paid by the owner and reports to no one else."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should a construction document review happen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As soon as there's an issued set to review — pre-bid, at IFC, or at any bulletin, addendum, or RFI-driven revision after. Earlier catches more before pricing locks in, but there's no point in the process where it's too late to run one against the current issued set."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Doesn't BIM clash detection already cover this?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Clash detection catches geometry — two modeled elements overlapping inside a coordinated model. It doesn't catch a written spec that contradicts the drawing it's paired with, a general note that prohibits what a detail on another sheet requires, or a set that hasn't reached coordination-ready modeling yet. This review reads the issued document itself."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What kinds of projects need this?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Any set with multiple trades sharing tight coordination — office, manufacturing, warehouse and distribution, healthcare, higher-ed, data centers, multifamily residential, and other complex, multi-discipline builds. There's no minimum construction value; the deciding factor is coordination complexity, not project size."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div class="bg-[#1A1A1A] text-white mono text-[11px] tracking-widest px-4 py-1.5 flex justify-between items-center border-b-2 border-[#FF5722]"><span>DRAWING SET: DEFINITION / SCOPE / DIFFERENCE</span><span class="hidden sm:inline">SCALE: 1:1 · STATUS: <span class="text-[#FFD700]">LIVE</span></span></div>
+  <header class="border-b-2 border-[#1A1A1A] sticky top-0 bg-white z-40">
+    <div class="max-w-[1400px] mx-auto flex items-center justify-between px-5 sm:px-8 py-4">
+      <a href="/" class="flex items-center gap-2"><img src="/assets/images/preempt_global_logo.png" width="26" height="26" alt="Preempt Global logo" class="object-contain"><span class="display text-base whitespace-nowrap sm:text-xl">Preempt Global</span></a>
+      <!-- NAV_DESKTOP:START --><nav class="hidden lg:flex items-center gap-8 mono text-[13px] tracking-wide uppercase"><a href="/#friction" class="hover-underline">What We Do</a><a href="/#process" class="hover-underline">How It Works</a><a href="/#about" class="hover-underline">About</a><a href="/#pricing" class="hover-underline">Pricing</a><div class="relative group"><button type="button" class="hover-underline flex items-center gap-1 uppercase">Comparisons<svg width="9" height="6" viewBox="0 0 9 6" fill="none" class="mt-0.5"><path d="M1 1L4.5 5L8 1" stroke="#1A1A1A" stroke-width="1.5"></path></svg></button><div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-opacity duration-150 absolute left-0 top-full pt-3 z-50"><div class="w-60 bg-white border-2 border-[#1A1A1A] hard-shadow-sm normal-case tracking-normal overflow-hidden"><a href="/vs-redicheck/" class="block px-4 py-3 border-b border-[#1A1A1A]/10 text-[13px] hover:bg-[#FF5722]/10">vs. RediCheck</a><a href="/vs-lighttable-ai/" class="block px-4 py-3 border-b border-[#1A1A1A]/10 text-[13px] hover:bg-[#FF5722]/10">vs. LightTable AI</a><a href="/vs-checkset/" class="block px-4 py-3 border-b border-[#1A1A1A]/10 text-[13px] hover:bg-[#FF5722]/10">vs. CHECKSET</a><a href="/vs-bim-clash/" class="block px-4 py-3 text-[13px] hover:bg-[#FF5722]/10">vs. BIM Clash Detection</a></div></div></div><a href="/#faq" class="hover-underline">FAQ</a><a href="/blog" class="hover-underline">Blog</a></nav><!-- NAV_DESKTOP:END -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="mono text-[11px] sm:text-[12px] uppercase tracking-wide bg-[#FF5722] text-[#1A1A1A] font-bold px-3.5 sm:px-4 py-2.5 border-2 border-[#1A1A1A] hard-shadow-sm whitespace-nowrap"><span class="hidden sm:inline">BOOK YOUR MEETING</span><span class="sm:hidden">BOOK NOW</span></a>
+        <button id="nav-toggle-btn" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Toggle navigation menu" class="lg:hidden inline-flex items-center justify-center w-10 h-10 shrink-0 border-2 border-[#1A1A1A]">
+          <svg id="icon-bars" width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M0 1H18" stroke="#1A1A1A" stroke-width="2"></path><path d="M0 7H18" stroke="#1A1A1A" stroke-width="2"></path><path d="M0 13H18" stroke="#1A1A1A" stroke-width="2"></path></svg>
+          <svg id="icon-close" class="hidden" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 1L15 15" stroke="#1A1A1A" stroke-width="2"></path><path d="M15 1L1 15" stroke="#1A1A1A" stroke-width="2"></path></svg>
+        </button>
+      </div>
+    </div>
+    <!-- NAV_MOBILE:START --><nav id="mobile-nav" class="hidden lg:hidden bg-white border-t-2 border-[#1A1A1A]">
+  <div class="max-w-[1400px] mx-auto flex flex-col mono text-[13px] tracking-wide uppercase px-5 sm:px-8">
+    <a href="/#friction" class="py-3.5 border-b border-[#1A1A1A]/10">What We Do</a>
+    <a href="/#process" class="py-3.5 border-b border-[#1A1A1A]/10">How It Works</a>
+    <a href="/#about" class="py-3.5 border-b border-[#1A1A1A]/10">About</a>
+    <a href="/#pricing" class="py-3.5 border-b border-[#1A1A1A]/10">Pricing</a><div class="border-b border-[#1A1A1A]/10 py-1.5"><p class="mono text-[10px] uppercase tracking-widest text-[#1A1A1A]/40 pt-2 pb-1">Comparisons</p><a href="/vs-redicheck/" class="block py-2 pl-3 normal-case tracking-normal text-[13px]">vs. RediCheck</a><a href="/vs-lighttable-ai/" class="block py-2 pl-3 normal-case tracking-normal text-[13px]">vs. LightTable AI</a><a href="/vs-checkset/" class="block py-2 pl-3 normal-case tracking-normal text-[13px]">vs. CHECKSET</a><a href="/vs-bim-clash/" class="block py-2 pb-2.5 pl-3 normal-case tracking-normal text-[13px]">vs. BIM Clash Detection</a></div>
+    <a href="/#faq" class="py-3.5 border-b border-[#1A1A1A]/10">FAQ</a><a href="/blog" class="py-3.5">Blog</a>
+  </div>
+</nav><!-- NAV_MOBILE:END -->
+  </header>
+
+  <!-- HERO -->
+  <section class="relative border-b-2 border-[#1A1A1A] bg-white blueprint-grid">
+    <div class="max-w-[1000px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      <p class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 mb-6"><a href="/" class="hover-underline">Home</a><span class="mx-2 text-[#1A1A1A]/25">/</span>Construction Document Review</p>
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-6">Sheet 01 · The Definition, The Scope, The Difference</p>
+      <h1 class="display leading-[0.95] break-words text-[10.5vw] sm:text-[48px] lg:text-[54px] max-w-[880px]">WHAT A CONSTRUCTION DOCUMENT REVIEW<br /><span class="text-[#FF5722]">ACTUALLY CATCHES.</span></h1>
+      <p class="mt-7 text-[16px] leading-relaxed text-[#1A1A1A]/80 max-w-[680px]">A construction document review is an owner-side audit of an issued drawing set — checking every sheet and spec against itself and against every other trade before construction starts. Some call it a construction drawing review, others use "drawing set review services" — different name, same job: catching the cross-discipline conflicts that turn into RFIs and change orders once the crew hits the field.</p>
+      <div class="mt-9 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="display text-[15px] tracking-wide bg-[#1A1A1A] text-white px-7 py-4 border-2 border-[#1A1A1A] hard-shadow-orange">BOOK YOUR DEMO MEETING →</a>
+        <a href="#what-it-is" class="mono text-[13px] uppercase tracking-wide hover-underline">See the full breakdown ↓</a>
+      </div>
+      <p class="mt-8 mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40">$50K Exposure Guarantee · No Minimum Construction Value · 48-Hour Turnaround</p>
+    </div>
+  </section>
+
+  <!-- WHAT IT IS -->
+  <section id="what-it-is" class="bg-[#1A1A1A] blueprint-grid-dark border-b-2 border-[#FF5722] relative overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-6">What It Actually Is</p>
+      <h2 class="display break-words text-white leading-[0.92] text-[9.5vw] sm:text-[44px] lg:text-[52px] max-w-[960px]">ONE TERM, THREE NAMES, <span class="text-[#FF5722]">THE SAME JOB.</span></h2>
+      <p class="mt-8 text-[16px] leading-relaxed text-white/70 max-w-[760px]">Construction document review, construction drawing review, and drawing set review services all describe the same thing: an independent, owner-paid check of the issued set — drawings and specs, every discipline, cross-referenced against each other — run before the set goes to bid or before it's built. It's not a design review and it's not a code-only plan check. It's specifically looking for the conflicts that live between sheets, between disciplines, and between the drawings and the written spec.</p>
+      <p class="mt-4 text-[16px] leading-relaxed text-white/70 max-w-[760px]">The distinction that matters isn't the name — it's who it's for. This review is paid by the owner, reports to no one else, and runs alongside the design team's QC and the GC's coordination review, not instead of either one.</p>
+      <div class="mt-10 grid sm:grid-cols-3 gap-4 max-w-[900px]">
+        <div class="border-2 border-white/20 bg-white/[0.03] p-5">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#FF5722] font-bold mb-2">Construction Document Review</p>
+          <p class="text-[14px] text-white/70 leading-snug">The formal name — the full issued set, drawings and specs together.</p>
+        </div>
+        <div class="border-2 border-white/20 bg-white/[0.03] p-5">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#FF5722] font-bold mb-2">Construction Drawing Review</p>
+          <p class="text-[14px] text-white/70 leading-snug">Same service — the phrase most field and design teams actually say out loud.</p>
+        </div>
+        <div class="border-2 border-white/20 bg-white/[0.03] p-5">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#FF5722] font-bold mb-2">Drawing Set Review Services</p>
+          <p class="text-[14px] text-white/70 leading-snug">The procurement phrase — what it's called when it's being scoped and bought.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE CHECK -->
+  <section class="border-b-2 border-[#1A1A1A] bg-white blueprint-grid">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">What We Actually Do With It</p>
+      <h2 class="display break-words text-[10vw] sm:text-[44px] lg:text-[50px] leading-[0.95] mb-6 max-w-[900px]">EVERY SHEET, CROSS-CHECKED AGAINST EVERY OTHER SHEET.</h2>
+      <p class="text-[16px] leading-relaxed text-[#1A1A1A]/80 max-w-[760px] mb-10">The set is read once, in full, by reviewers who've drawn these sets themselves — not a keyword search, not a single-discipline pass. Four things get checked on every construction document review:</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="border-2 border-[#1A1A1A] p-6 hard-shadow-sm bg-white">
+          <p class="display text-[19px] mb-2">SUBMITTAL CROSS-CHECKS</p>
+          <p class="text-[14px] text-[#1A1A1A]/70 leading-relaxed">Specified equipment and finishes checked against what's actually drawn and scheduled.</p>
+        </div>
+        <div class="border-2 border-[#1A1A1A] p-6 hard-shadow-sm bg-white">
+          <p class="display text-[19px] mb-2">SPEC-TO-DRAWING ALIGNMENT</p>
+          <p class="text-[14px] text-[#1A1A1A]/70 leading-relaxed">Written spec sections read against the sheets they're paired with — not assumed to match.</p>
+        </div>
+        <div class="border-2 border-[#1A1A1A] p-6 hard-shadow-sm bg-white">
+          <p class="display text-[19px] mb-2">CODE COMPLIANCE</p>
+          <p class="text-[14px] text-[#1A1A1A]/70 leading-relaxed">Fire ratings, egress, and life-safety call-outs checked for consistency sheet to sheet.</p>
+        </div>
+        <div class="border-2 border-[#1A1A1A] p-6 hard-shadow-sm bg-white">
+          <p class="display text-[19px] mb-2">MEP COORDINATION</p>
+          <p class="text-[14px] text-[#1A1A1A]/70 leading-relaxed">Structural, mechanical, electrical, and plumbing sheets cross-read for routing and clearance conflicts.</p>
+        </div>
+      </div>
+      <p class="mt-8 text-[15px] leading-relaxed text-[#1A1A1A]/70 max-w-[760px]">The output is a written findings report — every conflict located by sheet and detail, severity-ranked (High/Med/Low), with an estimated dollar exposure and schedule impact on each — plus a live walkthrough meeting. See the full four-step process on the <a href="/#process" class="hover-underline font-bold text-[#1A1A1A]">homepage</a>.</p>
+    </div>
+  </section>
+
+  <!-- HOW WE DIFFER -->
+  <section class="bg-[#004B87] blueprint-grid-navy border-b-2 border-[#FF5722]">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-4">How We Differ</p>
+      <h2 class="display break-words text-white leading-[0.95] text-[9vw] sm:text-[40px] lg:text-[46px] mb-10 max-w-[900px]">SAME GOAL AS YOUR OTHER CHECKS. <span class="text-[#FF5722]">DIFFERENT LAYER, DIFFERENT LOYALTY.</span></h2>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="border-2 border-white/25 bg-white/[0.05] p-6">
+          <p class="mono text-[11px] uppercase tracking-widest text-white/50 mb-2">vs. Architect QC</p>
+          <p class="display text-white text-[18px] mb-3">DESIGN INTENT VS. OWNER'S INTEREST</p>
+          <p class="text-[14px] text-white/75 leading-relaxed">The architect's QC checks the set against design intent. This review is paid by the owner and reports to no one else — run alongside QC, not instead of it.</p>
+        </div>
+        <div class="border-2 border-white/25 bg-white/[0.05] p-6">
+          <p class="mono text-[11px] uppercase tracking-widest text-white/50 mb-2">vs. GC Coordination Review</p>
+          <p class="display text-white text-[18px] mb-3">PRICING THE WORK VS. FLAGGING THE RISK</p>
+          <p class="text-[14px] text-white/75 leading-relaxed">The contractor's coordination review is scoped to pricing the work accurately. This review is scoped to surface exposure for the owner, in writing, before it's priced or built.</p>
+        </div>
+        <div class="border-2 border-[#FF5722] bg-white/[0.08] p-6 hard-shadow-caution">
+          <p class="mono text-[11px] uppercase tracking-widest text-[#FFD700] font-bold mb-2">vs. BIM Clash Detection</p>
+          <p class="display text-white text-[18px] mb-3">GEOMETRY VS. THE ISSUED PAPER</p>
+          <p class="text-[14px] text-white/85 leading-relaxed">Clash detection catches modeled elements overlapping in 3D. This review reads the issued set itself — specs, notes, and sheet-to-sheet conflicts that never show up in a model. <a href="/vs-bim-clash/" class="hover-underline font-bold text-white">Full comparison →</a></p>
+        </div>
+      </div>
+      <p class="mt-8 mono text-[13px] text-white/50 max-w-[760px]">Preempt Global also gets compared against clash-list and checklist software directly: see <a href="/vs-redicheck/" class="hover-underline text-white/70">vs. RediCheck</a>, <a href="/vs-lighttable-ai/" class="hover-underline text-white/70">vs. LightTable AI</a>, and <a href="/vs-checkset/" class="hover-underline text-white/70">vs. CHECKSET</a>.</p>
+    </div>
+  </section>
+
+  <!-- WHY YOU'D NEED IT -->
+  <section class="bg-[#1A1A1A] relative">
+    <div class="ruler-top w-full"></div>
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 pt-10 pb-2">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-2">Why This Matters</p>
+      <p class="mono text-[11px] uppercase tracking-widest text-white/50">the cost of skipping it, across the industry</p>
+    </div>
+    <div class="max-w-[1400px] mx-auto grid grid-cols-2 lg:grid-cols-4">
+      <div class="border-r-2 border-[#FF5722] px-6 py-10 lg:py-14">
+        <a href="https://www.autodesk.com/blogs/construction/construction-disconnected-fmi-report/" target="_blank" rel="noopener noreferrer" class="hover-underline"><div class="display text-white text-[26px] sm:text-[42px] lg:text-[48px] leading-none">$177 billion</div></a>
+        <div class="mono text-[11px] uppercase tracking-widest text-white/60 mt-3">yearly cost of un-coordinated construction items</div>
+      </div>
+      <div class="lg:border-r-2 border-[#FF5722] px-6 py-10 lg:py-14">
+        <a href="https://www.openspace.ai/blog/construction-project-delay-statistics/" target="_blank" rel="noopener noreferrer" class="hover-underline"><div class="display text-[#FFD700] text-[26px] sm:text-[42px] lg:text-[48px] leading-none">3-5 weeks</div></a>
+        <div class="mono text-[11px] uppercase tracking-widest text-white/60 mt-3">avg. schedule delay per commercial project</div>
+      </div>
+      <div class="border-r-2 border-[#FF5722] px-6 py-10 lg:py-14 border-t-2 lg:border-t-0">
+        <a href="https://www.justanswer.com/finance/0xmgq-current-usa-average-change-order-percent-versus.html" target="_blank" rel="noopener noreferrer" class="hover-underline"><div class="display text-white text-[26px] sm:text-[42px] lg:text-[48px] leading-none">12%</div></a>
+        <div class="mono text-[11px] uppercase tracking-widest text-white/60 mt-3">of total project budget goes to change orders</div>
+      </div>
+      <div class="px-6 py-10 lg:py-14 border-t-2 lg:border-t-0">
+        <a href="https://www.openspace.ai/blog/construction-project-delay-statistics/" target="_blank" rel="noopener noreferrer" class="hover-underline"><div class="display text-white text-[26px] sm:text-[42px] lg:text-[48px] leading-none">76%</div></a>
+        <div class="mono text-[11px] uppercase tracking-widest text-white/60 mt-3">of projects fall behind schedule due to poor QA/QC</div>
+      </div>
+    </div>
+    <div class="ruler-top w-full"></div>
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-10">
+      <p class="text-[15px] sm:text-[16px] leading-relaxed text-white/70 max-w-[760px]">A clash caught in a construction document review costs one redline and five minutes. The same conflict caught in the field averages <span class="text-[#FFD700] font-bold">$18,400 and a 12-day schedule slip</span>. If your set has multiple trades sharing tight coordination — any project size, no minimum construction value — that's the gap this review is built to close.</p>
+    </div>
+  </section>
+
+  <!-- THE GUARANTEE -->
+  <section class="border-b-2 border-[#1A1A1A] bg-white blueprint-grid">
+    <div class="max-w-[1200px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">The Guarantee</p>
+      <h2 class="display break-words text-[9vw] sm:text-[38px] lg:text-[44px] leading-[0.95] mb-6 max-w-[860px]">$50K IN EXPOSURE, OR THE REVIEW IS FREE.</h2>
+      <p class="text-[16px] leading-relaxed text-[#1A1A1A]/80 max-w-[720px] mb-8">If a construction document review doesn't surface at least $50,000 in documented cost exposure, you don't pay for it — no partial credit, no fine print, on every pricing tier. On a set of this size and complexity, there's always something to find, which is why it's in writing.</p>
+      <a href="/#pricing" class="inline-block mono text-[13px] uppercase tracking-wide bg-[#1A1A1A] text-white font-bold px-6 py-3.5 border-2 border-[#1A1A1A] hard-shadow-orange">See Full Pricing Tiers →</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="border-b-2 border-[#1A1A1A] bg-white">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">Before You Ask</p>
+      <h2 class="display break-words text-[10vw] sm:text-[44px] lg:text-[50px] leading-[0.95] mb-10 max-w-[820px]">STILL GOT QUESTIONS?<br /><span class="text-[#FF5722]">HERE'S THE STRAIGHT ANSWER.</span></h2>
+      <div class="max-w-[860px] border-t-2 border-[#1A1A1A]">
+        <details class="faq-item group border-b-2 border-[#1A1A1A] py-5" open>
+          <summary class="flex items-start justify-between gap-6 cursor-pointer">
+            <span class="display text-[17px] sm:text-[19px]">What's the difference between a construction document review and a construction drawing review?</span>
+            <span class="mono text-[22px] leading-none text-[#FF5722] font-bold shrink-0 mt-0.5 group-open:hidden">+</span>
+            <span class="mono text-[22px] leading-none text-[#FF5722] font-bold shrink-0 mt-0.5 hidden group-open:inline">–</span>
+          </summary>
+          <p class="mt-3 text-[15px] leading-relaxed text-[#1A1A1A]/70 max-w-[760px]">Nothing — they're the same service under two names the industry uses interchangeably, along with "drawing set review." All three describe an independent, owner-side check of the issued set: drawings and specs, cross-checked against each other and across every trade, before construction starts.</p>
+        </details>
+        <details class="faq-item group border-b-2 border-[#1A1A1A] py-5">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer">
+            <span class="display text-[17px] sm:text-[19px]">What's actually included in drawing set review services?</span>
+            <span class="mono text-[22px] leading-none text-[#FF5722] font-bold shrink-0 mt-0.5 group-open:hidden">+</span>
+            <span class="mono text-[22px] leading-none text-[#FF5722] font-bold shrink-0 mt-0.5 hidden group-open:inline">–</span>
+          </summary>
+          <p class="mt-3 text-[15px] leading-relaxed text-[#1A1A1A]/70 max-w-[760px]">Every sheet and spec section, checked against itself and against every other discipline: submittal cross-checks, spec-to-drawing alignment, code compliance, and MEP/structural coordination. The output is a written findings report — every conflict located by sheet and detail, severity-ranked, with an estimated dollar exposure and schedule impact on each.</p>
+        </details>
+        <details class="faq-item group border-b-2 border-[#1A1A1A] py-5">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer">
+            <span class="display text-[17px] sm:text-[19px]">Who orders a construction document review — the owner, the GC, or the architect?</span>
+            <span class="mono text-[22px] leading-none text-[#FF5722] font-bold shrink-0 mt-0.5 group-open:hidden">+</span>
+            <span class="mono text-[22px] leading-none text-[#FF5722] font-bold shrink-0 mt-0.5 hidden group-open:inline">–</span>
+          </summary>
+          <p class="mt-3 text-[15px] leading-relaxed text-[#1A1A1A]/70 max-w-[760px]">The owner (or the owner's rep). That's what separates it from architect QC or GC coordination review — both real, both necessary, neither scoped to work for the owner alone. This review is paid by the owner and reports to no one else.</p>
+        </details>
+        <details class="faq-item group border-b-2 border-[#1A1A1A] py-5">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer">
+            <span class="display text-[17px] sm:text-[19px]">When should a construction document review happen?</span>
+            <span class="mono text-[22px] leading-none text-[#FF5722] font-bold shrink-0 mt-0.5 group-open:hidden">+</span>
+            <span class="mono text-[22px] leading-none text-[#FF5722] font-bold shrink-0 mt-0.5 hidden group-open:inline">–</span>
+          </summary>
+          <p class="mt-3 text-[15px] leading-relaxed text-[#1A1A1A]/70 max-w-[760px]">As soon as there's an issued set to review — pre-bid, at IFC, or at any bulletin, addendum, or RFI-driven revision after. Earlier catches more before pricing locks in, but there's no point in the process where it's too late to run one against the current issued set.</p>
+        </details>
+        <details class="faq-item group border-b-2 border-[#1A1A1A] py-5">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer">
+            <span class="display text-[17px] sm:text-[19px]">Doesn't BIM clash detection already cover this?</span>
+            <span class="mono text-[22px] leading-none text-[#FF5722] font-bold shrink-0 mt-0.5 group-open:hidden">+</span>
+            <span class="mono text-[22px] leading-none text-[#FF5722] font-bold shrink-0 mt-0.5 hidden group-open:inline">–</span>
+          </summary>
+          <p class="mt-3 text-[15px] leading-relaxed text-[#1A1A1A]/70 max-w-[760px]">No. Clash detection catches geometry — two modeled elements overlapping inside a coordinated model. It doesn't catch a written spec that contradicts the drawing it's paired with, a general note that prohibits what a detail on another sheet requires, or a set that hasn't reached coordination-ready modeling yet. This review reads the issued document itself. <a href="/vs-bim-clash/" class="hover-underline font-bold text-[#1A1A1A]">Full comparison →</a></p>
+        </details>
+        <details class="faq-item group border-b-2 border-[#1A1A1A] py-5">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer">
+            <span class="display text-[17px] sm:text-[19px]">What kinds of projects need this?</span>
+            <span class="mono text-[22px] leading-none text-[#FF5722] font-bold shrink-0 mt-0.5 group-open:hidden">+</span>
+            <span class="mono text-[22px] leading-none text-[#FF5722] font-bold shrink-0 mt-0.5 hidden group-open:inline">–</span>
+          </summary>
+          <p class="mt-3 text-[15px] leading-relaxed text-[#1A1A1A]/70 max-w-[760px]">Any set with multiple trades sharing tight coordination — office, manufacturing, warehouse and distribution, healthcare, higher-ed, data centers, multifamily residential, and other complex, multi-discipline builds. There's no minimum construction value; the deciding factor is coordination complexity, not project size.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section id="cta" class="bg-[#1A1A1A] blueprint-grid-dark relative overflow-hidden">
+    <div class="ruler-top w-full"></div>
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-20 lg:py-24 text-center">
+      <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FFD700] font-bold mb-6">Sheet 01 of 01 — Last Call</p>
+      <h2 class="display break-words text-white leading-[0.92] text-[9vw] sm:text-[44px] lg:text-[54px] max-w-[920px] mx-auto">NOW YOU KNOW WHAT IT IS. <span class="text-[#FF5722]">SEE IT CATCH SOMETHING.</span></h2>
+      <p class="mt-7 text-[16px] leading-relaxed text-white/70 max-w-[520px] mx-auto">Book a 30-minute demo. Nothing's shared until the NDA is signed, and nothing's billed unless we find something worth the fee.</p>
+      <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="display text-[15px] tracking-wide bg-[#FF5722] text-[#1A1A1A] px-8 py-4 border-2 border-[#1A1A1A] hard-shadow-sm">BOOK YOUR DEMO MEETING →</a>
+        <span class="mono text-[11px] uppercase tracking-widest text-white/40 border-2 border-white/20 px-4 py-2">STATUS: <span class="text-[#FFD700]">ACCEPTING 4 SETS / MONTH</span></span>
+      </div>
+      <p class="mt-8 mono text-[12px] text-white/40 max-w-[600px] mx-auto">See the full pitch, pricing, and process on the <a href="/" class="hover-underline text-white/60">Preempt Global homepage</a>.</p>
+    </div>
+    <div class="ruler-top w-full"></div>
+  </section>
+
+  <footer class="bg-white">
+    <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-6">
+      <div class="grid grid-cols-2 sm:grid-cols-5 border-2 border-[#1A1A1A] mono text-[11px]">
+        <div class="border-r border-[#1A1A1A] p-3">
+          <p class="text-[#1A1A1A]/50 uppercase">Drawn by</p>
+          <p class="font-bold mt-1">Preempt Global</p>
+        </div>
+        <div class="border-r border-[#1A1A1A] p-3">
+          <p class="text-[#1A1A1A]/50 uppercase">Checked by</p>
+          <p class="font-bold mt-1">Joe Rossi</p>
+        </div>
+        <div class="border-r border-[#1A1A1A] p-3 hidden sm:block">
+          <p class="text-[#1A1A1A]/50 uppercase">Scale</p>
+          <p class="font-bold mt-1">1 : 1</p>
+        </div>
+        <div class="border-r border-[#1A1A1A] p-3">
+          <p class="text-[#1A1A1A]/50 uppercase">Date</p>
+          <p class="font-bold mt-1">2026.07.29</p>
+        </div>
+        <div class="p-3">
+          <p class="text-[#1A1A1A]/50 uppercase">Sheet</p>
+          <p class="font-bold mt-1">CDR-01</p>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-6 gap-4">
+        <a href="/" class="flex items-center gap-2"><img src="/assets/images/preempt_global_logo.png" width="20" height="20" alt="Preempt Global logo" class="object-contain"><span class="display text-sm">Preempt Global</span></a>
+        <!-- FOOTER_LINKS:START --><nav class="mono text-[11px] uppercase tracking-wide flex gap-6 text-[#1A1A1A]/60"><a href="mailto:jrossi@preemptglobal.com" class="hover-underline">Contact</a><a href="/privacy-policy/" class="hover-underline">Privacy Policy</a><a href="/terms-and-conditions/" class="hover-underline">Terms &amp; Conditions</a><a href="/service-agreement/" class="hover-underline">Service Agreement</a></nav><!-- FOOTER_LINKS:END --><span class="mono text-[11px] text-[#1A1A1A]/40">© 2026 Preempt Global — All Rights Reserved</span>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.getElementById('nav-toggle-btn');
+      var menu = document.getElementById('mobile-nav');
+      var iconBars = document.getElementById('icon-bars');
+      var iconClose = document.getElementById('icon-close');
+      if (!btn || !menu) return;
+
+      function closeMenu() {
+        menu.classList.add('hidden');
+        iconBars.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+
+      function openMenu() {
+        menu.classList.remove('hidden');
+        iconBars.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+
+      btn.addEventListener('click', function () {
+        if (menu.classList.contains('hidden')) {
+          openMenu();
+        } else {
+          closeMenu();
+        }
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      var desktopQuery = window.matchMedia('(min-width: 1024px)');
+      desktopQuery.addEventListener('change', function (e) {
+        if (e.matches) closeMenu();
+      });
+    })();
+  </script>
+</body>
+
+</html>
