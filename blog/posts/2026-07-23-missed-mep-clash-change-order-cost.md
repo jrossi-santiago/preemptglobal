@@ -1,5 +1,5 @@
 ---
-title: "How a Single Missed MEP Clash Turns Into a $400K Change Order"
+title: "How a Missed MEP Clash Costs $400K"
 slug: missed-mep-clash-change-order-cost
 date: 2026-07-23
 description: "A single missed MEP/structural drawing coordination conflict rarely shows up as a line item until it's a change order. Here's how one clash compounds into six figures."

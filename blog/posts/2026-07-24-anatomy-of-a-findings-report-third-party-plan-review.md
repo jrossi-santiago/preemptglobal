@@ -1,5 +1,5 @@
 ---
-title: "Anatomy of a Findings Report: What a Real Third-Party Plan Review Actually Produces"
+title: "What's Actually in a Findings Report"
 slug: anatomy-of-a-findings-report-third-party-plan-review
 date: 2026-07-24
 description: "What does a third-party plan review actually deliver? Inside the anatomy of a real findings report: how conflicts get classified, priced, and handed back to the owner."

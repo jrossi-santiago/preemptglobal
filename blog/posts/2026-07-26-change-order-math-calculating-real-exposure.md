@@ -1,5 +1,5 @@
 ---
-title: "Change Order Math: Calculating Real Exposure Before You Bid"
+title: "Change Order Math: Calculating Exposure"
 slug: change-order-math-calculating-real-exposure
 date: 2026-07-26
 description: "Change order risk mitigation starts with a real number, not a round contingency line. Here's the actual math for calculating design-related change order exposure before you bid."

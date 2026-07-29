@@ -1,5 +1,5 @@
 ---
-title: "Pre-Bid Drawing Review vs. IFC: Why Timing Changes the Price of Every Conflict"
+title: "Pre-Bid vs. IFC: Timing Changes Cost"
 slug: pre-bid-drawing-review-vs-ifc-timing
 date: 2026-07-22
 description: "A pre-bid drawing review and a post-award IFC review catch the same conflicts — at very different prices. Here's what timing actually costs an owner."

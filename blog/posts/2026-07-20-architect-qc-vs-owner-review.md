@@ -1,5 +1,5 @@
 ---
-title: "What Architect QC Covers — and Where an Owner-Side Review Picks Up"
+title: "What Architect QC Covers vs. Owner Review"
 slug: architect-qc-vs-owner-review
 date: 2026-07-20
 description: "The architect's QC and the GC's coordination review are both real — but neither is scoped to protect the owner. Here's what closes that gap."

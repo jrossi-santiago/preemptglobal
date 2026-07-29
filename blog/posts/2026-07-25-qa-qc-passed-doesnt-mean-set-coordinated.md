@@ -1,5 +1,5 @@
 ---
-title: "Why \"It Passed QA/QC\" Doesn't Mean the Set Is Coordinated"
+title: "Passing QA/QC Doesn't Mean Coordinated"
 slug: qa-qc-passed-doesnt-mean-set-coordinated
 date: 2026-07-25
 description: "Catching design errors before construction takes more than a passed QA/QC review. Here's exactly what QA/QC checks on a drawing set — and what it isn't scoped to catch."

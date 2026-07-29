@@ -1,5 +1,5 @@
 ---
-title: "RFI Reduction Won't Save You From Coordination Conflicts"
+title: "RFI Reduction Won't Fix Coordination"
 slug: rfi-reduction-coordination-conflicts
 date: 2026-07-22
 description: "RFI reduction sounds like progress, but a low RFI count doesn't mean a coordinated set. Here's the metric owners should track instead — and why."

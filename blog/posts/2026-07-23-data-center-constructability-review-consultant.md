@@ -1,5 +1,5 @@
 ---
-title: "Why Data Centers Need a Constructability Review Consultant More Than Any Other Asset Class"
+title: "Data Centers Need Constructability Review"
 slug: data-center-constructability-review-consultant
 date: 2026-07-23
 description: "Data center construction sees more cross-discipline conflicts than any other asset class. Here's why MEP density, redundancy, and fast-track schedules are the reason — and what closes the gap."
