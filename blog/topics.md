@@ -16,6 +16,8 @@ Already published:
 - [x] Change Order Math: Calculating Real Exposure Before You Bid — `change-order-math-calculating-real-exposure` — 2026-07-26 (change order risk mitigation)
 - [x] E&O Insurance and the Real Cost of Design Errors and Omissions: What Owners Should Ask For — `eo-insurance-cost-of-design-errors-and-omissions` — 2026-07-28 (cost of design errors and omissions)
 - [x] The NDA Question: Vetting an Independent Reviewer's Confidentiality — `nda-confidentiality-owners-representative-drawing-review` — 2026-07-29 (owner's representative drawing review)
+- [x] BIM Clash Detection: What It Catches (and Misses) — `bim-clash-detection-what-it-catches-and-misses` — 2026-07-29 (BIM clash detection — direct assignment, not from queue)
+- [x] The Real Cost of Construction Change Orders — `construction-change-order-costs` — 2026-07-29 (construction change order costs — direct assignment, not from queue)
 
 Queue:
 - [ ] 7 Bid Set Red Flags That Mean Your Documents Aren't Field-Ready (document review checklist)
