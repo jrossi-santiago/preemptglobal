@@ -15,9 +15,9 @@ Already published:
 - [x] Why "It Passed QA/QC" Doesn't Mean the Set Is Coordinated — `qa-qc-passed-doesnt-mean-set-coordinated` — 2026-07-25 (catching design errors before construction)
 - [x] Change Order Math: Calculating Real Exposure Before You Bid — `change-order-math-calculating-real-exposure` — 2026-07-26 (change order risk mitigation)
 - [x] E&O Insurance and the Real Cost of Design Errors and Omissions: What Owners Should Ask For — `eo-insurance-cost-of-design-errors-and-omissions` — 2026-07-28 (cost of design errors and omissions)
+- [x] The NDA Question: Vetting an Independent Reviewer's Confidentiality — `nda-confidentiality-owners-representative-drawing-review` — 2026-07-29 (owner's representative drawing review)
 
 Queue:
-- [ ] The NDA Question: Vetting an Independent Reviewer's Confidentiality (owner's representative drawing review)
 - [ ] 7 Bid Set Red Flags That Mean Your Documents Aren't Field-Ready (document review checklist)
 - [ ] Where Coordination-Error Costs Actually Come From — and How to Catch Them Before Bid (why so many change orders)
 - [ ] Constructability Review vs. Peer Review: What's the Actual Difference? (constructability review vs peer review)
