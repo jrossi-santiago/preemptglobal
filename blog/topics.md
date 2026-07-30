@@ -19,9 +19,9 @@ Already published:
 - [x] BIM Clash Detection: What It Catches (and Misses) — `bim-clash-detection-what-it-catches-and-misses` — 2026-07-29 (BIM clash detection — direct assignment, not from queue)
 - [x] The Real Cost of Construction Change Orders — `construction-change-order-costs` — 2026-07-29 (construction change order costs — direct assignment, not from queue)
 - [x] AI QA/QC Tools vs. Independent Document Review: Who Owns the Call? — `ai-qaqc-tools-vs-independent-document-review` — 2026-07-29 (AI document review software / lighttable ai — direct assignment, not from queue; links to /vs-lighttable-ai/)
+- [x] 7 Bid Set Red Flags That Mean Your Documents Aren't Field-Ready — `bid-set-red-flags-document-review-checklist` — 2026-07-30 (document review checklist)
 
 Queue:
-- [ ] 7 Bid Set Red Flags That Mean Your Documents Aren't Field-Ready (document review checklist)
 - [ ] Where Coordination-Error Costs Actually Come From — and How to Catch Them Before Bid (why so many change orders)
 - [ ] Constructability Review vs. Peer Review: What's the Actual Difference? (constructability review vs peer review)
 - [ ] What Counts as a "Set" Ready for Bid? A Document Review Checklist for Owners (document review checklist)
