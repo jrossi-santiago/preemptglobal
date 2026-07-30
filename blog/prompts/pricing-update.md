@@ -4,7 +4,7 @@ site, auto-deployed — generated static HTML is committed directly, no
 build step beyond blog/build.py).
 
 First: read PREEMPT_CONTEXT.md at the repo root in full. It contains
-the current, real pricing (a monthly subscription for unlimited set
+the current, real pricing (a monthly retainer for unlimited set
 reviews, and a one-time set review as the secondary offer) and the
 $50K-exposure-or-free guarantee. If it conflicts with this prompt,
 PREEMPT_CONTEXT.md wins.
@@ -48,7 +48,7 @@ Do this, fully autonomously, no confirmation needed:
 
 4. Confirm the real, current figures before writing anything:
    - Never invent a number. Pull pricing straight from
-     PREEMPT_CONTEXT.md's pricing section (subscription $7,000/mo for
+     PREEMPT_CONTEXT.md's pricing section (retainer $7,000/mo for
      unlimited set reviews, one-time review $9,000 per review — both
      start with every deliverable included, and specific add-ons can be
      removed to lower the price), and cross-check against the live
@@ -58,9 +58,11 @@ Do this, fully autonomously, no confirmation needed:
      the discrepancy in your reply so PREEMPT_CONTEXT.md can be
      corrected.
    - State pricing as the two-offer structure it actually is (default
-     to leading with the subscription as the lower cost per review) —
+     to leading with the retainer as the lower cost per review) —
      do not invent a third tier or a per-project package.
-   - Do not describe subscription capacity or client count as capped
+   - Never call the retainer a "subscription" — it's B2B professional
+     services language, not a SaaS plan.
+   - Do not describe retainer capacity or client count as capped
      or limited in any way — that language was intentionally removed
      from the live site and should not be reintroduced.
 
@@ -71,7 +73,7 @@ Do this, fully autonomously, no confirmation needed:
    non-removable), which add-ons can be unchecked to adjust price, the
    48-hour turnaround, the $50K-exposure-or-free guarantee (no partial
    credit, no fine print), and how a buyer should decide between the
-   subscription and the one-time review. No invented discounts, no
+   retainer and the one-time review. No invented discounts, no
    invented "starting at" figures beyond what the two offers actually
    state.
 
@@ -100,7 +102,7 @@ Do this, fully autonomously, no confirmation needed:
     if you updated rather than created), matching the "Already
     published" format. If fewer than 10 unchecked topics remain, add
     6–8 new topics per PREEMPT_CONTEXT.md's pricing offers, spread
-    across the subscription and one-time review.
+    across the retainer and one-time review.
 
 11. Commit all changes (new/updated post .md, generated
     blog/<slug>/index.html, regenerated blog/index.html, sitemap.xml,

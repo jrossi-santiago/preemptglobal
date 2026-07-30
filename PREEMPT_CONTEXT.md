@@ -33,21 +33,22 @@ project size or dollar threshold to work with us anywhere in generated content.
   for it — no partial credit, no fine print.
 - Confidentiality: an NDA is signed before any drawings move. Nothing is sent
   until it's in place. Documents are deleted on completion.
-- Do not state or imply any cap on subscription capacity or client count
+- Do not state or imply any cap on retainer capacity or client count
   anywhere in generated content — that language was intentionally removed
   from the live site.
 
 ## Pricing (two offers — as of the current site)
 
-Two ways to bring Preempt onto a team: a monthly subscription (primary,
+Two ways to bring Preempt onto a team: a monthly retainer (primary,
 lower cost per review) and a one-time review (secondary). Every deliverable
 starts included on both — specific add-ons can be removed to lower the
 price, but do not invent or quote the exact per-add-on dollar amounts in
 content, since those are intentionally not disclosed on the live site.
 Confirm current figures against the live pricing page before quoting exact
-numbers in new content, since these are subject to change.
+numbers in new content, since these are subject to change. Never call this
+offer a "subscription" — it's a retainer, not a SaaS plan.
 
-**Subscription (recommended):** $7,000/mo. Unlimited sets reviewed, across
+**Retainer (recommended):** $7,000/mo. Unlimited sets reviewed, across
 every active project, no cap on number of passes.
 
 **One-Time Review:** $9,000 per review. A single issued set, reviewed once,
@@ -66,7 +67,7 @@ AHJ; revision re-review (every bulletin/addendum/RFI-driven revision
 re-checked, not just the initial set); a dedicated single point of contact;
 a cumulative findings tracker (resolved vs. open, running log).
 
-Subscription-only, not available on the one-time review: unlimited sets per
+Retainer-only, not available on the one-time review: unlimited sets per
 month across every active project, priority scheduling ahead of one-time
 clients, and a quarterly portfolio risk summary.
 

@@ -456,7 +456,7 @@
 
         <div class="max-w-[720px] mx-auto">
           <div class="grid grid-cols-2 border-2 border-[#1A1A1A]" role="tablist">
-            <button type="button" id="home-mode-btn-subscription" data-home-mode-btn="subscription" role="tab" aria-selected="true" class="display text-[13px] sm:text-[15px] px-3 py-4 border-r-2 border-[#1A1A1A] transition-colors">SUBSCRIPTION</button>
+            <button type="button" id="home-mode-btn-retainer" data-home-mode-btn="retainer" role="tab" aria-selected="true" class="display text-[13px] sm:text-[15px] px-3 py-4 border-r-2 border-[#1A1A1A] transition-colors">RETAINER</button>
             <button type="button" id="home-mode-btn-onetime" data-home-mode-btn="onetime" role="tab" aria-selected="false" class="display text-[13px] sm:text-[15px] px-3 py-4 transition-colors">ONE-TIME REVIEW</button>
           </div>
 
@@ -470,6 +470,11 @@
                 <div class="text-right shrink-0">
                   <p class="display text-white text-[34px] sm:text-[42px] leading-none">$<span id="home-offer-price">7,000</span><span id="home-offer-unit" class="text-white/50 text-[18px]">/mo</span></p>
                 </div>
+              </div>
+
+              <div class="mt-5 border-2 border-[#FFD700] bg-[#FFD700]/10 px-4 py-3 flex items-center gap-2.5">
+                <span class="text-[#FFD700] font-bold text-[15px] shrink-0">✓</span>
+                <span class="mono text-[11.5px] sm:text-[12.5px] text-white font-bold uppercase tracking-wide leading-snug">$50K-Exposure-Or-Free Guarantee — No Partial Credit, No Fine Print</span>
               </div>
 
               <div class="mt-7 pt-6 border-t border-white/15">
@@ -512,8 +517,8 @@
                 </ul>
               </div>
 
-              <div id="home-subscription-only-perks" class="mt-6 pt-6 border-t border-white/15">
-                <p class="mono text-[11px] uppercase tracking-widest text-[#FFD700] font-bold mb-3">Subscription-Only — Not Available On A One-Time Review</p>
+              <div id="home-retainer-only-perks" class="mt-6 pt-6 border-t border-white/15">
+                <p class="mono text-[11px] uppercase tracking-widest text-[#FFD700] font-bold mb-3">Retainer-Only — Not Available On A One-Time Review</p>
                 <ul class="space-y-3">
                   <li class="flex gap-3 items-start">
                     <span class="mt-0.5 shrink-0 w-5 h-5 border-2 border-[#FFD700]/50 bg-[#FFD700]/10 flex items-center justify-center"><span class="text-[#FFD700] text-[13px] font-bold leading-none">✓</span></span>
@@ -534,7 +539,6 @@
                 <ul class="space-y-2">
                   <li class="flex gap-3 items-center"><span class="text-[#FFD700] font-bold shrink-0">✓</span><span class="mono text-[12px] text-white/60">NDA signed before any docs move</span></li>
                   <li class="flex gap-3 items-center"><span class="text-[#FFD700] font-bold shrink-0">✓</span><span class="mono text-[12px] text-white/60">48-hour turnaround, per pass</span></li>
-                  <li class="flex gap-3 items-center"><span class="text-[#FFD700] font-bold shrink-0">✓</span><span class="mono text-[12px] text-white/60">$50K-exposure-or-free guarantee</span></li>
                 </ul>
               </div>
 
@@ -558,7 +562,7 @@
       <script>
         (function () {
           var OFFERS = {
-            subscription: {
+            retainer: {
               base: 7000,
               unit: '/mo',
               eyebrow: 'Recommended · Lower Cost Per Review',
@@ -576,15 +580,15 @@
             }
           };
 
-          var mode = 'subscription';
+          var mode = 'retainer';
           var card = document.getElementById('home-offer-card');
           var priceEl = document.getElementById('home-offer-price');
           var unitEl = document.getElementById('home-offer-unit');
           var eyebrowEl = document.getElementById('home-offer-eyebrow');
           var scopeEl = document.getElementById('home-offer-scope');
           var ctaEl = document.getElementById('home-offer-cta');
-          var subOnlyEl = document.getElementById('home-subscription-only-perks');
-          var btnSub = document.getElementById('home-mode-btn-subscription');
+          var subOnlyEl = document.getElementById('home-retainer-only-perks');
+          var btnSub = document.getElementById('home-mode-btn-retainer');
           var btnOne = document.getElementById('home-mode-btn-onetime');
           var onetimeLink = document.getElementById('home-onetime-link');
           var checkboxes = document.querySelectorAll('.home-offer-checkbox');
@@ -607,7 +611,7 @@
 
           function setActiveButton() {
             [btnSub, btnOne].forEach(function (btn) { btn.classList.remove('bg-[#1A1A1A]', 'text-white'); btn.classList.add('bg-white', 'text-[#1A1A1A]'); btn.setAttribute('aria-selected', 'false'); });
-            var active = mode === 'subscription' ? btnSub : btnOne;
+            var active = mode === 'retainer' ? btnSub : btnOne;
             active.classList.remove('bg-white', 'text-[#1A1A1A]');
             active.classList.add('bg-[#1A1A1A]', 'text-white');
             active.setAttribute('aria-selected', 'true');
@@ -618,13 +622,13 @@
             eyebrowEl.textContent = offer.eyebrow;
             scopeEl.textContent = offer.scope;
             ctaEl.textContent = offer.ctaText;
-            subOnlyEl.style.display = mode === 'subscription' ? '' : 'none';
+            subOnlyEl.style.display = mode === 'retainer' ? '' : 'none';
             checkboxes.forEach(function (box) { box.checked = true; });
             setActiveButton();
             recalc();
           }
 
-          btnSub.addEventListener('click', function () { mode = 'subscription'; applyMode(); });
+          btnSub.addEventListener('click', function () { mode = 'retainer'; applyMode(); });
           btnOne.addEventListener('click', function () { mode = 'onetime'; applyMode(); });
           onetimeLink.addEventListener('click', function () { mode = 'onetime'; applyMode(); onetimeLink.style.display = 'none'; card.scrollIntoView({ behavior: 'smooth', block: 'center' }); });
           checkboxes.forEach(function (box) { box.addEventListener('change', recalc); });
