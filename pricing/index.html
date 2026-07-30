@@ -269,10 +269,18 @@
             <div class="mt-4 border-l-4 border-[#004B87] bg-white/[0.04] px-4 py-3">
               <p class="mono text-[11px] sm:text-[12px] text-white/70 leading-relaxed"><span class="text-white font-bold">12.4%</span> of installed project cost is lost to quality deviations <span class="text-white/40">(CII)</span> — a comprehensive design review runs <span class="text-white font-bold">0.2–0.5%</span> <span class="text-white/40">(Federal Facilities Council)</span>.</p>
             </div>
+          </div>
 
-            <div class="mt-6 pt-6 border-t border-white/15">
+          <!-- price + CTA stay visible while checking/unchecking items below -->
+          <div id="offer-sticky-bar" class="sticky top-[90px] z-10 mt-6 bg-[#1A1A1A] border-y-2 border-[#FFD700]/40 px-6 sm:px-8 py-3 flex items-center justify-between gap-4">
+            <p class="display text-white text-[22px] sm:text-[26px] leading-none">$<span class="offer-price-mirror">7,000</span><span class="offer-unit-mirror text-white/50 text-[14px]">/mo</span></p>
+            <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="offer-cta-mirror mono text-[11px] sm:text-[12px] uppercase tracking-wide bg-[#FF5722] text-[#1A1A1A] font-bold px-4 py-2.5 border-2 border-[#1A1A1A] whitespace-nowrap">Book A Retainer Call →</a>
+          </div>
+
+          <div class="p-6 sm:p-8 pt-0">
+            <div class="pt-6">
               <p class="mono text-[11px] uppercase tracking-widest text-white/40 mb-3">The Core Review — Always Included</p>
-              <ul class="space-y-3">
+              <ul class="grid sm:grid-cols-2 gap-3">
                 <li class="flex gap-3 items-start">
                   <span class="mt-0.5 shrink-0 w-5 h-5 border-2 border-white/40 bg-white/10 flex items-center justify-center"><span class="text-[#FFD700] text-[13px] font-bold leading-none">✓</span></span>
                   <span class="mono text-[13px] leading-relaxed text-white/85">Full drawing &amp; spec review — all disciplines, drawings + specs</span>
@@ -286,7 +294,7 @@
 
             <div class="mt-6 pt-6 border-t border-white/15">
               <p class="mono text-[11px] uppercase tracking-widest text-white/40 mb-3">Included — Uncheck To Remove</p>
-              <ul class="space-y-3">
+              <ul class="grid sm:grid-cols-2 gap-3">
                 <li class="flex gap-3 items-start">
                   <input type="checkbox" data-item="meeting" checked class="offer-checkbox mt-1 shrink-0 w-5 h-5 accent-[#FF5722] cursor-pointer">
                   <label class="mono text-[13px] leading-relaxed text-white/85 cursor-pointer">1-hr live review meeting — walk through findings with suggestions on how to address each one</label>
@@ -312,7 +320,7 @@
 
             <div id="retainer-only-perks" class="mt-6 pt-6 border-t border-white/15">
               <p class="mono text-[11px] uppercase tracking-widest text-[#FFD700] font-bold mb-3">Retainer-Only — Not Available On A One-Time Review</p>
-              <ul class="space-y-3">
+              <ul class="grid sm:grid-cols-2 gap-3">
                 <li class="flex gap-3 items-start">
                   <span class="mt-0.5 shrink-0 w-5 h-5 border-2 border-[#FFD700]/50 bg-[#FFD700]/10 flex items-center justify-center"><span class="text-[#FFD700] text-[13px] font-bold leading-none">✓</span></span>
                   <span class="mono text-[13px] leading-relaxed text-white/85">Unlimited sets reviewed per month, across every active project</span>
@@ -328,11 +336,9 @@
               </ul>
             </div>
 
-            <div class="mt-6 pt-6 border-t border-white/15">
-              <ul class="space-y-2">
-                <li class="flex gap-3 items-center"><span class="text-[#FFD700] font-bold shrink-0">✓</span><span class="mono text-[12px] text-white/60">NDA signed before any docs move</span></li>
-                <li class="flex gap-3 items-center"><span class="text-[#FFD700] font-bold shrink-0">✓</span><span class="mono text-[12px] text-white/60">48-hour turnaround, per pass</span></li>
-              </ul>
+            <div class="mt-6 pt-6 border-t border-white/15 flex flex-wrap items-center gap-x-6 gap-y-2">
+              <span class="flex gap-2 items-center"><span class="text-[#FFD700] font-bold shrink-0">✓</span><span class="mono text-[12px] text-white/60">NDA signed before any docs move</span></span>
+              <span class="flex gap-2 items-center"><span class="text-[#FFD700] font-bold shrink-0">✓</span><span class="mono text-[12px] text-white/60">48-hour turnaround, per pass</span></span>
             </div>
 
             <a id="offer-cta" href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="mt-8 block text-center mono text-[13px] uppercase tracking-wide bg-[#FF5722] text-[#1A1A1A] font-bold px-5 py-4 border-2 border-[#1A1A1A]">Book A Retainer Call →</a>
@@ -378,6 +384,9 @@
       var card = document.getElementById('offer-card');
       var priceEl = document.getElementById('offer-price');
       var unitEl = document.getElementById('offer-unit');
+      var priceMirrorEls = document.querySelectorAll('.offer-price-mirror');
+      var unitMirrorEls = document.querySelectorAll('.offer-unit-mirror');
+      var ctaMirrorEls = document.querySelectorAll('.offer-cta-mirror');
       var eyebrowEl = document.getElementById('offer-eyebrow');
       var scopeEl = document.getElementById('offer-scope');
       var ctaEl = document.getElementById('offer-cta');
@@ -401,6 +410,8 @@
         });
         priceEl.textContent = formatPrice(total);
         unitEl.textContent = offer.unit;
+        priceMirrorEls.forEach(function (el) { el.textContent = formatPrice(total); });
+        unitMirrorEls.forEach(function (el) { el.textContent = offer.unit; });
       }
 
       function setActiveButton() {
@@ -416,6 +427,7 @@
         eyebrowEl.textContent = offer.eyebrow;
         scopeEl.textContent = offer.scope;
         ctaEl.textContent = offer.ctaText;
+        ctaMirrorEls.forEach(function (el) { el.textContent = offer.ctaText; });
         subOnlyEl.style.display = mode === 'retainer' ? '' : 'none';
         checkboxes.forEach(function (box) { box.checked = true; });
         setActiveButton();
