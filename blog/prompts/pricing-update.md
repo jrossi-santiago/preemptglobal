@@ -4,9 +4,10 @@ site, auto-deployed — generated static HTML is committed directly, no
 build step beyond blog/build.py).
 
 First: read PREEMPT_CONTEXT.md at the repo root in full. It contains
-the current, real, tiered pricing (Tier 01 one-time set review, Tier 02
-per-project, Tier 03 monthly retainer) and the $50K-exposure-or-free
-guarantee. If it conflicts with this prompt, PREEMPT_CONTEXT.md wins.
+the current, real pricing (a monthly subscription for unlimited set
+reviews, and a one-time set review as the secondary offer) and the
+$50K-exposure-or-free guarantee. If it conflicts with this prompt,
+PREEMPT_CONTEXT.md wins.
 
 GATE CHECK — do this before anything else:
 Read blog/next_action.json. If route_to is NOT
@@ -47,24 +48,32 @@ Do this, fully autonomously, no confirmation needed:
 
 4. Confirm the real, current figures before writing anything:
    - Never invent a number. Pull pricing straight from
-     PREEMPT_CONTEXT.md's "Pricing (tiered — as of the current site)"
-     section (Tier 01 $1,500–$7,500 per review, Tier 02 $10,000–$25,000
-     per project, Tier 03 $3,500–$7,500/mo), and cross-check against
-     the live homepage pricing section (index.html, id="pricing")
-     since PREEMPT_CONTEXT.md itself notes tiers are subject to change.
-   - If the two sources disagree, trust the live homepage and note the
-     discrepancy in your reply so PREEMPT_CONTEXT.md can be corrected.
-   - State pricing as the tier structure it actually is — do not
-     collapse it into a single flat number.
+     PREEMPT_CONTEXT.md's pricing section (subscription $7,000/mo for
+     unlimited set reviews, one-time review $9,000 per review — both
+     start with every deliverable included, and specific add-ons can be
+     removed to lower the price), and cross-check against the live
+     pricing page (pricing/index.html, id="tiers") since
+     PREEMPT_CONTEXT.md itself notes pricing is subject to change.
+   - If the two sources disagree, trust the live pricing page and note
+     the discrepancy in your reply so PREEMPT_CONTEXT.md can be
+     corrected.
+   - State pricing as the two-offer structure it actually is (default
+     to leading with the subscription as the lower cost per review) —
+     do not invent a third tier or a per-project package.
+   - Do not describe subscription capacity or client count as capped
+     or limited in any way — that language was intentionally removed
+     from the live site and should not be reintroduced.
 
 5. Write or update the page as blog/posts/YYYY-MM-DD-slug.md (new) or
    in place (existing), 800–1,500 words. Complete frontmatter per
    POST_GUIDE.md. Primary keyword in title, slug, and first 100 words
-   where natural. Cover: what's included at each tier, the 48-hour
-   turnaround, the $50K-exposure-or-free guarantee (no partial credit,
-   no fine print), and how a buyer should think about which tier fits
-   their pipeline. No invented discounts, no invented "starting at"
-   figures beyond what the tiers actually state.
+   where natural. Cover: what's included in the core review (locked,
+   non-removable), which add-ons can be unchecked to adjust price, the
+   48-hour turnaround, the $50K-exposure-or-free guarantee (no partial
+   credit, no fine print), and how a buyer should decide between the
+   subscription and the one-time review. No invented discounts, no
+   invented "starting at" figures beyond what the two offers actually
+   state.
 
 6. End the body with an FAQ section: 3–5 real searcher questions
    (check "People Also Ask"-style phrasings during research), each
@@ -90,7 +99,8 @@ Do this, fully autonomously, no confirmation needed:
     append slug + today's date (or "(updated existing page: <path>)"
     if you updated rather than created), matching the "Already
     published" format. If fewer than 10 unchecked topics remain, add
-    6–8 new topics per PREEMPT_CONTEXT.md's tiers, spread across tiers.
+    6–8 new topics per PREEMPT_CONTEXT.md's pricing offers, spread
+    across the subscription and one-time review.
 
 11. Commit all changes (new/updated post .md, generated
     blog/<slug>/index.html, regenerated blog/index.html, sitemap.xml,

@@ -8,7 +8,7 @@
 
 Preempt Global is a QA/QC document review service for construction. Clients are owners, owner's reps, general contractors, and A/E firms, on projects of any size.
 
-**The offer:** An independent, professional-led review of an issued drawing/submittal set (all disciplines, drawings + specs) with a 48-hour turnaround. The output is a ranked findings report — every issue located by sheet, severity-ranked (High/Med/Low), with a dollar exposure and schedule impact attached to each individual finding. Backed by a $50K-exposure-or-free guarantee. Pricing runs $1,500–$7,500 per single-set review, with tiers for full-project and portfolio coverage.
+**The offer:** An independent, professional-led review of an issued drawing/submittal set (all disciplines, drawings + specs) with a 48-hour turnaround. The output is a ranked findings report — every issue located by sheet, severity-ranked (High/Med/Low), with a dollar exposure and schedule impact attached to each individual finding. Backed by a $50K-exposure-or-free guarantee. Two ways to buy: a $7,000/mo subscription for unlimited set reviews (recommended), or a $9,000 one-time review. Every deliverable starts included on both; specific add-ons can be removed to lower the price.
 
 **The core claim:** A clash caught in review costs one redline and five minutes. The same clash caught in the field costs a change order and a schedule slip. Preempt finds it on paper — before it's built.
 

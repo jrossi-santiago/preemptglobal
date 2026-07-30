@@ -28,7 +28,7 @@ The standard risk exposure formula is simple: probability of the risk occurring,
   <div class="rh"><span class="title">ILLUSTRATIVE EXPOSURE CALCULATION</span><span class="meta">$40M hard cost, IFC-stage set — not a specific project</span></div>
   <div class="mini-row"><span class="k">Design-related change order range (industry)</span><span class="v">3%–5% of hard cost</span></div>
   <div class="mini-row"><span class="k">Unweighted exposure range</span><span class="v hot">$1.2M–$2.0M</span></div>
-  <div class="mini-row"><span class="k">Document-level review cost</span><span class="v">$1,500–$7,500 / 48 hours</span></div>
+  <div class="mini-row"><span class="k">Document-level review cost</span><span class="v">$9,000 one-time, or $7,000/mo unlimited / 48 hours</span></div>
   <div class="mini-row"><span class="k">Review guarantee threshold</span><span class="v">Free unless $50,000+ found</span></div>
 </div>
 

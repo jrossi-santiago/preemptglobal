@@ -135,7 +135,7 @@
         "name": "Who does the review?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Joe Rossi oversees every review personally — five-plus years producing construction documents and managing project administration on jobs up to $60 million, before founding Preempt Global. The work is done by reviewers who've drawn these sets themselves, never outsourced and never a black box, with Joe's name on every finding. That's why capacity is capped at four sets a month."
+          "text": "Joe Rossi oversees every review personally — five-plus years producing construction documents and managing project administration on jobs up to $60 million, before founding Preempt Global. The work is done by reviewers who've drawn these sets themselves, never outsourced and never a black box, with Joe's name on every finding."
         }
       },
       {
@@ -436,8 +436,8 @@
                 <p class="display text-[#FFD700] text-[19px] sm:text-[24px] mt-1">$60M</p>
               </div>
               <div class="border-r-2 border-white/20 px-5 py-6">
-                <p class="mono text-[10px] uppercase tracking-widest text-white/40">Reviews / Month</p>
-                <p class="display text-white text-[17px] sm:text-[24px] mt-1 whitespace-nowrap">CAPPED AT 4</p>
+                <p class="mono text-[10px] uppercase tracking-widest text-white/40">Turnaround</p>
+                <p class="display text-white text-[17px] sm:text-[24px] mt-1 whitespace-nowrap">48 HRS</p>
               </div>
               <div class="px-5 py-6">
                 <p class="mono text-[10px] uppercase tracking-widest text-white/40">On Every Finding</p>
@@ -451,90 +451,187 @@
     <section id="pricing" class="border-b-2 border-[#1A1A1A] bg-white blueprint-grid">
       <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
         <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">Pricing</p>
-        <h2 class="display break-words text-[10vw] sm:text-[44px] lg:text-[50px] leading-[0.95] mb-3">PICK THE COVERAGE<br />THAT MATCHES YOUR PIPELINE.</h2>
-        <p class="mono text-[13px] text-[#1A1A1A]/60 mb-10 max-w-[620px]">One set, one project, or everything you've got running at once — three ways to bring Preempt onto the team.</p>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-7 items-stretch">
-          <div class="flex flex-col border-2 border-[#1A1A1A] bg-white hard-shadow-sm">
-            <div class="h-2 bg-[#004B87]"></div>
-            <div class="p-6 sm:p-7 flex flex-col flex-1">
-              <p class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40">Tier 01 · Single Set</p>
-              <h3 class="display text-[22px] sm:text-[24px] mt-2 mb-1">ONE-TIME SET REVIEW</h3>
-              <p class="display text-[#1A1A1A] text-[28px] sm:text-[32px] mt-3 leading-none">$1,500<span class="text-[#1A1A1A]/40 text-[18px]">–</span>$7,500</p>
-              <p class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 mt-2 mb-6">per review</p>
-              <ul class="space-y-3 mono text-[13px] leading-relaxed text-[#1A1A1A]/80 flex-1">
-                <li class="flex gap-2"><span class="text-[#FF5722] font-bold shrink-0">✓</span>NDA signed before any docs move</li>
-                <li class="flex gap-2"><span class="text-[#FF5722] font-bold shrink-0">✓</span>Single-pass review of the issued set — all disciplines, drawings + specs</li>
-                <li class="flex gap-2"><span class="text-[#FF5722] font-bold shrink-0">✓</span>Written findings report: every conflict, sheet-located, severity-ranked (High/Med/Low), with $ exposure + schedule impact per item</li>
-                <li class="flex gap-2"><span class="text-[#FF5722] font-bold shrink-0">✓</span>One 48-hr turnaround</li>
-                <li class="flex gap-2"><span class="text-[#FF5722] font-bold shrink-0">✓</span>One live walkthrough meeting</li>
-                <li class="flex gap-2"><span class="text-[#FF5722] font-bold shrink-0">✓</span>$50K-exposure-or-free guarantee</li>
-              </ul>
-              <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="mt-7 text-center mono text-[12px] uppercase tracking-wide bg-[#1A1A1A] text-white font-bold px-5 py-3.5 border-2 border-[#1A1A1A] hard-shadow-orange">Book A Set Review →</a>
-            </div>
+        <h2 class="display break-words text-[10vw] sm:text-[44px] lg:text-[50px] leading-[0.95] mb-3">BUILD YOUR OFFER.<br />UNCHECK WHAT YOU DON'T NEED.</h2>
+        <p class="mono text-[13px] text-[#1A1A1A]/60 mb-10 max-w-[680px]">Everything starts checked. The core review can't be removed — everything below it can. <a href="/pricing/" class="hover-underline font-bold text-[#1A1A1A]">Full pricing breakdown →</a></p>
+
+        <div class="max-w-[720px] mx-auto">
+          <div class="grid grid-cols-2 border-2 border-[#1A1A1A]" role="tablist">
+            <button type="button" id="home-mode-btn-subscription" data-home-mode-btn="subscription" role="tab" aria-selected="true" class="display text-[13px] sm:text-[15px] px-3 py-4 border-r-2 border-[#1A1A1A] transition-colors">SUBSCRIPTION</button>
+            <button type="button" id="home-mode-btn-onetime" data-home-mode-btn="onetime" role="tab" aria-selected="false" class="display text-[13px] sm:text-[15px] px-3 py-4 transition-colors">ONE-TIME REVIEW</button>
           </div>
-          <div class="flex flex-col border-2 border-[#1A1A1A] bg-white hard-shadow-sm">
-            <div class="h-2 bg-[#FF5722]"></div>
-            <div class="p-6 sm:p-7 flex flex-col flex-1">
-              <p class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40">Tier 02 · Full Project</p>
-              <h3 class="display text-[22px] sm:text-[24px] mt-2 mb-1">PER-PROJECT</h3>
-              <p class="display text-[#1A1A1A] text-[28px] sm:text-[32px] mt-3 leading-none">$10,000<span class="text-[#1A1A1A]/40 text-[18px]">–</span>$25,000</p>
-              <p class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/40 mt-2 mb-6">per project, initial set through permit/GMP</p>
-              <p class="mono text-[12px] uppercase tracking-wide text-[#FF5722] font-bold mb-3">Everything in Tier 01, plus:</p>
-              <ul class="space-y-3 mono text-[13px] leading-relaxed text-[#1A1A1A]/80 flex-1">
-                <li class="flex gap-2"><span class="text-[#FF5722] font-bold shrink-0">✓</span>Re-review of every bulletin, addendum &amp; RFI-driven revision — initial set through permit/GMP, no cap on number of passes</li>
-                <li class="flex gap-2"><span class="text-[#FF5722] font-bold shrink-0">✓</span>Cumulative findings log — tracks resolved vs. open across the life of the project, not just one snapshot</li>
-                <li class="flex gap-2"><span class="text-[#FF5722] font-bold shrink-0">✓</span>Single point of contact for the whole project — no re-onboarding each revision</li>
-                <li class="flex gap-2"><span class="text-[#FF5722] font-bold shrink-0">✓</span>Same 48-hr turnaround, per revision</li>
-                <li class="flex gap-2"><span class="text-[#FF5722] font-bold shrink-0">✓</span>$50K-exposure-or-free guarantee</li>
-              </ul>
-              <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="mt-7 text-center mono text-[12px] uppercase tracking-wide bg-[#1A1A1A] text-white font-bold px-5 py-3.5 border-2 border-[#1A1A1A] hard-shadow-orange">Book A Project Consult →</a>
-            </div>
-          </div>
-          <div class="relative flex flex-col border-2 border-[#1A1A1A] bg-[#1A1A1A] hard-shadow-orange">
-            <span class="absolute -top-3 left-6 mono text-[10px] uppercase tracking-widest bg-[#FFD700] text-[#1A1A1A] font-bold px-3 py-1 border-2 border-[#1A1A1A]">Built For 3+ Projects/Yr</span>
-            <div class="h-2 bg-[#FFD700]"></div>
-            <div class="p-6 sm:p-7 pt-8 flex flex-col flex-1">
-              <p class="mono text-[11px] uppercase tracking-widest text-white/40">Tier 03 · Ongoing Coverage</p>
-              <h3 class="display text-white text-[22px] sm:text-[24px] mt-2 mb-1">MONTHLY RETAINER</h3>
-              <p class="display text-white text-[28px] sm:text-[32px] mt-3 leading-none">$3,500<span class="text-white/40 text-[18px]">–</span>$7,500<span class="text-white/50 text-[16px]">/mo</span></p>
-              <div class="grid grid-cols-3 gap-2 mt-5 mb-6">
-                <div class="border border-white/20 px-2 py-2.5 text-center">
-                  <p class="mono text-[9px] uppercase tracking-widest text-white/40">Starter</p>
-                  <p class="mono text-[13px] font-bold text-white mt-1">$3,500</p>
-                  <p class="mono text-[9px] text-white/40 mt-0.5">up to 2 sets</p>
+
+          <div id="home-offer-card" class="border-2 border-t-0 border-[#1A1A1A] bg-[#1A1A1A] hard-shadow-orange">
+            <div class="p-6 sm:p-8">
+              <div class="flex items-start justify-between gap-4 flex-wrap">
+                <div>
+                  <p id="home-offer-eyebrow" class="mono text-[11px] uppercase tracking-widest text-[#FFD700] font-bold mb-2">Recommended · Lower Cost Per Review</p>
+                  <p id="home-offer-scope" class="mono text-[13px] text-white/60 max-w-[440px]">Unlimited sets reviewed — every active project, no cap on passes.</p>
                 </div>
-                <div class="border border-white/20 px-2 py-2.5 text-center">
-                  <p class="mono text-[9px] uppercase tracking-widest text-white/40">Growth</p>
-                  <p class="mono text-[13px] font-bold text-[#FFD700] mt-1">$5,500</p>
-                  <p class="mono text-[9px] text-white/40 mt-0.5">up to 4 sets</p>
-                </div>
-                <div class="border border-white/20 px-2 py-2.5 text-center">
-                  <p class="mono text-[9px] uppercase tracking-widest text-white/40">Unlimited</p>
-                  <p class="mono text-[13px] font-bold text-white mt-1">$7,500</p>
-                  <p class="mono text-[9px] text-white/40 mt-0.5">no cap</p>
+                <div class="text-right shrink-0">
+                  <p class="display text-white text-[34px] sm:text-[42px] leading-none">$<span id="home-offer-price">7,000</span><span id="home-offer-unit" class="text-white/50 text-[18px]">/mo</span></p>
                 </div>
               </div>
-              <ul class="space-y-3 mono text-[13px] leading-relaxed text-white/80 flex-1">
-                <li class="flex gap-2"><span class="text-[#FFD700] font-bold shrink-0">✓</span>Covers multiple active projects running at once for one flat monthly number</li>
-                <li class="flex gap-2"><span class="text-[#FFD700] font-bold shrink-0">✓</span>All bulletins/addendums across every covered project included</li>
-                <li class="flex gap-2"><span class="text-[#FFD700] font-bold shrink-0">✓</span>Priority scheduling — jumps ahead of one-time/per-project clients in the queue</li>
-                <li class="flex gap-2"><span class="text-[#FFD700] font-bold shrink-0">✓</span>Quarterly portfolio risk summary across everything reviewed that quarter</li>
-                <li class="flex gap-2"><span class="text-[#FFD700] font-bold shrink-0">✓</span>Direct line to Joe — one master NDA covers all projects</li>
-                <li class="flex gap-2"><span class="text-[#FFD700] font-bold shrink-0">✓</span>Pause or cancel anytime</li>
-                <li class="flex gap-2"><span class="text-[#FFD700] font-bold shrink-0">✓</span>$50K-exposure-or-free guarantee</li>
-              </ul>
-              <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="mt-7 text-center mono text-[12px] uppercase tracking-wide bg-[#FF5722] text-[#1A1A1A] font-bold px-5 py-3.5 border-2 border-[#1A1A1A]">Book A Retainer Call →</a>
+
+              <div class="mt-7 pt-6 border-t border-white/15">
+                <p class="mono text-[11px] uppercase tracking-widest text-white/40 mb-3">The Core Review — Always Included</p>
+                <ul class="space-y-3">
+                  <li class="flex gap-3 items-start">
+                    <span class="mt-0.5 shrink-0 w-5 h-5 border-2 border-white/40 bg-white/10 flex items-center justify-center"><span class="text-[#FFD700] text-[13px] font-bold leading-none">✓</span></span>
+                    <span class="mono text-[13px] leading-relaxed text-white/85">Full drawing &amp; spec review — all disciplines, drawings + specs</span>
+                  </li>
+                  <li class="flex gap-3 items-start">
+                    <span class="mt-0.5 shrink-0 w-5 h-5 border-2 border-white/40 bg-white/10 flex items-center justify-center"><span class="text-[#FFD700] text-[13px] font-bold leading-none">✓</span></span>
+                    <span class="mono text-[13px] leading-relaxed text-white/85">Findings report — every conflict, sheet-located, severity-ranked, with $ exposure + schedule impact per item</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mt-6 pt-6 border-t border-white/15">
+                <p class="mono text-[11px] uppercase tracking-widest text-white/40 mb-3">Included — Uncheck To Remove</p>
+                <ul class="space-y-3">
+                  <li class="flex gap-3 items-start">
+                    <input type="checkbox" data-home-item="meeting" checked class="home-offer-checkbox mt-1 shrink-0 w-5 h-5 accent-[#FF5722] cursor-pointer">
+                    <label class="mono text-[13px] leading-relaxed text-white/85 cursor-pointer">1-hr live review meeting — walk through findings with suggestions on how to address each one</label>
+                  </li>
+                  <li class="flex gap-3 items-start">
+                    <input type="checkbox" data-home-item="ahj" checked class="home-offer-checkbox mt-1 shrink-0 w-5 h-5 accent-[#FF5722] cursor-pointer">
+                    <label class="mono text-[13px] leading-relaxed text-white/85 cursor-pointer">Permit, bulletin &amp; addendum submissions handled directly with the AHJ on your behalf</label>
+                  </li>
+                  <li class="flex gap-3 items-start">
+                    <input type="checkbox" data-home-item="revision" checked class="home-offer-checkbox mt-1 shrink-0 w-5 h-5 accent-[#FF5722] cursor-pointer">
+                    <label class="mono text-[13px] leading-relaxed text-white/85 cursor-pointer">Revision re-review — every bulletin, addendum &amp; RFI-driven revision re-checked, not just the initial set</label>
+                  </li>
+                  <li class="flex gap-3 items-start">
+                    <input type="checkbox" data-home-item="poc" checked class="home-offer-checkbox mt-1 shrink-0 w-5 h-5 accent-[#FF5722] cursor-pointer">
+                    <label class="mono text-[13px] leading-relaxed text-white/85 cursor-pointer">Dedicated single point of contact — no re-onboarding each revision</label>
+                  </li>
+                  <li class="flex gap-3 items-start">
+                    <input type="checkbox" data-home-item="tracker" checked class="home-offer-checkbox mt-1 shrink-0 w-5 h-5 accent-[#FF5722] cursor-pointer">
+                    <label class="mono text-[13px] leading-relaxed text-white/85 cursor-pointer">Cumulative findings tracker — resolved vs. open, running log across every pass</label>
+                  </li>
+                </ul>
+              </div>
+
+              <div id="home-subscription-only-perks" class="mt-6 pt-6 border-t border-white/15">
+                <p class="mono text-[11px] uppercase tracking-widest text-[#FFD700] font-bold mb-3">Subscription-Only — Not Available On A One-Time Review</p>
+                <ul class="space-y-3">
+                  <li class="flex gap-3 items-start">
+                    <span class="mt-0.5 shrink-0 w-5 h-5 border-2 border-[#FFD700]/50 bg-[#FFD700]/10 flex items-center justify-center"><span class="text-[#FFD700] text-[13px] font-bold leading-none">✓</span></span>
+                    <span class="mono text-[13px] leading-relaxed text-white/85">Unlimited sets reviewed per month, across every active project</span>
+                  </li>
+                  <li class="flex gap-3 items-start">
+                    <span class="mt-0.5 shrink-0 w-5 h-5 border-2 border-[#FFD700]/50 bg-[#FFD700]/10 flex items-center justify-center"><span class="text-[#FFD700] text-[13px] font-bold leading-none">✓</span></span>
+                    <span class="mono text-[13px] leading-relaxed text-white/85">Priority scheduling — jumps ahead of one-time clients in the queue</span>
+                  </li>
+                  <li class="flex gap-3 items-start">
+                    <span class="mt-0.5 shrink-0 w-5 h-5 border-2 border-[#FFD700]/50 bg-[#FFD700]/10 flex items-center justify-center"><span class="text-[#FFD700] text-[13px] font-bold leading-none">✓</span></span>
+                    <span class="mono text-[13px] leading-relaxed text-white/85">Quarterly portfolio risk summary across everything reviewed that quarter</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mt-6 pt-6 border-t border-white/15">
+                <ul class="space-y-2">
+                  <li class="flex gap-3 items-center"><span class="text-[#FFD700] font-bold shrink-0">✓</span><span class="mono text-[12px] text-white/60">NDA signed before any docs move</span></li>
+                  <li class="flex gap-3 items-center"><span class="text-[#FFD700] font-bold shrink-0">✓</span><span class="mono text-[12px] text-white/60">48-hour turnaround, per pass</span></li>
+                  <li class="flex gap-3 items-center"><span class="text-[#FFD700] font-bold shrink-0">✓</span><span class="mono text-[12px] text-white/60">$50K-exposure-or-free guarantee</span></li>
+                </ul>
+              </div>
+
+              <a id="home-offer-cta" href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="mt-8 block text-center mono text-[13px] uppercase tracking-wide bg-[#FF5722] text-[#1A1A1A] font-bold px-5 py-4 border-2 border-[#1A1A1A]">Book A Retainer Call →</a>
             </div>
           </div>
+
+          <p class="mt-4 text-center">
+            <button type="button" id="home-onetime-link" class="mono text-[12px] uppercase tracking-wide text-[#1A1A1A]/60 hover-underline">Just need one set reviewed? See one-time pricing →</button>
+          </p>
         </div>
-        <div class="mt-8 border-2 border-[#1A1A1A] bg-[#1A1A1A] px-6 py-6 sm:py-7 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
-          <p class="text-white/85 text-[14px] sm:text-[15px] leading-relaxed max-w-[640px]"><span class="text-[#FFD700] font-bold">$50K-exposure-or-free, on every tier.</span> If the review doesn't surface at least $50,000 in documented cost exposure, you don't pay for it — no partial credit, no fine print. On a set of this size and complexity, there's always something to find.</p>
+
+        <div class="mt-10 border-2 border-[#1A1A1A] bg-[#1A1A1A] px-6 py-6 sm:py-7 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
+          <p class="text-white/85 text-[14px] sm:text-[15px] leading-relaxed max-w-[640px]"><span class="text-[#FFD700] font-bold">$50K-exposure-or-free, on either offer.</span> If the review doesn't surface at least $50,000 in documented cost exposure, you don't pay for it — no partial credit, no fine print. On a set of this size and complexity, there's always something to find.</p>
           <div class="flex flex-col sm:items-end gap-2 shrink-0">
             <p class="mono text-[12px] uppercase tracking-widest text-white/50">Don't see a fit? Custom packages are available.</p>
             <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="mono text-[12px] uppercase tracking-wide bg-[#FF5722] text-[#1A1A1A] font-bold px-5 py-3 border-2 border-[#1A1A1A] hard-shadow-sm whitespace-nowrap">Schedule A Call To Discuss →</a>
           </div>
         </div>
       </div>
+      <script>
+        (function () {
+          var OFFERS = {
+            subscription: {
+              base: 7000,
+              unit: '/mo',
+              eyebrow: 'Recommended · Lower Cost Per Review',
+              scope: 'Unlimited sets reviewed — every active project, no cap on passes.',
+              ctaText: 'Book A Retainer Call →',
+              deltas: { meeting: 500, ahj: 1000, revision: 750, poc: 500, tracker: 500 }
+            },
+            onetime: {
+              base: 9000,
+              unit: '',
+              eyebrow: 'Single Set · One Clean Pass',
+              scope: 'One issued set, reviewed once, start to finish.',
+              ctaText: 'Book A Set Review →',
+              deltas: { meeting: 750, ahj: 1500, revision: 2000, poc: 500, tracker: 500 }
+            }
+          };
+
+          var mode = 'subscription';
+          var card = document.getElementById('home-offer-card');
+          var priceEl = document.getElementById('home-offer-price');
+          var unitEl = document.getElementById('home-offer-unit');
+          var eyebrowEl = document.getElementById('home-offer-eyebrow');
+          var scopeEl = document.getElementById('home-offer-scope');
+          var ctaEl = document.getElementById('home-offer-cta');
+          var subOnlyEl = document.getElementById('home-subscription-only-perks');
+          var btnSub = document.getElementById('home-mode-btn-subscription');
+          var btnOne = document.getElementById('home-mode-btn-onetime');
+          var onetimeLink = document.getElementById('home-onetime-link');
+          var checkboxes = document.querySelectorAll('.home-offer-checkbox');
+
+          function formatPrice(n) {
+            return n.toLocaleString('en-US');
+          }
+
+          function recalc() {
+            var offer = OFFERS[mode];
+            var total = offer.base;
+            checkboxes.forEach(function (box) {
+              if (!box.checked) {
+                total -= offer.deltas[box.getAttribute('data-home-item')] || 0;
+              }
+            });
+            priceEl.textContent = formatPrice(total);
+            unitEl.textContent = offer.unit;
+          }
+
+          function setActiveButton() {
+            [btnSub, btnOne].forEach(function (btn) { btn.classList.remove('bg-[#1A1A1A]', 'text-white'); btn.classList.add('bg-white', 'text-[#1A1A1A]'); btn.setAttribute('aria-selected', 'false'); });
+            var active = mode === 'subscription' ? btnSub : btnOne;
+            active.classList.remove('bg-white', 'text-[#1A1A1A]');
+            active.classList.add('bg-[#1A1A1A]', 'text-white');
+            active.setAttribute('aria-selected', 'true');
+          }
+
+          function applyMode() {
+            var offer = OFFERS[mode];
+            eyebrowEl.textContent = offer.eyebrow;
+            scopeEl.textContent = offer.scope;
+            ctaEl.textContent = offer.ctaText;
+            subOnlyEl.style.display = mode === 'subscription' ? '' : 'none';
+            checkboxes.forEach(function (box) { box.checked = true; });
+            setActiveButton();
+            recalc();
+          }
+
+          btnSub.addEventListener('click', function () { mode = 'subscription'; applyMode(); });
+          btnOne.addEventListener('click', function () { mode = 'onetime'; applyMode(); });
+          onetimeLink.addEventListener('click', function () { mode = 'onetime'; applyMode(); onetimeLink.style.display = 'none'; card.scrollIntoView({ behavior: 'smooth', block: 'center' }); });
+          checkboxes.forEach(function (box) { box.addEventListener('change', recalc); });
+
+          applyMode();
+        })();
+      </script>
     </section>
     <section id="faq" class="border-b-2 border-[#1A1A1A] bg-white">
       <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16">
@@ -571,7 +668,7 @@
               <span class="mono text-[22px] leading-none text-[#FF5722] font-bold shrink-0 mt-0.5 group-open:hidden">+</span>
               <span class="mono text-[22px] leading-none text-[#FF5722] font-bold shrink-0 mt-0.5 hidden group-open:inline">–</span>
             </summary>
-            <p class="mt-3 text-[15px] leading-relaxed text-[#1A1A1A]/70 max-w-[760px]">Joe Rossi oversees every review personally — five-plus years producing construction documents and managing project administration on jobs up to $60 million, before founding Preempt Global. The work is done by reviewers who've drawn these sets themselves, never outsourced and never a black box, with Joe's name on every finding. That's why capacity is capped at four sets a month.</p>
+            <p class="mt-3 text-[15px] leading-relaxed text-[#1A1A1A]/70 max-w-[760px]">Joe Rossi oversees every review personally — five-plus years producing construction documents and managing project administration on jobs up to $60 million, before founding Preempt Global. The work is done by reviewers who've drawn these sets themselves, never outsourced and never a black box, with Joe's name on every finding.</p>
           </details>
           <details class="faq-item group border-b-2 border-[#1A1A1A] py-5">
             <summary class="flex items-start justify-between gap-6 cursor-pointer">
@@ -608,7 +705,7 @@
         <p class="mt-7 text-[16px] leading-relaxed text-white/70 max-w-[520px] mx-auto">Book a 30-minute demo. Nothing's shared until the NDA is signed, and nothing's billed unless we find something worth the fee.</p>
         <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="display text-[15px] tracking-wide bg-[#FF5722] text-[#1A1A1A] px-8 py-4 border-2 border-[#1A1A1A] hard-shadow-sm">BOOK YOUR DEMO MEETING →</a>
-          <span class="mono text-[11px] uppercase tracking-widest text-white/40 border-2 border-white/20 px-4 py-2">STATUS: <span class="text-[#FFD700]">ACCEPTING 4 SETS / MONTH</span></span>
+          <span class="mono text-[11px] uppercase tracking-widest text-white/40 border-2 border-white/20 px-4 py-2">STATUS: <span class="text-[#FFD700]">ACCEPTING NEW CLIENTS</span></span>
         </div>
       </div>
       <div class="ruler-top w-full"></div>

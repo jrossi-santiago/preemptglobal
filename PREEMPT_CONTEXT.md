@@ -27,45 +27,51 @@ project size or dollar threshold to work with us anywhere in generated content.
   Preempt Global. Reviews are done by reviewers who've drawn these sets
   themselves — never outsourced, never a black box — with Joe's name on every
   finding.
-- Capacity: capped at 4 sets a month.
 - Turnaround: 48 hours per review pass.
-- Guarantee: $50K-exposure-or-free, on every tier. If the review doesn't surface
-  at least $50,000 in documented cost exposure, the client doesn't pay for it —
-  no partial credit, no fine print.
+- Guarantee: $50K-exposure-or-free, on either offer. If the review doesn't
+  surface at least $50,000 in documented cost exposure, the client doesn't pay
+  for it — no partial credit, no fine print.
 - Confidentiality: an NDA is signed before any drawings move. Nothing is sent
   until it's in place. Documents are deleted on completion.
+- Do not state or imply any cap on subscription capacity or client count
+  anywhere in generated content — that language was intentionally removed
+  from the live site.
 
-## Pricing (tiered — as of the current site)
+## Pricing (two offers — as of the current site)
 
-Three ways to bring Preempt onto a team. Do not describe pricing as a single
-flat number — always reflect the tier structure below, and confirm against the
-live site before quoting exact figures in new content, since these are subject
-to change.
+Two ways to bring Preempt onto a team: a monthly subscription (primary,
+lower cost per review) and a one-time review (secondary). Every deliverable
+starts included on both — specific add-ons can be removed to lower the
+price, but do not invent or quote the exact per-add-on dollar amounts in
+content, since those are intentionally not disclosed on the live site.
+Confirm current figures against the live pricing page before quoting exact
+numbers in new content, since these are subject to change.
 
-**Tier 01 — One-Time Set Review:** $1,500–$7,500 per review.
-Single-pass review of the issued set (all disciplines, drawings + specs), one
-48-hr turnaround, one written findings report (severity-ranked, $ exposure +
-schedule impact per item), one live walkthrough meeting, $50K guarantee.
+**Subscription (recommended):** $7,000/mo. Unlimited sets reviewed, across
+every active project, no cap on number of passes.
 
-**Tier 02 — Per-Project:** $10,000–$25,000 per project (initial set through
-permit/GMP). Everything in Tier 01, plus: re-review of every bulletin, addendum,
-and RFI-driven revision with no cap on number of passes; a cumulative findings
-log tracking resolved vs. open across the life of the project; a single point of
-contact for the whole project; the same 48-hr turnaround per revision; $50K
+**One-Time Review:** $9,000 per review. A single issued set, reviewed once,
+start to finish.
+
+Both offers always include, non-removable: full drawing & spec review across
+all disciplines (drawings + specs), and a written findings report (every
+conflict, sheet-located, severity-ranked, with $ exposure + schedule impact
+per item), plus NDA-first confidentiality, 48-hr turnaround, and the $50K
 guarantee.
 
-**Tier 03 — Monthly Retainer:** $3,500–$7,500/mo, covering multiple active
-projects at once for one flat monthly number.
-- Starter: $3,500/mo, up to 2 sets
-- Growth: $5,500/mo, up to 4 sets
-- Unlimited: $7,500/mo, no cap
+Both offers start with these included, and a buyer can remove any of them to
+reduce price and scope: a 1-hr live review meeting with remediation
+suggestions; permit/bulletin/addendum submissions handled directly with the
+AHJ; revision re-review (every bulletin/addendum/RFI-driven revision
+re-checked, not just the initial set); a dedicated single point of contact;
+a cumulative findings tracker (resolved vs. open, running log).
 
-Includes all bulletins/addendums across every covered project, priority
-scheduling ahead of one-time/per-project clients, a quarterly portfolio risk
-summary, a direct line to Joe with one master NDA covering all projects, pause
-or cancel anytime, and the $50K guarantee.
+Subscription-only, not available on the one-time review: unlimited sets per
+month across every active project, priority scheduling ahead of one-time
+clients, and a quarterly portfolio risk summary.
 
-Custom packages are available outside these tiers for anything that doesn't fit.
+Custom packages are available outside these two offers for anything that
+doesn't fit.
 
 ## Voice
 
