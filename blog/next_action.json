@@ -1,10 +1,10 @@
 {
-  "date": "2026-07-30",
-  "topic": "7 Bid Set Red Flags That Mean Your Documents Aren't Field-Ready",
-  "keyword": "document review checklist",
+  "date": "2026-07-31",
+  "topic": "Where Coordination-Error Costs Actually Come From — and How to Catch Them Before Bid",
+  "keyword": "why so many change orders",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword 'document review checklist' is a generic guide/listicle term with no named commercial product or vendor, so rules 2-5 (comparison, pricing, review, trial) don't match and it falls through to informational per rule 6, routing to a new daily post."
+  "reasoning": "The keyword 'why so many change orders' names no specific commercial product or vendor, so rules 2-5 (comparison, pricing, review, trial) don't match and it falls through to informational per rule 6, routing to a new daily post."
 }

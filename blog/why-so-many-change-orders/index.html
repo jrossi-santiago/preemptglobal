@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#1A1A1A">
 <script src="/assets/tracking.js"></script>
-<title>What Architect QC Covers vs. Owner Review — Preempt Global</title>
-<meta name="description" content="The architect's QC and the GC's coordination review are both real — but neither is scoped to protect the owner. Here's what closes that gap.">
-<link rel="canonical" href="https://preemptglobal.com/blog/architect-qc-vs-owner-review/">
+<title>Where Coordination-Error Costs Actually Come From — and How to Catch Them Before Bid — Preempt Global</title>
+<meta name="description" content="Why so many change orders happen traces back to a handful of root causes, not bad luck. Here's where the preventable slice actually starts, and how to catch it before bid.">
+<link rel="canonical" href="https://preemptglobal.com/blog/why-so-many-change-orders/">
 <link rel="icon" type="image/x-icon" href="/assets/favicons/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
@@ -17,13 +17,13 @@
 
 <!-- Open Graph / Twitter -->
 <meta property="og:type" content="article">
-<meta property="og:title" content="What Architect QC Covers vs. Owner Review">
-<meta property="og:description" content="The architect's QC and the GC's coordination review are both real — but neither is scoped to protect the owner. Here's what closes that gap.">
-<meta property="og:url" content="https://preemptglobal.com/blog/architect-qc-vs-owner-review/">
+<meta property="og:title" content="Where Coordination-Error Costs Actually Come From — and How to Catch Them Before Bid">
+<meta property="og:description" content="Why so many change orders happen traces back to a handful of root causes, not bad luck. Here's where the preventable slice actually starts, and how to catch it before bid.">
+<meta property="og:url" content="https://preemptglobal.com/blog/why-so-many-change-orders/">
 <meta property="og:image" content="https://preemptglobal.com/assets/images/preempt_global_logo.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="What Architect QC Covers vs. Owner Review">
-<meta name="twitter:description" content="The architect's QC and the GC's coordination review are both real — but neither is scoped to protect the owner. Here's what closes that gap.">
+<meta name="twitter:title" content="Where Coordination-Error Costs Actually Come From — and How to Catch Them Before Bid">
+<meta name="twitter:description" content="Why so many change orders happen traces back to a handful of root causes, not bad luck. Here's where the preventable slice actually starts, and how to catch it before bid.">
 <meta name="twitter:image" content="https://preemptglobal.com/assets/images/preempt_global_logo.png">
 
 <script src="https://cdn.tailwindcss.com"></script>
@@ -35,12 +35,12 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "What Architect QC Covers vs. Owner Review",
-  "description": "The architect's QC and the GC's coordination review are both real \u2014 but neither is scoped to protect the owner. Here's what closes that gap.",
-  "datePublished": "2026-07-20",
-  "dateModified": "2026-07-20",
+  "headline": "Where Coordination-Error Costs Actually Come From \u2014 and How to Catch Them Before Bid",
+  "description": "Why so many change orders happen traces back to a handful of root causes, not bad luck. Here's where the preventable slice actually starts, and how to catch it before bid.",
+  "datePublished": "2026-07-31",
+  "dateModified": "2026-07-31",
   "image": "https://preemptglobal.com/assets/images/preempt_global_logo.png",
-  "mainEntityOfPage": "https://preemptglobal.com/blog/architect-qc-vs-owner-review/",
+  "mainEntityOfPage": "https://preemptglobal.com/blog/why-so-many-change-orders/",
   "author": {
     "@type": "Person",
     "name": "Joe Rossi"
@@ -167,7 +167,7 @@
 </head>
 
 <body>
-  <div class="bg-[#1A1A1A] text-white mono text-[11px] tracking-widest px-4 py-1.5 flex justify-between items-center border-b-2 border-[#FF5722]"><span>FIELD NOTES: Coordination</span><span class="hidden sm:inline">SCALE: 1:1 · STATUS: <span class="text-[#FFD700]">LIVE</span></span></div>
+  <div class="bg-[#1A1A1A] text-white mono text-[11px] tracking-widest px-4 py-1.5 flex justify-between items-center border-b-2 border-[#FF5722]"><span>FIELD NOTES: Change Orders</span><span class="hidden sm:inline">SCALE: 1:1 · STATUS: <span class="text-[#FFD700]">LIVE</span></span></div>
   <header class="border-b-2 border-[#1A1A1A] sticky top-0 bg-white z-40">
     <div class="max-w-[1400px] mx-auto flex items-center justify-between px-5 sm:px-8 py-4">
       <a href="/" class="flex items-center gap-2"><img src="/assets/images/preempt_global_logo.png" width="26" height="26" alt="Preempt Global logo" class="object-contain"><span class="display text-base whitespace-nowrap sm:text-xl">Preempt Global</span></a>
@@ -192,21 +192,21 @@
   </header>
 
   <div class="max-w-[1400px] mx-auto px-5 sm:px-8">
-    <p class="mono text-[12px] text-[#1A1A1A]/50 pt-6 flex gap-2 flex-wrap"><a href="/" class="hover-underline">Home</a><span>／</span><a href="/blog" class="hover-underline">Blog</a><span>／</span><span class="text-[#1A1A1A]/70">Coordination</span></p>
+    <p class="mono text-[12px] text-[#1A1A1A]/50 pt-6 flex gap-2 flex-wrap"><a href="/" class="hover-underline">Home</a><span>／</span><a href="/blog" class="hover-underline">Blog</a><span>／</span><span class="text-[#1A1A1A]/70">Change Orders</span></p>
   </div>
 
   <!-- ============ ARTICLE HEADER ============ -->
   <section class="max-w-[1400px] mx-auto px-5 sm:px-8 pt-6 pb-2">
     <div class="max-w-[720px] mx-auto">
       <div class="flex flex-wrap gap-2 mb-6">
+        <span class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/70 border-2 border-[#1A1A1A]/15 px-3 py-1">Change Orders</span>
         <span class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/70 border-2 border-[#1A1A1A]/15 px-3 py-1">Coordination</span>
         <span class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/70 border-2 border-[#1A1A1A]/15 px-3 py-1">Bid Documents</span>
-        <span class="mono text-[11px] uppercase tracking-widest text-[#1A1A1A]/70 border-2 border-[#1A1A1A]/15 px-3 py-1">Owner's Rep</span>
       </div>
 
-      <h1 class="display leading-[1.02] break-words text-[8vw] sm:text-[40px] lg:text-[44px] text-[#1A1A1A]">What Architect QC Covers vs. Owner Review</h1>
+      <h1 class="display leading-[1.02] break-words text-[8vw] sm:text-[40px] lg:text-[44px] text-[#1A1A1A]">Where Coordination-Error Costs Actually Come From — and How to Catch Them Before Bid</h1>
 
-      <p class="mt-6 text-[18px] sm:text-[19px] leading-relaxed text-[#1A1A1A]/65 max-w-[640px]">Why the two reviews already built into your project's process — the architect's and the contractor's — aren't scoped to catch the conflicts that end up costing you the most.</p>
+      <p class="mt-6 text-[18px] sm:text-[19px] leading-relaxed text-[#1A1A1A]/65 max-w-[640px]">Ask why so many change orders hit a project and the honest answer usually isn't a mystery. Most of them trace back to a handful of predictable places — and one of those places is fixable before the set is ever priced.</p>
 
       <div class="mt-8 flex items-center gap-4 border-t-2 border-b-2 border-[#1A1A1A] py-4 flex-wrap">
         <span class="inline-flex items-center justify-center w-11 h-11 bg-[#1A1A1A] text-white font-bold text-[13px] shrink-0 mono">JR</span>
@@ -215,103 +215,139 @@
           <div class="mono text-[12px] text-[#1A1A1A]/50 uppercase tracking-wide">Founding Principal</div>
         </div>
         <div class="mono text-[12.5px] text-[#1A1A1A]/50 sm:ml-auto flex gap-3 flex-wrap items-center">
-          <time datetime="2026-07-20">July 20, 2026</time><span class="text-[#1A1A1A]/25">·</span><span>4 min read</span>
+          <time datetime="2026-07-31">July 31, 2026</time><span class="text-[#1A1A1A]/25">·</span><span>9 min read</span>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="feature-art">
-  <div class="frame">
-    <svg viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Elevation schematic showing a structural beam overlapping a mechanical duct with a flagged conflict zone.">
-      <rect width="1000" height="400" fill="#12203F"/>
-      <defs>
-        <pattern id="gfeat" width="24" height="24" patternUnits="userSpaceOnUse">
-          <path d="M24 0H0V24" fill="none" stroke="#22345C" stroke-width="1"/>
-        </pattern>
-      </defs>
-      <rect width="1000" height="400" fill="url(#gfeat)"/>
-      <rect x="60" y="185" width="880" height="46" fill="#C99A3E"/>
-      <rect x="60" y="176" width="880" height="10" fill="#DDB463"/>
-      <rect x="60" y="228" width="880" height="10" fill="#B08331"/>
-      <text x="70" y="168" fill="#DDB463" font-family="IBM Plex Mono, monospace" font-size="13">S-204 · TRANSFER GIRDER</text>
-      <rect x="440" y="90" width="140" height="220" rx="14" fill="#2A4E8C" fill-opacity="0.92"/>
-      <rect x="440" y="90" width="140" height="220" rx="14" fill="none" stroke="#7FA6C9" stroke-width="2"/>
-      <text x="446" y="80" fill="#7FA6C9" font-family="IBM Plex Mono, monospace" font-size="13">M-302 · SUPPLY DUCT</text>
-      <rect x="440" y="185" width="140" height="46" fill="#B5502E" fill-opacity="0.6" stroke="#E8956E" stroke-width="1.5" stroke-dasharray="4 3"/>
-      <text x="460" y="345" fill="#E8956E" font-family="IBM Plex Mono, monospace" font-size="14" font-weight="600">CONFLICT ZONE — 18" OVERLAP</text>
-    </svg>
-  </div>
-  <p class="feature-cap">Actual finding, anonymized - flagged during a pre-bid document review.</p>
-</div>
-
+  
 
   <!-- ============ ARTICLE BODY ============ -->
   <article class="max-w-[1400px] mx-auto px-5 sm:px-8 pt-10 pb-4">
     <div class="article-body">
 
-  <p class="lede-p">Every large capital project already has two sets of eyes on the drawings before they reach the field. The architect checks the set against design intent. The contractor's coordination review is scoped to pricing the work accurately. Both reviews are real, thorough, and staffed by capable people — and neither one is scoped to protect the party writing the checks.</p>
+  <p class="lede-p">Why so many change orders hit a single project is rarely a mystery once you actually trace them back. Owners tend to talk about change orders as if they're weather — unpredictable, something to budget around rather than something to prevent. That framing holds for two of the three categories that drive them. It does not hold for the third, and that third category is usually the biggest preventable slice on the set: design errors and coordination gaps that were sitting in the documents, readable, before a single crew showed up.</p>
 
-  <p>That gap isn't a failure of process. It's the process working exactly as designed, for a different, legitimate purpose. Once you see it, the pattern shows up on nearly every large, multi-discipline set we've reviewed — commercial, multifamily, industrial, or higher-ed.</p>
+  <p>That distinction is worth taking seriously, because it changes what an owner should actually do about change order volume. Two of the three root causes genuinely can't be eliminated by reading the drawings more closely. The third one can — and understanding why it keeps happening is the first step to catching it before it turns into a line item.</p>
 
-  <h2>The two reviews your project already has</h2>
+  <h2>The Three Places Change Orders Actually Come From</h2>
 
-  <p>Start with what's actually happening on a typical bid or IFC set. The architect of record runs quality control against their own design intent — checking that what got drawn matches what they meant to draw. Once that's confirmed, their review is complete. It was never scoped to catch a mechanical duct routed through a structural member on someone else's sheet.</p>
+  <p>A January 2025 report from the U.S. DOT's Project Delivery Center of Excellence, produced by the Volpe National Transportation Systems Center, grouped the root causes of construction change orders into three categories: the quality of technical project development work, the influence of organizational culture on how issues get raised and resolved, and uncertainty introduced by financial forces outside the project team's control. That framing lines up with what shows up on any large capital project, public or private.</p>
 
-  <p>The general contractor's coordination team reads the same set differently. Their review is scoped to pricing the work accurately — not to flagging cross-discipline conflicts on the owner's behalf, which is a different task with a different objective. <strong>Neither party is doing anything wrong.</strong> They're both doing their jobs as their contracts define them.</p>
-
-<div class="pull-quote">The only party with no one reading the set purely on their behalf is the one who pays for every miss.</div>
-
-  <h2>What an uncaught conflict actually costs</h2>
-
-  <p>The same clash carries a radically different price tag depending on when it's caught. At the design phase, a conflict costs nothing to fix — it's a redline. By permit, it's a coordination note. By bid, someone has already priced around the ambiguity. In the field, it's a stop-work RFI, a change order, and very likely schedule float that no one budgeted for.</p>
-
-<div class="mini-report">
-  <div class="rh"><span class="title">SAMPLE FINDING</span><span class="meta">Illustrative · pre-bid review</span></div>
-  <div class="mini-row"><span class="k">Sheets in conflict</span><span class="v">S-204 / M-302</span></div>
-  <div class="mini-row"><span class="k">Issue</span><span class="v">Girder / duct elevation overlap</span></div>
-  <div class="mini-row"><span class="k">Overlap</span><span class="v hot">18 inches</span></div>
-  <div class="mini-row"><span class="k">Caught pre-bid</span><span class="v">$0</span></div>
-  <div class="mini-row"><span class="k">Cost if built as issued</span><span class="v hot">$85,000–$140,000</span></div>
-</div>
-
-  <p>No clash detection software flagged it, because the model itself wasn't in conflict — it was a general note on one sheet contradicting a routing decision on another. That distinction matters more than it sounds like it should.</p>
-
-  <h3>Why BIM clash detection doesn't close this gap</h3>
-
-  <p>Clash detection is genuinely useful, and most large projects already run it. But it catches geometry — two coordinated elements physically overlapping inside the model. It doesn't catch a written note that prohibits what another sheet requires, a spec section that contradicts a detail, or an omission where no conflicting geometry exists at all because no one ever drew the connection. Those are the conflicts that live in the issued documents themselves, not in the model.</p>
+  <p>Only the first category — the quality of the technical work itself — is something a document-level review can act on before the set ever gets priced. Organizational culture and financial uncertainty are real, but they aren't fixable by reading a drawing set more carefully. The technical-quality category is different: it's made up of things that are already wrong on paper, sitting in the issued set, waiting for someone to notice.</p>
 
 <div class="callout">
   <div class="cl-label">Worth knowing</div>
-  <p>On one 133-sheet bid set for a large data center build — a set that had already been through a top-5 general contractor's own coordination process — an independent owner-side pass surfaced 26 cross-discipline conflicts, six of them critical, representing roughly $430,000 in confirmed field-cost exposure. None had been caught by anyone else on the project.</p>
+  <p>A Texas Department of Transportation study tracking change orders across eleven years of highway projects found that 31% of the total change orders — averaging $45 million a year — were tied specifically to design errors and omissions. That's not a rounding error in the total change order picture; it's close to a third of it, on a category of projects with far more design review scrutiny than most private commercial work ever gets.</p>
 </div>
 
-  <h2>What owners can do before the set goes out</h2>
+  <h2>Why the Design-Error Slice Keeps Slipping Through</h2>
 
-  <p>The fix isn't more process from the same two parties — it's a third, independent read of the set, run for no one's interest but the owner's. In practice that means:</p>
+  <p>If design errors and coordination gaps are genuinely catchable on paper, the obvious question is why so many change orders in that category still happen. The answer isn't that nobody reviews the set — it's how the set typically gets reviewed.</p>
+
+  <p>Most quality control on a construction document set happens discipline by discipline. The structural engineer checks the structural sheets against structural standards. The mechanical engineer checks the mechanical sheets against mechanical standards. Each pass can be thorough and still miss the conflict that only exists between two disciplines' sheets — a duct routed through a beam, a note on one sheet that contradicts a detail on another, a spec section calling for an assembly the drawing doesn't match. None of those show up in a single-discipline QA/QC pass, because each sheet, read on its own, is internally correct. The problem only exists in the gap between sheets — which is exactly the ground covered in <a class="inline-link" href="/blog/qa-qc-passed-doesnt-mean-set-coordinated/">why "it passed QA/QC" doesn't mean the set is coordinated</a>.</p>
+
+  <p>Add schedule pressure on top of that gap and the pattern gets worse, not better. Cross-discipline coordination checks are the first thing compressed when a set has to move to bid on a fixed date — not because anyone decided coordination didn't matter, but because nobody explicitly owns catching the conflicts that live between disciplines instead of inside one. That ownership gap, more than any single mistake, is why so many change orders in the design-error category keep making it all the way to the field before anyone catches them.</p>
+
+  <h2>Where the Preventable Conflicts Actually Sit on the Set</h2>
+
+  <p>The specific conflicts that drive this category aren't random. They cluster in a small number of predictable spots:</p>
 
   <ul>
-    <li><strong>Reviewing the issued set, not just the model.</strong> Written notes, specs, and details matter as much as coordinated geometry.</li>
-    <li><strong>Pricing every finding in dollars.</strong> A "potential conflict" doesn't get budget attention. A documented exposure number does.</li>
-    <li><strong>Doing it before bid, not after.</strong> Every day the set sits uncorrected, the cheapest fix on the table keeps disappearing.</li>
-    <li><strong>Adding a review whose incentives are aligned with the owner's from the start.</strong> A dedicated, owner-paid read focused specifically on cross-discipline exposure, run alongside the architect's QC and the GC's coordination review — not instead of them.</li>
+    <li><strong>MEP-to-structural clashes</strong> — a duct, conduit run, or pipe routed at an elevation that conflicts with a beam or column drawn on a different sheet, as walked through in detail in <a class="inline-link" href="/blog/missed-mep-clash-change-order-cost/">how a single missed MEP clash turns into a $400,000 change order</a>.</li>
+    <li><strong>Spec-vs-drawing contradictions</strong> — a written spec section calling for one assembly while the paired drawing shows a different one.</li>
+    <li><strong>General notes that contradict a detail</strong> — both defensible read alone, impossible to build together.</li>
+    <li><strong>Schedule mismatches</strong> — a door schedule that doesn't match its hardware spec, a panel schedule that doesn't match its one-line diagram.</li>
   </ul>
 
-  <p>None of this requires slowing down a project. A focused, independent pass on a bid set typically takes 48 hours and changes nothing about the design or construction schedule — it just puts a number on what's hiding in the documents before the field finds it.</p>
+  <p>Every one of these already exists on the issued set before a shovel goes in the ground. None of them requires a field surprise to happen — they're sitting on paper, waiting to be read by someone whose job is specifically to check one discipline's sheets against every other discipline's, not just against itself.</p>
 
-  <p>For a fuller breakdown of what makes this kind of review distinct — who pays for it, who it reports to, and how that changes its scope — see <a class="inline-link" href="/construction-qa-qc-review/">what owner-side QA/QC actually means</a>.</p>
+<div class="mini-report">
+  <div class="rh"><span class="title">WHY CHANGE ORDERS HAPPEN — DESIGN-ERROR SLICE</span><span class="meta">published industry figures, not project-specific</span></div>
+  <div class="mini-row"><span class="k">TxDOT 11-yr study, share tied to design E&O</span><span class="v hot">31% of all change orders</span></div>
+  <div class="mini-row"><span class="k">Same study, average annual cost</span><span class="v">$45M/yr</span></div>
+  <div class="mini-row"><span class="k">National average, design-error share of budget</span><span class="v">3%–5% of total project budget</span></div>
+  <div class="mini-row"><span class="k">Total change order costs, all categories</span><span class="v">10%–15% of contract value, some past 25%</span></div>
+</div>
+
+  <h2>Catching It Before the Set Gets Priced</h2>
+
+  <p>Once the design-error slice is understood as a coordination gap rather than an unlucky field discovery, the fix stops being mysterious: someone has to read the full set — drawings and specs, every discipline against every other discipline — before it goes to bid, specifically looking for the conflicts a single-discipline QA/QC pass is structurally unable to catch. That's a different exercise than a code check or a peer review of one discipline's own work; it's a cross-discipline read with the explicit job of finding where the sheets disagree with each other.</p>
+
+  <p>Timing changes what that catch is worth, too. A conflict found before the set is priced is still just a redline — cheap to fix, nobody's contract is built around the wrong version yet. The same conflict found after subcontractors have already bid the set as drawn means reconciling what was priced against what actually has to get built, which is a slower and more expensive version of the identical fix, as covered in <a class="inline-link" href="/blog/pre-bid-drawing-review-vs-ifc-timing/">pre-bid vs. IFC review timing</a>. And once the exposure sitting in a given set is treated as a real number instead of a fixed cost of doing business, it becomes something an owner can act on directly — the actual math for that is laid out in <a class="inline-link" href="/blog/change-order-math-calculating-real-exposure/">change order math: calculating real exposure before you bid</a>.</p>
+
+  <p>Preempt Global's document review is built around exactly that gap: reviewers who've drawn these sets themselves read the full issued set — every discipline against every other — within 48 hours, backed by a $50,000-exposure-or-free guarantee. That guarantee only makes sense as a business model because the design-error slice described above isn't theoretical. It's reliably sitting in sets of this size and complexity, in the same handful of places, waiting to be read before it becomes a change order instead of a redline.</p>
 
 <div class="takeaways">
   <h3>Key takeaways</h3>
   <ul>
-    <li>The architect's QC and the contractor's coordination review are both real — and neither is scoped to protect the owner.</li>
-    <li>The same conflict gets exponentially more expensive the later it's caught: free at design, costly in the field.</li>
-    <li>BIM clash detection catches geometry, not contradictions between written notes, specs, and details.</li>
-    <li>An independent, owner-side review run before bid is the only check with incentives aligned to the owner alone.</li>
+    <li>Change orders trace back to three root categories: technical document quality, organizational culture, and financial uncertainty — only the first is fixable by reading the set more closely.</li>
+    <li>A TxDOT study spanning eleven years found 31% of all change orders, averaging $45 million a year, tied specifically to design errors and omissions.</li>
+    <li>Most QA/QC happens discipline by discipline, which structurally misses conflicts that only exist between two disciplines' sheets — the exact gap a cross-discipline review is built to close.</li>
+    <li>The preventable slice clusters in predictable spots: MEP-vs-structural clashes, spec-vs-drawing contradictions, conflicting general notes, and schedule mismatches.</li>
+    <li>The same conflict is cheapest to fix as a pre-bid redline and gets progressively more expensive the later it's caught — timing, not luck, drives most of the cost difference.</li>
   </ul>
 </div>
 
-  <p>Whichever direction a project ultimately goes, the sequencing rarely changes: the cheapest fix for any given conflict always exists before the set issues, never after. Every day a review gets pushed later is a day that fix gets more expensive for whoever's paying for it — and on projects this size, that's rarely a small difference.</p>
+  <h2>Frequently Asked Questions</h2>
+
+  <h3>Why so many change orders happen on large construction projects?</h3>
+
+  <p>Most change orders trace back to one of three root causes: owner-requested scope changes, unforeseen field conditions, and design errors or coordination gaps already sitting in the issued set. The first two are genuinely hard to predict. The third is a document-level problem, and it's consistently the largest single preventable category — a TxDOT study found 31% of all change orders over an eleven-year span were tied specifically to design errors and omissions.</p>
+
+  <h3>Can better QA/QC alone stop most change orders?</h3>
+
+  <p>Not on its own. Most QA/QC checks a discipline's sheets against that discipline's own standards, which structurally can't catch a conflict that only exists between two disciplines — a mechanical duct routed through a structural beam, for example. Passing QA/QC confirms each sheet is internally correct; it doesn't confirm the sheets agree with each other.</p>
+
+  <h3>What's the difference between a change order caused by design errors and one caused by unforeseen conditions?</h3>
+
+  <p>A design-error change order comes from a conflict already sitting on paper in the issued set — something readable and catchable before the set goes to bid. An unforeseen-condition change order comes from something the drawings couldn't have shown, like a buried utility or subsurface soil condition discovered during excavation. Only the first category is something a pre-bid document review is scoped to prevent.</p>
+
+  <h3>When is the best point to catch a design-error conflict before it becomes a change order?</h3>
+
+  <p>Before the set goes out to bid, while the conflict is still just a redline nobody has priced around. The same conflict caught after subcontractors have already bid the set as drawn requires reconciling what was priced against what actually has to be built — a more expensive, more contentious version of the identical fix.</p>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why so many change orders happen on large construction projects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most change orders trace back to one of three root causes: owner-requested scope changes, unforeseen field conditions, and design errors or coordination gaps already sitting in the issued set. The first two are genuinely hard to predict. The third is a document-level problem, and it's consistently the largest single preventable category — a TxDOT study found 31% of all change orders over an eleven-year span were tied specifically to design errors and omissions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can better QA/QC alone stop most change orders?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not on its own. Most QA/QC checks a discipline's sheets against that discipline's own standards, which structurally can't catch a conflict that only exists between two disciplines — a mechanical duct routed through a structural beam, for example. Passing QA/QC confirms each sheet is internally correct; it doesn't confirm the sheets agree with each other."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between a change order caused by design errors and one caused by unforeseen conditions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A design-error change order comes from a conflict already sitting on paper in the issued set — something readable and catchable before the set goes to bid. An unforeseen-condition change order comes from something the drawings couldn't have shown, like a buried utility or subsurface soil condition discovered during excavation. Only the first category is something a pre-bid document review is scoped to prevent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is the best point to catch a design-error conflict before it becomes a change order?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Before the set goes out to bid, while the conflict is still just a redline nobody has priced around. The same conflict caught after subcontractors have already bid the set as drawn requires reconciling what was priced against what actually has to be built — a more expensive, more contentious version of the identical fix."
+      }
+    }
+  ]
+}
+</script>
 
       <hr class="divider">
     </div>
@@ -340,9 +376,9 @@
 
       <div class="mt-8 flex items-center gap-4 flex-wrap pt-6 border-t-2 border-[#1A1A1A]/10">
         <span class="mono text-[12px] uppercase tracking-widest text-[#1A1A1A]/50">Share this</span>
-        <a href="mailto:?subject=What%20Architect%20QC%20Covers%20vs.%20Owner%20Review&amp;body=https://preemptglobal.com/blog/architect-qc-vs-owner-review/" class="mono text-[12.5px] border-2 border-[#1A1A1A]/20 px-4 py-2 hover-underline">Email</a>
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://preemptglobal.com/blog/architect-qc-vs-owner-review/" target="_blank" rel="noopener" class="mono text-[12.5px] border-2 border-[#1A1A1A]/20 px-4 py-2 hover-underline">LinkedIn</a>
-        <button type="button" class="js-copy-link mono text-[12.5px] border-2 border-[#1A1A1A]/20 px-4 py-2 bg-transparent cursor-pointer hover-underline" data-url="https://preemptglobal.com/blog/architect-qc-vs-owner-review/">Copy link</button>
+        <a href="mailto:?subject=Where%20Coordination-Error%20Costs%20Actually%20Come%20From%20%E2%80%94%20and%20How%20to%20Catch%20Them%20Before%20Bid&amp;body=https://preemptglobal.com/blog/why-so-many-change-orders/" class="mono text-[12.5px] border-2 border-[#1A1A1A]/20 px-4 py-2 hover-underline">Email</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://preemptglobal.com/blog/why-so-many-change-orders/" target="_blank" rel="noopener" class="mono text-[12.5px] border-2 border-[#1A1A1A]/20 px-4 py-2 hover-underline">LinkedIn</a>
+        <button type="button" class="js-copy-link mono text-[12.5px] border-2 border-[#1A1A1A]/20 px-4 py-2 bg-transparent cursor-pointer hover-underline" data-url="https://preemptglobal.com/blog/why-so-many-change-orders/">Copy link</button>
       </div>
     </div>
   </section>
@@ -352,11 +388,6 @@
       <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">Keep Reading</p>
       <h2 class="display break-words text-[8vw] sm:text-[32px] leading-[1.05] mb-8 text-[#1A1A1A]">MORE FROM THE FIELD.</h2>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
-        <a href="/blog/why-so-many-change-orders/" class="block bg-white border-2 border-[#1A1A1A] p-5 hard-shadow-sm hover:-translate-y-0.5 transition-transform">
-          <span class="mono text-[10.5px] uppercase tracking-widest text-[#FF5722] font-bold">Change Orders</span>
-          <h4 class="display text-[16px] leading-snug mt-3 mb-3 text-[#1A1A1A]">Where Coordination-Error Costs Actually Come From — and How to Catch Them Before Bid</h4>
-          <span class="mono text-[11.5px] text-[#1A1A1A]/50">9 min read</span>
-        </a>
         <a href="/blog/bid-set-red-flags-document-review-checklist/" class="block bg-white border-2 border-[#1A1A1A] p-5 hard-shadow-sm hover:-translate-y-0.5 transition-transform">
           <span class="mono text-[10.5px] uppercase tracking-widest text-[#FF5722] font-bold">Bid Documents</span>
           <h4 class="display text-[16px] leading-snug mt-3 mb-3 text-[#1A1A1A]">7 Bid Set Red Flags That Mean Your Documents Aren't Field-Ready</h4>
@@ -366,6 +397,11 @@
           <span class="mono text-[10.5px] uppercase tracking-widest text-[#FF5722] font-bold">Document Review</span>
           <h4 class="display text-[16px] leading-snug mt-3 mb-3 text-[#1A1A1A]">AI QA/QC Tools vs. Independent Document Review: Who Owns the Call?</h4>
           <span class="mono text-[11.5px] text-[#1A1A1A]/50">6 min read</span>
+        </a>
+        <a href="/blog/bim-clash-detection-what-it-catches-and-misses/" class="block bg-white border-2 border-[#1A1A1A] p-5 hard-shadow-sm hover:-translate-y-0.5 transition-transform">
+          <span class="mono text-[10.5px] uppercase tracking-widest text-[#FF5722] font-bold">BIM</span>
+          <h4 class="display text-[16px] leading-snug mt-3 mb-3 text-[#1A1A1A]">BIM Clash Detection: What It Catches (and Misses)</h4>
+          <span class="mono text-[11.5px] text-[#1A1A1A]/50">9 min read</span>
         </a>
       </div>
     </div>
@@ -388,7 +424,7 @@
         </div>
         <div class="border-r border-[#1A1A1A] p-3">
           <p class="text-[#1A1A1A]/50 uppercase">Date</p>
-          <p class="font-bold mt-1"><time datetime="2026-07-20">July 20, 2026</time></p>
+          <p class="font-bold mt-1"><time datetime="2026-07-31">July 31, 2026</time></p>
         </div>
         <div class="p-3">
           <p class="text-[#1A1A1A]/50 uppercase">Sheet</p>
