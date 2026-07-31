@@ -28,7 +28,7 @@ project size or dollar threshold to work with us anywhere in generated content.
   themselves — never outsourced, never a black box — with Joe's name on every
   finding.
 - Turnaround: 48 hours per review pass.
-- Guarantee: $50K-exposure-or-free, on either offer. If the review doesn't
+- Guarantee: $50K-exposure-or-free, on every offer. If the review doesn't
   surface at least $50,000 in documented cost exposure, the client doesn't pay
   for it — no partial credit, no fine print.
 - Confidentiality: an NDA is signed before any drawings move. Nothing is sent
@@ -37,42 +37,58 @@ project size or dollar threshold to work with us anywhere in generated content.
   anywhere in generated content — that language was intentionally removed
   from the live site.
 
-## Pricing (two offers — as of the current site)
+## Pricing (three offers — as of the current site)
 
-Two ways to bring Preempt onto a team: a monthly retainer (primary,
-lower cost per review) and a one-time review (secondary). Every deliverable
-starts included on both — specific add-ons can be removed to lower the
-price, but do not invent or quote the exact per-add-on dollar amounts in
-content, since those are intentionally not disclosed on the live site.
-Confirm current figures against the live pricing page before quoting exact
-numbers in new content, since these are subject to change. Never call this
-offer a "subscription" — it's a retainer, not a SaaS plan.
+Three ways to bring Preempt onto a team: a Simple Retainer, a Custom
+Retainer, and a Simple Single Review. Never call any of these a
+"subscription" — the retainers are B2B professional services, not a SaaS
+plan. Confirm current figures against the live pricing page before quoting
+exact numbers in new content, since these are subject to change.
 
-**Retainer (recommended):** $7,000/mo. Unlimited sets reviewed, across
-every active project, no cap on number of passes.
+**Simple Retainer:** $2,750/mo flat. Unlimited sets reviewed, across every
+active project, no cap on number of passes, plus an optional live review
+meeting every time (client's choice whether to take it, no extra charge).
+No configurator, no add-ons, nothing to check or uncheck — it's a flat
+rate. Does not include AHJ handling, revision re-review, a dedicated point
+of contact, or a cumulative findings tracker at any price; those are
+Custom Retainer features only.
 
-**One-Time Review:** $9,000 per review. A single issued set, reviewed once,
-start to finish.
+**Custom Retainer:** starts at $5,000/mo fully loaded (every add-on
+included), configurable down from there — a buyer can remove any add-on to
+lower price and scope. Do not invent or quote the exact per-add-on dollar
+amounts in content, since those are intentionally not disclosed on the
+live site.
 
-Both offers always include, non-removable: full drawing & spec review across
-all disciplines (drawings + specs), and a written findings report (every
-conflict, sheet-located, severity-ranked, with $ exposure + schedule impact
-per item), plus NDA-first confidentiality, 48-hr turnaround, and the $50K
-guarantee.
+**Simple Single Review:** $1,375 per review flat. One issued set, reviewed
+once, start to finish, plus an optional live review meeting. No
+configurator, no add-ons — same flat-rate structure as the Simple
+Retainer, scaled to a single review. This replaced the old $9,000
+"one-time review" configurator entirely; do not reference a $9,000
+one-time review anywhere — it no longer exists.
 
-Both offers start with these included, and a buyer can remove any of them to
-reduce price and scope: a 1-hr live review meeting with remediation
-suggestions; permit/bulletin/addendum submissions handled directly with the
-AHJ; revision re-review (every bulletin/addendum/RFI-driven revision
-re-checked, not just the initial set); a dedicated single point of contact;
-a cumulative findings tracker (resolved vs. open, running log).
+All three offers always include, non-removable: full drawing & spec review
+across all disciplines (drawings + specs), and a written findings report
+(every conflict, sheet-located, severity-ranked, with $ exposure + schedule
+impact per item), plus NDA-first confidentiality, 48-hr turnaround, and the
+$50K guarantee.
 
-Retainer-only, not available on the one-time review: unlimited sets per
-month across every active project, priority scheduling ahead of one-time
-clients, and a quarterly portfolio risk summary.
+Only the Custom Retainer has add-ons to configure. It starts with these
+included, and a buyer can remove any of them to reduce price and scope: a
+1-hr live review meeting with remediation suggestions; permit/bulletin/
+addendum submissions handled directly with the AHJ; revision re-review
+(every bulletin/addendum/RFI-driven revision re-checked, not just the
+initial set); a dedicated single point of contact; a cumulative findings
+tracker (resolved vs. open, running log).
 
-Custom packages are available outside these two offers for anything that
-doesn't fit.
+Retainer-only perks (Custom Retainer only, not available on either Simple
+tier): unlimited sets per month across every active project, priority
+scheduling ahead of one-time clients, and a quarterly portfolio risk
+summary.
+
+Custom packages are available outside these three offers for anything that
+doesn't fit — when referring to this catch-all, call it a "custom-scoped
+package" or similar, not "custom package," to avoid confusion with the
+named "Custom Retainer" tier.
 
 ## Voice
 
