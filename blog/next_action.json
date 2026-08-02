@@ -1,10 +1,10 @@
 {
-  "date": "2026-08-01",
-  "topic": "Constructability Review vs. Peer Review: What's the Actual Difference?",
-  "keyword": "constructability review vs peer review",
+  "date": "2026-08-02",
+  "topic": "What Counts as a \"Set\" Ready for Bid? A Document Review Checklist for Owners",
+  "keyword": "document review checklist",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword contains \"vs\" but names no specific commercial product/vendor on either side (constructability review and peer review are both generic methods), so rule 2 (comparison) explicitly does not match per its stated non-match example, and no other rule (alternatives, pricing, review, trial_or_discount) matches either, so it falls through to the informational default and routes to daily-post.md as a new post."
+  "reasoning": "The keyword is a generic service-category/how-to term with no named commercial product and no vs/pricing/review-intent signal, so it falls through rules 1-5 to the informational default."
 }

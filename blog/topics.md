@@ -22,9 +22,9 @@ Already published:
 - [x] 7 Bid Set Red Flags That Mean Your Documents Aren't Field-Ready — `bid-set-red-flags-document-review-checklist` — 2026-07-30 (document review checklist)
 - [x] Where Coordination-Error Costs Actually Come From — and How to Catch Them Before Bid — `why-so-many-change-orders` — 2026-07-31 (why so many change orders)
 - [x] Constructability Review vs. Peer Review: What's the Actual Difference? — `constructability-review-vs-peer-review` — 2026-08-01 (constructability review vs peer review)
+- [x] What Counts as a "Set" Ready for Bid? A Document Review Checklist for Owners — `set-ready-for-bid-document-review-checklist` — 2026-08-02 (document review checklist)
 
 Queue:
-- [ ] What Counts as a "Set" Ready for Bid? A Document Review Checklist for Owners (document review checklist)
 - [ ] Average Change Order Percentage by Project Type: What the Data Actually Shows (average change order percentage by project type)
 - [ ] When Spec Sections Contradict the Drawings: A Field Guide to Spec vs. Drawing Conflicts (spec vs drawing conflicts)
 - [ ] When Should an Owner Hire a Drawing Review Consultant? A Timing Guide (when to hire a drawing review consultant)
