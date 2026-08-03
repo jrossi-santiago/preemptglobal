@@ -451,23 +451,24 @@
     <section id="pricing" class="border-b-2 border-[#1A1A1A] bg-white blueprint-grid">
       <div class="max-w-[1400px] mx-auto px-5 sm:px-8 py-16 lg:py-20">
         <p class="mono text-[12px] uppercase tracking-[0.15em] text-[#FF5722] font-bold mb-4">Pricing</p>
-        <h2 class="display break-words text-[10vw] sm:text-[44px] lg:text-[50px] leading-[0.95] mb-3">BUILD YOUR OFFER.<br />UNCHECK WHAT YOU DON'T NEED.</h2>
-        <p class="mono text-[13px] text-[#1A1A1A]/60 mb-10 max-w-[680px]">Everything starts checked. The core review can't be removed — everything below it can. <a href="/pricing/" class="hover-underline font-bold text-[#1A1A1A]">Full pricing breakdown →</a></p>
+        <h2 class="display break-words text-[10vw] sm:text-[44px] lg:text-[50px] leading-[0.95] mb-3">TWO FLAT RATES.<br />ONE YOU BUILD YOURSELF.</h2>
+        <p class="mono text-[13px] text-[#1A1A1A]/60 mb-10 max-w-[680px]">Simple Retainer and Simple Single Review are one flat price — nothing to configure. Switch to Custom Retainer to build your own. <a href="/pricing/" class="hover-underline font-bold text-[#1A1A1A]">Full pricing breakdown →</a></p>
 
         <div>
-          <div class="grid grid-cols-2 border-2 border-[#1A1A1A]" role="tablist">
-            <button type="button" id="home-mode-btn-retainer" data-home-mode-btn="retainer" role="tab" aria-selected="true" class="display text-[13px] sm:text-[15px] px-3 py-4 border-r-2 border-[#1A1A1A] transition-colors">RETAINER</button>
-            <button type="button" id="home-mode-btn-onetime" data-home-mode-btn="onetime" role="tab" aria-selected="false" class="display text-[13px] sm:text-[15px] px-3 py-4 transition-colors">ONE-TIME REVIEW</button>
+          <div class="grid grid-cols-3 border-2 border-[#1A1A1A]" role="tablist">
+            <button type="button" id="home-mode-btn-simple-retainer" data-home-mode-btn="simple-retainer" role="tab" aria-selected="true" class="display text-[11px] sm:text-[15px] px-2 sm:px-3 py-4 border-r-2 border-[#1A1A1A] transition-colors">SIMPLE RETAINER</button>
+            <button type="button" id="home-mode-btn-custom-retainer" data-home-mode-btn="custom-retainer" role="tab" aria-selected="false" class="display text-[11px] sm:text-[15px] px-2 sm:px-3 py-4 border-r-2 border-[#1A1A1A] transition-colors">CUSTOM RETAINER</button>
+            <button type="button" id="home-mode-btn-simple-review" data-home-mode-btn="simple-review" role="tab" aria-selected="false" class="display text-[11px] sm:text-[15px] px-2 sm:px-3 py-4 transition-colors">SIMPLE REVIEW</button>
           </div>
 
           <div id="home-offer-card" class="border-2 border-t-0 border-[#1A1A1A] bg-[#1A1A1A] hard-shadow-orange">
-            <div class="grid lg:grid-cols-4">
+            <div id="home-offer-grid" class="grid lg:grid-cols-2">
 
               <!-- buy box -->
               <div class="p-6 sm:p-7 bg-[#FF5722]/[0.06] lg:border-r-2 border-white/15 flex flex-col">
-                <p id="home-offer-eyebrow" class="mono text-[11px] uppercase tracking-widest text-[#FFD700] font-bold mb-2">Recommended · Lower Cost Per Review</p>
+                <p id="home-offer-eyebrow" class="mono text-[11px] uppercase tracking-widest text-[#FFD700] font-bold mb-2">Simple · Flat Monthly Rate</p>
                 <p id="home-offer-scope" class="mono text-[12px] text-white/60 mb-4">Unlimited sets, every active project.</p>
-                <p class="display text-white text-[36px] sm:text-[40px] leading-none mb-4">$<span id="home-offer-price">7,000</span><span id="home-offer-unit" class="text-white/50 text-[16px]">/mo</span></p>
+                <p class="display text-white text-[36px] sm:text-[40px] leading-none mb-4">$<span id="home-offer-price">2,750</span><span id="home-offer-unit" class="text-white/50 text-[16px]">/mo</span></p>
                 <div class="border-2 border-[#FFD700] bg-[#FFD700]/10 px-3 py-2 mb-3 flex items-center gap-2">
                   <span class="text-[#FFD700] font-bold text-[14px] shrink-0">✓</span>
                   <span class="mono text-[11px] text-white font-bold uppercase tracking-wide leading-snug">$50K-Exposure-Or-Free Guarantee</span>
@@ -477,7 +478,7 @@
               </div>
 
               <!-- core review -->
-              <div class="p-6 sm:p-7 lg:border-r-2 border-white/15 border-t-2 lg:border-t-0">
+              <div id="home-offer-core-col" class="p-6 sm:p-7 border-white/15 border-t-2 lg:border-t-0">
                 <p class="mono text-[11px] uppercase tracking-widest text-white/40 mb-3">Core Review — Always Included</p>
                 <ul class="space-y-3">
                   <li class="flex gap-2.5 items-start">
@@ -492,11 +493,12 @@
                 <div class="mt-6 pt-5 border-t border-white/15 space-y-2">
                   <p class="mono text-[11px] text-white/60">✓ NDA signed before docs move</p>
                   <p class="mono text-[11px] text-white/60">✓ 48-hour turnaround, per pass</p>
+                  <p id="home-offer-meeting-note" class="mono text-[11px] text-white/60">✓ Optional live review meeting, every time — no extra charge</p>
                 </div>
               </div>
 
-              <!-- optional add-ons -->
-              <div class="p-6 sm:p-7 lg:border-r-2 border-white/15 border-t-2 lg:border-t-0">
+              <!-- optional add-ons (Custom Retainer only) -->
+              <div id="home-offer-addons" class="p-6 sm:p-7 lg:border-r-2 border-white/15 border-t-2 lg:border-t-0" style="display:none">
                 <p class="mono text-[11px] uppercase tracking-widest text-white/40 mb-3">Add-Ons — Uncheck To Remove</p>
                 <ul class="space-y-3">
                   <li class="flex gap-2.5 items-start">
@@ -522,8 +524,8 @@
                 </ul>
               </div>
 
-              <!-- retainer-only perks -->
-              <div id="home-retainer-only-perks" class="p-6 sm:p-7 border-t-2 lg:border-t-0">
+              <!-- retainer-only perks (Custom Retainer only) -->
+              <div id="home-retainer-only-perks" class="p-6 sm:p-7 border-t-2 lg:border-t-0" style="display:none">
                 <p class="mono text-[11px] uppercase tracking-widest text-[#FFD700] font-bold mb-3">Retainer-Only Perks</p>
                 <ul class="space-y-3">
                   <li class="flex gap-2.5 items-start">
@@ -539,7 +541,7 @@
                     <span class="mono text-[12.5px] leading-snug text-white/85">Quarterly portfolio summary</span>
                   </li>
                 </ul>
-                <p class="mt-6 pt-5 border-t border-white/15 mono text-[11px] text-white/40">Not available on a one-time review.</p>
+                <p class="mt-6 pt-5 border-t border-white/15 mono text-[11px] text-white/40">Not available on either Simple offer.</p>
               </div>
 
             </div>
@@ -547,9 +549,9 @@
         </div>
 
         <div class="mt-10 border-2 border-[#1A1A1A] bg-[#1A1A1A] px-6 py-6 sm:py-7 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
-          <p class="text-white/85 text-[14px] sm:text-[15px] leading-relaxed max-w-[640px]"><span class="text-[#FFD700] font-bold">$50K-exposure-or-free, on either offer.</span> If the review doesn't surface at least $50,000 in documented cost exposure, you don't pay for it — no partial credit, no fine print. On a set of this size and complexity, there's always something to find.</p>
+          <p class="text-white/85 text-[14px] sm:text-[15px] leading-relaxed max-w-[640px]"><span class="text-[#FFD700] font-bold">$50K-exposure-or-free, on every offer.</span> If the review doesn't surface at least $50,000 in documented cost exposure, you don't pay for it — no partial credit, no fine print. On a set of this size and complexity, there's always something to find.</p>
           <div class="flex flex-col sm:items-end gap-2 shrink-0">
-            <p class="mono text-[12px] uppercase tracking-widest text-white/50">Don't see a fit? Custom packages are available.</p>
+            <p class="mono text-[12px] uppercase tracking-widest text-white/50">Don't see a fit? Custom-scoped packages are available.</p>
             <a href="https://cal.com/preemptglobal/30min" target="_blank" rel="noopener noreferrer" class="mono text-[12px] uppercase tracking-wide bg-[#FF5722] text-[#1A1A1A] font-bold px-5 py-3 border-2 border-[#1A1A1A] hard-shadow-sm whitespace-nowrap">Schedule A Call To Discuss →</a>
           </div>
         </div>
@@ -557,33 +559,50 @@
       <script>
         (function () {
           var OFFERS = {
-            retainer: {
-              base: 7000,
+            'simple-retainer': {
+              base: 2750,
               unit: '/mo',
-              eyebrow: 'Recommended · Lower Cost Per Review',
+              eyebrow: 'Simple · Flat Monthly Rate',
+              scope: 'Unlimited sets, every active project.',
+              ctaText: 'Book A Retainer Call →',
+              simple: true
+            },
+            'custom-retainer': {
+              base: 5000,
+              unit: '/mo',
+              eyebrow: 'Recommended · Build Your Own',
               scope: 'Unlimited sets reviewed — every active project, no cap on passes.',
               ctaText: 'Book A Retainer Call →',
-              deltas: { meeting: 500, ahj: 1000, revision: 750, poc: 500, tracker: 500 }
+              simple: false,
+              deltas: { meeting: 250, ahj: 500, revision: 500, poc: 250, tracker: 250 }
             },
-            onetime: {
-              base: 9000,
+            'simple-review': {
+              base: 1375,
               unit: '',
-              eyebrow: 'Single Set · One Clean Pass',
+              eyebrow: 'Simple · Flat Per-Review Rate',
               scope: 'One issued set, reviewed once, start to finish.',
               ctaText: 'Book A Set Review →',
-              deltas: { meeting: 750, ahj: 1500, revision: 2000, poc: 500, tracker: 500 }
+              simple: true
             }
           };
+          var MODES = ['simple-retainer', 'custom-retainer', 'simple-review'];
 
-          var mode = 'retainer';
+          var mode = 'simple-retainer';
           var priceEl = document.getElementById('home-offer-price');
           var unitEl = document.getElementById('home-offer-unit');
           var eyebrowEl = document.getElementById('home-offer-eyebrow');
           var scopeEl = document.getElementById('home-offer-scope');
           var ctaEl = document.getElementById('home-offer-cta');
-          var subOnlyEl = document.getElementById('home-retainer-only-perks');
-          var btnSub = document.getElementById('home-mode-btn-retainer');
-          var btnOne = document.getElementById('home-mode-btn-onetime');
+          var perksEl = document.getElementById('home-retainer-only-perks');
+          var addonsEl = document.getElementById('home-offer-addons');
+          var meetingNoteEl = document.getElementById('home-offer-meeting-note');
+          var gridEl = document.getElementById('home-offer-grid');
+          var coreColEl = document.getElementById('home-offer-core-col');
+          var modeButtons = {
+            'simple-retainer': document.getElementById('home-mode-btn-simple-retainer'),
+            'custom-retainer': document.getElementById('home-mode-btn-custom-retainer'),
+            'simple-review': document.getElementById('home-mode-btn-simple-review')
+          };
           var checkboxes = document.querySelectorAll('.home-offer-checkbox');
 
           function formatPrice(n) {
@@ -593,18 +612,25 @@
           function recalc() {
             var offer = OFFERS[mode];
             var total = offer.base;
-            checkboxes.forEach(function (box) {
-              if (!box.checked) {
-                total -= offer.deltas[box.getAttribute('data-home-item')] || 0;
-              }
-            });
+            if (!offer.simple) {
+              checkboxes.forEach(function (box) {
+                if (!box.checked) {
+                  total -= offer.deltas[box.getAttribute('data-home-item')] || 0;
+                }
+              });
+            }
             priceEl.textContent = formatPrice(total);
             unitEl.textContent = offer.unit;
           }
 
           function setActiveButton() {
-            [btnSub, btnOne].forEach(function (btn) { btn.classList.remove('bg-[#1A1A1A]', 'text-white'); btn.classList.add('bg-white', 'text-[#1A1A1A]'); btn.setAttribute('aria-selected', 'false'); });
-            var active = mode === 'retainer' ? btnSub : btnOne;
+            MODES.forEach(function (m) {
+              var btn = modeButtons[m];
+              btn.classList.remove('bg-[#1A1A1A]', 'text-white');
+              btn.classList.add('bg-white', 'text-[#1A1A1A]');
+              btn.setAttribute('aria-selected', 'false');
+            });
+            var active = modeButtons[mode];
             active.classList.remove('bg-white', 'text-[#1A1A1A]');
             active.classList.add('bg-[#1A1A1A]', 'text-white');
             active.setAttribute('aria-selected', 'true');
@@ -615,14 +641,20 @@
             eyebrowEl.textContent = offer.eyebrow;
             scopeEl.textContent = offer.scope;
             ctaEl.textContent = offer.ctaText;
-            subOnlyEl.style.display = mode === 'retainer' ? '' : 'none';
+            perksEl.style.display = mode === 'custom-retainer' ? '' : 'none';
+            addonsEl.style.display = offer.simple ? 'none' : '';
+            meetingNoteEl.style.display = offer.simple ? '' : 'none';
+            gridEl.classList.toggle('lg:grid-cols-2', offer.simple);
+            gridEl.classList.toggle('lg:grid-cols-4', !offer.simple);
+            coreColEl.classList.toggle('lg:border-r-2', !offer.simple);
             checkboxes.forEach(function (box) { box.checked = true; });
             setActiveButton();
             recalc();
           }
 
-          btnSub.addEventListener('click', function () { mode = 'retainer'; applyMode(); });
-          btnOne.addEventListener('click', function () { mode = 'onetime'; applyMode(); });
+          MODES.forEach(function (m) {
+            modeButtons[m].addEventListener('click', function () { mode = m; applyMode(); });
+          });
           checkboxes.forEach(function (box) { box.addEventListener('change', recalc); });
 
           applyMode();

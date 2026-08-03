@@ -48,23 +48,28 @@ Do this, fully autonomously, no confirmation needed:
 
 4. Confirm the real, current figures before writing anything:
    - Never invent a number. Pull pricing straight from
-     PREEMPT_CONTEXT.md's pricing section (retainer $7,000/mo for
-     unlimited set reviews, one-time review $9,000 per review — both
-     start with every deliverable included, and specific add-ons can be
-     removed to lower the price), and cross-check against the live
-     pricing page (pricing/index.html, id="tiers") since
-     PREEMPT_CONTEXT.md itself notes pricing is subject to change.
+     PREEMPT_CONTEXT.md's pricing section (Simple Retainer $2,750/mo flat,
+     Custom Retainer starting at $5,000/mo fully loaded and configurable
+     down, Simple Single Review $1,375 per review flat — only the Custom
+     Retainer has add-ons, and specific add-on dollar amounts are not
+     disclosed in content), and cross-check against the live pricing page
+     (pricing/index.html, id="tiers") since PREEMPT_CONTEXT.md itself
+     notes pricing is subject to change.
    - If the two sources disagree, trust the live pricing page and note
      the discrepancy in your reply so PREEMPT_CONTEXT.md can be
      corrected.
-   - State pricing as the two-offer structure it actually is (default
-     to leading with the retainer as the lower cost per review) —
-     do not invent a third tier or a per-project package.
-   - Never call the retainer a "subscription" — it's B2B professional
+   - State pricing as the three-offer structure it actually is (Simple
+     Retainer, Custom Retainer, Simple Single Review) — do not invent a
+     fourth tier or collapse it back into two offers. The old $9,000
+     one-time review no longer exists; never reference it.
+   - Never call either retainer a "subscription" — it's B2B professional
      services language, not a SaaS plan.
    - Do not describe retainer capacity or client count as capped
      or limited in any way — that language was intentionally removed
      from the live site and should not be reintroduced.
+   - When referring to the catch-all custom-scoped offering for anything
+     that doesn't fit the three named tiers, don't call it a "custom
+     package" — that collides with the named "Custom Retainer" tier.
 
 5. Write or update the page as blog/posts/YYYY-MM-DD-slug.md (new) or
    in place (existing), 800–1,500 words. Complete frontmatter per
@@ -73,9 +78,9 @@ Do this, fully autonomously, no confirmation needed:
    non-removable), which add-ons can be unchecked to adjust price, the
    48-hour turnaround, the $50K-exposure-or-free guarantee (no partial
    credit, no fine print), and how a buyer should decide between the
-   retainer and the one-time review. No invented discounts, no
-   invented "starting at" figures beyond what the two offers actually
-   state.
+   Simple Retainer, Custom Retainer, and Simple Single Review. No
+   invented discounts, no invented "starting at" figures beyond what the
+   three offers actually state.
 
 6. End the body with an FAQ section: 3–5 real searcher questions
    (check "People Also Ask"-style phrasings during research), each
@@ -102,7 +107,8 @@ Do this, fully autonomously, no confirmation needed:
     if you updated rather than created), matching the "Already
     published" format. If fewer than 10 unchecked topics remain, add
     6–8 new topics per PREEMPT_CONTEXT.md's pricing offers, spread
-    across the retainer and one-time review.
+    across the Simple Retainer, Custom Retainer, and Simple Single
+    Review.
 
 11. Commit all changes (new/updated post .md, generated
     blog/<slug>/index.html, regenerated blog/index.html, sitemap.xml,
