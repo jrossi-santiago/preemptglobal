@@ -1,5 +1,5 @@
 ---
-title: "E&O Insurance and the Real Cost of Design Errors and Omissions: What Owners Should Ask For"
+title: "E&O Insurance and Design Error Costs"
 slug: eo-insurance-cost-of-design-errors-and-omissions
 date: 2026-07-28
 description: "The cost of design errors and omissions isn't fully covered by your architect's E&O policy. Here's what that insurance actually protects, and what owners should ask for."

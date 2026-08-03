@@ -1,5 +1,5 @@
 ---
-title: "What Counts as a \"Set\" Ready for Bid? A Document Review Checklist for Owners"
+title: "Bid-Ready Document Review Checklist"
 slug: set-ready-for-bid-document-review-checklist
 date: 2026-08-02
 description: "A document review checklist for owners: what actually has to be true of a drawing set before it's ready for bid, beyond a stack of sheets with a bid date on the cover."
