@@ -1,10 +1,10 @@
 {
-  "date": "2026-08-02",
-  "topic": "What Counts as a \"Set\" Ready for Bid? A Document Review Checklist for Owners",
-  "keyword": "document review checklist",
+  "date": "2026-08-03",
+  "topic": "Average Change Order Percentage by Project Type: What the Data Actually Shows",
+  "keyword": "average change order percentage by project type",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword is a generic service-category/how-to term with no named commercial product and no vs/pricing/review-intent signal, so it falls through rules 1-5 to the informational default."
+  "reasoning": "Keyword names no specific commercial product/vendor and doesn't match alternatives, comparison, pricing, review, or trial/discount rules, so it falls through to the informational default."
 }
