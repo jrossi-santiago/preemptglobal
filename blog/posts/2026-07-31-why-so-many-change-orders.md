@@ -1,5 +1,5 @@
 ---
-title: "Where Coordination-Error Costs Actually Come From — and How to Catch Them Before Bid"
+title: "Why So Many Change Orders Trace Back to Coordination Errors"
 slug: why-so-many-change-orders
 date: 2026-07-31
 description: "Why so many change orders happen traces back to a handful of root causes, not bad luck. Here's where the preventable slice actually starts, and how to catch it before bid."
