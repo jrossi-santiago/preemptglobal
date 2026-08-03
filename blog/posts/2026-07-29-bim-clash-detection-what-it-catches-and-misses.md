@@ -1,5 +1,5 @@
 ---
-title: "BIM Clash Detection: What It Catches (and Misses)"
+title: "BIM Clash Detection: What It Misses"
 slug: bim-clash-detection-what-it-catches-and-misses
 date: 2026-07-29
 description: "BIM clash detection catches geometry — two modeled elements overlapping. Here's exactly what it catches, what it misses, and where paper clash detection picks up."

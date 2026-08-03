@@ -1,5 +1,5 @@
 ---
-title: "Constructability Review vs. Peer Review: What's the Actual Difference?"
+title: "Constructability Review vs. Peer Review"
 slug: constructability-review-vs-peer-review
 date: 2026-08-01
 description: "Constructability review vs peer review: two different checks that get lumped together. Here's what each one actually looks for, and why a set needs both."

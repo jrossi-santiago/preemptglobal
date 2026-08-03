@@ -1,5 +1,5 @@
 ---
-title: "7 Bid Set Red Flags That Mean Your Documents Aren't Field-Ready"
+title: "7 Bid Set Red Flags in Document Review"
 slug: bid-set-red-flags-document-review-checklist
 date: 2026-07-30
 description: "A practical document review checklist: seven concrete signs a bid set isn't field-ready, from dangling detail callouts to specs that contradict the drawings — and what each one costs if it ships uncaught."

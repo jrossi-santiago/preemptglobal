@@ -1,5 +1,5 @@
 ---
-title: "The NDA Question: What Confidentiality Should Look Like in Owner's Representative Drawing Review"
+title: "NDA Confidentiality in Drawing Review"
 slug: nda-confidentiality-owners-representative-drawing-review
 date: 2026-07-29
 description: "A signed NDA is table stakes for owner's representative drawing review. Here's what real confidentiality looks like — who sees the set, where it's stored, and when it's deleted."

@@ -1,5 +1,5 @@
 ---
-title: "AI QA/QC Tools vs. Independent Document Review: Who Owns the Call?"
+title: "AI QA/QC vs. Independent Document Review"
 slug: ai-qaqc-tools-vs-independent-document-review
 date: 2026-07-29
 description: "AI-powered QA/QC platforms like LightTable find issues in a document set fast. Here's what that gets an owner, what it doesn't, and where an independent review still has to pick up."
