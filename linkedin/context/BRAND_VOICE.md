@@ -103,6 +103,9 @@ Use these, but don't overuse any single one in the same post:
 - Every post needs at least one real, specific number - not a rounded, invented-sounding one.
 - Confidence is earned through specificity. If a sentence sounds bold but contains no verifiable anchor, revise it or cut it.
 - First person ("I built this," "I spent years drawing these sets"), not corporate "we," when speaking to founder credibility. "We" is fine when describing what the team/service does operationally (e.g., "we review every drawing").
+- **CTA rule (updated 2026-08-03 per `STRATEGY.md`):** no generic "DM me if interested" - it reads as hunger and collapses trust. The one CTA line this brand uses is the flat line defined in `CONVERSION_PLAYBOOK.md` ("If this is you, my DMs are open - not free."), and only on the two post formats in `FRAMEWORK.md` built to carry it (Full-System Giveaway, Case Study Breakdown). Every other format stays CTA-free.
+- **Unfair-advantage filter (`UNFAIR_ADVANTAGE.md`):** before a post gets written, check whether a competitor with no access to Preempt's findings data or Joe's field experience could have written it. If yes, don't publish it as-is - it needs a proprietary number, pattern, or founder-specific detail layered in first.
+- **Archive consistency:** don't take a position in a new post that contradicts a position taken in an earlier one. A real buyer reads the archive in one sitting before deciding; contradicting a prior post fails that read.
 
 ---
 

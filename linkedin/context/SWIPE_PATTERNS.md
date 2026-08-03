@@ -1,6 +1,8 @@
 # Preempt Global — LinkedIn Performance Patterns (Data File)
 *Data center MEP/coordination content — 6 posts analyzed*
 
+**2026-08-03 note:** this data predates the migration to the 4-format system in `FRAMEWORK.md` (`STRATEGY.md`'s High-Ticket Sniper System). The findings below still apply directly - the "framework + explicit CTA" post that won on both metrics (Section 3) is structurally what Format 1 (Full-System Giveaway) now is by default, and the reader-address hook lever (Section 5, #1) applies to all 4 new formats, not just one old post type. Nothing here needed rewording, only remapping to the new format names when cited elsewhere.
+
 ---
 
 ## How to use this file
