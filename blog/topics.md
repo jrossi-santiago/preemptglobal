@@ -24,9 +24,9 @@ Already published:
 - [x] Constructability Review vs. Peer Review: What's the Actual Difference? — `constructability-review-vs-peer-review` — 2026-08-01 (constructability review vs peer review)
 - [x] What Counts as a "Set" Ready for Bid? A Document Review Checklist for Owners — `set-ready-for-bid-document-review-checklist` — 2026-08-02 (document review checklist)
 - [x] Average Change Order Percentage by Project Type: What the Data Actually Shows — `average-change-order-percentage-by-project-type` — 2026-08-03 (average change order percentage by project type)
+- [x] When Spec Sections Contradict the Drawings: A Field Guide to Spec vs. Drawing Conflicts — `spec-vs-drawing-conflicts` — 2026-08-04 (spec vs drawing conflicts)
 
 Queue:
-- [ ] When Spec Sections Contradict the Drawings: A Field Guide to Spec vs. Drawing Conflicts (spec vs drawing conflicts)
 - [ ] When Should an Owner Hire a Drawing Review Consultant? A Timing Guide (when to hire a drawing review consultant)
 - [ ] Construction Document Review Services: What's Actually in Scope (construction document review services)
 - [ ] Choosing a Pre-Bid Drawing Review Partner: What to Look for Beyond Price (pre-bid drawing review)
@@ -35,4 +35,9 @@ Queue:
 - [ ] RFI Volume Isn't a KPI: What to Track Instead (RFI reduction)
 - [ ] Structural vs. MEP: Where Coordination Conflicts Actually Originate on a Set (MEP/structural drawing coordination conflicts)
 - [ ] Document Review Checklist for GMP Sets: What Changes at 100% CDs (document review checklist)
-- [ ] Spec vs. Drawing Conflicts: Which One Wins When They Disagree? (spec vs drawing conflicts)
+- [ ] What Owner's Representatives Should Ask a Drawing Review Firm Before Hiring (owner's representative drawing review)
+- [ ] Constructability Review Consultants vs. In-House QA/QC: When You Need Both (constructability review consultant)
+- [ ] Pre-Bid Document Review Services: What's Included and What Isn't (construction document review services)
+- [ ] Why Change Order Risk Mitigation Starts Before the Bid, Not After (change order risk mitigation)
+- [ ] Catching Design Errors Before Construction: A Practical Checklist for Owners (catching design errors before construction)
+- [ ] MEP/Structural Coordination Conflicts: The Interface Points That Fail Most Often (MEP/structural drawing coordination conflicts)

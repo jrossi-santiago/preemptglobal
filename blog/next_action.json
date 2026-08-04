@@ -1,10 +1,10 @@
 {
-  "date": "2026-08-03",
-  "topic": "Average Change Order Percentage by Project Type: What the Data Actually Shows",
-  "keyword": "average change order percentage by project type",
+  "date": "2026-08-04",
+  "topic": "When Spec Sections Contradict the Drawings: A Field Guide to Spec vs. Drawing Conflicts",
+  "keyword": "spec vs drawing conflicts",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword names no specific commercial product/vendor and doesn't match alternatives, comparison, pricing, review, or trial/discount rules, so it falls through to the informational default."
+  "reasoning": "Keyword contains \"vs\" but names no specific commercial product/vendor on either side (matches DECISION_TYPES.md's explicit non-match example for this exact phrase), so it falls through to the informational default and routes to a new daily post."
 }
