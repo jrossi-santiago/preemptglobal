@@ -25,9 +25,9 @@ Already published:
 - [x] What Counts as a "Set" Ready for Bid? A Document Review Checklist for Owners — `set-ready-for-bid-document-review-checklist` — 2026-08-02 (document review checklist)
 - [x] Average Change Order Percentage by Project Type: What the Data Actually Shows — `average-change-order-percentage-by-project-type` — 2026-08-03 (average change order percentage by project type)
 - [x] When Spec Sections Contradict the Drawings: A Field Guide to Spec vs. Drawing Conflicts — `spec-vs-drawing-conflicts` — 2026-08-04 (spec vs drawing conflicts)
+- [x] When Should an Owner Hire a Drawing Review Consultant? A Timing Guide — `when-to-hire-a-drawing-review-consultant` — 2026-08-05 (when to hire a drawing review consultant)
 
 Queue:
-- [ ] When Should an Owner Hire a Drawing Review Consultant? A Timing Guide (when to hire a drawing review consultant)
 - [ ] Construction Document Review Services: What's Actually in Scope (construction document review services)
 - [ ] Choosing a Pre-Bid Drawing Review Partner: What to Look for Beyond Price (pre-bid drawing review)
 - [ ] What a Constructability Review Consultant Actually Delivers, Project by Project (constructability review consultant)

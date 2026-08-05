@@ -1,10 +1,10 @@
 {
-  "date": "2026-08-04",
-  "topic": "When Spec Sections Contradict the Drawings: A Field Guide to Spec vs. Drawing Conflicts",
-  "keyword": "spec vs drawing conflicts",
+  "date": "2026-08-05",
+  "topic": "When Should an Owner Hire a Drawing Review Consultant? A Timing Guide",
+  "keyword": "when to hire a drawing review consultant",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword contains \"vs\" but names no specific commercial product/vendor on either side (matches DECISION_TYPES.md's explicit non-match example for this exact phrase), so it falls through to the informational default and routes to a new daily post."
+  "reasoning": "Keyword names no specific product/vendor and doesn't match alternatives/comparison/pricing/review/trial patterns, so it falls through to the informational default routed to daily-post.md for a new post."
 }
