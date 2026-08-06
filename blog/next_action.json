@@ -1,10 +1,10 @@
 {
-  "date": "2026-08-05",
-  "topic": "When Should an Owner Hire a Drawing Review Consultant? A Timing Guide",
-  "keyword": "when to hire a drawing review consultant",
+  "date": "2026-08-06",
+  "topic": "Construction Document Review Services: What's Actually in Scope",
+  "keyword": "construction document review services",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword names no specific product/vendor and doesn't match alternatives/comparison/pricing/review/trial patterns, so it falls through to the informational default routed to daily-post.md for a new post."
+  "reasoning": "Keyword names a generic service category, not a commercial product/vendor, so it doesn't match alternatives/comparison/pricing/review (review rule explicitly lists this exact keyword as a non-match example), falling through to the informational default routed to daily-post.md."
 }

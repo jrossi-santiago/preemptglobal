@@ -27,8 +27,9 @@ Already published:
 - [x] When Spec Sections Contradict the Drawings: A Field Guide to Spec vs. Drawing Conflicts — `spec-vs-drawing-conflicts` — 2026-08-04 (spec vs drawing conflicts)
 - [x] When Should an Owner Hire a Drawing Review Consultant? A Timing Guide — `when-to-hire-a-drawing-review-consultant` — 2026-08-05 (when to hire a drawing review consultant)
 
+- [x] Construction Document Review Services: What's Actually in Scope — `construction-document-review-services` — 2026-08-06 (construction document review services)
+
 Queue:
-- [ ] Construction Document Review Services: What's Actually in Scope (construction document review services)
 - [ ] Choosing a Pre-Bid Drawing Review Partner: What to Look for Beyond Price (pre-bid drawing review)
 - [ ] What a Constructability Review Consultant Actually Delivers, Project by Project (constructability review consultant)
 - [ ] How to Reduce Change Orders Without Adding Weeks to Your Schedule (how to reduce change orders)
