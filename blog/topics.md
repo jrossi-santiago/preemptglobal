@@ -29,8 +29,9 @@ Already published:
 
 - [x] Construction Document Review Services: What's Actually in Scope — `construction-document-review-services` — 2026-08-06 (construction document review services)
 
+- [x] Choosing a Pre-Bid Drawing Review Partner: What to Look for Beyond Price — `choosing-a-pre-bid-drawing-review-partner` — 2026-08-07 (pre-bid drawing review)
+
 Queue:
-- [ ] Choosing a Pre-Bid Drawing Review Partner: What to Look for Beyond Price (pre-bid drawing review)
 - [ ] What a Constructability Review Consultant Actually Delivers, Project by Project (constructability review consultant)
 - [ ] How to Reduce Change Orders Without Adding Weeks to Your Schedule (how to reduce change orders)
 - [ ] RFI Volume Isn't a KPI: What to Track Instead (RFI reduction)

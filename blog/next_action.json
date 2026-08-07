@@ -1,10 +1,10 @@
 {
-  "date": "2026-08-06",
-  "topic": "Construction Document Review Services: What's Actually in Scope",
-  "keyword": "construction document review services",
+  "date": "2026-08-07",
+  "topic": "Choosing a Pre-Bid Drawing Review Partner: What to Look for Beyond Price",
+  "keyword": "pre-bid drawing review",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword names a generic service category, not a commercial product/vendor, so it doesn't match alternatives/comparison/pricing/review (review rule explicitly lists this exact keyword as a non-match example), falling through to the informational default routed to daily-post.md."
+  "reasoning": "Keyword is a generic method/practice term with no named commercial product/vendor, so it doesn't match alternatives/comparison/pricing/review, falling through to the informational default routed to daily-post.md."
 }
