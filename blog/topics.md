@@ -31,8 +31,9 @@ Already published:
 
 - [x] Choosing a Pre-Bid Drawing Review Partner: What to Look for Beyond Price — `choosing-a-pre-bid-drawing-review-partner` — 2026-08-07 (pre-bid drawing review)
 
+- [x] What a Constructability Review Consultant Actually Delivers, Project by Project — `what-a-constructability-review-consultant-delivers-project-by-project` — 2026-08-08 (constructability review consultant)
+
 Queue:
-- [ ] What a Constructability Review Consultant Actually Delivers, Project by Project (constructability review consultant)
 - [ ] How to Reduce Change Orders Without Adding Weeks to Your Schedule (how to reduce change orders)
 - [ ] RFI Volume Isn't a KPI: What to Track Instead (RFI reduction)
 - [ ] Structural vs. MEP: Where Coordination Conflicts Actually Originate on a Set (MEP/structural drawing coordination conflicts)

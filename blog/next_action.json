@@ -1,10 +1,10 @@
 {
-  "date": "2026-08-07",
-  "topic": "Choosing a Pre-Bid Drawing Review Partner: What to Look for Beyond Price",
-  "keyword": "pre-bid drawing review",
+  "date": "2026-08-08",
+  "topic": "What a Constructability Review Consultant Actually Delivers, Project by Project",
+  "keyword": "constructability review consultant",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword is a generic method/practice term with no named commercial product/vendor, so it doesn't match alternatives/comparison/pricing/review, falling through to the informational default routed to daily-post.md."
+  "reasoning": "Keyword names a generic service-category term (explicitly listed as a non-match example under rule 4/review) with no specific commercial product/vendor, so it doesn't match alternatives/comparison/pricing/review, falling through to the informational default routed to daily-post.md."
 }
