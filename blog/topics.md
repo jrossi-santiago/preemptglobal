@@ -33,8 +33,9 @@ Already published:
 
 - [x] What a Constructability Review Consultant Actually Delivers, Project by Project — `what-a-constructability-review-consultant-delivers-project-by-project` — 2026-08-08 (constructability review consultant)
 
+- [x] How to Reduce Change Orders Without Adding Weeks to Your Schedule — `how-to-reduce-change-orders-without-adding-weeks-to-your-schedule` — 2026-08-09 (how to reduce change orders)
+
 Queue:
-- [ ] How to Reduce Change Orders Without Adding Weeks to Your Schedule (how to reduce change orders)
 - [ ] RFI Volume Isn't a KPI: What to Track Instead (RFI reduction)
 - [ ] Structural vs. MEP: Where Coordination Conflicts Actually Originate on a Set (MEP/structural drawing coordination conflicts)
 - [ ] Document Review Checklist for GMP Sets: What Changes at 100% CDs (document review checklist)
@@ -44,3 +45,10 @@ Queue:
 - [ ] Why Change Order Risk Mitigation Starts Before the Bid, Not After (change order risk mitigation)
 - [ ] Catching Design Errors Before Construction: A Practical Checklist for Owners (catching design errors before construction)
 - [ ] MEP/Structural Coordination Conflicts: The Interface Points That Fail Most Often (MEP/structural drawing coordination conflicts)
+- [ ] What a Pre-Bid Drawing Review Catches That a Bid-Set Walkthrough Doesn't (pre-bid drawing review)
+- [ ] Third-Party Plan Review: How It's Scoped Differently From an Architect's Own QC (third-party plan review)
+- [ ] Cost of Design Errors and Omissions: An Owner's Framework for Estimating Exposure Pre-Bid (cost of design errors and omissions)
+- [ ] RFI Reduction: What a Lower RFI Count Actually Signals About Set Coordination (RFI reduction)
+- [ ] When to Hire a Drawing Review Consultant vs. When In-House QA/QC Is Enough (when to hire a drawing review consultant)
+- [ ] Average Change Order Percentage by Project Type: Data Centers vs. Multifamily vs. Healthcare (average change order percentage by project type)
+- [ ] Spec vs. Drawing Conflicts: The Five Sections Most Likely to Disagree With the Plans (spec vs drawing conflicts)
