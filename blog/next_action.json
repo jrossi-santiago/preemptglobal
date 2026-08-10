@@ -1,10 +1,10 @@
 {
-  "date": "2026-08-09",
-  "topic": "How to Reduce Change Orders Without Adding Weeks to Your Schedule",
-  "keyword": "how to reduce change orders",
+  "date": "2026-08-10",
+  "topic": "RFI Volume Isn't a KPI: What to Track Instead",
+  "keyword": "RFI reduction",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword is a generic how-to phrase with no named commercial product/vendor and no pricing, comparison, or review signal, so it falls through rules 1-5 to the informational default routed to daily-post.md."
+  "reasoning": "The keyword \"RFI reduction\" doesn't match alternatives, comparison, pricing, review, or trial_or_discount rules (no named product/vendor, no vs/pricing/review language), so it falls through to the informational default and routes to a new post via daily-post.md."
 }
