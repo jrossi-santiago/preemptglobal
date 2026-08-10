@@ -8,6 +8,13 @@ Reset 2026-08 — prior entries used a retired Growth/Nurture/Conversion taxonom
 Reset 2026-08-03 (v2) — migrated from the 7-type Conviction/Story/Midas/Doc/Hot Take/Transformation/Vulnerability system to the High-Ticket Sniper System's 4-format taxonomy (Full-System Giveaway, Case Study, Short-Form, Personality). The entries immediately below (2026-08-03 through 2026-08-09) were drafted and logged under the retired 7-type system before this migration and are grandfathered as already-scheduled — their type labels are historical, not to be reused going forward. New entries from the next batch onward use the 4-format system.
 
 <!-- New entries get prepended below this line, newest first. -->
+2026-08-23 | Personality | Owner's rep role - why I'd rather be hired by the rep than the GC
+2026-08-22 | Short-Form | Contracts/indemnification - risk allocation moves who pays, not whether it's built
+2026-08-21 | Case Study | Budget tracking/cost codes - fire suppression system with no cost code behind it
+2026-08-20 | Full-System Giveaway | Differing site conditions - Differing Condition Record protocol
+2026-08-19 | Short-Form | PM software adoption - a platform organizes a set, it doesn't cross-reference it
+2026-08-18 | Case Study | Site visit reports - $78,900 finding set, damper missing from a rated corridor penetration
+2026-08-17 | Full-System Giveaway | Warranty tracking - Warranty Trigger Ledger framework
 2026-08-16 | Personality | Founder posture - reviewers who drew the sets vs. software/generalists
 2026-08-15 | Short-Form | Value engineering - cutting the line item vs. cutting the reason it existed
 2026-08-14 | Case Study | Delay claims/critical path - $42,000 beam/duct clash, 18-day slip eating float
