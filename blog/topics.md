@@ -37,8 +37,9 @@ Already published:
 
 - [x] RFI Volume Isn't a KPI: What to Track Instead — `rfi-volume-not-a-kpi-what-to-track-instead` — 2026-08-10 (RFI reduction)
 
+- [x] Structural vs. MEP: Where Coordination Conflicts Actually Originate on a Set — `structural-vs-mep-where-coordination-conflicts-originate` — 2026-08-11 (MEP/structural drawing coordination conflicts)
+
 Queue:
-- [ ] Structural vs. MEP: Where Coordination Conflicts Actually Originate on a Set (MEP/structural drawing coordination conflicts)
 - [ ] Document Review Checklist for GMP Sets: What Changes at 100% CDs (document review checklist)
 - [ ] What Owner's Representatives Should Ask a Drawing Review Firm Before Hiring (owner's representative drawing review)
 - [ ] Constructability Review Consultants vs. In-House QA/QC: When You Need Both (constructability review consultant)

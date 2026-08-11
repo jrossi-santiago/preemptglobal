@@ -1,10 +1,10 @@
 {
-  "date": "2026-08-10",
-  "topic": "RFI Volume Isn't a KPI: What to Track Instead",
-  "keyword": "RFI reduction",
+  "date": "2026-08-11",
+  "topic": "Structural vs. MEP: Where Coordination Conflicts Actually Originate on a Set",
+  "keyword": "MEP/structural drawing coordination conflicts",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword \"RFI reduction\" doesn't match alternatives, comparison, pricing, review, or trial_or_discount rules (no named product/vendor, no vs/pricing/review language), so it falls through to the informational default and routes to a new post via daily-post.md."
+  "reasoning": "The keyword names no specific commercial product/vendor and contains none of the comparison/pricing/review/trial trigger terms, so it falls through to the informational default per DECISION_TYPES.md rule 6, routing to a new post via daily-post.md."
 }
