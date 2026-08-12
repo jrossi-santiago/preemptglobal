@@ -1,10 +1,10 @@
 {
-  "date": "2026-08-11",
-  "topic": "Structural vs. MEP: Where Coordination Conflicts Actually Originate on a Set",
-  "keyword": "MEP/structural drawing coordination conflicts",
+  "date": "2026-08-12",
+  "topic": "Document Review Checklist for GMP Sets: What Changes at 100% CDs",
+  "keyword": "document review checklist",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword names no specific commercial product/vendor and contains none of the comparison/pricing/review/trial trigger terms, so it falls through to the informational default per DECISION_TYPES.md rule 6, routing to a new post via daily-post.md."
+  "reasoning": "The keyword 'document review checklist' is a generic guide/checklist term with no named product/vendor, comparison, pricing, or review-checking intent, so it falls through to the informational default routed to daily-post.md."
 }

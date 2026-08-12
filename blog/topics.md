@@ -39,8 +39,9 @@ Already published:
 
 - [x] Structural vs. MEP: Where Coordination Conflicts Actually Originate on a Set — `structural-vs-mep-where-coordination-conflicts-originate` — 2026-08-11 (MEP/structural drawing coordination conflicts)
 
+- [x] Document Review Checklist for GMP Sets: What Changes at 100% CDs — `gmp-document-review-checklist-100-percent-cds` — 2026-08-12 (document review checklist)
+
 Queue:
-- [ ] Document Review Checklist for GMP Sets: What Changes at 100% CDs (document review checklist)
 - [ ] What Owner's Representatives Should Ask a Drawing Review Firm Before Hiring (owner's representative drawing review)
 - [ ] Constructability Review Consultants vs. In-House QA/QC: When You Need Both (constructability review consultant)
 - [ ] Pre-Bid Document Review Services: What's Included and What Isn't (construction document review services)
