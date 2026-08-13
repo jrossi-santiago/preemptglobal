@@ -41,8 +41,9 @@ Already published:
 
 - [x] Document Review Checklist for GMP Sets: What Changes at 100% CDs — `gmp-document-review-checklist-100-percent-cds` — 2026-08-12 (document review checklist)
 
+- [x] What Owner's Representatives Should Ask a Drawing Review Firm Before Hiring — `owners-representative-drawing-review-hiring-questions` — 2026-08-13 (owner's representative drawing review)
+
 Queue:
-- [ ] What Owner's Representatives Should Ask a Drawing Review Firm Before Hiring (owner's representative drawing review)
 - [ ] Constructability Review Consultants vs. In-House QA/QC: When You Need Both (constructability review consultant)
 - [ ] Pre-Bid Document Review Services: What's Included and What Isn't (construction document review services)
 - [ ] Why Change Order Risk Mitigation Starts Before the Bid, Not After (change order risk mitigation)

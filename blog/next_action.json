@@ -1,10 +1,10 @@
 {
-  "date": "2026-08-12",
-  "topic": "Document Review Checklist for GMP Sets: What Changes at 100% CDs",
-  "keyword": "document review checklist",
+  "date": "2026-08-13",
+  "topic": "What Owner's Representatives Should Ask a Drawing Review Firm Before Hiring",
+  "keyword": "owner's representative drawing review",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword 'document review checklist' is a generic guide/checklist term with no named product/vendor, comparison, pricing, or review-checking intent, so it falls through to the informational default routed to daily-post.md."
+  "reasoning": "Keyword is a generic hire-me/service-category term with no named commercial product or vendor, so comparison/pricing/review rules don't match and it falls through to the informational default."
 }
