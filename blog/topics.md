@@ -43,8 +43,9 @@ Already published:
 
 - [x] What Owner's Representatives Should Ask a Drawing Review Firm Before Hiring — `owners-representative-drawing-review-hiring-questions` — 2026-08-13 (owner's representative drawing review)
 
+- [x] Constructability Review Consultants vs. In-House QA/QC: When You Need Both — `constructability-review-consultants-vs-in-house-qa-qc` — 2026-08-14 (constructability review consultant)
+
 Queue:
-- [ ] Constructability Review Consultants vs. In-House QA/QC: When You Need Both (constructability review consultant)
 - [ ] Pre-Bid Document Review Services: What's Included and What Isn't (construction document review services)
 - [ ] Why Change Order Risk Mitigation Starts Before the Bid, Not After (change order risk mitigation)
 - [ ] Catching Design Errors Before Construction: A Practical Checklist for Owners (catching design errors before construction)

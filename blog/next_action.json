@@ -1,10 +1,10 @@
 {
-  "date": "2026-08-13",
-  "topic": "What Owner's Representatives Should Ask a Drawing Review Firm Before Hiring",
-  "keyword": "owner's representative drawing review",
+  "date": "2026-08-14",
+  "topic": "Constructability Review Consultants vs. In-House QA/QC: When You Need Both",
+  "keyword": "constructability review consultant",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword is a generic hire-me/service-category term with no named commercial product or vendor, so comparison/pricing/review rules don't match and it falls through to the informational default."
+  "reasoning": "Keyword 'constructability review consultant' names no specific commercial product/vendor and contains no vs/versus/or itself, so the comparison/pricing/review rules don't match (per DECISION_TYPES.md's explicit non-match example) and it falls through to the informational default."
 }
