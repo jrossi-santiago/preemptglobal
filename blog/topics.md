@@ -45,8 +45,9 @@ Already published:
 
 - [x] Constructability Review Consultants vs. In-House QA/QC: When You Need Both — `constructability-review-consultants-vs-in-house-qa-qc` — 2026-08-14 (constructability review consultant)
 
+- [x] Pre-Bid Document Review Services: What's Included and What Isn't — `pre-bid-document-review-services-scope` — 2026-08-15 (construction document review services)
+
 Queue:
-- [ ] Pre-Bid Document Review Services: What's Included and What Isn't (construction document review services)
 - [ ] Why Change Order Risk Mitigation Starts Before the Bid, Not After (change order risk mitigation)
 - [ ] Catching Design Errors Before Construction: A Practical Checklist for Owners (catching design errors before construction)
 - [ ] MEP/Structural Coordination Conflicts: The Interface Points That Fail Most Often (MEP/structural drawing coordination conflicts)
