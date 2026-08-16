@@ -47,8 +47,9 @@ Already published:
 
 - [x] Pre-Bid Document Review Services: What's Included and What Isn't — `pre-bid-document-review-services-scope` — 2026-08-15 (construction document review services)
 
+- [x] Why Change Order Risk Mitigation Starts Before the Bid, Not After — `change-order-risk-mitigation-starts-before-bid` — 2026-08-16 (change order risk mitigation)
+
 Queue:
-- [ ] Why Change Order Risk Mitigation Starts Before the Bid, Not After (change order risk mitigation)
 - [ ] Catching Design Errors Before Construction: A Practical Checklist for Owners (catching design errors before construction)
 - [ ] MEP/Structural Coordination Conflicts: The Interface Points That Fail Most Often (MEP/structural drawing coordination conflicts)
 - [ ] What a Pre-Bid Drawing Review Catches That a Bid-Set Walkthrough Doesn't (pre-bid drawing review)
@@ -58,3 +59,10 @@ Queue:
 - [ ] When to Hire a Drawing Review Consultant vs. When In-House QA/QC Is Enough (when to hire a drawing review consultant)
 - [ ] Average Change Order Percentage by Project Type: Data Centers vs. Multifamily vs. Healthcare (average change order percentage by project type)
 - [ ] Spec vs. Drawing Conflicts: The Five Sections Most Likely to Disagree With the Plans (spec vs drawing conflicts)
+- [ ] Constructability Review Consultant Red Flags: What a Weak Proposal Looks Like Before You Sign (constructability review consultant)
+- [ ] Owner's Representative Drawing Review: Building It Into the Project Team From Day One (owner's representative drawing review)
+- [ ] What Happens After You Send a Set for Document Review: The Process, Step by Step (construction document review services)
+- [ ] How to Reduce Change Orders on a Fast-Tracked or Design-Build Schedule (how to reduce change orders)
+- [ ] Why So Many Change Orders Trace Back to the Same Handful of Interface Points (why so many change orders)
+- [ ] A Document Review Checklist for Renovation and Adaptive Reuse Projects (document review checklist)
+- [ ] Constructability Review vs. Peer Review: Which One Actually Catches Cross-Discipline Conflicts? (constructability review vs peer review)

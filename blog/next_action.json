@@ -1,10 +1,10 @@
 {
-  "date": "2026-08-15",
-  "topic": "Pre-Bid Document Review Services: What's Included and What Isn't",
-  "keyword": "construction document review services",
+  "date": "2026-08-16",
+  "topic": "Why Change Order Risk Mitigation Starts Before the Bid, Not After",
+  "keyword": "change order risk mitigation",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword 'construction document review services' is a generic service-category term (no named commercial product/vendor, no vs/versus/or, no pricing/review-checking intent), matching DECISION_TYPES.md's explicit non-match pattern for rules 2-4, so it falls through to the informational default."
+  "reasoning": "Keyword 'change order risk mitigation' names no commercial product/vendor and doesn't match pricing, review, alternatives, or comparison patterns, so it falls through to the informational default."
 }
