@@ -8,6 +8,13 @@ Reset 2026-08 — prior entries used a retired Growth/Nurture/Conversion taxonom
 Reset 2026-08-03 (v2) — migrated from the 7-type Conviction/Story/Midas/Doc/Hot Take/Transformation/Vulnerability system to the High-Ticket Sniper System's 4-format taxonomy (Full-System Giveaway, Case Study, Short-Form, Personality). The entries immediately below (2026-08-03 through 2026-08-09) were drafted and logged under the retired 7-type system before this migration and are grandfathered as already-scheduled — their type labels are historical, not to be reused going forward. New entries from the next batch onward use the 4-format system.
 
 <!-- New entries get prepended below this line, newest first. -->
+2026-08-30 | Personality | Contracts/AIA documents - reading the contract before the drawings, order-of-precedence
+2026-08-29 | Short-Form | Drone site surveys - catches drift between model and field, not a paper coordination miss
+2026-08-28 | Case Study | RFIs - answer resolved in the log, revision never made it back to the issued sheet
+2026-08-27 | Full-System Giveaway | Insurance & bonding basics - Default Notice Record framework for bond claims
+2026-08-26 | Short-Form | Change orders - markup negotiation vs. whether the change should have existed
+2026-08-25 | Case Study | Pay applications - AIA G702/G703 billed percentage ahead of submittal approval
+2026-08-24 | Full-System Giveaway | Critical path scheduling - Look-Ahead Lock framework for look-aheads vs. the issued set
 2026-08-23 | Personality | Owner's rep role - why I'd rather be hired by the rep than the GC
 2026-08-22 | Short-Form | Contracts/indemnification - risk allocation moves who pays, not whether it's built
 2026-08-21 | Case Study | Budget tracking/cost codes - fire suppression system with no cost code behind it
