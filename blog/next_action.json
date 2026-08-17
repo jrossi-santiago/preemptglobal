@@ -1,10 +1,10 @@
 {
-  "date": "2026-08-16",
-  "topic": "Why Change Order Risk Mitigation Starts Before the Bid, Not After",
-  "keyword": "change order risk mitigation",
+  "date": "2026-08-17",
+  "topic": "Catching Design Errors Before Construction: A Practical Checklist for Owners",
+  "keyword": "catching design errors before construction",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword 'change order risk mitigation' names no commercial product/vendor and doesn't match pricing, review, alternatives, or comparison patterns, so it falls through to the informational default."
+  "reasoning": "Keyword 'catching design errors before construction' names no commercial product/vendor and doesn't match alternatives, comparison, pricing, review, or trial/discount patterns, so it falls through to the informational default."
 }
