@@ -50,9 +50,9 @@ Already published:
 - [x] Why Change Order Risk Mitigation Starts Before the Bid, Not After — `change-order-risk-mitigation-starts-before-bid` — 2026-08-16 (change order risk mitigation)
 
 - [x] Catching Design Errors Before Construction: A Practical Checklist for Owners — `catching-design-errors-before-construction-checklist` — 2026-08-17 (catching design errors before construction)
+- [x] MEP/Structural Coordination Conflicts: The Interface Points That Fail Most Often — `mep-structural-interface-points-fail-most-often` — 2026-08-18 (MEP/structural drawing coordination conflicts)
 
 Queue:
-- [ ] MEP/Structural Coordination Conflicts: The Interface Points That Fail Most Often (MEP/structural drawing coordination conflicts)
 - [ ] What a Pre-Bid Drawing Review Catches That a Bid-Set Walkthrough Doesn't (pre-bid drawing review)
 - [ ] Third-Party Plan Review: How It's Scoped Differently From an Architect's Own QC (third-party plan review)
 - [ ] Cost of Design Errors and Omissions: An Owner's Framework for Estimating Exposure Pre-Bid (cost of design errors and omissions)
