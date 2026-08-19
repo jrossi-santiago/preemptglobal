@@ -1,10 +1,10 @@
 {
-  "date": "2026-08-18",
-  "topic": "MEP/Structural Coordination Conflicts: The Interface Points That Fail Most Often",
-  "keyword": "MEP/structural drawing coordination conflicts",
+  "date": "2026-08-19",
+  "topic": "What a Pre-Bid Drawing Review Catches That a Bid-Set Walkthrough Doesn't",
+  "keyword": "pre-bid drawing review",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword is a generic problem-aware category term with no named commercial product and no pricing/comparison/review/trial language, so it falls through to the default informational rule."
+  "reasoning": "The keyword names no specific commercial product/vendor and isn't asking about price or reviewing a named product, so none of rules 1-5 match and it falls through to the informational default, routed as a new post."
 }
