@@ -1,10 +1,10 @@
 {
-  "date": "2026-08-19",
-  "topic": "What a Pre-Bid Drawing Review Catches That a Bid-Set Walkthrough Doesn't",
-  "keyword": "pre-bid drawing review",
+  "date": "2026-08-20",
+  "topic": "Third-Party Plan Review: How It's Scoped Differently From an Architect's Own QC",
+  "keyword": "third-party plan review",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword names no specific commercial product/vendor and isn't asking about price or reviewing a named product, so none of rules 1-5 match and it falls through to the informational default, routed as a new post."
+  "reasoning": "The keyword names a generic service category, not a specific commercial product/vendor, so it doesn't match alternatives, comparison, pricing, or review; it falls through to the informational default."
 }

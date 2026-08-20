@@ -53,8 +53,9 @@ Already published:
 - [x] MEP/Structural Coordination Conflicts: The Interface Points That Fail Most Often — `mep-structural-interface-points-fail-most-often` — 2026-08-18 (MEP/structural drawing coordination conflicts)
 - [x] What a Pre-Bid Drawing Review Catches That a Bid-Set Walkthrough Doesn't — `what-a-pre-bid-drawing-review-catches-that-a-bid-set-walkthrough-doesnt` — 2026-08-19 (pre-bid drawing review)
 
+- [x] Third-Party Plan Review: How It's Scoped Differently From an Architect's Own QC — `third-party-plan-review-scope-vs-architect-qc` — 2026-08-20 (third-party plan review)
+
 Queue:
-- [ ] Third-Party Plan Review: How It's Scoped Differently From an Architect's Own QC (third-party plan review)
 - [ ] Cost of Design Errors and Omissions: An Owner's Framework for Estimating Exposure Pre-Bid (cost of design errors and omissions)
 - [ ] RFI Reduction: What a Lower RFI Count Actually Signals About Set Coordination (RFI reduction)
 - [ ] When to Hire a Drawing Review Consultant vs. When In-House QA/QC Is Enough (when to hire a drawing review consultant)
