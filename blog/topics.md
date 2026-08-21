@@ -55,8 +55,9 @@ Already published:
 
 - [x] Third-Party Plan Review: How It's Scoped Differently From an Architect's Own QC — `third-party-plan-review-scope-vs-architect-qc` — 2026-08-20 (third-party plan review)
 
+- [x] Cost of Design Errors and Omissions: An Owner's Framework for Estimating Exposure Pre-Bid — `cost-of-design-errors-and-omissions-exposure-framework` — 2026-08-21 (cost of design errors and omissions)
+
 Queue:
-- [ ] Cost of Design Errors and Omissions: An Owner's Framework for Estimating Exposure Pre-Bid (cost of design errors and omissions)
 - [ ] RFI Reduction: What a Lower RFI Count Actually Signals About Set Coordination (RFI reduction)
 - [ ] When to Hire a Drawing Review Consultant vs. When In-House QA/QC Is Enough (when to hire a drawing review consultant)
 - [ ] Average Change Order Percentage by Project Type: Data Centers vs. Multifamily vs. Healthcare (average change order percentage by project type)
