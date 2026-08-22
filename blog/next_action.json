@@ -1,10 +1,10 @@
 {
-  "date": "2026-08-21",
-  "topic": "Cost of Design Errors and Omissions: An Owner's Framework for Estimating Exposure Pre-Bid",
-  "keyword": "cost of design errors and omissions",
+  "date": "2026-08-22",
+  "topic": "RFI Reduction: What a Lower RFI Count Actually Signals About Set Coordination",
+  "keyword": "RFI reduction",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword contains \"cost\" but names no specific product/vendor, matching DECISION_TYPES.md's explicit pricing non-match example, so it falls through to the informational default routed to daily-post.md."
+  "reasoning": "The keyword 'RFI reduction' doesn't match the alternatives, comparison, pricing, review, or trial_or_discount rules (no named commercial product, no 'vs'/'versus'/'or' pairing, no price question), so it falls through to the informational default and routes to a new post via daily-post.md."
 }
