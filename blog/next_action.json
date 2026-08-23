@@ -1,10 +1,10 @@
 {
-  "date": "2026-08-22",
-  "topic": "RFI Reduction: What a Lower RFI Count Actually Signals About Set Coordination",
-  "keyword": "RFI reduction",
+  "date": "2026-08-23",
+  "topic": "When to Hire a Drawing Review Consultant vs. When In-House QA/QC Is Enough",
+  "keyword": "when to hire a drawing review consultant",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword 'RFI reduction' doesn't match the alternatives, comparison, pricing, review, or trial_or_discount rules (no named commercial product, no 'vs'/'versus'/'or' pairing, no price question), so it falls through to the informational default and routes to a new post via daily-post.md."
+  "reasoning": "The keyword names no specific commercial product/vendor and asks a how-to/when-to question, so it falls through rules 1-5 (alternatives, comparison, pricing, review, trial_or_discount) to the informational default."
 }

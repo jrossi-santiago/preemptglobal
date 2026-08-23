@@ -58,9 +58,9 @@ Already published:
 - [x] Cost of Design Errors and Omissions: An Owner's Framework for Estimating Exposure Pre-Bid — `cost-of-design-errors-and-omissions-exposure-framework` — 2026-08-21 (cost of design errors and omissions)
 
 - [x] RFI Reduction: What a Lower RFI Count Actually Signals About Set Coordination — `rfi-reduction-what-a-lower-rfi-count-signals` — 2026-08-22 (RFI reduction)
+- [x] When to Hire a Drawing Review Consultant vs. When In-House QA/QC Is Enough — `when-to-hire-a-drawing-review-consultant-vs-in-house-qa-qc` — 2026-08-23 (when to hire a drawing review consultant)
 
 Queue:
-- [ ] When to Hire a Drawing Review Consultant vs. When In-House QA/QC Is Enough (when to hire a drawing review consultant)
 - [ ] Average Change Order Percentage by Project Type: Data Centers vs. Multifamily vs. Healthcare (average change order percentage by project type)
 - [ ] Spec vs. Drawing Conflicts: The Five Sections Most Likely to Disagree With the Plans (spec vs drawing conflicts)
 - [ ] Constructability Review Consultant Red Flags: What a Weak Proposal Looks Like Before You Sign (constructability review consultant)
@@ -70,3 +70,10 @@ Queue:
 - [ ] Why So Many Change Orders Trace Back to the Same Handful of Interface Points (why so many change orders)
 - [ ] A Document Review Checklist for Renovation and Adaptive Reuse Projects (document review checklist)
 - [ ] Constructability Review vs. Peer Review: Which One Actually Catches Cross-Discipline Conflicts? (constructability review vs peer review)
+- [ ] Pre-Bid Drawing Review for Design-Build Delivery: What Changes When There's No Separate Bid Set (pre-bid drawing review)
+- [ ] Third-Party Plan Review and AHJ Permitting: Where the Two Processes Actually Intersect (third-party plan review)
+- [ ] Owner's Representative Drawing Review on Multi-Phase Programs: Keeping Coordination Consistent Across Phases (owner's representative drawing review)
+- [ ] MEP/Structural Coordination Conflicts on Renovation and Adaptive Reuse Projects: Why Existing Conditions Raise the Risk (MEP/structural drawing coordination conflicts)
+- [ ] Catching Design Errors Before Construction on a Design-Build Schedule: What Changes When Design and Construction Overlap (catching design errors before construction)
+- [ ] Change Order Risk Mitigation for Healthcare and Life Sciences Projects: Where the Exposure Concentrates (change order risk mitigation)
+- [ ] The Cost of Design Errors and Omissions When a Project Is Self-Performed vs. GC-Led (cost of design errors and omissions)
