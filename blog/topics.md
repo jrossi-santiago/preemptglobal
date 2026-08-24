@@ -61,7 +61,7 @@ Already published:
 - [x] When to Hire a Drawing Review Consultant vs. When In-House QA/QC Is Enough — `when-to-hire-a-drawing-review-consultant-vs-in-house-qa-qc` — 2026-08-23 (when to hire a drawing review consultant)
 
 Queue:
-- [ ] Average Change Order Percentage by Project Type: Data Centers vs. Multifamily vs. Healthcare (average change order percentage by project type)
+- [x] Average Change Order Percentage by Project Type: Data Centers vs. Multifamily vs. Healthcare — `average-change-order-percentage-data-centers-multifamily-healthcare` — 2026-08-24 (average change order percentage by project type)
 - [ ] Spec vs. Drawing Conflicts: The Five Sections Most Likely to Disagree With the Plans (spec vs drawing conflicts)
 - [ ] Constructability Review Consultant Red Flags: What a Weak Proposal Looks Like Before You Sign (constructability review consultant)
 - [ ] Owner's Representative Drawing Review: Building It Into the Project Team From Day One (owner's representative drawing review)
