@@ -1,10 +1,10 @@
 {
-  "date": "2026-08-24",
-  "topic": "Average Change Order Percentage by Project Type: Data Centers vs. Multifamily vs. Healthcare",
-  "keyword": "average change order percentage by project type",
+  "date": "2026-08-25",
+  "topic": "Spec vs. Drawing Conflicts: The Five Sections Most Likely to Disagree With the Plans",
+  "keyword": "(spec vs drawing conflicts)",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword is a generic cross-project-type cost comparison with no named commercial product or vendor, so none of the alternatives/comparison/pricing/review/trial rules match and it falls through to the informational default."
+  "reasoning": "The keyword contains \"vs\" but neither side names a specific commercial product (it's a generic method/practice comparison per DECISION_TYPES.md's explicit non-match example), so rule 2 does not apply and it falls through to the informational default."
 }
