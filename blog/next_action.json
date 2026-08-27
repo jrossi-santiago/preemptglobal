@@ -1,10 +1,10 @@
 {
-  "date": "2026-08-26",
-  "topic": "Constructability Review Consultant Red Flags: What a Weak Proposal Looks Like Before You Sign",
-  "keyword": "constructability review consultant",
+  "date": "2026-08-27",
+  "topic": "Owner's Representative Drawing Review: Building It Into the Project Team From Day One",
+  "keyword": "owner's representative drawing review",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword is a generic service-category term (matches DECISION_TYPES.md's explicit review-rule non-match example), not a named product/vendor, so it falls through to the informational default."
+  "reasoning": "The keyword names a generic service-category term rather than a specific commercial product/vendor, so it does not match the alternatives, comparison, pricing, review, or trial_or_discount rules and falls through to the informational default."
 }

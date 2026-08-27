@@ -64,7 +64,7 @@ Queue:
 - [x] Average Change Order Percentage by Project Type: Data Centers vs. Multifamily vs. Healthcare — `average-change-order-percentage-data-centers-multifamily-healthcare` — 2026-08-24 (average change order percentage by project type)
 - [x] Spec vs. Drawing Conflicts: The Five Sections Most Likely to Disagree With the Plans — `spec-vs-drawing-five-sections-most-likely-to-disagree` — 2026-08-25 (spec vs drawing conflicts)
 - [x] Constructability Review Consultant Red Flags: What a Weak Proposal Looks Like Before You Sign — `constructability-review-consultant-red-flags-weak-proposal` — 2026-08-26 (constructability review consultant)
-- [ ] Owner's Representative Drawing Review: Building It Into the Project Team From Day One (owner's representative drawing review)
+- [x] Owner's Representative Drawing Review: Building It Into the Project Team From Day One — `owners-representative-drawing-review-building-into-project-team` — 2026-08-27 (owner's representative drawing review)
 - [ ] What Happens After You Send a Set for Document Review: The Process, Step by Step (construction document review services)
 - [ ] How to Reduce Change Orders on a Fast-Tracked or Design-Build Schedule (how to reduce change orders)
 - [ ] Why So Many Change Orders Trace Back to the Same Handful of Interface Points (why so many change orders)
