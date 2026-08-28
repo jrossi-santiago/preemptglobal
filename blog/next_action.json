@@ -1,10 +1,10 @@
 {
-  "date": "2026-08-27",
-  "topic": "Owner's Representative Drawing Review: Building It Into the Project Team From Day One",
-  "keyword": "owner's representative drawing review",
+  "date": "2026-08-28",
+  "topic": "What Happens After You Send a Set for Document Review: The Process, Step by Step",
+  "keyword": "construction document review services",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword names a generic service-category term rather than a specific commercial product/vendor, so it does not match the alternatives, comparison, pricing, review, or trial_or_discount rules and falls through to the informational default."
+  "reasoning": "The keyword is a generic service-category term with no product/vendor name and no pricing/comparison/review/alternatives/discount language, so it falls through to the default informational rule and routes to a new daily post."
 }
