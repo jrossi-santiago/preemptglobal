@@ -1,10 +1,10 @@
 {
-  "date": "2026-08-28",
-  "topic": "What Happens After You Send a Set for Document Review: The Process, Step by Step",
-  "keyword": "construction document review services",
+  "date": "2026-08-29",
+  "topic": "How to Reduce Change Orders on a Fast-Tracked or Design-Build Schedule",
+  "keyword": "how to reduce change orders",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword is a generic service-category term with no product/vendor name and no pricing/comparison/review/alternatives/discount language, so it falls through to the default informational rule and routes to a new daily post."
+  "reasoning": "The keyword names no commercial product and has no comparison/pricing/review/trial signal, so it falls through to the informational default routed to daily-post.md for a new post."
 }
