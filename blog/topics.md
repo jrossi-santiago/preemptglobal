@@ -68,7 +68,7 @@ Queue:
 - [x] What Happens After You Send a Set for Document Review: The Process, Step by Step — `what-happens-after-you-send-a-set-for-document-review` — 2026-08-28 (construction document review services)
 - [x] How to Reduce Change Orders on a Fast-Tracked or Design-Build Schedule — `how-to-reduce-change-orders-fast-tracked-design-build-schedule` — 2026-08-29 (how to reduce change orders)
 - [x] Why So Many Change Orders Trace Back to the Same Handful of Interface Points — `why-so-many-change-orders-same-handful-interface-points` — 2026-08-30 (why so many change orders)
-- [ ] A Document Review Checklist for Renovation and Adaptive Reuse Projects (document review checklist)
+- [x] A Document Review Checklist for Renovation and Adaptive Reuse Projects — `document-review-checklist-renovation-adaptive-reuse` — 2026-08-31 (document review checklist)
 - [ ] Constructability Review vs. Peer Review: Which One Actually Catches Cross-Discipline Conflicts? (constructability review vs peer review)
 - [ ] Pre-Bid Drawing Review for Design-Build Delivery: What Changes When There's No Separate Bid Set (pre-bid drawing review)
 - [ ] Third-Party Plan Review and AHJ Permitting: Where the Two Processes Actually Intersect (third-party plan review)
