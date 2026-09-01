@@ -69,7 +69,7 @@ Queue:
 - [x] How to Reduce Change Orders on a Fast-Tracked or Design-Build Schedule — `how-to-reduce-change-orders-fast-tracked-design-build-schedule` — 2026-08-29 (how to reduce change orders)
 - [x] Why So Many Change Orders Trace Back to the Same Handful of Interface Points — `why-so-many-change-orders-same-handful-interface-points` — 2026-08-30 (why so many change orders)
 - [x] A Document Review Checklist for Renovation and Adaptive Reuse Projects — `document-review-checklist-renovation-adaptive-reuse` — 2026-08-31 (document review checklist)
-- [ ] Constructability Review vs. Peer Review: Which One Actually Catches Cross-Discipline Conflicts? (constructability review vs peer review)
+- [x] Constructability Review vs. Peer Review: Which One Actually Catches Cross-Discipline Conflicts? — `constructability-review-vs-peer-review-cross-discipline-conflicts` — 2026-09-01 (constructability review vs peer review)
 - [ ] Pre-Bid Drawing Review for Design-Build Delivery: What Changes When There's No Separate Bid Set (pre-bid drawing review)
 - [ ] Third-Party Plan Review and AHJ Permitting: Where the Two Processes Actually Intersect (third-party plan review)
 - [ ] Owner's Representative Drawing Review on Multi-Phase Programs: Keeping Coordination Consistent Across Phases (owner's representative drawing review)

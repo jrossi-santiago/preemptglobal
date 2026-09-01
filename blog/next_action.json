@@ -1,10 +1,10 @@
 {
-  "date": "2026-08-31",
-  "topic": "A Document Review Checklist for Renovation and Adaptive Reuse Projects",
-  "keyword": "document review checklist",
+  "date": "2026-09-01",
+  "topic": "Constructability Review vs. Peer Review: Which One Actually Catches Cross-Discipline Conflicts?",
+  "keyword": "constructability review vs peer review",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword names no specific product/vendor and isn't a buy-intent comparison/pricing/review lookup, so it falls through to the informational default per DECISION_TYPES.md rule 6, routed to daily-post.md as a new post."
+  "reasoning": "Keyword contains \"vs\" but names no specific commercial product/vendor on either side (matches DECISION_TYPES.md's own example non-match), so rule 2 doesn't apply and it falls through to the informational default."
 }
