@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-01",
-  "topic": "Constructability Review vs. Peer Review: Which One Actually Catches Cross-Discipline Conflicts?",
-  "keyword": "constructability review vs peer review",
+  "date": "2026-09-02",
+  "topic": "Pre-Bid Drawing Review for Design-Build Delivery: What Changes When There's No Separate Bid Set",
+  "keyword": "pre-bid drawing review",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword contains \"vs\" but names no specific commercial product/vendor on either side (matches DECISION_TYPES.md's own example non-match), so rule 2 doesn't apply and it falls through to the informational default."
+  "reasoning": "The keyword names no specific commercial product/vendor and isn't asking about pricing or a product review, so none of rules 1-5 match and it falls through to the informational default routed to daily-post.md."
 }
