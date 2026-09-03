@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-02",
-  "topic": "Pre-Bid Drawing Review for Design-Build Delivery: What Changes When There's No Separate Bid Set",
-  "keyword": "pre-bid drawing review",
+  "date": "2026-09-03",
+  "topic": "Third-Party Plan Review and AHJ Permitting: Where the Two Processes Actually Intersect",
+  "keyword": "third-party plan review",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword names no specific commercial product/vendor and isn't asking about pricing or a product review, so none of rules 1-5 match and it falls through to the informational default routed to daily-post.md."
+  "reasoning": "The keyword is a generic service-category term (not a named commercial product) with no comparison, pricing, review-checking, or trial/discount intent, so it falls through to the informational default."
 }
