@@ -72,7 +72,7 @@ Queue:
 - [x] Constructability Review vs. Peer Review: Which One Actually Catches Cross-Discipline Conflicts? — `constructability-review-vs-peer-review-cross-discipline-conflicts` — 2026-09-01 (constructability review vs peer review)
 - [x] Pre-Bid Drawing Review for Design-Build Delivery: What Changes When There's No Separate Bid Set — `pre-bid-drawing-review-design-build-no-separate-bid-set` — 2026-09-02 (pre-bid drawing review)
 - [x] Third-Party Plan Review and AHJ Permitting: Where the Two Processes Actually Intersect — `third-party-plan-review-ahj-permitting-intersection` — 2026-09-03 (third-party plan review)
-- [ ] Owner's Representative Drawing Review on Multi-Phase Programs: Keeping Coordination Consistent Across Phases (owner's representative drawing review)
+- [x] Owner's Representative Drawing Review on Multi-Phase Programs: Keeping Coordination Consistent Across Phases — `owners-representative-drawing-review-multi-phase-programs` — 2026-09-04 (owner's representative drawing review)
 - [ ] MEP/Structural Coordination Conflicts on Renovation and Adaptive Reuse Projects: Why Existing Conditions Raise the Risk (MEP/structural drawing coordination conflicts)
 - [ ] Catching Design Errors Before Construction on a Design-Build Schedule: What Changes When Design and Construction Overlap (catching design errors before construction)
 - [ ] Change Order Risk Mitigation for Healthcare and Life Sciences Projects: Where the Exposure Concentrates (change order risk mitigation)
