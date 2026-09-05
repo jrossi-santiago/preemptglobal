@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-04",
-  "topic": "Owner's Representative Drawing Review on Multi-Phase Programs: Keeping Coordination Consistent Across Phases",
-  "keyword": "owner's representative drawing review",
+  "date": "2026-09-05",
+  "topic": "MEP/Structural Coordination Conflicts on Renovation and Adaptive Reuse Projects: Why Existing Conditions Raise the Risk",
+  "keyword": "MEP/structural drawing coordination conflicts",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword is a generic service-category term (not a named commercial product) with no comparison, pricing, review-checking, or trial/discount intent, so it falls through to the informational default."
+  "reasoning": "The keyword names no specific commercial product/vendor and contains none of the alternatives/comparison/pricing/review/trial_or_discount trigger phrases, so it falls through to the informational default."
 }
