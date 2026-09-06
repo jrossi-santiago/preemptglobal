@@ -74,7 +74,7 @@ Queue:
 - [x] Third-Party Plan Review and AHJ Permitting: Where the Two Processes Actually Intersect — `third-party-plan-review-ahj-permitting-intersection` — 2026-09-03 (third-party plan review)
 - [x] Owner's Representative Drawing Review on Multi-Phase Programs: Keeping Coordination Consistent Across Phases — `owners-representative-drawing-review-multi-phase-programs` — 2026-09-04 (owner's representative drawing review)
 - [x] MEP/Structural Coordination Conflicts on Renovation and Adaptive Reuse Projects: Why Existing Conditions Raise the Risk — `mep-structural-conflicts-renovation-adaptive-reuse` — 2026-09-05 (MEP/structural drawing coordination conflicts)
-- [ ] Catching Design Errors Before Construction on a Design-Build Schedule: What Changes When Design and Construction Overlap (catching design errors before construction)
+- [x] Catching Design Errors Before Construction on a Design-Build Schedule: What Changes When Design and Construction Overlap — `catching-design-errors-before-construction-design-build-overlap` — 2026-09-06 (catching design errors before construction)
 - [ ] Change Order Risk Mitigation for Healthcare and Life Sciences Projects: Where the Exposure Concentrates (change order risk mitigation)
 - [ ] The Cost of Design Errors and Omissions When a Project Is Self-Performed vs. GC-Led (cost of design errors and omissions)
 - [ ] Construction Document Review Services for Public Agencies: What Procurement Requirements Change (construction document review services)

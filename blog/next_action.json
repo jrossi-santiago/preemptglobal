@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-05",
-  "topic": "MEP/Structural Coordination Conflicts on Renovation and Adaptive Reuse Projects: Why Existing Conditions Raise the Risk",
-  "keyword": "MEP/structural drawing coordination conflicts",
+  "date": "2026-09-06",
+  "topic": "Catching Design Errors Before Construction on a Design-Build Schedule: What Changes When Design and Construction Overlap",
+  "keyword": "catching design errors before construction",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword names no specific commercial product/vendor and contains none of the alternatives/comparison/pricing/review/trial_or_discount trigger phrases, so it falls through to the informational default."
+  "reasoning": "Keyword is a generic how-to/guide topic with no named commercial product and doesn't match alternatives, comparison, pricing, review, or trial rules, so it falls through to the informational default routed to daily-post.md as a new post."
 }
