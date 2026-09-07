@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-06",
-  "topic": "Catching Design Errors Before Construction on a Design-Build Schedule: What Changes When Design and Construction Overlap",
-  "keyword": "catching design errors before construction",
+  "date": "2026-09-07",
+  "topic": "Change Order Risk Mitigation for Healthcare and Life Sciences Projects: Where the Exposure Concentrates",
+  "keyword": "change order risk mitigation",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword is a generic how-to/guide topic with no named commercial product and doesn't match alternatives, comparison, pricing, review, or trial rules, so it falls through to the informational default routed to daily-post.md as a new post."
+  "reasoning": "The keyword names no specific commercial product/vendor and doesn't match alternatives, comparison, pricing, review, or trial_or_discount patterns, so it falls through to the informational default routed to daily-post.md."
 }
