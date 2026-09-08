@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-07",
-  "topic": "Change Order Risk Mitigation for Healthcare and Life Sciences Projects: Where the Exposure Concentrates",
-  "keyword": "change order risk mitigation",
+  "date": "2026-09-08",
+  "topic": "The Cost of Design Errors and Omissions When a Project Is Self-Performed vs. GC-Led",
+  "keyword": "cost of design errors and omissions",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword names no specific commercial product/vendor and doesn't match alternatives, comparison, pricing, review, or trial_or_discount patterns, so it falls through to the informational default routed to daily-post.md."
+  "reasoning": "The keyword contains \"cost\" but names no specific product/vendor whose price is in question (this exact phrase is DECISION_TYPES.md's own non-match example for rule 3), and it doesn't match alternatives, comparison, review, or trial/discount either, so it falls through to the informational default routed to daily-post.md for a new post."
 }
