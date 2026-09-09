@@ -77,7 +77,7 @@ Queue:
 - [x] Catching Design Errors Before Construction on a Design-Build Schedule: What Changes When Design and Construction Overlap — `catching-design-errors-before-construction-design-build-overlap` — 2026-09-06 (catching design errors before construction)
 - [x] Change Order Risk Mitigation for Healthcare and Life Sciences Projects: Where the Exposure Concentrates — `change-order-risk-mitigation-healthcare-life-sciences` — 2026-09-07 (change order risk mitigation)
 - [x] The Cost of Design Errors and Omissions When a Project Is Self-Performed vs. GC-Led — `cost-of-design-errors-and-omissions-self-performed-vs-gc-led` — 2026-09-08 (cost of design errors and omissions)
-- [ ] Construction Document Review Services for Public Agencies: What Procurement Requirements Change (construction document review services)
+- [x] Construction Document Review Services for Public Agencies: What Procurement Requirements Change — `construction-document-review-services-public-agencies-procurement` — 2026-09-09 (construction document review services)
 - [ ] What a Constructability Review Consultant Checks That a Cost Estimator Doesn't (constructability review consultant)
 - [ ] RFI Reduction on Fast-Tracked Projects: Why the Usual Playbook Doesn't Fully Apply (RFI reduction)
 - [ ] MEP/Structural Coordination Conflicts in Vertical vs. Horizontal Construction: Why the Risk Profile Shifts (MEP/structural drawing coordination conflicts)
