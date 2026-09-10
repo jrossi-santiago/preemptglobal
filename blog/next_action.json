@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-09",
-  "topic": "Construction Document Review Services for Public Agencies: What Procurement Requirements Change",
-  "keyword": "construction document review services",
+  "date": "2026-09-10",
+  "topic": "What a Constructability Review Consultant Checks That a Cost Estimator Doesn't",
+  "keyword": "constructability review consultant",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword is a generic service-category term with no named commercial product/vendor and no pricing/comparison/review/trial language, so it falls through rules 1-5 to the informational default."
+  "reasoning": "The keyword names no specific commercial product/vendor and doesn't match the alternatives, comparison, pricing, review, or trial/discount rules, so it falls through to the informational default and gets published as a new post."
 }

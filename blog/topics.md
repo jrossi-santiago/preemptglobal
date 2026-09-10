@@ -78,7 +78,7 @@ Queue:
 - [x] Change Order Risk Mitigation for Healthcare and Life Sciences Projects: Where the Exposure Concentrates — `change-order-risk-mitigation-healthcare-life-sciences` — 2026-09-07 (change order risk mitigation)
 - [x] The Cost of Design Errors and Omissions When a Project Is Self-Performed vs. GC-Led — `cost-of-design-errors-and-omissions-self-performed-vs-gc-led` — 2026-09-08 (cost of design errors and omissions)
 - [x] Construction Document Review Services for Public Agencies: What Procurement Requirements Change — `construction-document-review-services-public-agencies-procurement` — 2026-09-09 (construction document review services)
-- [ ] What a Constructability Review Consultant Checks That a Cost Estimator Doesn't (constructability review consultant)
+- [x] What a Constructability Review Consultant Checks That a Cost Estimator Doesn't — `what-a-constructability-review-consultant-checks-that-a-cost-estimator-doesnt` — 2026-09-10 (constructability review consultant)
 - [ ] RFI Reduction on Fast-Tracked Projects: Why the Usual Playbook Doesn't Fully Apply (RFI reduction)
 - [ ] MEP/Structural Coordination Conflicts in Vertical vs. Horizontal Construction: Why the Risk Profile Shifts (MEP/structural drawing coordination conflicts)
 - [ ] A Document Review Checklist for Tenant Improvement and Interior Fit-Out Projects (document review checklist)
