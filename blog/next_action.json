@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-10",
-  "topic": "What a Constructability Review Consultant Checks That a Cost Estimator Doesn't",
-  "keyword": "constructability review consultant",
+  "date": "2026-09-11",
+  "topic": "RFI Reduction on Fast-Tracked Projects: Why the Usual Playbook Doesn't Fully Apply",
+  "keyword": "RFI reduction",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword names no specific commercial product/vendor and doesn't match the alternatives, comparison, pricing, review, or trial/discount rules, so it falls through to the informational default and gets published as a new post."
+  "reasoning": "The keyword 'RFI reduction' is a generic problem-aware term with no named commercial product and no pricing/comparison/review intent, so it falls through to the informational default routed to daily-post.md."
 }
