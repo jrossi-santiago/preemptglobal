@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-12",
-  "topic": "MEP/Structural Coordination Conflicts in Vertical vs. Horizontal Construction: Why the Risk Profile Shifts",
-  "keyword": "MEP/structural drawing coordination conflicts",
+  "date": "2026-09-13",
+  "topic": "A Document Review Checklist for Tenant Improvement and Interior Fit-Out Projects",
+  "keyword": "document review checklist",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword is a generic problem-aware term with no named commercial product and no vs./pricing/review/trial intent, so it falls through to the default informational rule routed to daily-post.md for a new post."
+  "reasoning": "The keyword 'document review checklist' is a generic how-to/checklist term with no named product/vendor, matching none of rules 1-5, so it falls through to the informational default routed to daily-post.md."
 }

@@ -81,7 +81,7 @@ Queue:
 - [x] What a Constructability Review Consultant Checks That a Cost Estimator Doesn't — `what-a-constructability-review-consultant-checks-that-a-cost-estimator-doesnt` — 2026-09-10 (constructability review consultant)
 - [x] RFI Reduction on Fast-Tracked Projects: Why the Usual Playbook Doesn't Fully Apply — `rfi-reduction-fast-tracked-projects-usual-playbook` — 2026-09-11 (RFI reduction)
 - [x] MEP/Structural Coordination Conflicts in Vertical vs. Horizontal Construction: Why the Risk Profile Shifts — `mep-structural-conflicts-vertical-vs-horizontal-construction` — 2026-09-12 (MEP/structural drawing coordination conflicts)
-- [ ] A Document Review Checklist for Tenant Improvement and Interior Fit-Out Projects (document review checklist)
+- [x] A Document Review Checklist for Tenant Improvement and Interior Fit-Out Projects — `document-review-checklist-tenant-improvement-interior-fit-out` — 2026-09-13 (document review checklist)
 - [ ] Average Change Order Percentage by Project Type: Renovation vs. New Construction (average change order percentage by project type)
 - [ ] Owner's Representative Drawing Review for Public-Private Partnership (P3) Projects (owner's representative drawing review)
 - [ ] Change Order Risk Mitigation on Public Bid Projects: What Changes When Low-Bid Rules Apply (change order risk mitigation)
