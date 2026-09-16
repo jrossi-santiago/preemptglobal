@@ -84,7 +84,7 @@ Queue:
 - [x] A Document Review Checklist for Tenant Improvement and Interior Fit-Out Projects — `document-review-checklist-tenant-improvement-interior-fit-out` — 2026-09-13 (document review checklist)
 - [x] Average Change Order Percentage by Project Type: Renovation vs. New Construction — `average-change-order-percentage-renovation-vs-new-construction` — 2026-09-14 (average change order percentage by project type)
 - [x] Owner's Representative Drawing Review for Public-Private Partnership (P3) Projects — `owners-representative-drawing-review-p3-projects` — 2026-09-15 (owner's representative drawing review)
-- [ ] Change Order Risk Mitigation on Public Bid Projects: What Changes When Low-Bid Rules Apply (change order risk mitigation)
+- [x] Change Order Risk Mitigation on Public Bid Projects: What Changes When Low-Bid Rules Apply — `change-order-risk-mitigation-public-bid-low-bid-rules` — 2026-09-16 (change order risk mitigation)
 - [ ] Pre-Bid Drawing Review for Mixed-Use Projects: Coordinating Retail, Residential, and Parking Interfaces (pre-bid drawing review)
 - [ ] Third-Party Plan Review for Design-Assist Delivery: What Changes When Trade Partners Join Early (third-party plan review)
 - [ ] Constructability Review Consultants on Industrial and Warehouse Projects: What's Different About Tilt-Up and Pre-Engineered Sets (constructability review consultant)
