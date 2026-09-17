@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-16",
-  "topic": "Change Order Risk Mitigation on Public Bid Projects: What Changes When Low-Bid Rules Apply",
-  "keyword": "change order risk mitigation",
+  "date": "2026-09-17",
+  "topic": "Pre-Bid Drawing Review for Mixed-Use Projects: Coordinating Retail, Residential, and Parking Interfaces",
+  "keyword": "pre-bid drawing review",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword names no commercial product/vendor and asks no pricing/review question, so it falls through rules 1-5 to the informational default, routing to daily-post.md for a new post."
+  "reasoning": "The keyword names no specific commercial product/vendor and asks no price/review question, so it falls through rules 1-5 to the informational default, routing to daily-post.md for a new post."
 }
