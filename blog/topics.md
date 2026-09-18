@@ -86,7 +86,7 @@ Queue:
 - [x] Owner's Representative Drawing Review for Public-Private Partnership (P3) Projects — `owners-representative-drawing-review-p3-projects` — 2026-09-15 (owner's representative drawing review)
 - [x] Change Order Risk Mitigation on Public Bid Projects: What Changes When Low-Bid Rules Apply — `change-order-risk-mitigation-public-bid-low-bid-rules` — 2026-09-16 (change order risk mitigation)
 - [x] Pre-Bid Drawing Review for Mixed-Use Projects: Coordinating Retail, Residential, and Parking Interfaces — `pre-bid-drawing-review-mixed-use-retail-residential-parking-interfaces` — 2026-09-17 (pre-bid drawing review)
-- [ ] Third-Party Plan Review for Design-Assist Delivery: What Changes When Trade Partners Join Early (third-party plan review)
+- [x] Third-Party Plan Review for Design-Assist Delivery: What Changes When Trade Partners Join Early — `third-party-plan-review-design-assist-trade-partners-early` — 2026-09-18 (third-party plan review)
 - [ ] Constructability Review Consultants on Industrial and Warehouse Projects: What's Different About Tilt-Up and Pre-Engineered Sets (constructability review consultant)
 - [ ] MEP/Structural Coordination Conflicts on Data Center Retrofits: Why Existing Infrastructure Raises the Stakes (MEP/structural drawing coordination conflicts)
 - [ ] Catching Design Errors Before Construction in Multifamily Podium Construction: Where Type III-Over-I-A Sets Fail (catching design errors before construction)

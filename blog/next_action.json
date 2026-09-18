@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-17",
-  "topic": "Pre-Bid Drawing Review for Mixed-Use Projects: Coordinating Retail, Residential, and Parking Interfaces",
-  "keyword": "pre-bid drawing review",
+  "date": "2026-09-18",
+  "topic": "Third-Party Plan Review for Design-Assist Delivery: What Changes When Trade Partners Join Early",
+  "keyword": "(third-party plan review)",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword names no specific commercial product/vendor and asks no price/review question, so it falls through rules 1-5 to the informational default, routing to daily-post.md for a new post."
+  "reasoning": "Keyword 'third-party plan review' is a generic service-category term with no named commercial product and no vs/pricing/review/trial signal, so it falls through to the informational default per DECISION_TYPES.md rule 6."
 }
