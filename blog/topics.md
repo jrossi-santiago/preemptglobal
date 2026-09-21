@@ -89,7 +89,7 @@ Queue:
 - [x] Third-Party Plan Review for Design-Assist Delivery: What Changes When Trade Partners Join Early — `third-party-plan-review-design-assist-trade-partners-early` — 2026-09-18 (third-party plan review)
 - [x] Constructability Review Consultants on Industrial and Warehouse Projects: What's Different About Tilt-Up and Pre-Engineered Sets — `constructability-review-consultant-industrial-warehouse-tilt-up-pre-engineered` — 2026-09-19 (constructability review consultant)
 - [x] MEP/Structural Coordination Conflicts on Data Center Retrofits: Why Existing Infrastructure Raises the Stakes — `mep-structural-conflicts-data-center-retrofits` — 2026-09-20 (MEP/structural drawing coordination conflicts)
-- [ ] Catching Design Errors Before Construction in Multifamily Podium Construction: Where Type III-Over-I-A Sets Fail (catching design errors before construction)
+- [x] Catching Design Errors Before Construction in Multifamily Podium Construction: Where Type III-Over-I-A Sets Fail — `catching-design-errors-before-construction-multifamily-podium` — 2026-09-21 (catching design errors before construction)
 - [ ] Cost of Design Errors and Omissions on Design-Build Projects: Who Bears the Exposure When Design and Construction Share a Contract (cost of design errors and omissions)
 - [ ] A Document Review Checklist for Higher Education Lab and Classroom Hybrid Buildings (document review checklist)
 - [ ] Spec vs. Drawing Conflicts on Healthcare Projects: Where Equipment Specs and Room Data Sheets Diverge (spec vs drawing conflicts)
