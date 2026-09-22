@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-21",
-  "topic": "Catching Design Errors Before Construction in Multifamily Podium Construction: Where Type III-Over-I-A Sets Fail",
-  "keyword": "(catching design errors before construction)",
+  "date": "2026-09-22",
+  "topic": "Cost of Design Errors and Omissions on Design-Build Projects: Who Bears the Exposure When Design and Construction Share a Contract",
+  "keyword": "cost of design errors and omissions",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword is a generic how-to/informational phrase with no named commercial product, so it falls through rules 1-5 to the informational default routed to daily-post.md for a new post."
+  "reasoning": "The keyword is a generic cost/impact topic naming no specific product or vendor, which DECISION_TYPES.md rule 3 explicitly lists as a non-match for pricing, so it falls through to the informational default and routes to daily-post.md as a new post."
 }
