@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-22",
-  "topic": "Cost of Design Errors and Omissions on Design-Build Projects: Who Bears the Exposure When Design and Construction Share a Contract",
-  "keyword": "cost of design errors and omissions",
+  "date": "2026-09-23",
+  "topic": "A Document Review Checklist for Higher Education Lab and Classroom Hybrid Buildings",
+  "keyword": "document review checklist",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword is a generic cost/impact topic naming no specific product or vendor, which DECISION_TYPES.md rule 3 explicitly lists as a non-match for pricing, so it falls through to the informational default and routes to daily-post.md as a new post."
+  "reasoning": "Keyword 'document review checklist' names no specific product/vendor and doesn't match alternatives, comparison, pricing, review, or trial_or_discount, so it falls through to the informational default routed to daily-post.md for a new post."
 }
