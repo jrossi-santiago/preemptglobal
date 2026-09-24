@@ -92,7 +92,7 @@ Queue:
 - [x] Catching Design Errors Before Construction in Multifamily Podium Construction: Where Type III-Over-I-A Sets Fail — `catching-design-errors-before-construction-multifamily-podium` — 2026-09-21 (catching design errors before construction)
 - [x] Cost of Design Errors and Omissions on Design-Build Projects: Who Bears the Exposure When Design and Construction Share a Contract — `cost-of-design-errors-and-omissions-design-build-who-bears-exposure` — 2026-09-22 (cost of design errors and omissions)
 - [x] A Document Review Checklist for Higher Education Lab and Classroom Hybrid Buildings — `document-review-checklist-higher-education-lab-classroom-hybrid` — 2026-09-23 (document review checklist)
-- [ ] Spec vs. Drawing Conflicts on Healthcare Projects: Where Equipment Specs and Room Data Sheets Diverge (spec vs drawing conflicts)
+- [x] Spec vs. Drawing Conflicts on Healthcare Projects: Where Equipment Specs and Room Data Sheets Diverge — `spec-vs-drawing-conflicts-healthcare-equipment-room-data-sheets` — 2026-09-24 (spec vs drawing conflicts)
 - [ ] Third-Party Plan Review for Modular and Prefabricated Construction: What Changes When Components Are Built Off-Site (third-party plan review)
 - [ ] Construction Document Review Services for Life Sciences and Lab Buildings: What Cleanroom and Containment Sets Add to Scope (construction document review services)
 - [ ] How to Reduce Change Orders on Renovation Projects With Incomplete As-Built Drawings (how to reduce change orders)
