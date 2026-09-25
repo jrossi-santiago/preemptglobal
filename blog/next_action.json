@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-24",
-  "topic": "Spec vs. Drawing Conflicts on Healthcare Projects: Where Equipment Specs and Room Data Sheets Diverge",
-  "keyword": "spec vs drawing conflicts",
+  "date": "2026-09-25",
+  "topic": "Third-Party Plan Review for Modular and Prefabricated Construction: What Changes When Components Are Built Off-Site",
+  "keyword": "third-party plan review",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword contains \"vs\" but neither side names a specific commercial product/vendor (rule 2 non-match), and no other rule matches, so it falls through to the informational default routed to daily-post.md for a new post."
+  "reasoning": "The keyword 'third-party plan review' is a generic service-category term containing the word 'review' but names no specific product/vendor, so it falls through comparison/pricing/review rules to the informational default."
 }
