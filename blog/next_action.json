@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-25",
-  "topic": "Third-Party Plan Review for Modular and Prefabricated Construction: What Changes When Components Are Built Off-Site",
-  "keyword": "third-party plan review",
+  "date": "2026-09-26",
+  "topic": "Construction Document Review Services for Life Sciences and Lab Buildings: What Cleanroom and Containment Sets Add to Scope",
+  "keyword": "construction document review services",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword 'third-party plan review' is a generic service-category term containing the word 'review' but names no specific product/vendor, so it falls through comparison/pricing/review rules to the informational default."
+  "reasoning": "The keyword is the generic service-category term explicitly listed as a non-match example under rule 4 (review) in DECISION_TYPES.md, and matches no other rule, so it falls through to the informational default routed to daily-post.md for a new post."
 }
