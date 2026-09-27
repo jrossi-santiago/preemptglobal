@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-26",
-  "topic": "Construction Document Review Services for Life Sciences and Lab Buildings: What Cleanroom and Containment Sets Add to Scope",
-  "keyword": "construction document review services",
+  "date": "2026-09-27",
+  "topic": "How to Reduce Change Orders on Renovation Projects With Incomplete As-Built Drawings",
+  "keyword": "how to reduce change orders",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword is the generic service-category term explicitly listed as a non-match example under rule 4 (review) in DECISION_TYPES.md, and matches no other rule, so it falls through to the informational default routed to daily-post.md for a new post."
+  "reasoning": "The keyword is a generic how-to phrase with no named product/vendor, no comparison, pricing, or review intent, so it falls through to the informational default routed to daily-post.md."
 }
