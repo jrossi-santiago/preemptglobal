@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-27",
-  "topic": "How to Reduce Change Orders on Renovation Projects With Incomplete As-Built Drawings",
-  "keyword": "how to reduce change orders",
+  "date": "2026-09-28",
+  "topic": "RFI Reduction on Design-Assist Projects: Why Early Trade Input Doesn't Eliminate the Review Step",
+  "keyword": "RFI reduction",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword is a generic how-to phrase with no named product/vendor, no comparison, pricing, or review intent, so it falls through to the informational default routed to daily-post.md."
+  "reasoning": "The keyword names no product/vendor and isn't a comparison, pricing, or review lookup, so it falls through to the informational default routed to daily-post.md."
 }
