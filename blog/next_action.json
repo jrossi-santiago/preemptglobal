@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-28",
-  "topic": "RFI Reduction on Design-Assist Projects: Why Early Trade Input Doesn't Eliminate the Review Step",
-  "keyword": "RFI reduction",
+  "date": "2026-09-29",
+  "topic": "MEP/Structural Coordination Conflicts in High-Rise Residential: Where Shaft and Riser Stacking Fails",
+  "keyword": "MEP/structural drawing coordination conflicts",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "The keyword names no product/vendor and isn't a comparison, pricing, or review lookup, so it falls through to the informational default routed to daily-post.md."
+  "reasoning": "Keyword names no vendor/product and matches no alternatives/vs/pricing/review/trial rules, so it defaults to informational and a new post."
 }

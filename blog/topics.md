@@ -97,7 +97,7 @@ Queue:
 - [x] Construction Document Review Services for Life Sciences and Lab Buildings: What Cleanroom and Containment Sets Add to Scope — `construction-document-review-services-life-sciences-cleanroom-containment` — 2026-09-26 (construction document review services)
 - [x] How to Reduce Change Orders on Renovation Projects With Incomplete As-Built Drawings — `how-to-reduce-change-orders-renovation-incomplete-as-built-drawings` — 2026-09-27 (how to reduce change orders)
 - [x] RFI Reduction on Design-Assist Projects: Why Early Trade Input Doesn't Eliminate the Review Step — `rfi-reduction-design-assist-early-trade-input` — 2026-09-28 (RFI reduction)
-- [ ] MEP/Structural Coordination Conflicts in High-Rise Residential: Where Shaft and Riser Stacking Fails (MEP/structural drawing coordination conflicts)
+- [x] MEP/Structural Coordination Conflicts in High-Rise Residential: Where Shaft and Riser Stacking Fails — `mep-structural-conflicts-high-rise-residential-shaft-riser-stacking` — 2026-09-29 (MEP/structural drawing coordination conflicts)
 - [ ] When to Hire a Drawing Review Consultant on a Design-Assist or Progressive Design-Build Project (when to hire a drawing review consultant)
 - [ ] Average Change Order Percentage by Project Type: Industrial and Warehouse vs. Office (average change order percentage by project type)
 - [ ] Pre-Bid Drawing Review for Public Bid Projects: What Changes When Addenda Have to Go to Every Bidder (pre-bid drawing review)
