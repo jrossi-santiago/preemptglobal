@@ -1,10 +1,10 @@
 {
-  "date": "2026-09-30",
-  "topic": "When to Hire a Drawing Review Consultant on a Design-Assist or Progressive Design-Build Project",
-  "keyword": "when to hire a drawing review consultant",
+  "date": "2026-10-01",
+  "topic": "Average Change Order Percentage by Project Type: Industrial and Warehouse vs. Office",
+  "keyword": "average change order percentage by project type",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword names no vendor/product and matches no alternatives/vs/pricing/review/trial rules, so it defaults to informational and a new post."
+  "reasoning": "Keyword names no vendor/product (the vs. is a generic project-type comparison), so it matches no alternatives/comparison/pricing/review/trial rule and defaults to informational and a new post."
 }
