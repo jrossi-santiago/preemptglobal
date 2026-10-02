@@ -100,7 +100,7 @@ Queue:
 - [x] MEP/Structural Coordination Conflicts in High-Rise Residential: Where Shaft and Riser Stacking Fails — `mep-structural-conflicts-high-rise-residential-shaft-riser-stacking` — 2026-09-29 (MEP/structural drawing coordination conflicts)
 - [x] When to Hire a Drawing Review Consultant on a Design-Assist or Progressive Design-Build Project — `when-to-hire-a-drawing-review-consultant-design-assist-progressive-design-build` — 2026-09-30 (when to hire a drawing review consultant)
 - [x] Average Change Order Percentage by Project Type: Industrial and Warehouse vs. Office — `average-change-order-percentage-industrial-warehouse-vs-office` — 2026-10-01 (average change order percentage by project type)
-- [ ] Pre-Bid Drawing Review for Public Bid Projects: What Changes When Addenda Have to Go to Every Bidder (pre-bid drawing review)
+- [x] Pre-Bid Drawing Review for Public Bid Projects: What Changes When Addenda Have to Go to Every Bidder — `pre-bid-drawing-review-public-bid-addenda-every-bidder` — 2026-10-02 (pre-bid drawing review)
 - [ ] Constructability Review Consultants for Aviation and Transit Projects: What Changes on a Publicly Funded Set (constructability review consultant)
 - [ ] Owner's Representative Drawing Review for Higher Education Capital Programs: Coordinating Across Multiple Buildings at Once (owner's representative drawing review)
 - [ ] Change Order Risk Mitigation for Municipal and K-12 Bond Projects: What Public Funding Timelines Add to the Risk (change order risk mitigation)

@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-01",
-  "topic": "Average Change Order Percentage by Project Type: Industrial and Warehouse vs. Office",
-  "keyword": "average change order percentage by project type",
+  "date": "2026-10-02",
+  "topic": "Pre-Bid Drawing Review for Public Bid Projects: What Changes When Addenda Have to Go to Every Bidder",
+  "keyword": "pre-bid drawing review",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword names no vendor/product (the vs. is a generic project-type comparison), so it matches no alternatives/comparison/pricing/review/trial rule and defaults to informational and a new post."
+  "reasoning": "No named product/vendor and no alternatives/vs/pricing/review/trial terms, so it falls through to informational; a new post is needed for the public-bid angle."
 }
