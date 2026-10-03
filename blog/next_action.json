@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-02",
-  "topic": "Pre-Bid Drawing Review for Public Bid Projects: What Changes When Addenda Have to Go to Every Bidder",
-  "keyword": "pre-bid drawing review",
+  "date": "2026-10-03",
+  "topic": "Constructability Review Consultants for Aviation and Transit Projects: What Changes on a Publicly Funded Set",
+  "keyword": "constructability review consultant",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "No named product/vendor and no alternatives/vs/pricing/review/trial terms, so it falls through to informational; a new post is needed for the public-bid angle."
+  "reasoning": "Keyword is a generic hire-me service category with no named product/vendor, so rules 1-5 don't match and it falls through to informational; a new post is needed for the aviation/transit angle."
 }
