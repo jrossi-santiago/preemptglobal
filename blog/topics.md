@@ -102,7 +102,7 @@ Queue:
 - [x] Average Change Order Percentage by Project Type: Industrial and Warehouse vs. Office — `average-change-order-percentage-industrial-warehouse-vs-office` — 2026-10-01 (average change order percentage by project type)
 - [x] Pre-Bid Drawing Review for Public Bid Projects: What Changes When Addenda Have to Go to Every Bidder — `pre-bid-drawing-review-public-bid-addenda-every-bidder` — 2026-10-02 (pre-bid drawing review)
 - [x] Constructability Review Consultants for Aviation and Transit Projects: What Changes on a Publicly Funded Set — `constructability-review-consultant-aviation-transit-publicly-funded-set` — 2026-10-03 (constructability review consultant)
-- [ ] Owner's Representative Drawing Review for Higher Education Capital Programs: Coordinating Across Multiple Buildings at Once (owner's representative drawing review)
+- [x] Owner's Representative Drawing Review for Higher Education Capital Programs: Coordinating Across Multiple Buildings at Once — `owners-representative-drawing-review-higher-education-capital-programs-multiple-buildings` — 2026-10-04 (owner's representative drawing review)
 - [ ] Change Order Risk Mitigation for Municipal and K-12 Bond Projects: What Public Funding Timelines Add to the Risk (change order risk mitigation)
 - [ ] Catching Design Errors Before Construction on Higher Education Capital Programs: Where Multi-Building Phasing Raises the Stakes (catching design errors before construction)
 - [ ] The Cost of Design Errors and Omissions on Higher Education Capital Projects: Why Multi-Building Programs Compound Exposure (cost of design errors and omissions)

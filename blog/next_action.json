@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-03",
-  "topic": "Constructability Review Consultants for Aviation and Transit Projects: What Changes on a Publicly Funded Set",
-  "keyword": "constructability review consultant",
+  "date": "2026-10-04",
+  "topic": "Owner's Representative Drawing Review for Higher Education Capital Programs: Coordinating Across Multiple Buildings at Once",
+  "keyword": "owner's representative drawing review",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword is a generic hire-me service category with no named product/vendor, so rules 1-5 don't match and it falls through to informational; a new post is needed for the aviation/transit angle."
+  "reasoning": "Keyword is a generic hire-me service category naming no specific product/vendor, so rules 1-5 don't match and it falls to informational; a new post is needed for the higher-ed multi-building angle."
 }
