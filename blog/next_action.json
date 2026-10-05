@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-04",
-  "topic": "Owner's Representative Drawing Review for Higher Education Capital Programs: Coordinating Across Multiple Buildings at Once",
-  "keyword": "owner's representative drawing review",
+  "date": "2026-10-05",
+  "topic": "Change Order Risk Mitigation for Municipal and K-12 Bond Projects: What Public Funding Timelines Add to the Risk",
+  "keyword": "change order risk mitigation",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword is a generic hire-me service category naming no specific product/vendor, so rules 1-5 don't match and it falls to informational; a new post is needed for the higher-ed multi-building angle."
+  "reasoning": "Keyword names no specific product/vendor, so rules 1-5 don't match and it falls to informational; a new post is needed for the municipal/K-12 bond funding-timeline angle."
 }
