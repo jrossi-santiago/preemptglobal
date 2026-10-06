@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-05",
-  "topic": "Change Order Risk Mitigation for Municipal and K-12 Bond Projects: What Public Funding Timelines Add to the Risk",
-  "keyword": "change order risk mitigation",
+  "date": "2026-10-06",
+  "topic": "Catching Design Errors Before Construction on Higher Education Capital Programs: Where Multi-Building Phasing Raises the Stakes",
+  "keyword": "catching design errors before construction",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword names no specific product/vendor, so rules 1-5 don't match and it falls to informational; a new post is needed for the municipal/K-12 bond funding-timeline angle."
+  "reasoning": "Keyword is a generic problem-aware phrase naming no product or vendor, so rules 1-5 do not match and it defaults to informational; a new higher-ed-specific post is warranted."
 }
