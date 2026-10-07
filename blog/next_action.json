@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-06",
-  "topic": "Catching Design Errors Before Construction on Higher Education Capital Programs: Where Multi-Building Phasing Raises the Stakes",
-  "keyword": "catching design errors before construction",
+  "date": "2026-10-07",
+  "topic": "The Cost of Design Errors and Omissions on Higher Education Capital Projects: Why Multi-Building Programs Compound Exposure",
+  "keyword": "cost of design errors and omissions",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword is a generic problem-aware phrase naming no product or vendor, so rules 1-5 do not match and it defaults to informational; a new higher-ed-specific post is warranted."
+  "reasoning": "Generic cost/impact keyword with no named product or vendor, so rules 1-5 do not match and it falls through to informational; it is a new post."
 }
