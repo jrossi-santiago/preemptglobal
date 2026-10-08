@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-07",
-  "topic": "The Cost of Design Errors and Omissions on Higher Education Capital Projects: Why Multi-Building Programs Compound Exposure",
-  "keyword": "cost of design errors and omissions",
+  "date": "2026-10-08",
+  "topic": "Constructability Review vs. Peer Review on Public Agency Projects: Which One Satisfies Procurement Requirements",
+  "keyword": "constructability review vs peer review",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Generic cost/impact keyword with no named product or vendor, so rules 1-5 do not match and it falls through to informational; it is a new post."
+  "reasoning": "'vs' compares two generic review methods, not named commercial products, so rule 2 does not match and it falls through to informational; a new post is needed."
 }
