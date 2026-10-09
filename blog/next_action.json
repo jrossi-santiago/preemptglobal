@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-08",
-  "topic": "Constructability Review vs. Peer Review on Public Agency Projects: Which One Satisfies Procurement Requirements",
-  "keyword": "constructability review vs peer review",
+  "date": "2026-10-09",
+  "topic": "A Document Review Checklist for Cleanroom and Containment Lab Buildings: What Classification-Driven Detail Adds to Scope",
+  "keyword": "document review checklist",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "'vs' compares two generic review methods, not named commercial products, so rule 2 does not match and it falls through to informational; a new post is needed."
+  "reasoning": "Keyword names no vendor and matches none of the alternatives/comparison/pricing/review/trial rules, so it falls to the informational default, a new post."
 }

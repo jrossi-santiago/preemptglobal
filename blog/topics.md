@@ -107,7 +107,7 @@ Queue:
 - [x] Catching Design Errors Before Construction on Higher Education Capital Programs: Where Multi-Building Phasing Raises the Stakes (catching design errors before construction) — `catching-design-errors-before-construction-higher-education-multi-building-phasing` — 2026-10-06 (catching design errors before construction)
 - [x] The Cost of Design Errors and Omissions on Higher Education Capital Projects: Why Multi-Building Programs Compound Exposure — `cost-of-design-errors-and-omissions-higher-education-multi-building-programs` — 2026-10-07 (cost of design errors and omissions)
 - [x] Constructability Review vs. Peer Review on Public Agency Projects: Which One Satisfies Procurement Requirements — `constructability-review-vs-peer-review-public-agency-procurement` — 2026-10-08 (constructability review vs peer review)
-- [ ] A Document Review Checklist for Cleanroom and Containment Lab Buildings: What Classification-Driven Detail Adds to Scope (document review checklist)
+- [x] A Document Review Checklist for Cleanroom and Containment Lab Buildings: What Classification-Driven Detail Adds to Scope — `document-review-checklist-cleanroom-containment-lab-buildings` — 2026-10-09 (document review checklist)
 - [ ] Average Change Order Percentage by Project Type: Higher Education and Lab Buildings vs. Standard Office (average change order percentage by project type)
 - [ ] Construction Document Review Services for Data Center Builds: What Changes When Power and Cooling Drive the Set (construction document review services)
 - [ ] Third-Party Plan Review for Healthcare Projects: Where It Overlaps With State Health Department Plan Review (third-party plan review)
