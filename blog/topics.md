@@ -108,7 +108,7 @@ Queue:
 - [x] The Cost of Design Errors and Omissions on Higher Education Capital Projects: Why Multi-Building Programs Compound Exposure — `cost-of-design-errors-and-omissions-higher-education-multi-building-programs` — 2026-10-07 (cost of design errors and omissions)
 - [x] Constructability Review vs. Peer Review on Public Agency Projects: Which One Satisfies Procurement Requirements — `constructability-review-vs-peer-review-public-agency-procurement` — 2026-10-08 (constructability review vs peer review)
 - [x] A Document Review Checklist for Cleanroom and Containment Lab Buildings: What Classification-Driven Detail Adds to Scope — `document-review-checklist-cleanroom-containment-lab-buildings` — 2026-10-09 (document review checklist)
-- [ ] Average Change Order Percentage by Project Type: Higher Education and Lab Buildings vs. Standard Office (average change order percentage by project type)
+- [x] Average Change Order Percentage by Project Type: Higher Education and Lab Buildings vs. Standard Office — `average-change-order-percentage-higher-education-lab-buildings-vs-office` — 2026-10-10 (average change order percentage by project type)
 - [ ] Construction Document Review Services for Data Center Builds: What Changes When Power and Cooling Drive the Set (construction document review services)
 - [ ] Third-Party Plan Review for Healthcare Projects: Where It Overlaps With State Health Department Plan Review (third-party plan review)
 - [ ] How to Reduce Change Orders on Multifamily Projects: Where Unit Repetition Hides Coordination Errors (how to reduce change orders)

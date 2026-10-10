@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-09",
-  "topic": "A Document Review Checklist for Cleanroom and Containment Lab Buildings: What Classification-Driven Detail Adds to Scope",
-  "keyword": "document review checklist",
+  "date": "2026-10-10",
+  "topic": "Average Change Order Percentage by Project Type: Higher Education and Lab Buildings vs. Standard Office",
+  "keyword": "average change order percentage by project type",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword names no vendor and matches none of the alternatives/comparison/pricing/review/trial rules, so it falls to the informational default, a new post."
+  "reasoning": "Keyword names no vendor or product (the 'vs' is in the title, not a named-product head-to-head) and matches none of the alternatives/comparison/pricing/review/trial rules, so it falls to the informational default, a new post."
 }
