@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-10",
-  "topic": "Average Change Order Percentage by Project Type: Higher Education and Lab Buildings vs. Standard Office",
-  "keyword": "average change order percentage by project type",
+  "date": "2026-10-11",
+  "topic": "Construction Document Review Services for Data Center Builds: What Changes When Power and Cooling Drive the Set",
+  "keyword": "construction document review services",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword names no vendor or product (the 'vs' is in the title, not a named-product head-to-head) and matches none of the alternatives/comparison/pricing/review/trial rules, so it falls to the informational default, a new post."
+  "reasoning": "Keyword is a generic service-category term naming no commercial product/vendor, so rules 1-5 do not match and it falls through to the informational default; a new post is the target."
 }
