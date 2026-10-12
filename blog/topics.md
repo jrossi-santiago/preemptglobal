@@ -110,7 +110,7 @@ Queue:
 - [x] A Document Review Checklist for Cleanroom and Containment Lab Buildings: What Classification-Driven Detail Adds to Scope — `document-review-checklist-cleanroom-containment-lab-buildings` — 2026-10-09 (document review checklist)
 - [x] Average Change Order Percentage by Project Type: Higher Education and Lab Buildings vs. Standard Office — `average-change-order-percentage-higher-education-lab-buildings-vs-office` — 2026-10-10 (average change order percentage by project type)
 - [x] Construction Document Review Services for Data Center Builds: What Changes When Power and Cooling Drive the Set — `construction-document-review-services-data-center-builds-power-cooling` — 2026-10-11 (construction document review services)
-- [ ] Third-Party Plan Review for Healthcare Projects: Where It Overlaps With State Health Department Plan Review (third-party plan review)
+- [x] Third-Party Plan Review for Healthcare Projects: Where It Overlaps With State Health Department Plan Review — `third-party-plan-review-healthcare-state-health-department-overlap` — 2026-10-12 (third-party plan review)
 - [ ] How to Reduce Change Orders on Multifamily Projects: Where Unit Repetition Hides Coordination Errors (how to reduce change orders)
 - [ ] Why So Many Change Orders Start in Division 21–28 Scope: Fire Protection, Plumbing, HVAC, and Electrical Handoffs (why so many change orders)
 - [ ] RFI Reduction on Healthcare Projects: Which Question Types a Pre-Bid Review Removes (RFI reduction)
