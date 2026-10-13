@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-12",
-  "topic": "Third-Party Plan Review for Healthcare Projects: Where It Overlaps With State Health Department Plan Review",
-  "keyword": "third-party plan review",
+  "date": "2026-10-13",
+  "topic": "How to Reduce Change Orders on Multifamily Projects: Where Unit Repetition Hides Coordination Errors",
+  "keyword": "how to reduce change orders",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword is a generic service-category term naming no commercial product/vendor, so rules 1-5 do not match and it falls through to the informational default; a new post is the target."
+  "reasoning": "Keyword 'how to reduce change orders' is a how-to with no named vendor/product, so it matches none of rules 1-5 and falls to the informational default, which is a new post."
 }
