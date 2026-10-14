@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-13",
-  "topic": "How to Reduce Change Orders on Multifamily Projects: Where Unit Repetition Hides Coordination Errors",
-  "keyword": "how to reduce change orders",
+  "date": "2026-10-14",
+  "topic": "Why So Many Change Orders Start in Division 21–28 Scope: Fire Protection, Plumbing, HVAC, and Electrical Handoffs",
+  "keyword": "why so many change orders",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword 'how to reduce change orders' is a how-to with no named vendor/product, so it matches none of rules 1-5 and falls to the informational default, which is a new post."
+  "reasoning": "Keyword 'why so many change orders' is an explanatory informational query with no named vendor/product, so it matches none of rules 1-5 and falls to the informational default, a new post."
 }
