@@ -113,7 +113,7 @@ Queue:
 - [x] Third-Party Plan Review for Healthcare Projects: Where It Overlaps With State Health Department Plan Review — `third-party-plan-review-healthcare-state-health-department-overlap` — 2026-10-12 (third-party plan review)
 - [x] How to Reduce Change Orders on Multifamily Projects: Where Unit Repetition Hides Coordination Errors (how to reduce change orders) — `how-to-reduce-change-orders-multifamily-unit-repetition-coordination-errors` — 2026-10-13 (how to reduce change orders)
 - [x] Why So Many Change Orders Start in Division 21–28 Scope: Fire Protection, Plumbing, HVAC, and Electrical Handoffs (why so many change orders) — `why-so-many-change-orders-division-21-28-fire-protection-plumbing-hvac-electrical-handoffs` — 2026-10-14 (why so many change orders)
-- [ ] RFI Reduction on Healthcare Projects: Which Question Types a Pre-Bid Review Removes (RFI reduction)
+- [x] RFI Reduction on Healthcare Projects: Which Question Types a Pre-Bid Review Removes (RFI reduction) — `rfi-reduction-healthcare-projects-question-types-pre-bid-review-removes` — 2026-10-15 (RFI reduction)
 - [ ] Pre-Bid Drawing Review for Industrial Projects: Slab, Rack, and Fire Protection Interfaces to Check First (pre-bid drawing review)
 - [ ] Constructability Review Consultant for Multifamily Podium Projects: What to Check Where Wood Frame Meets Concrete (constructability review consultant)
 - [ ] Owner's Representative Drawing Review for Healthcare Systems: Coordinating Across Hospitals and Outpatient Buildings (owner's representative drawing review)

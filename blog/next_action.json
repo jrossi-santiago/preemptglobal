@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-14",
-  "topic": "Why So Many Change Orders Start in Division 21–28 Scope: Fire Protection, Plumbing, HVAC, and Electrical Handoffs",
-  "keyword": "why so many change orders",
+  "date": "2026-10-15",
+  "topic": "RFI Reduction on Healthcare Projects: Which Question Types a Pre-Bid Review Removes",
+  "keyword": "RFI reduction",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword 'why so many change orders' is an explanatory informational query with no named vendor/product, so it matches none of rules 1-5 and falls to the informational default, a new post."
+  "reasoning": "Keyword 'RFI reduction' names no commercial product/vendor, so rules 1-5 don't match and it falls through to the informational default, which is a new post."
 }
