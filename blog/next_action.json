@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-15",
-  "topic": "RFI Reduction on Healthcare Projects: Which Question Types a Pre-Bid Review Removes",
-  "keyword": "RFI reduction",
+  "date": "2026-10-16",
+  "topic": "Pre-Bid Drawing Review for Industrial Projects: Slab, Rack, and Fire Protection Interfaces to Check First",
+  "keyword": "pre-bid drawing review",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword 'RFI reduction' names no commercial product/vendor, so rules 1-5 don't match and it falls through to the informational default, which is a new post."
+  "reasoning": "Keyword 'pre-bid drawing review' names no commercial product/vendor, so rules 1-5 don't match and it falls through to the informational default, which is a new post."
 }
