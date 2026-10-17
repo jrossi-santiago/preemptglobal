@@ -1,10 +1,10 @@
 {
-  "date": "2026-10-16",
-  "topic": "Pre-Bid Drawing Review for Industrial Projects: Slab, Rack, and Fire Protection Interfaces to Check First",
-  "keyword": "pre-bid drawing review",
+  "date": "2026-10-17",
+  "topic": "Constructability Review Consultant for Multifamily Podium Projects: What to Check Where Wood Frame Meets Concrete",
+  "keyword": "constructability review consultant",
   "decision_type": "informational",
   "route_to": "blog/prompts/daily-post.md",
   "target": "new_post",
   "existing_page": null,
-  "reasoning": "Keyword 'pre-bid drawing review' names no commercial product/vendor, so rules 1-5 don't match and it falls through to the informational default, which is a new post."
+  "reasoning": "Keyword 'constructability review consultant' is a generic hire-me service term with no named product/vendor, so rules 1-5 don't match and it falls to the informational default, a new post."
 }
